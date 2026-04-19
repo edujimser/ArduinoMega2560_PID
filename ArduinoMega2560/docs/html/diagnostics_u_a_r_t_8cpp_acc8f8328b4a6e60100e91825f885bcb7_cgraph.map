@@ -1,0 +1,14 @@
+<map id="diagnoseAllUART" name="diagnoseAllUART">
+<area shape="rect" id="Node000001" title="Ejecuta diagnósticos en todos los puertos UART disponibles." alt="" coords="5,80,128,105"/>
+<area shape="rect" id="Node000002" href="$diagnostics_u_a_r_t_8cpp.html#abee9102ec0a3103a14af4e810b02ea01" title="Ejecuta diagnóstico sobre Serial1 (UART1), si está disponible." alt="" coords="186,5,301,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="92,78,175,40,191,33,193,38,177,44,95,82"/>
+<area shape="rect" id="Node000004" href="$diagnostics_u_a_r_t_8cpp.html#ab1adb888a9bf884d3315d094a9e71ff2" title="Ejecuta diagnóstico sobre Serial2 (UART2), si está disponible." alt="" coords="186,55,301,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="128,81,172,75,173,80,129,87"/>
+<area shape="rect" id="Node000005" href="$msg_8cpp.html#abda2f504e4bfdbfbdd0cd8f8937f72f1" title="Prints a decorated header with centered text and padding on both sides." alt="" coords="176,104,311,129"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="129,98,163,103,162,108,128,104"/>
+<area shape="rect" id="Node000006" href="$msg_8cpp.html#a6ef1ee9724c4aa2cdcd16023815c107a" title="Prints an enriched log message to the serial monitor." alt="" coords="181,153,306,179"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="97,103,177,138,196,146,194,151,175,143,95,108"/>
+<area shape="rect" id="Node000003" href="$diagnostics_u_a_r_t_8cpp.html#a4563ddd7762002687f3b4a852169ef36" title="Realiza un diagnóstico sobre un puerto UART específico." alt="" coords="359,31,509,56"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="301,23,345,29,345,34,301,28"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="301,57,345,52,345,57,301,63"/>
+</map>

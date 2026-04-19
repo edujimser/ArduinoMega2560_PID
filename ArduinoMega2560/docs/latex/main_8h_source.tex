@@ -1,0 +1,60 @@
+\doxysection{main.\+h}
+\hypertarget{main_8h_source}{}\label{main_8h_source}\index{main.h@{main.h}}
+\doxymbox{\hyperlink{main_8h}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00001}00001\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00002}00002\ \textcolor{comment}{\ *\ @file\ main.h}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00003}00003\ \textcolor{comment}{\ *\ @brief\ Archivo\ principal\ de\ cabecera\ del\ firmware.\ Contiene\ metadatos\ del\ firmware,}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00004}00004\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ includes\ del\ sistema,\ configuración\ de\ pines,\ diagnósticos,\ motor\ paso\ a\ paso}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00005}00005\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ y\ controlador\ PID.}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00006}00006\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00007}00007\ \textcolor{comment}{\ *\ Este\ archivo\ centraliza\ todas\ las\ dependencias\ necesarias\ para\ el\ funcionamiento}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00008}00008\ \textcolor{comment}{\ *\ del\ firmware\ en\ Arduino\ Mega\ 2560.}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00009}00009\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00011}00011\ \textcolor{preprocessor}{\#ifndef\ MAIN\_H}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00012}00012\ \textcolor{preprocessor}{\#define\ MAIN\_H}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00013}00013\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00014}00014\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00015}00015\ \textcolor{comment}{\ *\ @brief\ Includes\ del\ sistema\ y\ librerías\ necesarias\ para\ el\ firmware.}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00016}00016\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00017}00017\ \textcolor{comment}{\ *\ -\/\ pinout.h:\ Definición\ de\ pines\ del\ sistema}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00018}00018\ \textcolor{comment}{\ *\ -\/\ avr8-\/stub.h:\ Soporte\ para\ depuración\ con\ GDB}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00019}00019\ \textcolor{comment}{\ *\ -\/\ HardwareSerial.h:\ Comunicación\ serie}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00020}00020\ \textcolor{comment}{\ *\ -\/\ diagnosticsUART.h:\ Diagnóstico\ de\ UART}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00021}00021\ \textcolor{comment}{\ *\ -\/\ diagnosticsEEPROM.h:\ Diagnóstico\ de\ EEPROM}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00022}00022\ \textcolor{comment}{\ *\ -\/\ config.h:\ Parámetros\ de\ configuración\ del\ sistema}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00023}00023\ \textcolor{comment}{\ *\ -\/\ motorStep.h:\ Control\ del\ motor\ paso\ a\ paso}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00024}00024\ \textcolor{comment}{\ *\ -\/\ pid.h:\ Controlador\ PID}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00025}00025\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00026}00026\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{pinout_8h}{system/pinout/pinout.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00027}00027\ \textcolor{preprocessor}{\#include\ <\doxymbox{\hyperlink{avr8-stub_8h}{avr8-\/stub.h}}>}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ AVR8\ debugging\ stub\ for\ GDB}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00028}00028\ \textcolor{preprocessor}{\#include\ <HardwareSerial.h>}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Serial\ communication\ support}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00029}00029\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{diagnostics_u_a_r_t_8h}{system/diagnostics/diagnosticsUART.h}}"{}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ UART\ diagnostics\ functions}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00030}00030\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{diagnostics_e_e_p_r_o_m_8h}{system/diagnostics/diagnosticsEEPROM.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00031}00031\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{config_8h}{system/config/config.h}}"{}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ System\ configuration\ parameters}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00032}00032\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{pinout_8h}{system/pinout/pinout.h}}"{}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Pinout\ definitions}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00033}00033\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{motor_step_8h}{MotorStep/motorStep.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00034}00034\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{pid_8h}{PID/pid.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00035}00035\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00036}00036\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00037}00037\ \textcolor{comment}{\ *\ @brief\ Metadatos\ del\ firmware.}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00038}00038\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00039}00039\ \textcolor{comment}{\ *\ Incluye\ información\ sobre:}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00040}00040\ \textcolor{comment}{\ *\ -\/\ versión\ del\ firmware}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00041}00041\ \textcolor{comment}{\ *\ -\/\ nombre\ del\ firmware}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00042}00042\ \textcolor{comment}{\ *\ -\/\ fecha\ de\ compilación}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00043}00043\ \textcolor{comment}{\ *\ -\/\ autor}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00044}00044\ \textcolor{comment}{\ *\ -\/\ metadatos\ de\ la\ aplicación\ asociada}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00045}00045\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00046}\doxymbox{\hyperlink{main_8h_aa14dc39d52ab121ceb570f1a265385e0}{00046}}\ \textcolor{preprocessor}{\#define\ FIRMWARE\_VERSION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ "{}1.0.B"{}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{///<\ Firmware\ version}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00047}\doxymbox{\hyperlink{main_8h_a53e29efbf83712dcee0878d27965aedf}{00047}}\ \textcolor{preprocessor}{\#define\ FIRMWARE\_NAME\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ "{}ArduinoMega2560"{}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{///<\ Firmware\ name}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00048}\doxymbox{\hyperlink{main_8h_a3ad9b4b06ce62adc531dface9bf82cb5}{00048}}\ \textcolor{preprocessor}{\#define\ FIRMWARE\_DATE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ "{}17/12/2025"{}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{///<\ Firmware\ compilation\ date}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00049}\doxymbox{\hyperlink{main_8h_a741b54f6111da1cde82f0fce618a89ba}{00049}}\ \textcolor{preprocessor}{\#define\ FIRMWARE\_AUTHOR\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ "{}Eduardo\ Jimenez\ Serrato"{}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{///<\ Firmware\ author}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00050}\doxymbox{\hyperlink{main_8h_a38b33acb5d5661010989f8868009749e}{00050}}\ \textcolor{preprocessor}{\#define\ FIRMWARE\_VERSION\_APP\ \ \ \ \ \ \ \ \ \ \ \ \ "{}N.A"{}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{///<\ Firmware\ version\ for\ application}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00051}\doxymbox{\hyperlink{main_8h_adab0450942968f1384ed7e716cce4e8f}{00051}}\ \textcolor{preprocessor}{\#define\ FIRMWARE\_NAME\_APP\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ "{}N.A"{}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{///<\ Firmware\ name}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00052}\doxymbox{\hyperlink{main_8h_a1f08278ca8b35a571feec67789e62ea2}{00052}}\ \textcolor{preprocessor}{\#define\ FIRMWARE\_DATE\_APP\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ "{}N.A"{}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{///<\ Firmware\ compilation\ date}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00054}00054\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ MAIN\_H}}
+
+\end{DoxyCode}

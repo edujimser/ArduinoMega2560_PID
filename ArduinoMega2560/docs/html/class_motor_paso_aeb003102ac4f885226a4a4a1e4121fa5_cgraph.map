@@ -1,0 +1,5 @@
+<map id="MotorPaso::pasoAdelante" name="MotorPaso::pasoAdelante">
+<area shape="rect" id="Node000001" title="Avanza un paso en la secuencia del motor." alt="" coords="5,5,177,31"/>
+<area shape="rect" id="Node000002" href="$class_motor_paso.html#ac610d089d82aca423c7528f918e3e6f1" title="Aplica un paso específico de la secuencia (0–7)." alt="" coords="225,5,387,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="178,15,212,15,212,21,178,21"/>
+</map>

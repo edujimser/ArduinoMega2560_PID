@@ -1,0 +1,14 @@
+<map id="pinout.cpp" name="pinout.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,88,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="27,299,104,324"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="40,32,28,54,17,79,16,91,17,104,37,205,60,285,55,286,32,206,12,104,10,91,12,78,23,51,36,29"/>
+<area shape="rect" id="Node000003" href="$pinout_8h.html" title=" " alt="" coords="27,79,181,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="58,29,88,66,84,70,54,33"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="96,106,80,127,68,153,61,188,59,224,64,285,58,285,54,224,56,187,63,151,76,124,91,103"/>
+<area shape="rect" id="Node000004" href="$msg_8h.html" title=" " alt="" coords="78,152,213,177"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="113,103,134,139,129,141,109,106"/>
+<area shape="poly" id="edge5_Node000004_Node000002" title=" " alt="" coords="141,179,81,288,76,285,136,176"/>
+<area shape="rect" id="Node000005" href="$config_8h.html" title=" " alt="" coords="128,225,280,251"/>
+<area shape="poly" id="edge6_Node000004_Node000005" title=" " alt="" coords="157,176,188,213,184,217,153,179"/>
+<area shape="poly" id="edge7_Node000005_Node000002" title=" " alt="" coords="183,253,101,295,99,290,181,248"/>
+</map>

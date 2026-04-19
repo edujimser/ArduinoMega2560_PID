@@ -1,0 +1,46 @@
+\doxysection{app.\+ino}
+\hypertarget{app_8ino_source}{}\label{app_8ino_source}\index{app.ino@{app.ino}}
+\doxymbox{\hyperlink{app_8ino}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{app_8ino_source_l00001}00001\ //\ Example\ program\ for\ avr-\/debugger\ library.}
+\DoxyCodeLine{\Hypertarget{app_8ino_source_l00002}00002\ //\ IMPORTANT:\ }
+\DoxyCodeLine{\Hypertarget{app_8ino_source_l00003}00003\ //\ These\ instructions\ are\ for\ Visual\ Studio\ Code.\ For\ other\ use\ cases\ see\ the\ readme.txt.}
+\DoxyCodeLine{\Hypertarget{app_8ino_source_l00004}00004\ //\ To\ start\ debugging:}
+\DoxyCodeLine{\Hypertarget{app_8ino_source_l00005}00005\ //\ -\/\ Add\ "{}output"{}:\ "{}.\(\backslash\)\(\backslash\)build"{}\ to\ file\ arduino.json\ (in\ .vscode\ folder)}
+\DoxyCodeLine{\Hypertarget{app_8ino_source_l00006}00006\ //\ -\/\ Change\ the\ COM\ port\ number\ to\ your\ port\ number\ in\ launch.json,\ see\ "{}miDebuggerServerAddress"{}:\ "{}\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\).\(\backslash\)\(\backslash\)COM7"{}}
+\DoxyCodeLine{\Hypertarget{app_8ino_source_l00007}00007\ //\ -\/\ Change\ the\ path\ to\ point\ to\ avr-\/gdb.exe\ in\ your\ Arduino\ installation,\ see\ launch.json,\ \ "{}miDebuggerPath"{}:\ }
+\DoxyCodeLine{\Hypertarget{app_8ino_source_l00008}00008\ //}
+\DoxyCodeLine{\Hypertarget{app_8ino_source_l00009}00009\ //\ -\/\ Place\ breakpoint\ to\ loop,\ e.g.\ on\ digitalWrite\ -\/\ by\ clicking\ into\ the\ left\ margin\ of\ the\ file\ -\/\ red\ dot\ should\ appear}
+\DoxyCodeLine{\Hypertarget{app_8ino_source_l00010}00010\ //\ -\/\ Upload\ the\ program\ to\ your\ Arduino}
+\DoxyCodeLine{\Hypertarget{app_8ino_source_l00011}00011\ //\ -\/\ Switch\ to\ debug\ view}
+\DoxyCodeLine{\Hypertarget{app_8ino_source_l00012}00012\ //\ -\/\ Click\ Start\ debugging\ button\ (Play\ icon)\ in\ the\ top}
+\DoxyCodeLine{\Hypertarget{app_8ino_source_l00013}00013\ //}
+\DoxyCodeLine{\Hypertarget{app_8ino_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{app_8ino_source_l00015}00015\ \#include\ <app\_api.h>}
+\DoxyCodeLine{\Hypertarget{app_8ino_source_l00016}00016\ \#include\ <avr8-\/stub.h>}
+\DoxyCodeLine{\Hypertarget{app_8ino_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{app_8ino_source_l00018}00018\ int\ globalCounter\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{app_8ino_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{app_8ino_source_l00020}00020\ void\ setup()}
+\DoxyCodeLine{\Hypertarget{app_8ino_source_l00021}00021\ \{}
+\DoxyCodeLine{\Hypertarget{app_8ino_source_l00022}00022\ \ \ \ \ debug\_init();\ \ \ //\ initialize\ the\ debugger}
+\DoxyCodeLine{\Hypertarget{app_8ino_source_l00023}00023\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{app_8ino_source_l00024}00024\ \ \ \ \ pinMode(13,\ OUTPUT);\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{app_8ino_source_l00025}00025\ \}}
+\DoxyCodeLine{\Hypertarget{app_8ino_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{app_8ino_source_l00027}00027\ void\ loop()}
+\DoxyCodeLine{\Hypertarget{app_8ino_source_l00028}00028\ \{}
+\DoxyCodeLine{\Hypertarget{app_8ino_source_l00029}00029\ \ \ \ \ int\ localCounter\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{app_8ino_source_l00030}00030\ \ \ \ \ localCounter++;}
+\DoxyCodeLine{\Hypertarget{app_8ino_source_l00031}00031\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{app_8ino_source_l00032}00032\ \ \ \ \ digitalWrite(13,\ HIGH);}
+\DoxyCodeLine{\Hypertarget{app_8ino_source_l00033}00033\ \ \ \ \ delay(100);}
+\DoxyCodeLine{\Hypertarget{app_8ino_source_l00034}00034\ \ \ \ \ digitalWrite(13,\ LOW);}
+\DoxyCodeLine{\Hypertarget{app_8ino_source_l00035}00035\ \ \ \ \ delay(200);}
+\DoxyCodeLine{\Hypertarget{app_8ino_source_l00036}00036\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{app_8ino_source_l00037}00037\ \ \ \ \ globalCounter++;}
+\DoxyCodeLine{\Hypertarget{app_8ino_source_l00038}00038\ \ \ \ \ localCounter++;}
+\DoxyCodeLine{\Hypertarget{app_8ino_source_l00039}00039\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{app_8ino_source_l00040}00040\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,14 @@
+<map id="MotorPaso::aplicarPaso" name="MotorPaso::aplicarPaso">
+<area shape="rect" id="Node000001" title="Aplica un paso específico de la secuencia (0–7)." alt="" coords="577,39,739,64"/>
+<area shape="rect" id="Node000002" href="$class_motor_paso.html#aeb003102ac4f885226a4a4a1e4121fa5" title="Avanza un paso en la secuencia del motor." alt="" coords="357,13,529,39"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="564,43,529,39,530,34,564,38"/>
+<area shape="rect" id="Node000006" href="$class_motor_paso.html#a70e7b613b257ac6dab5a0dc38d389f3a" title="Retrocede un paso en la secuencia del motor." alt="" coords="367,63,519,88"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="564,65,520,70,519,64,563,59"/>
+<area shape="rect" id="Node000003" href="$class_motor_paso.html#a884b1a066e5684a4c1f25431efc6b316" title="Ejecuta movimiento continuo según la velocidad configurada." alt="" coords="100,5,309,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="343,25,310,24,310,19,343,20"/>
+<area shape="rect" id="Node000004" href="$class_motor_paso.html#a3bf0f1a5f2d26c41e405408be4ec47b4" title="Mueve el motor hacia un ángulo relativo usando el camino más corto." alt="" coords="101,55,309,95"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="368,44,302,58,301,53,367,39"/>
+<area shape="rect" id="Node000005" href="$main_8cpp.html#afe461d27b9c48d5921c00d521181f12f" title="Arduino main loop. Ejecuta continuamente la configuración de pines, lectura analógica,..." alt="" coords="5,63,52,88"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="87,78,52,78,52,73,87,73"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="354,78,309,78,309,73,354,73"/>
+</map>

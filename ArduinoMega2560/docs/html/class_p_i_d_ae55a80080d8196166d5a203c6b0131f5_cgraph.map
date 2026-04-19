@@ -1,0 +1,5 @@
+<map id="PID::setDt" name="PID::setDt">
+<area shape="rect" id="Node000001" title="Establece un nuevo tiempo de muestreo." alt="" coords="5,5,88,31"/>
+<area shape="rect" id="Node000002" href="$class_p_i_d.html#a5cdc6d7cb5e1520722dc764b21eb6f09" title="Valida y corrige el tiempo de muestreo." alt="" coords="136,5,227,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="88,15,122,15,122,21,88,21"/>
+</map>

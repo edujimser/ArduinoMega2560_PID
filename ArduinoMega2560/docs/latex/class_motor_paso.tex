@@ -1,0 +1,906 @@
+\doxysection{Referencia de la clase Motor\+Paso}
+\hypertarget{class_motor_paso}{}\label{class_motor_paso}\index{MotorPaso@{MotorPaso}}
+
+
+Controlador para motores paso a paso 28BYJ-\/48 con driver ULN2003.  
+
+
+
+
+{\ttfamily \+\#include $<$motor\+Step.\+h$>$}
+
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_motor_paso_aab41ed5022adcbe4f89c5c2fdf73bcad}{Motor\+Paso}} (uint8\+\_\+t \doxymbox{\hyperlink{class_motor_paso_a9f8eddccee5fd302f15b251328639b5a}{pinA}}, uint8\+\_\+t \doxymbox{\hyperlink{class_motor_paso_a5457b8c20cc470d18d7b67bf53405cda}{pinB}}, uint8\+\_\+t \doxymbox{\hyperlink{class_motor_paso_ae1e9b8723a636ad3349bef9c153b7164}{pinC}}, uint8\+\_\+t \doxymbox{\hyperlink{class_motor_paso_a030805e0b58b52b33950899e90998da3}{pinD}})
+\begin{DoxyCompactList}\small\item\em Constructor del motor paso a paso. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_motor_paso_ae45688954caa95057df7ac86389a7700}{fijar\+Velocidad}} (float \doxymbox{\hyperlink{class_motor_paso_af8abafcab50187207db982f024d2a981}{rpm}})
+\begin{DoxyCompactList}\small\item\em Establece la velocidad del motor en RPM. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_motor_paso_aeb003102ac4f885226a4a4a1e4121fa5}{paso\+Adelante}} ()
+\begin{DoxyCompactList}\small\item\em Avanza un paso en la secuencia del motor. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_motor_paso_a70e7b613b257ac6dab5a0dc38d389f3a}{paso\+Atras}} ()
+\begin{DoxyCompactList}\small\item\em Retrocede un paso en la secuencia del motor. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_motor_paso_ac610d089d82aca423c7528f918e3e6f1}{aplicar\+Paso}} (int indice\+Paso)
+\begin{DoxyCompactList}\small\item\em Aplica un paso específico de la secuencia (0–7). \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_motor_paso_a884b1a066e5684a4c1f25431efc6b316}{movimiento\+Continuo}} ()
+\begin{DoxyCompactList}\small\item\em Ejecuta movimiento continuo según la velocidad configurada. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_motor_paso_a3bf0f1a5f2d26c41e405408be4ec47b4}{movimiento\+Posicion\+Relativo}} (float grados, bool debug\+MSG=false)
+\begin{DoxyCompactList}\small\item\em Mueve el motor hacia un ángulo relativo usando el camino más corto. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{class_motor_paso_a5e3740ade4968870d145a97dfaa6378b}{diferencia\+Circular}} (float grados\+Actuales, float \doxymbox{\hyperlink{class_motor_paso_aff13a3e505f907b684f6374b51596a05}{grados\+Objetivo}})
+\begin{DoxyCompactList}\small\item\em Calcula la diferencia circular entre dos ángulos. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{class_motor_paso_afdcaa01d882749cc9a8de8ea6397a12c}{normalizar\+Grados}} (float grados)
+\begin{DoxyCompactList}\small\item\em Normaliza un ángulo al rango 0–360 grados. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_motor_paso_aa054bdf42608a37c3fbc9e5037c417e9}{convertir\+Grados\+APasos}} (float grados)
+\begin{DoxyCompactList}\small\item\em Convierte grados a pasos del motor. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{class_motor_paso_ac2b6d1c7bc1c04a0fb39839b1658721c}{convertir\+Pasos\+AGrados}} (int \doxymbox{\hyperlink{class_motor_paso_a45a17ca7197c7968adba7e667f51b492}{pasos}})
+\begin{DoxyCompactList}\small\item\em Convierte pasos del motor a grados. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{class_motor_paso_aa9331c4fc40047c1b7856cfebc9220bc}{movimiento\+De\+Posicion\+Grados\+Corriendo}} (int movimiento\+Pasos)
+\begin{DoxyCompactList}\small\item\em Actualiza y devuelve los grados recorridos durante el movimiento. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_motor_paso_af1f50306108a5f69c298367da9e96e3c}{debug\+Movimiento\+Relativo}} (int paso\+Actual\+Del\+Bucle)
+\begin{DoxyCompactList}\small\item\em Imprime información detallada del movimiento relativo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \doxymbox{\hyperlink{class_motor_paso_a9f8eddccee5fd302f15b251328639b5a}{pinA}}
+\begin{DoxyCompactList}\small\item\em Bobina A. \end{DoxyCompactList}\item 
+uint8\+\_\+t \doxymbox{\hyperlink{class_motor_paso_a5457b8c20cc470d18d7b67bf53405cda}{pinB}}
+\begin{DoxyCompactList}\small\item\em Bobina B. \end{DoxyCompactList}\item 
+uint8\+\_\+t \doxymbox{\hyperlink{class_motor_paso_ae1e9b8723a636ad3349bef9c153b7164}{pinC}}
+\begin{DoxyCompactList}\small\item\em Bobina C. \end{DoxyCompactList}\item 
+uint8\+\_\+t \doxymbox{\hyperlink{class_motor_paso_a030805e0b58b52b33950899e90998da3}{pinD}}
+\begin{DoxyCompactList}\small\item\em Bobina D. \end{DoxyCompactList}\item 
+unsigned long \doxymbox{\hyperlink{class_motor_paso_aa9426503a0b77432173ae0b5d9d16f75}{retardo\+Paso}}
+\begin{DoxyCompactList}\small\item\em Microsegundos entre pasos (determina la velocidad). \end{DoxyCompactList}\item 
+unsigned long \doxymbox{\hyperlink{class_motor_paso_adf180b58f05bee5cc728b2026aebd30a}{tiempo\+Ultimo\+Paso}}
+\begin{DoxyCompactList}\small\item\em Marca temporal del último paso ejecutado. \end{DoxyCompactList}\item 
+short \doxymbox{\hyperlink{class_motor_paso_af8abafcab50187207db982f024d2a981}{rpm}}
+\begin{DoxyCompactList}\small\item\em Velocidad configurada en RPM. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_motor_paso_a4dabb0433ba9843a7b0c44fff4ec4dfe}{paso\+Actual}}
+\begin{DoxyCompactList}\small\item\em Índice de la secuencia (0–7). \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_motor_paso_ad380b0d361ec87653d35b2113d4215da}{pasos\+Por\+Vuelta}} = \doxymbox{\hyperlink{motor_step_8h_af31318f5b00506ed7c7de3d525f8d5da}{PASOS\+\_\+\+POR\+\_\+\+VUELTA}}
+\begin{DoxyCompactList}\small\item\em Pasos necesarios para 360° \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_motor_paso_a45a17ca7197c7968adba7e667f51b492}{pasos}}
+\begin{DoxyCompactList}\small\item\em Pasos totales a ejecutar en el movimiento actual. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{class_motor_paso_a6c19097335276ef185ddcfdab1cf6144}{grado\+Actual}}
+\begin{DoxyCompactList}\small\item\em Ángulo actual del motor (0–360 normalizado). \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{class_motor_paso_aff13a3e505f907b684f6374b51596a05}{grados\+Objetivo}}
+\begin{DoxyCompactList}\small\item\em Ángulo objetivo solicitado. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{class_motor_paso_a064c3f5e2d7c46c29e9b6bfd01aa1904}{grados\+Corriendo}}
+\begin{DoxyCompactList}\small\item\em Ángulo recorrido durante el movimiento (progreso). \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{class_motor_paso_aef0c5e2a5b02be1ffee595aef622727e}{diferencia}}
+\begin{DoxyCompactList}\small\item\em Diferencia circular entre grado\+Actual y grados\+Objetivo (–180 a +180). \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_motor_paso_a74ae1066fd043a6859e95804da2ff170}{direccion\+Adelante}}
+\begin{DoxyCompactList}\small\item\em Dirección:\+ true = adelante. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_motor_paso_acaa45dc69e19963021e7e68fa962460b}{direccion\+Atras}}
+\begin{DoxyCompactList}\small\item\em Dirección:\+ true = atrás. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Controlador para motores paso a paso 28BYJ-\/48 con driver ULN2003. 
+
+Esta clase permite:\+
+\begin{DoxyItemize}
+\item Controlar pasos individuales (adelante/\+atrás)
+\item Establecer velocidad en RPM
+\item Realizar movimientos relativos en grados
+\item Obtener información del progreso del movimiento
+\item Depurar el comportamiento mediante mensajes por consola
+\end{DoxyItemize}
+
+La clase está organizada por familias funcionales para facilitar la lectura, mantenimiento y generación de documentación. 
+
+Definición en la línea \doxymbox{\hyperlink{motor_step_8h_source_l00022}{22}} del archivo \doxymbox{\hyperlink{motor_step_8h_source}{motor\+Step.\+h}}.
+
+
+
+\label{doc-constructors}
+\Hypertarget{class_motor_paso_doc-constructors}
+\doxysubsection{Documentación de constructores y destructores}
+\Hypertarget{class_motor_paso_aab41ed5022adcbe4f89c5c2fdf73bcad}\index{MotorPaso@{MotorPaso}!MotorPaso@{MotorPaso}}
+\index{MotorPaso@{MotorPaso}!MotorPaso@{MotorPaso}}
+\doxysubsubsection{\texorpdfstring{MotorPaso()}{MotorPaso()}}
+{\footnotesize\ttfamily \label{class_motor_paso_aab41ed5022adcbe4f89c5c2fdf73bcad} 
+Motor\+Paso::\+\+Motor\+Paso (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{pinA}{, }\item[{uint8\+\_\+t}]{pinB}{, }\item[{uint8\+\_\+t}]{pinC}{, }\item[{uint8\+\_\+t}]{pinD}{}\end{DoxyParamCaption})}
+
+
+
+Constructor del motor paso a paso. 
+
+Inicializa el motor paso a paso configurando los pines y el estado inicial.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em \doxylink{class_motor_paso_a9f8eddccee5fd302f15b251328639b5a}{pinA}} & Pin conectado a la bobina A. \\
+\hline
+{\em \doxylink{class_motor_paso_a5457b8c20cc470d18d7b67bf53405cda}{pinB}} & Pin conectado a la bobina B. \\
+\hline
+{\em \doxylink{class_motor_paso_ae1e9b8723a636ad3349bef9c153b7164}{pinC}} & Pin conectado a la bobina C. \\
+\hline
+{\em \doxylink{class_motor_paso_a030805e0b58b52b33950899e90998da3}{pinD}} & Pin conectado a la bobina D. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \doxymbox{\hyperlink{motor_step_8cpp_source_l00012}{12}} del archivo \doxymbox{\hyperlink{motor_step_8cpp_source}{motor\+Step.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00013\ \ \ \ \ :\ \doxymbox{\hyperlink{class_motor_paso_a9f8eddccee5fd302f15b251328639b5a}{pinA}}(\doxymbox{\hyperlink{class_motor_paso_a9f8eddccee5fd302f15b251328639b5a}{pinA}}),\ \doxymbox{\hyperlink{class_motor_paso_a5457b8c20cc470d18d7b67bf53405cda}{pinB}}(\doxymbox{\hyperlink{class_motor_paso_a5457b8c20cc470d18d7b67bf53405cda}{pinB}}),\ \doxymbox{\hyperlink{class_motor_paso_ae1e9b8723a636ad3349bef9c153b7164}{pinC}}(\doxymbox{\hyperlink{class_motor_paso_ae1e9b8723a636ad3349bef9c153b7164}{pinC}}),\ \doxymbox{\hyperlink{class_motor_paso_a030805e0b58b52b33950899e90998da3}{pinD}}(\doxymbox{\hyperlink{class_motor_paso_a030805e0b58b52b33950899e90998da3}{pinD}}),}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \doxymbox{\hyperlink{class_motor_paso_aa9426503a0b77432173ae0b5d9d16f75}{retardoPaso}}(2000),\ \doxymbox{\hyperlink{class_motor_paso_adf180b58f05bee5cc728b2026aebd30a}{tiempoUltimoPaso}}(0),\ \doxymbox{\hyperlink{class_motor_paso_a4dabb0433ba9843a7b0c44fff4ec4dfe}{pasoActual}}(0),}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \doxymbox{\hyperlink{class_motor_paso_a6c19097335276ef185ddcfdab1cf6144}{gradoActual}}(0),\ \doxymbox{\hyperlink{class_motor_paso_aff13a3e505f907b684f6374b51596a05}{gradosObjetivo}}(0),\ \doxymbox{\hyperlink{class_motor_paso_a064c3f5e2d7c46c29e9b6bfd01aa1904}{gradosCorriendo}}(0),}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \doxymbox{\hyperlink{class_motor_paso_a74ae1066fd043a6859e95804da2ff170}{direccionAdelante}}(\textcolor{keyword}{false}),\ \doxymbox{\hyperlink{class_motor_paso_acaa45dc69e19963021e7e68fa962460b}{direccionAtras}}(\textcolor{keyword}{false}) }
+\DoxyCodeLine{00017\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ pinMode(\doxymbox{\hyperlink{class_motor_paso_a9f8eddccee5fd302f15b251328639b5a}{pinA}},\ OUTPUT);}
+\DoxyCodeLine{00019\ \ \ \ \ pinMode(\doxymbox{\hyperlink{class_motor_paso_a5457b8c20cc470d18d7b67bf53405cda}{pinB}},\ OUTPUT);}
+\DoxyCodeLine{00020\ \ \ \ \ pinMode(\doxymbox{\hyperlink{class_motor_paso_ae1e9b8723a636ad3349bef9c153b7164}{pinC}},\ OUTPUT);}
+\DoxyCodeLine{00021\ \ \ \ \ pinMode(\doxymbox{\hyperlink{class_motor_paso_a030805e0b58b52b33950899e90998da3}{pinD}},\ OUTPUT);}
+\DoxyCodeLine{00022\ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-func-members}
+\Hypertarget{class_motor_paso_doc-func-members}
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{class_motor_paso_ac610d089d82aca423c7528f918e3e6f1}\index{MotorPaso@{MotorPaso}!aplicarPaso@{aplicarPaso}}
+\index{aplicarPaso@{aplicarPaso}!MotorPaso@{MotorPaso}}
+\doxysubsubsection{\texorpdfstring{aplicarPaso()}{aplicarPaso()}}
+{\footnotesize\ttfamily \label{class_motor_paso_ac610d089d82aca423c7528f918e3e6f1} 
+void Motor\+Paso::\+aplicar\+Paso (\begin{DoxyParamCaption}\item[{int}]{indice\+Paso}{}\end{DoxyParamCaption})}
+
+
+
+Aplica un paso específico de la secuencia (0–7). 
+
+Activa las bobinas según el índice de paso (0–7).
+
+
+\begin{DoxyParams}{Parámetros}
+{\em indice\+Paso} & Índice de la secuencia. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \doxymbox{\hyperlink{motor_step_8cpp_source_l00069}{69}} del archivo \doxymbox{\hyperlink{motor_step_8cpp_source}{motor\+Step.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordflow}{switch}\ (i)\ \{}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 0:\ digitalWrite(\doxymbox{\hyperlink{class_motor_paso_a9f8eddccee5fd302f15b251328639b5a}{pinA}},\ HIGH);\ digitalWrite(\doxymbox{\hyperlink{class_motor_paso_a5457b8c20cc470d18d7b67bf53405cda}{pinB}},\ LOW);\ \ digitalWrite(\doxymbox{\hyperlink{class_motor_paso_ae1e9b8723a636ad3349bef9c153b7164}{pinC}},\ LOW);\ \ digitalWrite(\doxymbox{\hyperlink{class_motor_paso_a030805e0b58b52b33950899e90998da3}{pinD}},\ LOW);\ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 1:\ digitalWrite(\doxymbox{\hyperlink{class_motor_paso_a9f8eddccee5fd302f15b251328639b5a}{pinA}},\ HIGH);\ digitalWrite(\doxymbox{\hyperlink{class_motor_paso_a5457b8c20cc470d18d7b67bf53405cda}{pinB}},\ HIGH);\ digitalWrite(\doxymbox{\hyperlink{class_motor_paso_ae1e9b8723a636ad3349bef9c153b7164}{pinC}},\ LOW);\ \ digitalWrite(\doxymbox{\hyperlink{class_motor_paso_a030805e0b58b52b33950899e90998da3}{pinD}},\ LOW);\ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 2:\ digitalWrite(\doxymbox{\hyperlink{class_motor_paso_a9f8eddccee5fd302f15b251328639b5a}{pinA}},\ LOW);\ \ digitalWrite(\doxymbox{\hyperlink{class_motor_paso_a5457b8c20cc470d18d7b67bf53405cda}{pinB}},\ HIGH);\ digitalWrite(\doxymbox{\hyperlink{class_motor_paso_ae1e9b8723a636ad3349bef9c153b7164}{pinC}},\ LOW);\ \ digitalWrite(\doxymbox{\hyperlink{class_motor_paso_a030805e0b58b52b33950899e90998da3}{pinD}},\ LOW);\ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 3:\ digitalWrite(\doxymbox{\hyperlink{class_motor_paso_a9f8eddccee5fd302f15b251328639b5a}{pinA}},\ LOW);\ \ digitalWrite(\doxymbox{\hyperlink{class_motor_paso_a5457b8c20cc470d18d7b67bf53405cda}{pinB}},\ HIGH);\ digitalWrite(\doxymbox{\hyperlink{class_motor_paso_ae1e9b8723a636ad3349bef9c153b7164}{pinC}},\ HIGH);\ digitalWrite(\doxymbox{\hyperlink{class_motor_paso_a030805e0b58b52b33950899e90998da3}{pinD}},\ LOW);\ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 4:\ digitalWrite(\doxymbox{\hyperlink{class_motor_paso_a9f8eddccee5fd302f15b251328639b5a}{pinA}},\ LOW);\ \ digitalWrite(\doxymbox{\hyperlink{class_motor_paso_a5457b8c20cc470d18d7b67bf53405cda}{pinB}},\ LOW);\ \ digitalWrite(\doxymbox{\hyperlink{class_motor_paso_ae1e9b8723a636ad3349bef9c153b7164}{pinC}},\ HIGH);\ digitalWrite(\doxymbox{\hyperlink{class_motor_paso_a030805e0b58b52b33950899e90998da3}{pinD}},\ LOW);\ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 5:\ digitalWrite(\doxymbox{\hyperlink{class_motor_paso_a9f8eddccee5fd302f15b251328639b5a}{pinA}},\ LOW);\ \ digitalWrite(\doxymbox{\hyperlink{class_motor_paso_a5457b8c20cc470d18d7b67bf53405cda}{pinB}},\ LOW);\ \ digitalWrite(\doxymbox{\hyperlink{class_motor_paso_ae1e9b8723a636ad3349bef9c153b7164}{pinC}},\ HIGH);\ digitalWrite(\doxymbox{\hyperlink{class_motor_paso_a030805e0b58b52b33950899e90998da3}{pinD}},\ HIGH);\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 6:\ digitalWrite(\doxymbox{\hyperlink{class_motor_paso_a9f8eddccee5fd302f15b251328639b5a}{pinA}},\ LOW);\ \ digitalWrite(\doxymbox{\hyperlink{class_motor_paso_a5457b8c20cc470d18d7b67bf53405cda}{pinB}},\ LOW);\ \ digitalWrite(\doxymbox{\hyperlink{class_motor_paso_ae1e9b8723a636ad3349bef9c153b7164}{pinC}},\ LOW);\ \ digitalWrite(\doxymbox{\hyperlink{class_motor_paso_a030805e0b58b52b33950899e90998da3}{pinD}},\ HIGH);\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 7:\ digitalWrite(\doxymbox{\hyperlink{class_motor_paso_a9f8eddccee5fd302f15b251328639b5a}{pinA}},\ HIGH);\ digitalWrite(\doxymbox{\hyperlink{class_motor_paso_a5457b8c20cc470d18d7b67bf53405cda}{pinB}},\ LOW);\ \ digitalWrite(\doxymbox{\hyperlink{class_motor_paso_ae1e9b8723a636ad3349bef9c153b7164}{pinC}},\ LOW);\ \ digitalWrite(\doxymbox{\hyperlink{class_motor_paso_a030805e0b58b52b33950899e90998da3}{pinD}},\ HIGH);\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00079\ \ \ \ \ \}}
+\DoxyCodeLine{00080\ \}}
+
+\end{DoxyCode}
+Gráfico de llamadas a esta función:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_motor_paso_ac610d089d82aca423c7528f918e3e6f1_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_motor_paso_aa054bdf42608a37c3fbc9e5037c417e9}\index{MotorPaso@{MotorPaso}!convertirGradosAPasos@{convertirGradosAPasos}}
+\index{convertirGradosAPasos@{convertirGradosAPasos}!MotorPaso@{MotorPaso}}
+\doxysubsubsection{\texorpdfstring{convertirGradosAPasos()}{convertirGradosAPasos()}}
+{\footnotesize\ttfamily \label{class_motor_paso_aa054bdf42608a37c3fbc9e5037c417e9} 
+int Motor\+Paso::\+convertir\+Grados\+APasos (\begin{DoxyParamCaption}\item[{float}]{grados}{}\end{DoxyParamCaption})}
+
+
+
+Convierte grados a pasos del motor. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em grados} & Ángulo en grados. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Número de pasos equivalentes. 
+\end{DoxyReturn}
+
+
+Definición en la línea \doxymbox{\hyperlink{motor_step_8cpp_source_l00159}{159}} del archivo \doxymbox{\hyperlink{motor_step_8cpp_source}{motor\+Step.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keywordflow}{return}\ (\textcolor{keywordtype}{int})(abs(grados)\ *\ this-\/>\doxymbox{\hyperlink{class_motor_paso_ad380b0d361ec87653d35b2113d4215da}{pasosPorVuelta}}\ /\ 360.0f);}
+\DoxyCodeLine{00161\ \}}
+
+\end{DoxyCode}
+Gráfico de llamadas a esta función:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_motor_paso_aa054bdf42608a37c3fbc9e5037c417e9_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_motor_paso_ac2b6d1c7bc1c04a0fb39839b1658721c}\index{MotorPaso@{MotorPaso}!convertirPasosAGrados@{convertirPasosAGrados}}
+\index{convertirPasosAGrados@{convertirPasosAGrados}!MotorPaso@{MotorPaso}}
+\doxysubsubsection{\texorpdfstring{convertirPasosAGrados()}{convertirPasosAGrados()}}
+{\footnotesize\ttfamily \label{class_motor_paso_ac2b6d1c7bc1c04a0fb39839b1658721c} 
+float Motor\+Paso::\+convertir\+Pasos\+AGrados (\begin{DoxyParamCaption}\item[{int}]{pasos}{}\end{DoxyParamCaption})}
+
+
+
+Convierte pasos del motor a grados. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em \doxylink{class_motor_paso_a45a17ca7197c7968adba7e667f51b492}{pasos}} & Número de pasos. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Ángulo equivalente en grados. 
+\end{DoxyReturn}
+
+
+Definición en la línea \doxymbox{\hyperlink{motor_step_8cpp_source_l00166}{166}} del archivo \doxymbox{\hyperlink{motor_step_8cpp_source}{motor\+Step.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00167\ \ \ \ \ \textcolor{keywordflow}{return}\ (\textcolor{keywordtype}{float})\doxymbox{\hyperlink{class_motor_paso_a45a17ca7197c7968adba7e667f51b492}{pasos}}\ *\ 360.0f\ /\ this-\/>\doxymbox{\hyperlink{class_motor_paso_ad380b0d361ec87653d35b2113d4215da}{pasosPorVuelta}};}
+\DoxyCodeLine{00168\ \}}
+
+\end{DoxyCode}
+Gráfico de llamadas a esta función:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_motor_paso_ac2b6d1c7bc1c04a0fb39839b1658721c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_motor_paso_af1f50306108a5f69c298367da9e96e3c}\index{MotorPaso@{MotorPaso}!debugMovimientoRelativo@{debugMovimientoRelativo}}
+\index{debugMovimientoRelativo@{debugMovimientoRelativo}!MotorPaso@{MotorPaso}}
+\doxysubsubsection{\texorpdfstring{debugMovimientoRelativo()}{debugMovimientoRelativo()}}
+{\footnotesize\ttfamily \label{class_motor_paso_af1f50306108a5f69c298367da9e96e3c} 
+void Motor\+Paso::\+debug\+Movimiento\+Relativo (\begin{DoxyParamCaption}\item[{int}]{paso\+Actual\+Del\+Bucle}{}\end{DoxyParamCaption})}
+
+
+
+Imprime información detallada del movimiento relativo. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em paso\+Actual\+Del\+Bucle} & Paso actual dentro del bucle de movimiento. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \doxymbox{\hyperlink{motor_step_8cpp_source_l00199}{199}} del archivo \doxymbox{\hyperlink{motor_step_8cpp_source}{motor\+Step.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00200\ }
+\DoxyCodeLine{00201\ \ \ \ \ Serial.println(\textcolor{stringliteral}{"{}===================================="{}});}
+\DoxyCodeLine{00202\ \ \ \ \ Serial.print(\textcolor{stringliteral}{"{}Paso\ actual:\ "{}});}
+\DoxyCodeLine{00203\ \ \ \ \ Serial.print(pasoActualDelBucle);}
+\DoxyCodeLine{00204\ \ \ \ \ Serial.print(\textcolor{stringliteral}{"{}\ /\ "{}});}
+\DoxyCodeLine{00205\ \ \ \ \ Serial.println(this-\/>\doxymbox{\hyperlink{class_motor_paso_a45a17ca7197c7968adba7e667f51b492}{pasos}});}
+\DoxyCodeLine{00206\ }
+\DoxyCodeLine{00207\ \ \ \ \ Serial.print(\textcolor{stringliteral}{"{}Diferencia\ circular:\ "{}});}
+\DoxyCodeLine{00208\ \ \ \ \ Serial.print(this-\/>\doxymbox{\hyperlink{class_motor_paso_aef0c5e2a5b02be1ffee595aef622727e}{diferencia}});}
+\DoxyCodeLine{00209\ \ \ \ \ Serial.println(\textcolor{stringliteral}{"{}\ grados"{}});}
+\DoxyCodeLine{00210\ }
+\DoxyCodeLine{00211\ \ \ \ \ Serial.print(\textcolor{stringliteral}{"{}Pasos\ totales\ calculados:\ "{}});}
+\DoxyCodeLine{00212\ \ \ \ \ Serial.println(this-\/>\doxymbox{\hyperlink{class_motor_paso_a45a17ca7197c7968adba7e667f51b492}{pasos}});}
+\DoxyCodeLine{00213\ }
+\DoxyCodeLine{00214\ \ \ \ \ Serial.print(\textcolor{stringliteral}{"{}Dirección:\ "{}});}
+\DoxyCodeLine{00215\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>\doxymbox{\hyperlink{class_motor_paso_a74ae1066fd043a6859e95804da2ff170}{direccionAdelante}})\ Serial.println(\textcolor{stringliteral}{"{}Adelante\ (+)"{}});}
+\DoxyCodeLine{00216\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (this-\/>\doxymbox{\hyperlink{class_motor_paso_acaa45dc69e19963021e7e68fa962460b}{direccionAtras}})\ Serial.println(\textcolor{stringliteral}{"{}Atrás\ (–)"{}});}
+\DoxyCodeLine{00217\ \ \ \ \ \textcolor{keywordflow}{else}\ Serial.println(\textcolor{stringliteral}{"{}Sin\ movimiento"{}});}
+\DoxyCodeLine{00218\ }
+\DoxyCodeLine{00219\ \ \ \ \ Serial.print(\textcolor{stringliteral}{"{}Grados\ recorridos\ hasta\ ahora:\ "{}});}
+\DoxyCodeLine{00220\ \ \ \ \ Serial.print(this-\/>\doxymbox{\hyperlink{class_motor_paso_a064c3f5e2d7c46c29e9b6bfd01aa1904}{gradosCorriendo}});}
+\DoxyCodeLine{00221\ \ \ \ \ Serial.println(\textcolor{stringliteral}{"{}\ grados"{}});}
+\DoxyCodeLine{00222\ }
+\DoxyCodeLine{00223\ \ \ \ \ Serial.print(\textcolor{stringliteral}{"{}Grado\ actual\ (antes\ de\ normalizar):\ "{}});}
+\DoxyCodeLine{00224\ \ \ \ \ Serial.println(this-\/>\doxymbox{\hyperlink{class_motor_paso_a6c19097335276ef185ddcfdab1cf6144}{gradoActual}});}
+\DoxyCodeLine{00225\ }
+\DoxyCodeLine{00226\ \ \ \ \ Serial.println(\textcolor{stringliteral}{"{}===================================="{}});}
+\DoxyCodeLine{00227\ \}}
+
+\end{DoxyCode}
+Gráfico de llamadas a esta función:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_motor_paso_af1f50306108a5f69c298367da9e96e3c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_motor_paso_a5e3740ade4968870d145a97dfaa6378b}\index{MotorPaso@{MotorPaso}!diferenciaCircular@{diferenciaCircular}}
+\index{diferenciaCircular@{diferenciaCircular}!MotorPaso@{MotorPaso}}
+\doxysubsubsection{\texorpdfstring{diferenciaCircular()}{diferenciaCircular()}}
+{\footnotesize\ttfamily \label{class_motor_paso_a5e3740ade4968870d145a97dfaa6378b} 
+float Motor\+Paso::\+diferencia\+Circular (\begin{DoxyParamCaption}\item[{float}]{grados\+Actuales}{, }\item[{float}]{grados\+Objetivo}{}\end{DoxyParamCaption})}
+
+
+
+Calcula la diferencia circular entre dos ángulos. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em grados\+Actuales} & Ángulo actual. \\
+\hline
+{\em \doxylink{class_motor_paso_aff13a3e505f907b684f6374b51596a05}{grados\+Objetivo}} & Ángulo objetivo. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Diferencia circular entre -\/180 y +180 grados. 
+\end{DoxyReturn}
+
+
+Definición en la línea \doxymbox{\hyperlink{motor_step_8cpp_source_l00173}{173}} del archivo \doxymbox{\hyperlink{motor_step_8cpp_source}{motor\+Step.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00174\ \ \ \ \ \textcolor{keywordtype}{float}\ diff\ =\ objetivo\ -\/\ actual;}
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00176\ \ \ \ \ \textcolor{keywordflow}{if}\ (diff\ >\ 180.0f)\ \ diff\ -\/=\ 360.0f;}
+\DoxyCodeLine{00177\ \ \ \ \ \textcolor{keywordflow}{if}\ (diff\ <\ -\/180.0f)\ diff\ +=\ 360.0f;}
+\DoxyCodeLine{00178\ }
+\DoxyCodeLine{00179\ \ \ \ \ \textcolor{keywordflow}{return}\ diff;}
+\DoxyCodeLine{00180\ \}}
+
+\end{DoxyCode}
+Gráfico de llamadas a esta función:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_motor_paso_a5e3740ade4968870d145a97dfaa6378b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_motor_paso_ae45688954caa95057df7ac86389a7700}\index{MotorPaso@{MotorPaso}!fijarVelocidad@{fijarVelocidad}}
+\index{fijarVelocidad@{fijarVelocidad}!MotorPaso@{MotorPaso}}
+\doxysubsubsection{\texorpdfstring{fijarVelocidad()}{fijarVelocidad()}}
+{\footnotesize\ttfamily \label{class_motor_paso_ae45688954caa95057df7ac86389a7700} 
+void Motor\+Paso::\+fijar\+Velocidad (\begin{DoxyParamCaption}\item[{float}]{rpm}{}\end{DoxyParamCaption})}
+
+
+
+Establece la velocidad del motor en RPM. 
+
+Establece la velocidad del motor en RPM calculando el retardo entre pasos.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em \doxylink{class_motor_paso_af8abafcab50187207db982f024d2a981}{rpm}} & Revoluciones por minuto. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \doxymbox{\hyperlink{motor_step_8cpp_source_l00033}{33}} del archivo \doxymbox{\hyperlink{motor_step_8cpp_source}{motor\+Step.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00034\ \ \ \ \ this-\/>\doxymbox{\hyperlink{class_motor_paso_aa9426503a0b77432173ae0b5d9d16f75}{retardoPaso}}\ =\ (60.0\ *\ 1000000.0)\ /\ (\doxymbox{\hyperlink{class_motor_paso_af8abafcab50187207db982f024d2a981}{rpm}}\ *\ this-\/>\doxymbox{\hyperlink{class_motor_paso_ad380b0d361ec87653d35b2113d4215da}{pasosPorVuelta}});}
+\DoxyCodeLine{00035\ \ \ \ \ this-\/>\doxymbox{\hyperlink{class_motor_paso_af8abafcab50187207db982f024d2a981}{rpm}}\ =\ \doxymbox{\hyperlink{class_motor_paso_af8abafcab50187207db982f024d2a981}{rpm}};}
+\DoxyCodeLine{00036\ \}}
+
+\end{DoxyCode}
+Gráfico de llamadas a esta función:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=279pt]{class_motor_paso_ae45688954caa95057df7ac86389a7700_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_motor_paso_a884b1a066e5684a4c1f25431efc6b316}\index{MotorPaso@{MotorPaso}!movimientoContinuo@{movimientoContinuo}}
+\index{movimientoContinuo@{movimientoContinuo}!MotorPaso@{MotorPaso}}
+\doxysubsubsection{\texorpdfstring{movimientoContinuo()}{movimientoContinuo()}}
+{\footnotesize\ttfamily \label{class_motor_paso_a884b1a066e5684a4c1f25431efc6b316} 
+void Motor\+Paso::\+movimiento\+Continuo (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Ejecuta movimiento continuo según la velocidad configurada. 
+
+
+
+Definición en la línea \doxymbox{\hyperlink{motor_step_8cpp_source_l00091}{91}} del archivo \doxymbox{\hyperlink{motor_step_8cpp_source}{motor\+Step.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ ahora\ =\ micros();}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordflow}{if}\ (ahora\ -\/\ this-\/>\doxymbox{\hyperlink{class_motor_paso_adf180b58f05bee5cc728b2026aebd30a}{tiempoUltimoPaso}}\ >=\ this-\/>\doxymbox{\hyperlink{class_motor_paso_aa9426503a0b77432173ae0b5d9d16f75}{retardoPaso}})\ \{}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ this-\/>\doxymbox{\hyperlink{class_motor_paso_adf180b58f05bee5cc728b2026aebd30a}{tiempoUltimoPaso}}\ =\ ahora;}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ this-\/>\doxymbox{\hyperlink{class_motor_paso_aeb003102ac4f885226a4a4a1e4121fa5}{pasoAdelante}}();}
+\DoxyCodeLine{00097\ \ \ \ \ \}}
+\DoxyCodeLine{00098\ \}}
+
+\end{DoxyCode}
+Gráfico de llamadas de esta función:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_motor_paso_a884b1a066e5684a4c1f25431efc6b316_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_motor_paso_aa9331c4fc40047c1b7856cfebc9220bc}\index{MotorPaso@{MotorPaso}!movimientoDePosicionGradosCorriendo@{movimientoDePosicionGradosCorriendo}}
+\index{movimientoDePosicionGradosCorriendo@{movimientoDePosicionGradosCorriendo}!MotorPaso@{MotorPaso}}
+\doxysubsubsection{\texorpdfstring{movimientoDePosicionGradosCorriendo()}{movimientoDePosicionGradosCorriendo()}}
+{\footnotesize\ttfamily \label{class_motor_paso_aa9331c4fc40047c1b7856cfebc9220bc} 
+float Motor\+Paso::\+movimiento\+De\+Posicion\+Grados\+Corriendo (\begin{DoxyParamCaption}\item[{int}]{movimiento\+Pasos}{}\end{DoxyParamCaption})}
+
+
+
+Actualiza y devuelve los grados recorridos durante el movimiento. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em movimiento\+Pasos} & Pasos ejecutados hasta el momento. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Grados recorridos. 
+\end{DoxyReturn}
+
+
+Definición en la línea \doxymbox{\hyperlink{motor_step_8cpp_source_l00145}{145}} del archivo \doxymbox{\hyperlink{motor_step_8cpp_source}{motor\+Step.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00146\ \ \ \ \ this-\/>\doxymbox{\hyperlink{class_motor_paso_a064c3f5e2d7c46c29e9b6bfd01aa1904}{gradosCorriendo}}\ =\ \doxymbox{\hyperlink{class_motor_paso_ac2b6d1c7bc1c04a0fb39839b1658721c}{convertirPasosAGrados}}(movimientoPasos);}
+\DoxyCodeLine{00147\ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>\doxymbox{\hyperlink{class_motor_paso_a064c3f5e2d7c46c29e9b6bfd01aa1904}{gradosCorriendo}};}
+\DoxyCodeLine{00148\ \}}
+
+\end{DoxyCode}
+Gráfico de llamadas de esta función:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_motor_paso_aa9331c4fc40047c1b7856cfebc9220bc_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_motor_paso_aa9331c4fc40047c1b7856cfebc9220bc_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_motor_paso_a3bf0f1a5f2d26c41e405408be4ec47b4}\index{MotorPaso@{MotorPaso}!movimientoPosicionRelativo@{movimientoPosicionRelativo}}
+\index{movimientoPosicionRelativo@{movimientoPosicionRelativo}!MotorPaso@{MotorPaso}}
+\doxysubsubsection{\texorpdfstring{movimientoPosicionRelativo()}{movimientoPosicionRelativo()}}
+{\footnotesize\ttfamily \label{class_motor_paso_a3bf0f1a5f2d26c41e405408be4ec47b4} 
+void Motor\+Paso::\+movimiento\+Posicion\+Relativo (\begin{DoxyParamCaption}\item[{float}]{grados}{, }\item[{bool}]{debug\+MSG}{ = {\ttfamily false}}\end{DoxyParamCaption})}
+
+
+
+Mueve el motor hacia un ángulo relativo usando el camino más corto. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em grados} & Ángulo objetivo en grados. \\
+\hline
+{\em debug\+MSG} & Si es true, imprime información detallada del movimiento. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \doxymbox{\hyperlink{motor_step_8cpp_source_l00109}{109}} del archivo \doxymbox{\hyperlink{motor_step_8cpp_source}{motor\+Step.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \ \ \ \ this-\/>\doxymbox{\hyperlink{class_motor_paso_aef0c5e2a5b02be1ffee595aef622727e}{diferencia}}\ =\ this-\/>\doxymbox{\hyperlink{class_motor_paso_a5e3740ade4968870d145a97dfaa6378b}{diferenciaCircular}}(this-\/>\doxymbox{\hyperlink{class_motor_paso_a6c19097335276ef185ddcfdab1cf6144}{gradoActual}},\ grados);}
+\DoxyCodeLine{00112\ \ \ \ \ this-\/>\doxymbox{\hyperlink{class_motor_paso_a45a17ca7197c7968adba7e667f51b492}{pasos}}\ =\ \doxymbox{\hyperlink{class_motor_paso_aa054bdf42608a37c3fbc9e5037c417e9}{convertirGradosAPasos}}(abs(this-\/>\doxymbox{\hyperlink{class_motor_paso_aef0c5e2a5b02be1ffee595aef622727e}{diferencia}}));}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \ \ \ \ this-\/>\doxymbox{\hyperlink{class_motor_paso_a74ae1066fd043a6859e95804da2ff170}{direccionAdelante}}\ =\ (this-\/>\doxymbox{\hyperlink{class_motor_paso_aef0c5e2a5b02be1ffee595aef622727e}{diferencia}}\ >\ 0);}
+\DoxyCodeLine{00115\ \ \ \ \ this-\/>\doxymbox{\hyperlink{class_motor_paso_acaa45dc69e19963021e7e68fa962460b}{direccionAtras}}\ \ \ \ =\ (this-\/>\doxymbox{\hyperlink{class_motor_paso_aef0c5e2a5b02be1ffee595aef622727e}{diferencia}}\ <\ 0);}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>\doxymbox{\hyperlink{class_motor_paso_acaa45dc69e19963021e7e68fa962460b}{direccionAtras}})\ \{}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ this-\/>\doxymbox{\hyperlink{class_motor_paso_a45a17ca7197c7968adba7e667f51b492}{pasos}};\ i++)\ \{}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\doxymbox{\hyperlink{class_motor_paso_a70e7b613b257ac6dab5a0dc38d389f3a}{pasoAtras}}();}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_motor_paso_aa9331c4fc40047c1b7856cfebc9220bc}{movimientoDePosicionGradosCorriendo}}(i);}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (debugMSG)\ \doxymbox{\hyperlink{class_motor_paso_af1f50306108a5f69c298367da9e96e3c}{debugMovimientoRelativo}}(i);}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00123\ \ \ \ \ \}}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>\doxymbox{\hyperlink{class_motor_paso_a74ae1066fd043a6859e95804da2ff170}{direccionAdelante}})\ \{}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ this-\/>\doxymbox{\hyperlink{class_motor_paso_a45a17ca7197c7968adba7e667f51b492}{pasos}};\ i++)\ \{}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\doxymbox{\hyperlink{class_motor_paso_aeb003102ac4f885226a4a4a1e4121fa5}{pasoAdelante}}();}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_motor_paso_aa9331c4fc40047c1b7856cfebc9220bc}{movimientoDePosicionGradosCorriendo}}(i);}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (debugMSG)\ \doxymbox{\hyperlink{class_motor_paso_af1f50306108a5f69c298367da9e96e3c}{debugMovimientoRelativo}}(i);}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00131\ \ \ \ \ \}}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ \ \ \ \ this-\/>\doxymbox{\hyperlink{class_motor_paso_a6c19097335276ef185ddcfdab1cf6144}{gradoActual}}\ =\ \doxymbox{\hyperlink{class_motor_paso_afdcaa01d882749cc9a8de8ea6397a12c}{normalizarGrados}}(grados);}
+\DoxyCodeLine{00134\ \}}
+
+\end{DoxyCode}
+Gráfico de llamadas de esta función:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_motor_paso_a3bf0f1a5f2d26c41e405408be4ec47b4_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=307pt]{class_motor_paso_a3bf0f1a5f2d26c41e405408be4ec47b4_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_motor_paso_afdcaa01d882749cc9a8de8ea6397a12c}\index{MotorPaso@{MotorPaso}!normalizarGrados@{normalizarGrados}}
+\index{normalizarGrados@{normalizarGrados}!MotorPaso@{MotorPaso}}
+\doxysubsubsection{\texorpdfstring{normalizarGrados()}{normalizarGrados()}}
+{\footnotesize\ttfamily \label{class_motor_paso_afdcaa01d882749cc9a8de8ea6397a12c} 
+float Motor\+Paso::\+normalizar\+Grados (\begin{DoxyParamCaption}\item[{float}]{grados}{}\end{DoxyParamCaption})}
+
+
+
+Normaliza un ángulo al rango 0–360 grados. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em grados} & Ángulo a normalizar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Ángulo normalizado. 
+\end{DoxyReturn}
+
+
+Definición en la línea \doxymbox{\hyperlink{motor_step_8cpp_source_l00185}{185}} del archivo \doxymbox{\hyperlink{motor_step_8cpp_source}{motor\+Step.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00186\ \ \ \ \ \textcolor{keywordtype}{float}\ g\ =\ fmod(grados,\ 360.0f);}
+\DoxyCodeLine{00187\ \ \ \ \ \textcolor{keywordflow}{return}\ (g\ <\ 0)\ ?\ g\ +\ 360.0f\ :\ g;}
+\DoxyCodeLine{00188\ \}}
+
+\end{DoxyCode}
+Gráfico de llamadas a esta función:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_motor_paso_afdcaa01d882749cc9a8de8ea6397a12c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_motor_paso_aeb003102ac4f885226a4a4a1e4121fa5}\index{MotorPaso@{MotorPaso}!pasoAdelante@{pasoAdelante}}
+\index{pasoAdelante@{pasoAdelante}!MotorPaso@{MotorPaso}}
+\doxysubsubsection{\texorpdfstring{pasoAdelante()}{pasoAdelante()}}
+{\footnotesize\ttfamily \label{class_motor_paso_aeb003102ac4f885226a4a4a1e4121fa5} 
+void Motor\+Paso::\+paso\+Adelante (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Avanza un paso en la secuencia del motor. 
+
+
+
+Definición en la línea \doxymbox{\hyperlink{motor_step_8cpp_source_l00047}{47}} del archivo \doxymbox{\hyperlink{motor_step_8cpp_source}{motor\+Step.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00048\ \ \ \ \ this-\/>\doxymbox{\hyperlink{class_motor_paso_a4dabb0433ba9843a7b0c44fff4ec4dfe}{pasoActual}}++;}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>\doxymbox{\hyperlink{class_motor_paso_a4dabb0433ba9843a7b0c44fff4ec4dfe}{pasoActual}}\ >\ 7)\ this-\/>\doxymbox{\hyperlink{class_motor_paso_a4dabb0433ba9843a7b0c44fff4ec4dfe}{pasoActual}}\ =\ 0;}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ this-\/>\doxymbox{\hyperlink{class_motor_paso_ac610d089d82aca423c7528f918e3e6f1}{aplicarPaso}}(this-\/>\doxymbox{\hyperlink{class_motor_paso_a4dabb0433ba9843a7b0c44fff4ec4dfe}{pasoActual}});}
+\DoxyCodeLine{00052\ \ \ \ \ delayMicroseconds(this-\/>\doxymbox{\hyperlink{class_motor_paso_aa9426503a0b77432173ae0b5d9d16f75}{retardoPaso}});}
+\DoxyCodeLine{00053\ \}}
+
+\end{DoxyCode}
+Gráfico de llamadas de esta función:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_motor_paso_aeb003102ac4f885226a4a4a1e4121fa5_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_motor_paso_aeb003102ac4f885226a4a4a1e4121fa5_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_motor_paso_a70e7b613b257ac6dab5a0dc38d389f3a}\index{MotorPaso@{MotorPaso}!pasoAtras@{pasoAtras}}
+\index{pasoAtras@{pasoAtras}!MotorPaso@{MotorPaso}}
+\doxysubsubsection{\texorpdfstring{pasoAtras()}{pasoAtras()}}
+{\footnotesize\ttfamily \label{class_motor_paso_a70e7b613b257ac6dab5a0dc38d389f3a} 
+void Motor\+Paso::\+paso\+Atras (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retrocede un paso en la secuencia del motor. 
+
+
+
+Definición en la línea \doxymbox{\hyperlink{motor_step_8cpp_source_l00058}{58}} del archivo \doxymbox{\hyperlink{motor_step_8cpp_source}{motor\+Step.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00059\ \ \ \ \ this-\/>\doxymbox{\hyperlink{class_motor_paso_a4dabb0433ba9843a7b0c44fff4ec4dfe}{pasoActual}}-\/-\/;}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>\doxymbox{\hyperlink{class_motor_paso_a4dabb0433ba9843a7b0c44fff4ec4dfe}{pasoActual}}\ <\ 0)\ this-\/>\doxymbox{\hyperlink{class_motor_paso_a4dabb0433ba9843a7b0c44fff4ec4dfe}{pasoActual}}\ =\ 7;}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ this-\/>\doxymbox{\hyperlink{class_motor_paso_ac610d089d82aca423c7528f918e3e6f1}{aplicarPaso}}(this-\/>\doxymbox{\hyperlink{class_motor_paso_a4dabb0433ba9843a7b0c44fff4ec4dfe}{pasoActual}});}
+\DoxyCodeLine{00063\ \ \ \ \ delayMicroseconds(this-\/>\doxymbox{\hyperlink{class_motor_paso_aa9426503a0b77432173ae0b5d9d16f75}{retardoPaso}});}
+\DoxyCodeLine{00064\ \}}
+
+\end{DoxyCode}
+Gráfico de llamadas de esta función:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_motor_paso_a70e7b613b257ac6dab5a0dc38d389f3a_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_motor_paso_a70e7b613b257ac6dab5a0dc38d389f3a_icgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_motor_paso_doc-variable-members}
+\doxysubsection{Documentación de datos miembro}
+\Hypertarget{class_motor_paso_aef0c5e2a5b02be1ffee595aef622727e}\index{MotorPaso@{MotorPaso}!diferencia@{diferencia}}
+\index{diferencia@{diferencia}!MotorPaso@{MotorPaso}}
+\doxysubsubsection{\texorpdfstring{diferencia}{diferencia}}
+{\footnotesize\ttfamily \label{class_motor_paso_aef0c5e2a5b02be1ffee595aef622727e} 
+float Motor\+Paso::\+diferencia\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Diferencia circular entre grado\+Actual y grados\+Objetivo (–180 a +180). 
+
+
+
+Definición en la línea \doxymbox{\hyperlink{motor_step_8h_source_l00176}{176}} del archivo \doxymbox{\hyperlink{motor_step_8h_source}{motor\+Step.\+h}}.
+
+\Hypertarget{class_motor_paso_a74ae1066fd043a6859e95804da2ff170}\index{MotorPaso@{MotorPaso}!direccionAdelante@{direccionAdelante}}
+\index{direccionAdelante@{direccionAdelante}!MotorPaso@{MotorPaso}}
+\doxysubsubsection{\texorpdfstring{direccionAdelante}{direccionAdelante}}
+{\footnotesize\ttfamily \label{class_motor_paso_a74ae1066fd043a6859e95804da2ff170} 
+bool Motor\+Paso::\+direccion\+Adelante\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Dirección:\+ true = adelante. 
+
+
+
+Definición en la línea \doxymbox{\hyperlink{motor_step_8h_source_l00177}{177}} del archivo \doxymbox{\hyperlink{motor_step_8h_source}{motor\+Step.\+h}}.
+
+\Hypertarget{class_motor_paso_acaa45dc69e19963021e7e68fa962460b}\index{MotorPaso@{MotorPaso}!direccionAtras@{direccionAtras}}
+\index{direccionAtras@{direccionAtras}!MotorPaso@{MotorPaso}}
+\doxysubsubsection{\texorpdfstring{direccionAtras}{direccionAtras}}
+{\footnotesize\ttfamily \label{class_motor_paso_acaa45dc69e19963021e7e68fa962460b} 
+bool Motor\+Paso::\+direccion\+Atras\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Dirección:\+ true = atrás. 
+
+
+
+Definición en la línea \doxymbox{\hyperlink{motor_step_8h_source_l00178}{178}} del archivo \doxymbox{\hyperlink{motor_step_8h_source}{motor\+Step.\+h}}.
+
+\Hypertarget{class_motor_paso_a6c19097335276ef185ddcfdab1cf6144}\index{MotorPaso@{MotorPaso}!gradoActual@{gradoActual}}
+\index{gradoActual@{gradoActual}!MotorPaso@{MotorPaso}}
+\doxysubsubsection{\texorpdfstring{gradoActual}{gradoActual}}
+{\footnotesize\ttfamily \label{class_motor_paso_a6c19097335276ef185ddcfdab1cf6144} 
+float Motor\+Paso::\+grado\+Actual\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Ángulo actual del motor (0–360 normalizado). 
+
+
+
+Definición en la línea \doxymbox{\hyperlink{motor_step_8h_source_l00173}{173}} del archivo \doxymbox{\hyperlink{motor_step_8h_source}{motor\+Step.\+h}}.
+
+\Hypertarget{class_motor_paso_a064c3f5e2d7c46c29e9b6bfd01aa1904}\index{MotorPaso@{MotorPaso}!gradosCorriendo@{gradosCorriendo}}
+\index{gradosCorriendo@{gradosCorriendo}!MotorPaso@{MotorPaso}}
+\doxysubsubsection{\texorpdfstring{gradosCorriendo}{gradosCorriendo}}
+{\footnotesize\ttfamily \label{class_motor_paso_a064c3f5e2d7c46c29e9b6bfd01aa1904} 
+float Motor\+Paso::\+grados\+Corriendo\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Ángulo recorrido durante el movimiento (progreso). 
+
+
+
+Definición en la línea \doxymbox{\hyperlink{motor_step_8h_source_l00175}{175}} del archivo \doxymbox{\hyperlink{motor_step_8h_source}{motor\+Step.\+h}}.
+
+\Hypertarget{class_motor_paso_aff13a3e505f907b684f6374b51596a05}\index{MotorPaso@{MotorPaso}!gradosObjetivo@{gradosObjetivo}}
+\index{gradosObjetivo@{gradosObjetivo}!MotorPaso@{MotorPaso}}
+\doxysubsubsection{\texorpdfstring{gradosObjetivo}{gradosObjetivo}}
+{\footnotesize\ttfamily \label{class_motor_paso_aff13a3e505f907b684f6374b51596a05} 
+float Motor\+Paso::\+grados\+Objetivo\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Ángulo objetivo solicitado. 
+
+
+
+Definición en la línea \doxymbox{\hyperlink{motor_step_8h_source_l00174}{174}} del archivo \doxymbox{\hyperlink{motor_step_8h_source}{motor\+Step.\+h}}.
+
+\Hypertarget{class_motor_paso_a4dabb0433ba9843a7b0c44fff4ec4dfe}\index{MotorPaso@{MotorPaso}!pasoActual@{pasoActual}}
+\index{pasoActual@{pasoActual}!MotorPaso@{MotorPaso}}
+\doxysubsubsection{\texorpdfstring{pasoActual}{pasoActual}}
+{\footnotesize\ttfamily \label{class_motor_paso_a4dabb0433ba9843a7b0c44fff4ec4dfe} 
+int Motor\+Paso::\+paso\+Actual\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Índice de la secuencia (0–7). 
+
+
+
+Definición en la línea \doxymbox{\hyperlink{motor_step_8h_source_l00165}{165}} del archivo \doxymbox{\hyperlink{motor_step_8h_source}{motor\+Step.\+h}}.
+
+\Hypertarget{class_motor_paso_a45a17ca7197c7968adba7e667f51b492}\index{MotorPaso@{MotorPaso}!pasos@{pasos}}
+\index{pasos@{pasos}!MotorPaso@{MotorPaso}}
+\doxysubsubsection{\texorpdfstring{pasos}{pasos}}
+{\footnotesize\ttfamily \label{class_motor_paso_a45a17ca7197c7968adba7e667f51b492} 
+int Motor\+Paso::\+pasos\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Pasos totales a ejecutar en el movimiento actual. 
+
+
+
+Definición en la línea \doxymbox{\hyperlink{motor_step_8h_source_l00172}{172}} del archivo \doxymbox{\hyperlink{motor_step_8h_source}{motor\+Step.\+h}}.
+
+\Hypertarget{class_motor_paso_ad380b0d361ec87653d35b2113d4215da}\index{MotorPaso@{MotorPaso}!pasosPorVuelta@{pasosPorVuelta}}
+\index{pasosPorVuelta@{pasosPorVuelta}!MotorPaso@{MotorPaso}}
+\doxysubsubsection{\texorpdfstring{pasosPorVuelta}{pasosPorVuelta}}
+{\footnotesize\ttfamily \label{class_motor_paso_ad380b0d361ec87653d35b2113d4215da} 
+int Motor\+Paso::\+pasos\+Por\+Vuelta = \doxymbox{\hyperlink{motor_step_8h_af31318f5b00506ed7c7de3d525f8d5da}{PASOS\+\_\+\+POR\+\_\+\+VUELTA}}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Pasos necesarios para 360° 
+
+
+
+Definición en la línea \doxymbox{\hyperlink{motor_step_8h_source_l00166}{166}} del archivo \doxymbox{\hyperlink{motor_step_8h_source}{motor\+Step.\+h}}.
+
+\Hypertarget{class_motor_paso_a9f8eddccee5fd302f15b251328639b5a}\index{MotorPaso@{MotorPaso}!pinA@{pinA}}
+\index{pinA@{pinA}!MotorPaso@{MotorPaso}}
+\doxysubsubsection{\texorpdfstring{pinA}{pinA}}
+{\footnotesize\ttfamily \label{class_motor_paso_a9f8eddccee5fd302f15b251328639b5a} 
+uint8\+\_\+t Motor\+Paso::\+pinA\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Bobina A. 
+
+
+
+Definición en la línea \doxymbox{\hyperlink{motor_step_8h_source_l00148}{148}} del archivo \doxymbox{\hyperlink{motor_step_8h_source}{motor\+Step.\+h}}.
+
+\Hypertarget{class_motor_paso_a5457b8c20cc470d18d7b67bf53405cda}\index{MotorPaso@{MotorPaso}!pinB@{pinB}}
+\index{pinB@{pinB}!MotorPaso@{MotorPaso}}
+\doxysubsubsection{\texorpdfstring{pinB}{pinB}}
+{\footnotesize\ttfamily \label{class_motor_paso_a5457b8c20cc470d18d7b67bf53405cda} 
+uint8\+\_\+t Motor\+Paso::\+pinB\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Bobina B. 
+
+
+
+Definición en la línea \doxymbox{\hyperlink{motor_step_8h_source_l00149}{149}} del archivo \doxymbox{\hyperlink{motor_step_8h_source}{motor\+Step.\+h}}.
+
+\Hypertarget{class_motor_paso_ae1e9b8723a636ad3349bef9c153b7164}\index{MotorPaso@{MotorPaso}!pinC@{pinC}}
+\index{pinC@{pinC}!MotorPaso@{MotorPaso}}
+\doxysubsubsection{\texorpdfstring{pinC}{pinC}}
+{\footnotesize\ttfamily \label{class_motor_paso_ae1e9b8723a636ad3349bef9c153b7164} 
+uint8\+\_\+t Motor\+Paso::\+pinC\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Bobina C. 
+
+
+
+Definición en la línea \doxymbox{\hyperlink{motor_step_8h_source_l00150}{150}} del archivo \doxymbox{\hyperlink{motor_step_8h_source}{motor\+Step.\+h}}.
+
+\Hypertarget{class_motor_paso_a030805e0b58b52b33950899e90998da3}\index{MotorPaso@{MotorPaso}!pinD@{pinD}}
+\index{pinD@{pinD}!MotorPaso@{MotorPaso}}
+\doxysubsubsection{\texorpdfstring{pinD}{pinD}}
+{\footnotesize\ttfamily \label{class_motor_paso_a030805e0b58b52b33950899e90998da3} 
+uint8\+\_\+t Motor\+Paso::\+pinD\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Bobina D. 
+
+
+
+Definición en la línea \doxymbox{\hyperlink{motor_step_8h_source_l00151}{151}} del archivo \doxymbox{\hyperlink{motor_step_8h_source}{motor\+Step.\+h}}.
+
+\Hypertarget{class_motor_paso_aa9426503a0b77432173ae0b5d9d16f75}\index{MotorPaso@{MotorPaso}!retardoPaso@{retardoPaso}}
+\index{retardoPaso@{retardoPaso}!MotorPaso@{MotorPaso}}
+\doxysubsubsection{\texorpdfstring{retardoPaso}{retardoPaso}}
+{\footnotesize\ttfamily \label{class_motor_paso_aa9426503a0b77432173ae0b5d9d16f75} 
+unsigned long Motor\+Paso::\+retardo\+Paso\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Microsegundos entre pasos (determina la velocidad). 
+
+
+
+Definición en la línea \doxymbox{\hyperlink{motor_step_8h_source_l00157}{157}} del archivo \doxymbox{\hyperlink{motor_step_8h_source}{motor\+Step.\+h}}.
+
+\Hypertarget{class_motor_paso_af8abafcab50187207db982f024d2a981}\index{MotorPaso@{MotorPaso}!rpm@{rpm}}
+\index{rpm@{rpm}!MotorPaso@{MotorPaso}}
+\doxysubsubsection{\texorpdfstring{rpm}{rpm}}
+{\footnotesize\ttfamily \label{class_motor_paso_af8abafcab50187207db982f024d2a981} 
+short Motor\+Paso::\+rpm\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Velocidad configurada en RPM. 
+
+
+
+Definición en la línea \doxymbox{\hyperlink{motor_step_8h_source_l00159}{159}} del archivo \doxymbox{\hyperlink{motor_step_8h_source}{motor\+Step.\+h}}.
+
+\Hypertarget{class_motor_paso_adf180b58f05bee5cc728b2026aebd30a}\index{MotorPaso@{MotorPaso}!tiempoUltimoPaso@{tiempoUltimoPaso}}
+\index{tiempoUltimoPaso@{tiempoUltimoPaso}!MotorPaso@{MotorPaso}}
+\doxysubsubsection{\texorpdfstring{tiempoUltimoPaso}{tiempoUltimoPaso}}
+{\footnotesize\ttfamily \label{class_motor_paso_adf180b58f05bee5cc728b2026aebd30a} 
+unsigned long Motor\+Paso::\+tiempo\+Ultimo\+Paso\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Marca temporal del último paso ejecutado. 
+
+
+
+Definición en la línea \doxymbox{\hyperlink{motor_step_8h_source_l00158}{158}} del archivo \doxymbox{\hyperlink{motor_step_8h_source}{motor\+Step.\+h}}.
+
+
+
+La documentación de esta clase está generada de los siguientes archivos:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{motor_step_8h}{motor\+Step.\+h}}\item 
+\doxymbox{\hyperlink{motor_step_8cpp}{motor\+Step.\+cpp}}\end{DoxyCompactItemize}

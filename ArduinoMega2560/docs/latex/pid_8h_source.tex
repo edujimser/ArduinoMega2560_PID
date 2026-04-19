@@ -1,0 +1,126 @@
+\doxysection{pid.\+h}
+\hypertarget{pid_8h_source}{}\label{pid_8h_source}\index{pid.h@{pid.h}}
+\doxymbox{\hyperlink{pid_8h}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ PID\_H}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00002}00002\ \textcolor{preprocessor}{\#define\ PID\_H}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <Arduino.h>}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00005}00005\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00006}00006\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00007}00007\ \textcolor{comment}{\ *\ @class\ PID}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00008}00008\ \textcolor{comment}{\ *\ @brief\ Controlador\ PID\ con\ anti-\/windup,\ derivative-\/on-\/measurement}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00009}00009\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ y\ limitación\ de\ cambio\ de\ salida\ (slew-\/rate\ limit).}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00010}00010\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00011}00011\ \textcolor{comment}{\ *\ Este\ controlador\ está\ diseñado\ para\ sistemas\ sensibles\ como\ motores\ paso\ a\ paso,}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00012}00012\ \textcolor{comment}{\ *\ actuadores\ lentos\ o\ sistemas\ donde\ se\ requiere\ suavidad\ y\ estabilidad.}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00013}00013\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00014}\doxymbox{\hyperlink{class_p_i_d}{00014}}\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_p_i_d_a4125833122b985f732eef6f3e6d728c3}{PID}}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00015}00015\ \{}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00016}00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00017}00017\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00018}00018\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00019}00019\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Constructor\ del\ controlador\ PID.}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00020}00020\ \textcolor{comment}{\ \ \ \ \ *}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00021}00021\ \textcolor{comment}{\ \ \ \ \ *\ @param\ Kp\ Ganancia\ proporcional.}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00022}00022\ \textcolor{comment}{\ \ \ \ \ *\ @param\ Ki\ Ganancia\ integral.}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00023}00023\ \textcolor{comment}{\ \ \ \ \ *\ @param\ Kd\ Ganancia\ derivativa.}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00024}00024\ \textcolor{comment}{\ \ \ \ \ *\ @param\ outputMin\ Límite\ mínimo\ de\ salida.}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00025}00025\ \textcolor{comment}{\ \ \ \ \ *\ @param\ outputMax\ Límite\ máximo\ de\ salida.}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00026}00026\ \textcolor{comment}{\ \ \ \ \ *\ @param\ dt\ Tiempo\ de\ muestreo\ en\ segundos.}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00027}00027\ \textcolor{comment}{\ \ \ \ \ *\ @param\ outputMaxChanged\ Máximo\ cambio\ permitido\ por\ ciclo\ (slew-\/rate).}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00028}00028\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00029}00029\ \ \ \ \ \doxymbox{\hyperlink{class_p_i_d_a4125833122b985f732eef6f3e6d728c3}{PID}}(\textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_p_i_d_a67f2b50c209d4de6a20c710b33b62f0e}{Kp}},\ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_p_i_d_ab48eeec8704e5d517a64b91fbe4fba57}{Ki}},\ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_p_i_d_a105396cb94f3ec2f352b3d116529112b}{Kd}},}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00030}00030\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_p_i_d_a996d72c3183fc2e68260efd49db30521}{outputMin}},\ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_p_i_d_a5867b916c0c69eeeebf997701c8157b2}{outputMax}},}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00031}00031\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_p_i_d_aa2ba5bce664ff9fd12efcf22bf6be7a9}{dt}},\ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_p_i_d_a84fa4441b8b7275ea55d0d2c6a44febf}{outputMaxChanged}});}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00032}00032\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00033}00033\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00034}00034\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Calcula\ la\ salida\ del\ controlador\ PID.}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00035}00035\ \textcolor{comment}{\ \ \ \ \ *}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00036}00036\ \textcolor{comment}{\ \ \ \ \ *\ @param\ setpoint\ Valor\ deseado.}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00037}00037\ \textcolor{comment}{\ \ \ \ \ *\ @param\ feedback\ Valor\ medido.}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00038}00038\ \textcolor{comment}{\ \ \ \ \ *\ @param\ debugMSG\ Si\ es\ true,\ imprime\ información\ de\ depuración\ del\ PID.}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00039}00039\ \textcolor{comment}{\ \ \ \ \ *\ @return\ Salida\ del\ PID.}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00040}00040\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00041}00041\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_p_i_d_af0cfbed86d613536bbd2b6220139d0c4}{calculoPID}}(\textcolor{keywordtype}{float}\ setpoint,\ \textcolor{keywordtype}{float}\ feedback,\ \textcolor{keywordtype}{bool}\ debugMSG\ =\ \textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00042}00042\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00043}00043\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00044}00044\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Establece\ nuevas\ ganancias\ PID.}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00045}00045\ \textcolor{comment}{\ \ \ \ \ *}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00046}00046\ \textcolor{comment}{\ \ \ \ \ *\ @param\ Kp\ Nueva\ ganancia\ proporcional.}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00047}00047\ \textcolor{comment}{\ \ \ \ \ *\ @param\ Ki\ Nueva\ ganancia\ integral.}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00048}00048\ \textcolor{comment}{\ \ \ \ \ *\ @param\ Kd\ Nueva\ ganancia\ derivativa.}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00049}00049\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00050}00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_p_i_d_af904362d0e2a6db02cd744af9edcf5bf}{setKPID}}(\textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_p_i_d_a67f2b50c209d4de6a20c710b33b62f0e}{Kp}},\ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_p_i_d_ab48eeec8704e5d517a64b91fbe4fba57}{Ki}},\ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_p_i_d_a105396cb94f3ec2f352b3d116529112b}{Kd}});}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00051}00051\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00052}00052\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00053}00053\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Establece\ los\ límites\ de\ salida\ del\ PID.}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00054}00054\ \textcolor{comment}{\ \ \ \ \ *}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00055}00055\ \textcolor{comment}{\ \ \ \ \ *\ @param\ outputMin\ Nuevo\ límite\ mínimo.}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00056}00056\ \textcolor{comment}{\ \ \ \ \ *\ @param\ outputMax\ Nuevo\ límite\ máximo.}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00057}00057\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00058}00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_p_i_d_a8de60a65c98638c43bc070b5bd32e77e}{setOutputLimits}}(\textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_p_i_d_a996d72c3183fc2e68260efd49db30521}{outputMin}},\ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_p_i_d_a5867b916c0c69eeeebf997701c8157b2}{outputMax}});}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00059}00059\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00060}00060\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00061}00061\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Establece\ un\ nuevo\ tiempo\ de\ muestreo.}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00062}00062\ \textcolor{comment}{\ \ \ \ \ *}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00063}00063\ \textcolor{comment}{\ \ \ \ \ *\ @param\ dt\ Nuevo\ dt.}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00064}00064\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00065}00065\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_p_i_d_ae55a80080d8196166d5a203c6b0131f5}{setDt}}(\textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_p_i_d_aa2ba5bce664ff9fd12efcf22bf6be7a9}{dt}});}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00066}00066\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00067}00067\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00068}00068\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Reinicia\ el\ estado\ interno\ del\ PID.}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00069}00069\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00070}00070\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_p_i_d_a4ec46f614451079f4485319d4d5a7477}{resetPID}}();}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00071}00071\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00072}00072\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00073}00073\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Valida\ y\ corrige\ el\ tiempo\ de\ muestreo.}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00074}00074\ \textcolor{comment}{\ \ \ \ \ *}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00075}00075\ \textcolor{comment}{\ \ \ \ \ *\ @param\ dt\ Tiempo\ de\ muestreo\ solicitado.}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00076}00076\ \textcolor{comment}{\ \ \ \ \ *\ @return\ dt\ válido\ (mínimo\ 0.1f).}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00077}00077\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00078}00078\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_p_i_d_a5cdc6d7cb5e1520722dc764b21eb6f09}{statedt}}(\textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_p_i_d_aa2ba5bce664ff9fd12efcf22bf6be7a9}{dt}});}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00079}00079\ \ \ \ \ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00080}00080\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00081}00081\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Imprime\ información\ de\ depuración\ del\ PID.}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00082}00082\ \textcolor{comment}{\ \ \ \ \ *}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00083}00083\ \textcolor{comment}{\ \ \ \ \ *\ @param\ setpoint\ Valor\ deseado.}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00084}00084\ \textcolor{comment}{\ \ \ \ \ *\ @param\ feedback\ Valor\ medido.}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00085}00085\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00086}00086\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_p_i_d_a7263b32d21a2759144d935442db72191}{printDebugPID}}(\textcolor{keywordtype}{float}\ setpoint,\ \textcolor{keywordtype}{float}\ feedback);}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00088}00088\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00089}00089\ }
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00090}00090\ \ \ \ \ \textcolor{comment}{//\ Ganancias\ del\ controlador\ PID}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00091}\doxymbox{\hyperlink{class_p_i_d_a67f2b50c209d4de6a20c710b33b62f0e}{00091}}\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_p_i_d_a67f2b50c209d4de6a20c710b33b62f0e}{Kp}};\ \textcolor{comment}{///<\ Ganancia\ proporcional}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00092}\doxymbox{\hyperlink{class_p_i_d_ab48eeec8704e5d517a64b91fbe4fba57}{00092}}\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_p_i_d_ab48eeec8704e5d517a64b91fbe4fba57}{Ki}};\ \textcolor{comment}{///<\ Ganancia\ integral}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00093}\doxymbox{\hyperlink{class_p_i_d_a105396cb94f3ec2f352b3d116529112b}{00093}}\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_p_i_d_a105396cb94f3ec2f352b3d116529112b}{Kd}};\ \textcolor{comment}{///<\ Ganancia\ derivativa}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00094}00094\ }
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00095}00095\ \ \ \ \ \textcolor{comment}{//\ Límites\ de\ salida}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00096}\doxymbox{\hyperlink{class_p_i_d_a996d72c3183fc2e68260efd49db30521}{00096}}\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_p_i_d_a996d72c3183fc2e68260efd49db30521}{outputMin}};\ \textcolor{comment}{///<\ Límite\ mínimo\ de\ salida}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00097}\doxymbox{\hyperlink{class_p_i_d_a5867b916c0c69eeeebf997701c8157b2}{00097}}\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_p_i_d_a5867b916c0c69eeeebf997701c8157b2}{outputMax}};\ \textcolor{comment}{///<\ Límite\ máximo\ de\ salida}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00098}00098\ }
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00099}00099\ \ \ \ \ \textcolor{comment}{//\ Intervalo\ de\ tiempo}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00100}\doxymbox{\hyperlink{class_p_i_d_aa2ba5bce664ff9fd12efcf22bf6be7a9}{00100}}\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_p_i_d_aa2ba5bce664ff9fd12efcf22bf6be7a9}{dt}};\ \textcolor{comment}{///<\ Tiempo\ de\ muestreo}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00101}00101\ }
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00102}00102\ \ \ \ \ \textcolor{comment}{//\ Estado\ interno}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00103}\doxymbox{\hyperlink{class_p_i_d_a58024226a4cabe7c195ec7f8ec41523b}{00103}}\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_p_i_d_a58024226a4cabe7c195ec7f8ec41523b}{error}};\ \ \ \ \ \ \ \ \textcolor{comment}{///<\ Error\ actual}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00104}\doxymbox{\hyperlink{class_p_i_d_a482b5f6204d925cc2ed9079c06a1dbcd}{00104}}\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_p_i_d_a482b5f6204d925cc2ed9079c06a1dbcd}{prevError}};\ \ \ \ \textcolor{comment}{///<\ Error\ previo}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00105}\doxymbox{\hyperlink{class_p_i_d_ab9dcad835103e9ad160c57f329f40e10}{00105}}\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_p_i_d_ab9dcad835103e9ad160c57f329f40e10}{proportional}};\ \textcolor{comment}{///<\ Término\ proporcional}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00106}\doxymbox{\hyperlink{class_p_i_d_a0e5d49534b4925162583cc0b1e124a50}{00106}}\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_p_i_d_a0e5d49534b4925162583cc0b1e124a50}{integral}};\ \ \ \ \ \textcolor{comment}{///<\ Acumulador\ integral}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00107}\doxymbox{\hyperlink{class_p_i_d_ad6f67ea0bed5ed7dd4e2a8d447d68a00}{00107}}\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_p_i_d_ad6f67ea0bed5ed7dd4e2a8d447d68a00}{pidNoIntegral}};\textcolor{comment}{///<\ PID\ sin\ término\ integral}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00108}\doxymbox{\hyperlink{class_p_i_d_a1a5c8f27b61a74868f874cc6df3a2639}{00108}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \doxymbox{\hyperlink{class_p_i_d_a1a5c8f27b61a74868f874cc6df3a2639}{saturated}};\ \ \ \ \textcolor{comment}{///<\ Indica\ si\ el\ PID\ está\ saturado}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00109}\doxymbox{\hyperlink{class_p_i_d_a65e03137e6442acb9852b8626220b6d3}{00109}}\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_p_i_d_a65e03137e6442acb9852b8626220b6d3}{derivative}};\ \ \ \textcolor{comment}{///<\ Término\ derivativo}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00110}\doxymbox{\hyperlink{class_p_i_d_a5d214a65132fc8545eb5d58a537a804a}{00110}}\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_p_i_d_a5d214a65132fc8545eb5d58a537a804a}{output}};\ \ \ \ \ \ \ \textcolor{comment}{///<\ Salida\ final\ del\ PID}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00111}\doxymbox{\hyperlink{class_p_i_d_a9760d4d6ce3a52353ac44cd997f50dc5}{00111}}\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_p_i_d_a9760d4d6ce3a52353ac44cd997f50dc5}{rawOutput}};\ \ \ \ \textcolor{comment}{///<\ Salida\ sin\ limitación\ de\ cambio}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00112}\doxymbox{\hyperlink{class_p_i_d_aa93700f20d6bcefe7c96ca08240e748b}{00112}}\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_p_i_d_aa93700f20d6bcefe7c96ca08240e748b}{prevOutput}};\ \ \ \textcolor{comment}{///<\ Salida\ previa}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00113}\doxymbox{\hyperlink{class_p_i_d_a50e3a777a99f13b048d9ece43dcf4dfc}{00113}}\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_p_i_d_a50e3a777a99f13b048d9ece43dcf4dfc}{deltaOutput}};\ \ \textcolor{comment}{///<\ Cambio\ entre\ salidas}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00114}\doxymbox{\hyperlink{class_p_i_d_ab1b409b1b5a3113d73c4b1d15946c6b1}{00114}}\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_p_i_d_ab1b409b1b5a3113d73c4b1d15946c6b1}{prevFeedback}};\ \textcolor{comment}{///<\ Feedback\ previo\ para\ derivative-\/on-\/measurement}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00115}00115\ }
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00116}00116\ \ \ \ \ \textcolor{comment}{//\ Limitación\ de\ cambio\ por\ ciclo}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00117}\doxymbox{\hyperlink{class_p_i_d_a84fa4441b8b7275ea55d0d2c6a44febf}{00117}}\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_p_i_d_a84fa4441b8b7275ea55d0d2c6a44febf}{outputMaxChanged}};\ \textcolor{comment}{///<\ Máximo\ cambio\ permitido\ por\ ciclo}}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00118}00118\ \};}
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00119}00119\ }
+\DoxyCodeLine{\Hypertarget{pid_8h_source_l00120}00120\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ PID\_H}}
+
+\end{DoxyCode}

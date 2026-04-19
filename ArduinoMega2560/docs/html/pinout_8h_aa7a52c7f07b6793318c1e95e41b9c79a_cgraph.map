@@ -1,0 +1,16 @@
+<map id="fullDiagnosticsPins" name="fullDiagnosticsPins">
+<area shape="rect" id="Node000001" title="Ejecuta todos los diagnósticos de pines." alt="" coords="5,107,137,132"/>
+<area shape="rect" id="Node000002" href="$pinout_8cpp.html#a78f24fdab5ead1139f3f21bb83161147" title="Diagnostica el voltaje presente en los pines analógicos del sistema." alt="" coords="191,5,305,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="91,104,184,48,208,35,211,39,187,52,94,109"/>
+<area shape="rect" id="Node000003" href="$msg_8cpp.html#abda2f504e4bfdbfbdd0cd8f8937f72f1" title="Prints a decorated header with centered text and padding on both sides." alt="" coords="359,81,493,107"/>
+<area shape="poly" id="edge7_Node000001_Node000003" title=" " alt="" coords="118,104,185,91,267,86,345,87,345,92,268,92,186,97,119,109"/>
+<area shape="rect" id="Node000004" href="$pinout_8cpp.html#ad6ad9404cb3845eca0a1c5bf2d2d1932" title="Diagnóstico de pines GPIO configurados como entrada." alt="" coords="195,107,301,132"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="137,117,181,117,181,122,137,122"/>
+<area shape="rect" id="Node000005" href="$pinout_8cpp.html#a271cb6214ddcfd09c0090119ed5159a0" title="Detecta la presencia de voltaje externo en pines PWM." alt="" coords="195,156,301,181"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="118,129,189,150,187,155,117,135"/>
+<area shape="rect" id="Node000006" href="$msg_8cpp.html#a6ef1ee9724c4aa2cdcd16023815c107a" title="Prints an enriched log message to the serial monitor." alt="" coords="185,205,311,231"/>
+<area shape="poly" id="edge8_Node000001_Node000006" title=" " alt="" coords="92,130,134,159,187,190,201,197,199,202,184,195,131,163,88,134"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="280,28,384,73,382,78,278,33"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="301,109,344,103,345,108,302,114"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="280,153,310,141,382,110,384,115,312,146,282,158"/>
+</map>

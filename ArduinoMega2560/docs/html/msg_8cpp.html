@@ -1,0 +1,736 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ArduinoMega2560_SPI: Referencia del archivo msg.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ArduinoMega2560_SPI<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('msg_8cpp.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia del archivo msg.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="msg_8h_source.html">system/msg/msg.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Gráfico de dependencias incluidas en msg.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="msg_8cpp__incl.png" border="0" usemap="#amsg_8cpp" loading="lazy" alt=""/></div>
+<map name="amsg_8cpp" id="amsg_8cpp">
+<area shape="rect" title=" " alt="" coords="37,5,109,31"/>
+<area shape="rect" href="msg_8h.html" title=" " alt="" coords="5,79,140,104"/>
+<area shape="poly" title=" " alt="" coords="75,31,75,65,70,65,70,31"/>
+<area shape="rect" title=" " alt="" coords="34,225,111,251"/>
+<area shape="poly" title=" " alt="" coords="67,106,54,127,45,153,43,168,46,184,59,212,54,215,41,185,38,168,39,151,50,125,62,103"/>
+<area shape="rect" href="config_8h.html" title=" " alt="" coords="54,152,206,177"/>
+<area shape="poly" title=" " alt="" coords="84,103,114,139,110,143,80,106"/>
+<area shape="poly" title=" " alt="" coords="123,179,93,216,89,213,118,176"/>
+</map>
+</div>
+</div>
+<p><a href="msg_8cpp_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a6ef1ee9724c4aa2cdcd16023815c107a" id="r_a6ef1ee9724c4aa2cdcd16023815c107a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a6ef1ee9724c4aa2cdcd16023815c107a">standardMessage</a> (const char *message, const char *file, const char *function, const char *date, const char *time)</td></tr>
+<tr class="memdesc:a6ef1ee9724c4aa2cdcd16023815c107a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Imprime un mensaje estandarizado y formateado en el monitor serie.  <br /></td></tr>
+<tr class="memitem:adde533a3eb738a72683661656b09ed23" id="r_adde533a3eb738a72683661656b09ed23"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#adde533a3eb738a72683661656b09ed23">standardHeader</a> (const char *message, uint16_t width, char deco)</td></tr>
+<tr class="memdesc:adde533a3eb738a72683661656b09ed23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Imprime un encabezado decorativo con el mensaje centrado.  <br /></td></tr>
+<tr class="memitem:abda2f504e4bfdbfbdd0cd8f8937f72f1" id="r_abda2f504e4bfdbfbdd0cd8f8937f72f1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#abda2f504e4bfdbfbdd0cd8f8937f72f1">standardHeaderFull</a> (const char *message, const char *file, const char *function, const char *date, const char *time, uint16_t width, char deco)</td></tr>
+<tr class="memdesc:abda2f504e4bfdbfbdd0cd8f8937f72f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Imprime un encabezado decorado con texto centrado y metadatos.  <br /></td></tr>
+<tr class="memitem:aaf284eacfd5fa2ce8756262345d925e9" id="r_aaf284eacfd5fa2ce8756262345d925e9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aaf284eacfd5fa2ce8756262345d925e9">standardErrorMessage</a> (const char *message, const char *file, const char *function, const char *date, const char *time, int line)</td></tr>
+<tr class="memdesc:aaf284eacfd5fa2ce8756262345d925e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Imprime un mensaje de error enriquecido con información contextual.  <br /></td></tr>
+<tr class="memitem:aff36c414af17efe4543ba01e5a18ccad" id="r_aff36c414af17efe4543ba01e5a18ccad"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aff36c414af17efe4543ba01e5a18ccad">showConfigurationMessage</a> (const <a class="el" href="structconfiguracion_main.html">configuracionMain</a> &amp;configuration)</td></tr>
+<tr class="memdesc:aff36c414af17efe4543ba01e5a18ccad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Muestra la configuración actual del sistema.  <br /></td></tr>
+<tr class="memitem:ac6b570fad074b50622ffef6916bcea8f" id="r_ac6b570fad074b50622ffef6916bcea8f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac6b570fad074b50622ffef6916bcea8f">showMsgPrinLine</a> (char c, int length)</td></tr>
+<tr class="memdesc:ac6b570fad074b50622ffef6916bcea8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Imprime una línea compuesta por un carácter repetido.  <br /></td></tr>
+<tr class="memitem:acedf89272beec6e618703147664ef34c" id="r_acedf89272beec6e618703147664ef34c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#acedf89272beec6e618703147664ef34c">printVersion</a> (const char *fwVersion, const char *fwName, const char *fwDate, const char *fwAuthor, const char *appVersion, const char *appName, const char *appDate)</td></tr>
+<tr class="memdesc:acedf89272beec6e618703147664ef34c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Imprime la información de versión del firmware.  <br /></td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones</h2>
+<a id="acedf89272beec6e618703147664ef34c" name="acedf89272beec6e618703147664ef34c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acedf89272beec6e618703147664ef34c">&#9670;&#160;</a></span>printVersion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void printVersion </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>fwVersion</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>fwName</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>fwDate</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>fwAuthor</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>appVersion</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>appName</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>appDate</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Imprime la información de versión del firmware. </p>
+<p>Prints firmware version details to the serial monitor.</p>
+<p>Muestra:</p><ul>
+<li>versión del firmware</li>
+<li>nombre</li>
+<li>fecha</li>
+<li>autor</li>
+<li>versión de la aplicación</li>
+<li>nombre de la aplicación</li>
+<li>fecha de la aplicación </li>
+</ul>
+
+<p class="definition">Definición en la línea <a class="el" href="msg_8cpp_source.html#l00248">248</a> del archivo <a class="el" href="msg_8cpp_source.html">msg.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  254</span>                                       {</div>
+<div class="line"><span class="lineno">  255</span>    <a class="code hl_function" href="#a6ef1ee9724c4aa2cdcd16023815c107a">standardMessage</a>(<span class="stringliteral">&quot;Firmware Version Information&quot;</span>,</div>
+<div class="line"><span class="lineno">  256</span>                     __FILE__,</div>
+<div class="line"><span class="lineno">  257</span>                     __FUNCTION__,</div>
+<div class="line"><span class="lineno">  258</span>                     __DATE__,</div>
+<div class="line"><span class="lineno">  259</span>                     __TIME__);</div>
+<div class="line"><span class="lineno">  260</span>    Serial.print(<span class="stringliteral">&quot;Firmware Version: &quot;</span>); Serial.println(fwVersion);</div>
+<div class="line"><span class="lineno">  261</span>    Serial.print(<span class="stringliteral">&quot;Firmware Name: &quot;</span>);    Serial.println(fwName);</div>
+<div class="line"><span class="lineno">  262</span>    Serial.print(<span class="stringliteral">&quot;Firmware Date: &quot;</span>);    Serial.println(fwDate);</div>
+<div class="line"><span class="lineno">  263</span>    Serial.print(<span class="stringliteral">&quot;Firmware Author: &quot;</span>);  Serial.println(fwAuthor);</div>
+<div class="line"><span class="lineno">  264</span>    Serial.print(<span class="stringliteral">&quot;App Version: &quot;</span>);      Serial.println(appVersion);</div>
+<div class="line"><span class="lineno">  265</span>    Serial.print(<span class="stringliteral">&quot;App Name: &quot;</span>);         Serial.println(appName);</div>
+<div class="line"><span class="lineno">  266</span>    Serial.print(<span class="stringliteral">&quot;App Date: &quot;</span>);         Serial.println(appDate);</div>
+<div class="line"><span class="lineno">  267</span>}</div>
+<div class="ttc" id="amsg_8cpp_html_a6ef1ee9724c4aa2cdcd16023815c107a"><div class="ttname"><a href="#a6ef1ee9724c4aa2cdcd16023815c107a">standardMessage</a></div><div class="ttdeci">void standardMessage(const char *message, const char *file, const char *function, const char *date, const char *time)</div><div class="ttdoc">Imprime un mensaje estandarizado y formateado en el monitor serie.</div><div class="ttdef"><b>Definition</b> <a href="msg_8cpp_source.html#l00015">msg.cpp:15</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Gráfico de llamadas de esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="msg_8cpp_acedf89272beec6e618703147664ef34c_cgraph.png" border="0" usemap="#amsg_8cpp_acedf89272beec6e618703147664ef34c_cgraph" loading="lazy" alt=""/></div>
+<map name="amsg_8cpp_acedf89272beec6e618703147664ef34c_cgraph" id="amsg_8cpp_acedf89272beec6e618703147664ef34c_cgraph">
+<area shape="rect" title="Imprime la información de versión del firmware." alt="" coords="5,5,96,31"/>
+<area shape="rect" href="msg_8cpp.html#a6ef1ee9724c4aa2cdcd16023815c107a" title="Imprime un mensaje estandarizado y formateado en el monitor serie." alt="" coords="144,5,269,31"/>
+<area shape="poly" title=" " alt="" coords="96,15,130,15,130,21,96,21"/>
+</map>
+</div>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="msg_8cpp_acedf89272beec6e618703147664ef34c_icgraph.png" border="0" usemap="#amsg_8cpp_acedf89272beec6e618703147664ef34c_icgraph" loading="lazy" alt=""/></div>
+<map name="amsg_8cpp_acedf89272beec6e618703147664ef34c_icgraph" id="amsg_8cpp_acedf89272beec6e618703147664ef34c_icgraph">
+<area shape="rect" title="Imprime la información de versión del firmware." alt="" coords="108,5,199,31"/>
+<area shape="rect" href="main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title="Arduino setup function (runs once at startup)." alt="" coords="5,5,60,31"/>
+<area shape="poly" title=" " alt="" coords="94,21,60,21,60,15,94,15"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aff36c414af17efe4543ba01e5a18ccad" name="aff36c414af17efe4543ba01e5a18ccad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff36c414af17efe4543ba01e5a18ccad">&#9670;&#160;</a></span>showConfigurationMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void showConfigurationMessage </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structconfiguracion_main.html">configuracionMain</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>configuration</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Muestra la configuración actual del sistema. </p>
+<p>Displays the current system configuration status on the serial monitor.</p>
+<p>Presenta los valores de la estructura <a class="el" href="structconfiguracion_main.html" title="Main configuration structure for the project.">configuracionMain</a> con un formato visual claro y amigable.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">configuration</td><td>Estructura de configuración del sistema. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="msg_8cpp_source.html#l00203">203</a> del archivo <a class="el" href="msg_8cpp_source.html">msg.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  203</span>                                                                      {</div>
+<div class="line"><span class="lineno">  204</span>  <a class="code hl_function" href="#a6ef1ee9724c4aa2cdcd16023815c107a">standardMessage</a>(<span class="stringliteral">&quot;Current System Configuration&quot;</span>,</div>
+<div class="line"><span class="lineno">  205</span>                     __FILE__,</div>
+<div class="line"><span class="lineno">  206</span>                     __FUNCTION__,</div>
+<div class="line"><span class="lineno">  207</span>                     __DATE__,</div>
+<div class="line"><span class="lineno">  208</span>                     __TIME__);</div>
+<div class="line"><span class="lineno">  209</span>  Serial.print(<span class="stringliteral">&quot;🔧 Debug mode: &quot;</span>);</div>
+<div class="line"><span class="lineno">  210</span>  Serial.println(configuration.<a class="code hl_variable" href="structconfiguracion_main.html#a5cdc0cc5a5232dc573e6429b06376bac">debugMode</a> ? <span class="stringliteral">&quot;Enabled&quot;</span> : <span class="stringliteral">&quot;Disabled&quot;</span>);</div>
+<div class="line"><span class="lineno">  211</span> </div>
+<div class="line"><span class="lineno">  212</span>  <a class="code hl_function" href="#abda2f504e4bfdbfbdd0cd8f8937f72f1">standardHeaderFull</a>(<span class="stringliteral">&quot;End of Configuration&quot;</span>,</div>
+<div class="line"><span class="lineno">  213</span>                     __FILE__,</div>
+<div class="line"><span class="lineno">  214</span>                     __FUNCTION__,</div>
+<div class="line"><span class="lineno">  215</span>                     __DATE__,</div>
+<div class="line"><span class="lineno">  216</span>                     __TIME__,</div>
+<div class="line"><span class="lineno">  217</span>                     120,</div>
+<div class="line"><span class="lineno">  218</span>                     <span class="charliteral">&#39;-&#39;</span>);</div>
+<div class="line"><span class="lineno">  219</span>}</div>
+<div class="ttc" id="amsg_8cpp_html_abda2f504e4bfdbfbdd0cd8f8937f72f1"><div class="ttname"><a href="#abda2f504e4bfdbfbdd0cd8f8937f72f1">standardHeaderFull</a></div><div class="ttdeci">void standardHeaderFull(const char *message, const char *file, const char *function, const char *date, const char *time, uint16_t width, char deco)</div><div class="ttdoc">Imprime un encabezado decorado con texto centrado y metadatos.</div><div class="ttdef"><b>Definition</b> <a href="msg_8cpp_source.html#l00121">msg.cpp:121</a></div></div>
+<div class="ttc" id="astructconfiguracion_main_html_a5cdc0cc5a5232dc573e6429b06376bac"><div class="ttname"><a href="structconfiguracion_main.html#a5cdc0cc5a5232dc573e6429b06376bac">configuracionMain::debugMode</a></div><div class="ttdeci">uint8_t debugMode</div><div class="ttdef"><b>Definition</b> <a href="config_8h_source.html#l00015">config.h:15</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Gráfico de llamadas de esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="msg_8cpp_aff36c414af17efe4543ba01e5a18ccad_cgraph.png" border="0" usemap="#amsg_8cpp_aff36c414af17efe4543ba01e5a18ccad_cgraph" loading="lazy" alt=""/></div>
+<map name="amsg_8cpp_aff36c414af17efe4543ba01e5a18ccad_cgraph" id="amsg_8cpp_aff36c414af17efe4543ba01e5a18ccad_cgraph">
+<area shape="rect" title="Muestra la configuración actual del sistema." alt="" coords="5,31,185,56"/>
+<area shape="rect" href="msg_8cpp.html#abda2f504e4bfdbfbdd0cd8f8937f72f1" title="Imprime un encabezado decorado con texto centrado y metadatos." alt="" coords="233,5,368,31"/>
+<area shape="poly" title=" " alt="" coords="185,30,219,25,220,31,186,35"/>
+<area shape="rect" href="msg_8cpp.html#a6ef1ee9724c4aa2cdcd16023815c107a" title="Imprime un mensaje estandarizado y formateado en el monitor serie." alt="" coords="238,55,363,80"/>
+<area shape="poly" title=" " alt="" coords="186,51,225,56,224,61,185,57"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac6b570fad074b50622ffef6916bcea8f" name="ac6b570fad074b50622ffef6916bcea8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6b570fad074b50622ffef6916bcea8f">&#9670;&#160;</a></span>showMsgPrinLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void showMsgPrinLine </td>
+          <td>(</td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>c</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>length</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Imprime una línea compuesta por un carácter repetido. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c</td><td>Carácter a imprimir. </td></tr>
+    <tr><td class="paramname">length</td><td>Número de repeticiones. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="msg_8cpp_source.html#l00228">228</a> del archivo <a class="el" href="msg_8cpp_source.html">msg.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  228</span>                                         {</div>
+<div class="line"><span class="lineno">  229</span>   <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; length; i++) {</div>
+<div class="line"><span class="lineno">  230</span>        Serial.print(c);</div>
+<div class="line"><span class="lineno">  231</span>    }</div>
+<div class="line"><span class="lineno">  232</span>    Serial.println();</div>
+<div class="line"><span class="lineno">  233</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aaf284eacfd5fa2ce8756262345d925e9" name="aaf284eacfd5fa2ce8756262345d925e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf284eacfd5fa2ce8756262345d925e9">&#9670;&#160;</a></span>standardErrorMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void standardErrorMessage </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>message</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>function</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>date</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>time</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>line</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Imprime un mensaje de error enriquecido con información contextual. </p>
+<p>Prints an enriched error message to the serial monitor, including contextual information.</p>
+<p>Incluye:</p><ul>
+<li>fecha y hora</li>
+<li>archivo</li>
+<li>función</li>
+<li>número de línea</li>
+<li>mensaje de error</li>
+</ul>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">message</td><td>Mensaje de error. </td></tr>
+    <tr><td class="paramname">file</td><td>Archivo origen. </td></tr>
+    <tr><td class="paramname">function</td><td>Función origen. </td></tr>
+    <tr><td class="paramname">date</td><td>Fecha de compilación. </td></tr>
+    <tr><td class="paramname">time</td><td>Hora de compilación. </td></tr>
+    <tr><td class="paramname">line</td><td>Número de línea donde se invoca. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="msg_8cpp_source.html#l00177">177</a> del archivo <a class="el" href="msg_8cpp_source.html">msg.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  177</span>                                                                                                                                     {</div>
+<div class="line"><span class="lineno">  178</span>  Serial.println();</div>
+<div class="line"><span class="lineno">  179</span>  Serial.print(<span class="stringliteral">&quot;[&quot;</span>);</div>
+<div class="line"><span class="lineno">  180</span>  Serial.print(date);</div>
+<div class="line"><span class="lineno">  181</span>  Serial.print(<span class="stringliteral">&quot; &quot;</span>);</div>
+<div class="line"><span class="lineno">  182</span>  Serial.print(time);</div>
+<div class="line"><span class="lineno">  183</span>  Serial.print(<span class="stringliteral">&quot;] &quot;</span>);</div>
+<div class="line"><span class="lineno">  184</span>  Serial.print(file);</div>
+<div class="line"><span class="lineno">  185</span>  Serial.print(<span class="stringliteral">&quot;::&quot;</span>);</div>
+<div class="line"><span class="lineno">  186</span>  Serial.print(function);</div>
+<div class="line"><span class="lineno">  187</span>  Serial.print(<span class="stringliteral">&quot; (Line &quot;</span>);</div>
+<div class="line"><span class="lineno">  188</span>  Serial.print(line);</div>
+<div class="line"><span class="lineno">  189</span>  Serial.print(<span class="stringliteral">&quot;) ❌ ERROR ➤ &quot;</span>);</div>
+<div class="line"><span class="lineno">  190</span>  Serial.println(message);</div>
+<div class="line"><span class="lineno">  191</span>  Serial.println();</div>
+<div class="line"><span class="lineno">  192</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="adde533a3eb738a72683661656b09ed23" name="adde533a3eb738a72683661656b09ed23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adde533a3eb738a72683661656b09ed23">&#9670;&#160;</a></span>standardHeader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void standardHeader </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>message</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>width</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>deco</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Imprime un encabezado decorativo con el mensaje centrado. </p>
+<p>Genera una línea con caracteres decorativos a ambos lados del texto, manteniendo un ancho total definido por el usuario.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">message</td><td>Texto a centrar. </td></tr>
+    <tr><td class="paramname">width</td><td>Ancho total de la línea. </td></tr>
+    <tr><td class="paramname">deco</td><td>Carácter decorativo. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="msg_8cpp_source.html#l00072">72</a> del archivo <a class="el" href="msg_8cpp_source.html">msg.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   74</span>                               {</div>
+<div class="line"><span class="lineno">   75</span>    <span class="keywordtype">int</span> msgLen = strlen(message);</div>
+<div class="line"><span class="lineno">   76</span>    <span class="keywordtype">int</span> totalDeco = width - msgLen - 2; <span class="comment">// Subtract 2 for spacing around the message</span></div>
+<div class="line"><span class="lineno">   77</span>    <span class="keywordflow">if</span> (totalDeco &lt; 0) totalDeco = 0;</div>
+<div class="line"><span class="lineno">   78</span> </div>
+<div class="line"><span class="lineno">   79</span>    <span class="keywordtype">int</span> leftDeco = totalDeco / 2;</div>
+<div class="line"><span class="lineno">   80</span>    <span class="keywordtype">int</span> rightDeco = totalDeco - leftDeco;</div>
+<div class="line"><span class="lineno">   81</span> </div>
+<div class="line"><span class="lineno">   82</span>    <span class="comment">// 🔹 Blank line before the header</span></div>
+<div class="line"><span class="lineno">   83</span>    Serial.println();</div>
+<div class="line"><span class="lineno">   84</span> </div>
+<div class="line"><span class="lineno">   85</span>    <span class="comment">// 🔹 Left decorative padding</span></div>
+<div class="line"><span class="lineno">   86</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; leftDeco; i++) Serial.write(deco);</div>
+<div class="line"><span class="lineno">   87</span> </div>
+<div class="line"><span class="lineno">   88</span>    <span class="comment">// 🔹 Centered message with spacing</span></div>
+<div class="line"><span class="lineno">   89</span>    Serial.print(<span class="charliteral">&#39; &#39;</span>);</div>
+<div class="line"><span class="lineno">   90</span>    Serial.print(message);</div>
+<div class="line"><span class="lineno">   91</span>    Serial.print(<span class="charliteral">&#39; &#39;</span>);</div>
+<div class="line"><span class="lineno">   92</span> </div>
+<div class="line"><span class="lineno">   93</span>    <span class="comment">// 🔹 Right decorative padding</span></div>
+<div class="line"><span class="lineno">   94</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; rightDeco; i++) Serial.write(deco);</div>
+<div class="line"><span class="lineno">   95</span> </div>
+<div class="line"><span class="lineno">   96</span>    <span class="comment">// 🔹 Blank line after the header</span></div>
+<div class="line"><span class="lineno">   97</span>    Serial.println();</div>
+<div class="line"><span class="lineno">   98</span>    Serial.println();</div>
+<div class="line"><span class="lineno">   99</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="abda2f504e4bfdbfbdd0cd8f8937f72f1" name="abda2f504e4bfdbfbdd0cd8f8937f72f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abda2f504e4bfdbfbdd0cd8f8937f72f1">&#9670;&#160;</a></span>standardHeaderFull()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void standardHeaderFull </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>message</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>function</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>date</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>time</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>width</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>deco</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Imprime un encabezado decorado con texto centrado y metadatos. </p>
+<p>Prints a decorated header with centered text and padding on both sides.</p>
+<p>Construye una línea única que incluye:</p><ul>
+<li>mensaje principal</li>
+<li>archivo</li>
+<li>función</li>
+<li>fecha y hora</li>
+</ul>
+<p>Todo ello centrado y rodeado de caracteres decorativos.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">message</td><td>Mensaje principal. </td></tr>
+    <tr><td class="paramname">file</td><td>Archivo origen. </td></tr>
+    <tr><td class="paramname">function</td><td>Función origen. </td></tr>
+    <tr><td class="paramname">date</td><td>Fecha de compilación. </td></tr>
+    <tr><td class="paramname">time</td><td>Hora de compilación. </td></tr>
+    <tr><td class="paramname">width</td><td>Ancho total de la línea. </td></tr>
+    <tr><td class="paramname">deco</td><td>Carácter decorativo. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="msg_8cpp_source.html#l00121">121</a> del archivo <a class="el" href="msg_8cpp_source.html">msg.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  127</span>                                   {</div>
+<div class="line"><span class="lineno">  128</span>    <span class="keywordtype">char</span> buffer[256];</div>
+<div class="line"><span class="lineno">  129</span>    <span class="comment">// Build the full message with metadata</span></div>
+<div class="line"><span class="lineno">  130</span>    snprintf(buffer, <span class="keyword">sizeof</span>(buffer), <span class="stringliteral">&quot;%s | %s | %s | %s %s&quot;</span>,</div>
+<div class="line"><span class="lineno">  131</span>             message, file, function, date, time);</div>
+<div class="line"><span class="lineno">  132</span> </div>
+<div class="line"><span class="lineno">  133</span>    <span class="keywordtype">int</span> msgLen = strlen(buffer);</div>
+<div class="line"><span class="lineno">  134</span>    <span class="keywordtype">int</span> totalDeco = width - msgLen - 2; <span class="comment">// Subtract 2 for spacing around the message</span></div>
+<div class="line"><span class="lineno">  135</span>    <span class="keywordflow">if</span> (totalDeco &lt; 0) totalDeco = 0;   <span class="comment">// Prevent negative padding</span></div>
+<div class="line"><span class="lineno">  136</span> </div>
+<div class="line"><span class="lineno">  137</span>    <span class="keywordtype">int</span> leftDeco = totalDeco / 2;</div>
+<div class="line"><span class="lineno">  138</span>    <span class="keywordtype">int</span> rightDeco = totalDeco - leftDeco;</div>
+<div class="line"><span class="lineno">  139</span> </div>
+<div class="line"><span class="lineno">  140</span>    <span class="comment">// 🔹 Blank line before the header</span></div>
+<div class="line"><span class="lineno">  141</span>    Serial.println();</div>
+<div class="line"><span class="lineno">  142</span> </div>
+<div class="line"><span class="lineno">  143</span>    <span class="comment">// 🔹 Left decorative padding</span></div>
+<div class="line"><span class="lineno">  144</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; leftDeco; i++) Serial.write(deco);</div>
+<div class="line"><span class="lineno">  145</span> </div>
+<div class="line"><span class="lineno">  146</span>    <span class="comment">// 🔹 Centered message with spacing</span></div>
+<div class="line"><span class="lineno">  147</span>    Serial.print(<span class="charliteral">&#39; &#39;</span>);</div>
+<div class="line"><span class="lineno">  148</span>    Serial.print(buffer);</div>
+<div class="line"><span class="lineno">  149</span>    Serial.print(<span class="charliteral">&#39; &#39;</span>);</div>
+<div class="line"><span class="lineno">  150</span> </div>
+<div class="line"><span class="lineno">  151</span>    <span class="comment">// 🔹 Right decorative padding</span></div>
+<div class="line"><span class="lineno">  152</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; rightDeco; i++) Serial.write(deco);</div>
+<div class="line"><span class="lineno">  153</span> </div>
+<div class="line"><span class="lineno">  154</span>    <span class="comment">// 🔹 Blank lines after the header</span></div>
+<div class="line"><span class="lineno">  155</span>    Serial.println();</div>
+<div class="line"><span class="lineno">  156</span>    Serial.println();</div>
+<div class="line"><span class="lineno">  157</span>}</div>
+</div><!-- fragment --><div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="msg_8cpp_abda2f504e4bfdbfbdd0cd8f8937f72f1_icgraph.png" border="0" usemap="#amsg_8cpp_abda2f504e4bfdbfbdd0cd8f8937f72f1_icgraph" loading="lazy" alt=""/></div>
+<map name="amsg_8cpp_abda2f504e4bfdbfbdd0cd8f8937f72f1_icgraph" id="amsg_8cpp_abda2f504e4bfdbfbdd0cd8f8937f72f1_icgraph">
+<area shape="rect" title="Imprime un encabezado decorado con texto centrado y metadatos." alt="" coords="539,157,673,183"/>
+<area shape="rect" href="diagnostics_u_a_r_t_8cpp.html#acc8f8328b4a6e60100e91825f885bcb7" title="Runs a complete diagnostic on all available UART ports." alt="" coords="124,5,247,31"/>
+<area shape="poly" title=" " alt="" coords="588,147,548,94,521,68,489,47,428,25,364,14,301,11,247,13,247,8,301,6,364,9,430,20,492,42,524,64,552,91,593,144"/>
+<area shape="rect" href="pinout_8cpp.html#a78f24fdab5ead1139f3f21bb83161147" title="Diagnóstico de pines analógicos." alt="" coords="343,56,458,81"/>
+<area shape="poly" title=" " alt="" coords="574,152,489,103,441,84,443,79,492,98,576,147"/>
+<area shape="rect" href="pinout_8cpp.html#aa7a52c7f07b6793318c1e95e41b9c79a" title="Ejecuta todos los diagnósticos de pines." alt="" coords="119,107,251,132"/>
+<area shape="poly" title=" " alt="" coords="537,157,490,149,363,134,251,125,252,120,364,129,491,143,538,152"/>
+<area shape="rect" href="pinout_8cpp.html#ad6ad9404cb3845eca0a1c5bf2d2d1932" title="Diagnóstico de pines GPIO." alt="" coords="347,157,454,183"/>
+<area shape="poly" title=" " alt="" coords="525,173,454,173,454,167,525,167"/>
+<area shape="rect" href="pinout_8cpp.html#a271cb6214ddcfd09c0090119ed5159a0" title="Diagnóstico de pines PWM." alt="" coords="347,207,454,232"/>
+<area shape="poly" title=" " alt="" coords="540,189,455,209,453,204,539,183"/>
+<area shape="rect" href="class_diagnostics_e_e_p_r_o_m.html#ac829dcc712fc300e26d11b51602fc5bb" title="Runs a diagnostic test on the EEPROM at the specified address. Writes a test value,..." alt="" coords="108,258,263,298"/>
+<area shape="poly" title=" " alt="" coords="581,194,541,222,492,247,433,264,373,274,263,282,263,277,372,269,432,259,490,242,538,218,578,189"/>
+<area shape="rect" href="msg_8cpp.html#aff36c414af17efe4543ba01e5a18ccad" title="Displays the current system configuration status on the serial monitor." alt="" coords="311,308,491,333"/>
+<area shape="poly" title=" " alt="" coords="589,196,548,243,521,269,492,291,451,310,449,305,489,286,518,265,544,240,585,192"/>
+<area shape="rect" href="main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title="Arduino setup function (runs once at startup)." alt="" coords="5,132,60,157"/>
+<area shape="poly" title=" " alt="" coords="132,39,110,52,88,72,70,94,43,133,39,130,65,91,84,68,106,48,129,34"/>
+<area shape="poly" title=" " alt="" coords="329,68,223,73,165,82,109,98,77,114,50,134,47,129,74,110,107,93,164,77,223,68,329,63"/>
+<area shape="poly" title=" " alt="" coords="333,87,241,109,239,104,332,82"/>
+<area shape="poly" title=" " alt="" coords="106,135,61,143,60,138,105,130"/>
+<area shape="poly" title=" " alt="" coords="333,168,60,149,60,144,334,163"/>
+<area shape="poly" title=" " alt="" coords="334,157,239,135,241,129,335,152"/>
+<area shape="poly" title=" " alt="" coords="333,211,107,167,60,155,61,150,109,162,334,206"/>
+<area shape="poly" title=" " alt="" coords="333,206,310,198,249,166,202,134,205,130,252,161,312,193,335,201"/>
+<area shape="poly" title=" " alt="" coords="123,253,106,241,66,199,39,159,44,156,70,195,110,237,127,249"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6ef1ee9724c4aa2cdcd16023815c107a" name="a6ef1ee9724c4aa2cdcd16023815c107a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ef1ee9724c4aa2cdcd16023815c107a">&#9670;&#160;</a></span>standardMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void standardMessage </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>message</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>function</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>date</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>time</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Imprime un mensaje estandarizado y formateado en el monitor serie. </p>
+<p>Prints an enriched log message to the serial monitor.</p>
+<p>El mensaje aparece centrado entre dos líneas decorativas y acompañado de información contextual como archivo, función, fecha y hora.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">message</td><td>Mensaje principal a mostrar. </td></tr>
+    <tr><td class="paramname">file</td><td>Nombre del archivo origen. </td></tr>
+    <tr><td class="paramname">function</td><td>Nombre de la función desde donde se llama. </td></tr>
+    <tr><td class="paramname">date</td><td>Fecha de compilación o personalizada. </td></tr>
+    <tr><td class="paramname">time</td><td>Hora de compilación o personalizada. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="msg_8cpp_source.html#l00015">15</a> del archivo <a class="el" href="msg_8cpp_source.html">msg.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   19</span>                                       {</div>
+<div class="line"><span class="lineno">   20</span>    <span class="keyword">const</span> uint8_t totalWidth = 200; <span class="comment">// Total width of the decorative line</span></div>
+<div class="line"><span class="lineno">   21</span>    <span class="keywordtype">int</span> msgLen = strlen(message);   <span class="comment">// Length of the message text</span></div>
+<div class="line"><span class="lineno">   22</span>    <span class="keywordtype">int</span> padding = (totalWidth - msgLen) / 2; <span class="comment">// Spaces to add on the left to center the text</span></div>
+<div class="line"><span class="lineno">   23</span> </div>
+<div class="line"><span class="lineno">   24</span>    Serial.println();</div>
+<div class="line"><span class="lineno">   25</span> </div>
+<div class="line"><span class="lineno">   26</span>    <span class="comment">// ─────────────────────────────</span></div>
+<div class="line"><span class="lineno">   27</span>    <span class="comment">// Top decorative line</span></div>
+<div class="line"><span class="lineno">   28</span>    <span class="comment">// ─────────────────────────────</span></div>
+<div class="line"><span class="lineno">   29</span>    <span class="keywordflow">for</span> (uint8_t i = 0; i &lt; totalWidth; i++) Serial.write(<span class="charliteral">&#39;-&#39;</span>);</div>
+<div class="line"><span class="lineno">   30</span>    Serial.println();</div>
+<div class="line"><span class="lineno">   31</span> </div>
+<div class="line"><span class="lineno">   32</span>    <span class="comment">// ─────────────────────────────</span></div>
+<div class="line"><span class="lineno">   33</span>    <span class="comment">// Centered message text</span></div>
+<div class="line"><span class="lineno">   34</span>    <span class="comment">// ─────────────────────────────</span></div>
+<div class="line"><span class="lineno">   35</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; padding; i++) Serial.write(<span class="charliteral">&#39; &#39;</span>); <span class="comment">// Left padding</span></div>
+<div class="line"><span class="lineno">   36</span>    Serial.println(message); <span class="comment">// Main message</span></div>
+<div class="line"><span class="lineno">   37</span> </div>
+<div class="line"><span class="lineno">   38</span>    <span class="comment">// ─────────────────────────────</span></div>
+<div class="line"><span class="lineno">   39</span>    <span class="comment">// Bottom decorative line</span></div>
+<div class="line"><span class="lineno">   40</span>    <span class="comment">// ─────────────────────────────</span></div>
+<div class="line"><span class="lineno">   41</span>    <span class="keywordflow">for</span> (uint8_t i = 0; i &lt; totalWidth; i++) Serial.write(<span class="charliteral">&#39;-&#39;</span>);</div>
+<div class="line"><span class="lineno">   42</span>    Serial.println();</div>
+<div class="line"><span class="lineno">   43</span> </div>
+<div class="line"><span class="lineno">   44</span>    <span class="comment">// ─────────────────────────────</span></div>
+<div class="line"><span class="lineno">   45</span>    <span class="comment">// Detailed information below the main message</span></div>
+<div class="line"><span class="lineno">   46</span>    <span class="comment">// ─────────────────────────────</span></div>
+<div class="line"><span class="lineno">   47</span>    Serial.print(<span class="stringliteral">&quot;[&quot;</span>);</div>
+<div class="line"><span class="lineno">   48</span>    Serial.print(date);</div>
+<div class="line"><span class="lineno">   49</span>    Serial.print(<span class="stringliteral">&quot; &quot;</span>);</div>
+<div class="line"><span class="lineno">   50</span>    Serial.print(time);</div>
+<div class="line"><span class="lineno">   51</span>    Serial.print(<span class="stringliteral">&quot;] &quot;</span>);</div>
+<div class="line"><span class="lineno">   52</span>    Serial.print(file);</div>
+<div class="line"><span class="lineno">   53</span>    Serial.print(<span class="stringliteral">&quot;::&quot;</span>);</div>
+<div class="line"><span class="lineno">   54</span>    Serial.print(function);</div>
+<div class="line"><span class="lineno">   55</span>    Serial.print(<span class="stringliteral">&quot; ➤ &quot;</span>);</div>
+<div class="line"><span class="lineno">   56</span>    Serial.println(message);</div>
+<div class="line"><span class="lineno">   57</span> </div>
+<div class="line"><span class="lineno">   58</span>    Serial.println();</div>
+<div class="line"><span class="lineno">   59</span>}</div>
+</div><!-- fragment --><div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="msg_8cpp_a6ef1ee9724c4aa2cdcd16023815c107a_icgraph.png" border="0" usemap="#amsg_8cpp_a6ef1ee9724c4aa2cdcd16023815c107a_icgraph" loading="lazy" alt=""/></div>
+<map name="amsg_8cpp_a6ef1ee9724c4aa2cdcd16023815c107a_icgraph" id="amsg_8cpp_a6ef1ee9724c4aa2cdcd16023815c107a_icgraph">
+<area shape="rect" title="Imprime un mensaje estandarizado y formateado en el monitor serie." alt="" coords="336,104,461,129"/>
+<area shape="rect" href="diagnostics_u_a_r_t_8cpp.html#acc8f8328b4a6e60100e91825f885bcb7" title="Runs a complete diagnostic on all available UART ports." alt="" coords="137,5,259,31"/>
+<area shape="poly" title=" " alt="" coords="370,97,332,70,287,44,257,33,258,28,289,40,335,65,373,93"/>
+<area shape="rect" href="pinout_8cpp.html#aa7a52c7f07b6793318c1e95e41b9c79a" title="Ejecuta todos los diagnósticos de pines." alt="" coords="132,55,264,80"/>
+<area shape="poly" title=" " alt="" coords="333,103,250,83,251,77,334,98"/>
+<area shape="rect" href="msg_8cpp.html#acedf89272beec6e618703147664ef34c" title="Prints firmware version details to the serial monitor." alt="" coords="153,104,243,129"/>
+<area shape="poly" title=" " alt="" coords="322,119,244,119,244,114,322,114"/>
+<area shape="rect" href="class_diagnostics_e_e_p_r_o_m.html#ac829dcc712fc300e26d11b51602fc5bb" title="Runs a diagnostic test on the EEPROM at the specified address. Writes a test value,..." alt="" coords="121,154,275,194"/>
+<area shape="poly" title=" " alt="" coords="341,136,269,157,268,151,339,131"/>
+<area shape="rect" href="msg_8cpp.html#aff36c414af17efe4543ba01e5a18ccad" title="Displays the current system configuration status on the serial monitor." alt="" coords="108,219,288,244"/>
+<area shape="poly" title=" " alt="" coords="377,141,338,176,289,208,258,221,256,216,287,204,335,171,374,137"/>
+<area shape="rect" href="main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title="Arduino setup function (runs once at startup)." alt="" coords="5,80,60,105"/>
+<area shape="poly" title=" " alt="" coords="126,37,109,44,77,63,51,82,48,78,75,58,107,40,124,33"/>
+<area shape="poly" title=" " alt="" coords="119,82,61,91,60,86,118,77"/>
+<area shape="poly" title=" " alt="" coords="139,111,60,99,61,94,140,106"/>
+<area shape="poly" title=" " alt="" coords="124,151,107,143,50,108,53,103,109,138,126,146"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_d501334aeb1b78ad67cd3c72c37b1e87.html">system</a></li><li class="navelem"><a href="dir_c3c49005096076c0dc40248b9478f411.html">msg</a></li><li class="navelem"><a href="msg_8cpp.html">msg.cpp</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

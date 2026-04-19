@@ -1,0 +1,9 @@
+<map id="diagnosticsEEPROM.h" name="diagnosticsEEPROM.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="82,5,238,31"/>
+<area shape="rect" id="Node000002" href="$diagnostics_e_e_p_r_o_m_8cpp.html" title=" " alt="" coords="5,79,176,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="141,43,104,80,100,77,137,39"/>
+<area shape="rect" id="Node000003" href="$main_8h.html" title="Archivo principal de cabecera del firmware. Contiene metadatos del firmware, includes del sistema,..." alt="" coords="200,79,261,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="183,39,221,77,217,80,179,43"/>
+<area shape="rect" id="Node000004" href="$main_8cpp.html" title="Firmware principal del sistema. Configura diagnósticos, pines, UART, SPI, I2C, interrupciones,..." alt="" coords="193,152,268,177"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="233,118,233,152,228,152,228,118"/>
+</map>

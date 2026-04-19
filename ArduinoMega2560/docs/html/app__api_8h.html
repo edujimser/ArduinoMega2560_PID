@@ -1,0 +1,379 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ArduinoMega2560_SPI: Referencia del archivo app_api.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ArduinoMega2560_SPI<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('app__api_8h.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia del archivo app_api.h</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><a href="app__api_8h_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+defines</h2></td></tr>
+<tr class="memitem:ad8a2d51386948571d322e0905fbe8823" id="r_ad8a2d51386948571d322e0905fbe8823"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ad8a2d51386948571d322e0905fbe8823">BOOT_OK</a>&#160;&#160;&#160;(0) /* no error, success */</td></tr>
+<tr class="memitem:abb3c34c561f0644d9f55eaf700fed7b2" id="r_abb3c34c561f0644d9f55eaf700fed7b2"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#abb3c34c561f0644d9f55eaf700fed7b2">BOOT_ERROR</a>&#160;&#160;&#160;(1) /* unspecified error */</td></tr>
+<tr class="memitem:ac8ffc07300ba259bfde532c6c560bee2" id="r_ac8ffc07300ba259bfde532c6c560bee2"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ac8ffc07300ba259bfde532c6c560bee2">BOOT_FUNCTION_INVALID</a>&#160;&#160;&#160;(2) /* The function address in jump table was not valid */</td></tr>
+<tr class="memitem:ae4cd3d175162645b06865e1b8cfa5b7d" id="r_ae4cd3d175162645b06865e1b8cfa5b7d"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ae4cd3d175162645b06865e1b8cfa5b7d">BOOT_VERSION_INVALID</a>&#160;&#160;&#160;(3) /* The version of the jump table in bootloader does not match the version of this code */</td></tr>
+<tr class="memitem:a0f30c1558839c101aa7607ad0afd396a" id="r_a0f30c1558839c101aa7607ad0afd396a"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a0f30c1558839c101aa7607ad0afd396a">BOOT_ID_INVALID</a>&#160;&#160;&#160;(4) /* The ID of the bootloader API does not match the ID expected by this code */</td></tr>
+<tr class="memitem:a0737dbb422f8332818fb6f6795f7e8a4" id="r_a0737dbb422f8332818fb6f6795f7e8a4"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a0737dbb422f8332818fb6f6795f7e8a4">BOOT_API_VERSION</a>&#160;&#160;&#160;(2)     /* Version of the API expected by this code. */</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:aeedbe8067955df9ce6aa7aebe626be0a" id="r_aeedbe8067955df9ce6aa7aebe626be0a"><td class="memItemLeft">uint8_t&#160;</td><td class="memItemRight"><a class="el" href="#aeedbe8067955df9ce6aa7aebe626be0a">dboot_init_api</a> (void)</td></tr>
+<tr class="memitem:a187c006526fbdc1759c52c0c99f54916" id="r_a187c006526fbdc1759c52c0c99f54916"><td class="memItemLeft">uint8_t&#160;</td><td class="memItemRight"><a class="el" href="#a187c006526fbdc1759c52c0c99f54916">dboot_get_api_version</a> (uint8_t *ver)</td></tr>
+<tr class="memitem:ae6e016717dbb8bf9834ddd4420d62d3b" id="r_ae6e016717dbb8bf9834ddd4420d62d3b"><td class="memItemLeft">uint8_t&#160;</td><td class="memItemRight"><a class="el" href="#ae6e016717dbb8bf9834ddd4420d62d3b">dboot_get_version</a> (uint16_t *ver)</td></tr>
+<tr class="memitem:a1c2fa2e40a00daec01fc34581d6eefde" id="r_a1c2fa2e40a00daec01fc34581d6eefde"><td class="memItemLeft">uint8_t&#160;</td><td class="memItemRight"><a class="el" href="#a1c2fa2e40a00daec01fc34581d6eefde">dboot_led_toggle</a> (void)</td></tr>
+<tr class="memitem:a43c82e1f8931999e0c92def081484010" id="r_a43c82e1f8931999e0c92def081484010"><td class="memItemLeft">uint8_t&#160;</td><td class="memItemRight"><a class="el" href="#a43c82e1f8931999e0c92def081484010">dboot_led_init</a> (void)</td></tr>
+<tr class="memitem:a87164cc63c2a9b72a157d2569c4f981b" id="r_a87164cc63c2a9b72a157d2569c4f981b"><td class="memItemLeft">uint8_t&#160;</td><td class="memItemRight"><a class="el" href="#a87164cc63c2a9b72a157d2569c4f981b">dboot_safe_pgm_write</a> (const void *ram_addr, uint16_t rom_addr, uint16_t sz)</td></tr>
+<tr class="memitem:a40304c671ecdf39592c1e4a215b9b90d" id="r_a40304c671ecdf39592c1e4a215b9b90d"><td class="memItemLeft">uint8_t&#160;</td><td class="memItemRight"><a class="el" href="#a40304c671ecdf39592c1e4a215b9b90d">dboot_handle_xload</a> (void)</td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Documentación de «define»</h2>
+<a id="a0737dbb422f8332818fb6f6795f7e8a4" name="a0737dbb422f8332818fb6f6795f7e8a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0737dbb422f8332818fb6f6795f7e8a4">&#9670;&#160;</a></span>BOOT_API_VERSION</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BOOT_API_VERSION&#160;&#160;&#160;(2)     /* Version of the API expected by this code. */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="app__api_8h_source.html#l00034">34</a> del archivo <a class="el" href="app__api_8h_source.html">app_api.h</a>.</p>
+
+</div>
+</div>
+<a id="abb3c34c561f0644d9f55eaf700fed7b2" name="abb3c34c561f0644d9f55eaf700fed7b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb3c34c561f0644d9f55eaf700fed7b2">&#9670;&#160;</a></span>BOOT_ERROR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BOOT_ERROR&#160;&#160;&#160;(1) /* unspecified error */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="app__api_8h_source.html#l00028">28</a> del archivo <a class="el" href="app__api_8h_source.html">app_api.h</a>.</p>
+
+</div>
+</div>
+<a id="ac8ffc07300ba259bfde532c6c560bee2" name="ac8ffc07300ba259bfde532c6c560bee2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8ffc07300ba259bfde532c6c560bee2">&#9670;&#160;</a></span>BOOT_FUNCTION_INVALID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BOOT_FUNCTION_INVALID&#160;&#160;&#160;(2) /* The function address in jump table was not valid */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="app__api_8h_source.html#l00029">29</a> del archivo <a class="el" href="app__api_8h_source.html">app_api.h</a>.</p>
+
+</div>
+</div>
+<a id="a0f30c1558839c101aa7607ad0afd396a" name="a0f30c1558839c101aa7607ad0afd396a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f30c1558839c101aa7607ad0afd396a">&#9670;&#160;</a></span>BOOT_ID_INVALID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BOOT_ID_INVALID&#160;&#160;&#160;(4) /* The ID of the bootloader API does not match the ID expected by this code */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="app__api_8h_source.html#l00031">31</a> del archivo <a class="el" href="app__api_8h_source.html">app_api.h</a>.</p>
+
+</div>
+</div>
+<a id="ad8a2d51386948571d322e0905fbe8823" name="ad8a2d51386948571d322e0905fbe8823"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8a2d51386948571d322e0905fbe8823">&#9670;&#160;</a></span>BOOT_OK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BOOT_OK&#160;&#160;&#160;(0) /* no error, success */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="app__api_8h_source.html#l00027">27</a> del archivo <a class="el" href="app__api_8h_source.html">app_api.h</a>.</p>
+
+</div>
+</div>
+<a id="ae4cd3d175162645b06865e1b8cfa5b7d" name="ae4cd3d175162645b06865e1b8cfa5b7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4cd3d175162645b06865e1b8cfa5b7d">&#9670;&#160;</a></span>BOOT_VERSION_INVALID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BOOT_VERSION_INVALID&#160;&#160;&#160;(3) /* The version of the jump table in bootloader does not match the version of this code */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="app__api_8h_source.html#l00030">30</a> del archivo <a class="el" href="app__api_8h_source.html">app_api.h</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones</h2>
+<a id="a187c006526fbdc1759c52c0c99f54916" name="a187c006526fbdc1759c52c0c99f54916"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a187c006526fbdc1759c52c0c99f54916">&#9670;&#160;</a></span>dboot_get_api_version()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t dboot_get_api_version </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>ver</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Read the verison of the API. This is the value of the "ver" field in the jump table struct avrdbgboot_jump_table_s </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ver</td><td>(out) - the version of the API </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>BOOT_OK on success. </dd></dl>
+
+</div>
+</div>
+<a id="ae6e016717dbb8bf9834ddd4420d62d3b" name="ae6e016717dbb8bf9834ddd4420d62d3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6e016717dbb8bf9834ddd4420d62d3b">&#9670;&#160;</a></span>dboot_get_version()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t dboot_get_version </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t *</td>          <td class="paramname"><span class="paramname"><em>ver</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Read the version of the bootloader from bootloader memory. This is the version of the bootloader, not the version of the API. The bootloader verison is (AVRDBG_BOOT_VERSION_MAJOR &lt;&lt; 8) | (AVRDBG_BOOT_VERSION_MINOR) as defined in bootapi.c </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ver</td><td>(out) - the version of the bootloader </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>BOOT_OK on success. </dd></dl>
+
+</div>
+</div>
+<a id="a40304c671ecdf39592c1e4a215b9b90d" name="a40304c671ecdf39592c1e4a215b9b90d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40304c671ecdf39592c1e4a215b9b90d">&#9670;&#160;</a></span>dboot_handle_xload()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t dboot_handle_xload </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Handle X load command from GDB that is load new application to memory </p>
+
+</div>
+</div>
+<a id="aeedbe8067955df9ce6aa7aebe626be0a" name="aeedbe8067955df9ce6aa7aebe626be0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeedbe8067955df9ce6aa7aebe626be0a">&#9670;&#160;</a></span>dboot_init_api()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t dboot_init_api </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Must be called to initialize the API and verify that it is OK before using any other function of this API. </p>
+
+</div>
+</div>
+<a id="a43c82e1f8931999e0c92def081484010" name="a43c82e1f8931999e0c92def081484010"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43c82e1f8931999e0c92def081484010">&#9670;&#160;</a></span>dboot_led_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t dboot_led_init </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Initialize the pin for on-board LED (PB5) This is only available if AVR8_STUB_DEBUG is defined. If not defined, it just returns BOOT_VERSION_INVALID. </p><dl class="section return"><dt>Devuelve</dt><dd>BOOT_OK on success. </dd></dl>
+
+</div>
+</div>
+<a id="a1c2fa2e40a00daec01fc34581d6eefde" name="a1c2fa2e40a00daec01fc34581d6eefde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c2fa2e40a00daec01fc34581d6eefde">&#9670;&#160;</a></span>dboot_led_toggle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t dboot_led_toggle </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Toggle the on-board LED This is only available if AVR8_STUB_DEBUG is defined. If not defined, it just returns BOOT_VERSION_INVALID. </p><dl class="section return"><dt>Devuelve</dt><dd>BOOT_OK on success. </dd></dl>
+
+</div>
+</div>
+<a id="a87164cc63c2a9b72a157d2569c4f981b" name="a87164cc63c2a9b72a157d2569c4f981b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87164cc63c2a9b72a157d2569c4f981b">&#9670;&#160;</a></span>dboot_safe_pgm_write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t dboot_safe_pgm_write </td>
+          <td>(</td>
+          <td class="paramtype">const void *</td>          <td class="paramname"><span class="paramname"><em>ram_addr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>rom_addr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>sz</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Write to program memory from RAM buffer. rom_addr - in words, sz - in bytes and must be multiple of two. </p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li><li class="navelem"><a href="dir_bb4fe7e8674c2fa1a791ed9fe544908f.html">avr-debugger</a></li><li class="navelem"><a href="dir_914d1a0a7fc30b249c077d0087c8590d.html">src</a></li><li class="navelem"><a href="app__api_8h.html">app_api.h</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

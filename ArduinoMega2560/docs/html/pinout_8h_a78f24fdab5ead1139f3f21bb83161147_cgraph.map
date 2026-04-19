@@ -1,0 +1,5 @@
+<map id="diagnoseAnalog" name="diagnoseAnalog">
+<area shape="rect" id="Node000001" title="Diagnóstico de pines analógicos." alt="" coords="5,5,120,31"/>
+<area shape="rect" id="Node000002" href="$msg_8cpp.html#abda2f504e4bfdbfbdd0cd8f8937f72f1" title="Prints a decorated header with centered text and padding on both sides." alt="" coords="168,5,303,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="120,15,154,15,154,21,120,21"/>
+</map>

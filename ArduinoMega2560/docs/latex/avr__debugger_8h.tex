@@ -1,0 +1,140 @@
+\doxysection{Referencia del archivo avr\+\_\+debugger.\+h}
+\hypertarget{avr__debugger_8h}{}\label{avr__debugger_8h}\index{avr\_debugger.h@{avr\_debugger.h}}
+{\ttfamily \+\#include "{}avr8-\/stub.\+h"{}}\newline
+{\ttfamily \+\#include $<$avr/\+interrupt.\+h$>$}\newline
+Gráfico de dependencias incluidas en avr\+\_\+debugger.\+h:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{avr__debugger_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{defines}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{avr__debugger_8h_a09198f76a02dcebf8ceec0099ac75329}{DBG\+\_\+\+EXEC}}(x)
+\item 
+\+\#define \doxymbox{\hyperlink{avr__debugger_8h_a89b4ba809a03664538a2b453d49b1eef}{dbg\+\_\+breakpoint}}()
+\item 
+\+\#define \doxymbox{\hyperlink{avr__debugger_8h_a62599516a7b5bb90d35d402af65b8b9c}{dbg\+\_\+init}}()
+\item 
+\+\#define \doxymbox{\hyperlink{avr__debugger_8h_a1b849ac55a1cf76e60c221b78b6ef47e}{dbg\+\_\+message}}(x)
+\item 
+\+\#define \doxymbox{\hyperlink{avr__debugger_8h_ad1f9490adcaacd00a1e0559cad282cea}{dbg\+\_\+start}}()
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{avr__debugger_8h_doc-define-members}
+\doxysubsection{Documentación de «define»}
+\Hypertarget{avr__debugger_8h_a89b4ba809a03664538a2b453d49b1eef}\index{avr\_debugger.h@{avr\_debugger.h}!dbg\_breakpoint@{dbg\_breakpoint}}
+\index{dbg\_breakpoint@{dbg\_breakpoint}!avr\_debugger.h@{avr\_debugger.h}}
+\doxysubsubsection{\texorpdfstring{dbg\_breakpoint}{dbg\_breakpoint}}
+{\footnotesize\ttfamily \label{avr__debugger_8h_a89b4ba809a03664538a2b453d49b1eef} 
+\+\#define dbg\+\_\+breakpoint(\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+{\bfseries Valor:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{\ \(\backslash\)}
+\DoxyCodeLine{DBG\_EXEC(\doxymbox{\hyperlink{avr8-stub_8h_aef5ea7360080a589bedb934b57656cb9}{breakpoint}}());\ \(\backslash\)}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Definición en la línea \doxymbox{\hyperlink{avr__debugger_8h_source_l00024}{24}} del archivo \doxymbox{\hyperlink{avr__debugger_8h_source}{avr\+\_\+debugger.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#define\ dbg\_breakpoint()\ \{\ \(\backslash\) }}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\ \ \ \ DBG\_EXEC(breakpoint());\ \(\backslash\) }}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\ \ \ \ \} }}
+
+\end{DoxyCode}
+\Hypertarget{avr__debugger_8h_a09198f76a02dcebf8ceec0099ac75329}\index{avr\_debugger.h@{avr\_debugger.h}!DBG\_EXEC@{DBG\_EXEC}}
+\index{DBG\_EXEC@{DBG\_EXEC}!avr\_debugger.h@{avr\_debugger.h}}
+\doxysubsubsection{\texorpdfstring{DBG\_EXEC}{DBG\_EXEC}}
+{\footnotesize\ttfamily \label{avr__debugger_8h_a09198f76a02dcebf8ceec0099ac75329} 
+\+\#define DBG\+\_\+\+EXEC(\begin{DoxyParamCaption}\item[{}]{x}{}\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \doxymbox{\hyperlink{avr__debugger_8h_source_l00021}{21}} del archivo \doxymbox{\hyperlink{avr__debugger_8h_source}{avr\+\_\+debugger.\+h}}.
+
+\Hypertarget{avr__debugger_8h_a62599516a7b5bb90d35d402af65b8b9c}\index{avr\_debugger.h@{avr\_debugger.h}!dbg\_init@{dbg\_init}}
+\index{dbg\_init@{dbg\_init}!avr\_debugger.h@{avr\_debugger.h}}
+\doxysubsubsection{\texorpdfstring{dbg\_init}{dbg\_init}}
+{\footnotesize\ttfamily \label{avr__debugger_8h_a62599516a7b5bb90d35d402af65b8b9c} 
+\+\#define dbg\+\_\+init(\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+{\bfseries Valor:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{\ \(\backslash\)}
+\DoxyCodeLine{DBG\_EXEC(\doxymbox{\hyperlink{avr8-stub_8h_aa3ccab9eb015b12a84ffcd9dd3bd66a9}{debug\_init}}());\ \(\backslash\)}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Definición en la línea \doxymbox{\hyperlink{avr__debugger_8h_source_l00028}{28}} del archivo \doxymbox{\hyperlink{avr__debugger_8h_source}{avr\+\_\+debugger.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#define\ dbg\_init()\ \ \ \ \ \ \ \{\ \(\backslash\) }}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\ \ \ \ DBG\_EXEC(debug\_init());\ \(\backslash\) }}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\ \ \ \ \} }}
+
+\end{DoxyCode}
+\Hypertarget{avr__debugger_8h_a1b849ac55a1cf76e60c221b78b6ef47e}\index{avr\_debugger.h@{avr\_debugger.h}!dbg\_message@{dbg\_message}}
+\index{dbg\_message@{dbg\_message}!avr\_debugger.h@{avr\_debugger.h}}
+\doxysubsubsection{\texorpdfstring{dbg\_message}{dbg\_message}}
+{\footnotesize\ttfamily \label{avr__debugger_8h_a1b849ac55a1cf76e60c221b78b6ef47e} 
+\+\#define dbg\+\_\+message(\begin{DoxyParamCaption}\item[{}]{x}{}\end{DoxyParamCaption})}
+
+{\bfseries Valor:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{\ \(\backslash\)}
+\DoxyCodeLine{DBG\_EXEC(\doxymbox{\hyperlink{avr8-stub_8h_a99d9303d3a4634b31d88812a0954ab7a}{debug\_message}}(x));\ \(\backslash\)}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Definición en la línea \doxymbox{\hyperlink{avr__debugger_8h_source_l00032}{32}} del archivo \doxymbox{\hyperlink{avr__debugger_8h_source}{avr\+\_\+debugger.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#define\ dbg\_message(x)\ \{\ \(\backslash\) }}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\ \ \ \ DBG\_EXEC(debug\_message(x));\ \(\backslash\) }}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\ \ \ \ \} }}
+
+\end{DoxyCode}
+\Hypertarget{avr__debugger_8h_ad1f9490adcaacd00a1e0559cad282cea}\index{avr\_debugger.h@{avr\_debugger.h}!dbg\_start@{dbg\_start}}
+\index{dbg\_start@{dbg\_start}!avr\_debugger.h@{avr\_debugger.h}}
+\doxysubsubsection{\texorpdfstring{dbg\_start}{dbg\_start}}
+{\footnotesize\ttfamily \label{avr__debugger_8h_ad1f9490adcaacd00a1e0559cad282cea} 
+\+\#define dbg\+\_\+start(\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+{\bfseries Valor:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{\ \(\backslash\)}
+\DoxyCodeLine{DBG\_EXEC(\doxymbox{\hyperlink{avr8-stub_8h_aa3ccab9eb015b12a84ffcd9dd3bd66a9}{debug\_init}}());\ \(\backslash\)}
+\DoxyCodeLine{DBG\_EXEC(sei());\ \(\backslash\)}
+\DoxyCodeLine{DBG\_EXEC(\doxymbox{\hyperlink{avr8-stub_8h_aef5ea7360080a589bedb934b57656cb9}{breakpoint}}());\ \(\backslash\)}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Definición en la línea \doxymbox{\hyperlink{avr__debugger_8h_source_l00036}{36}} del archivo \doxymbox{\hyperlink{avr__debugger_8h_source}{avr\+\_\+debugger.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#define\ dbg\_start()\ \ \ \ \ \ \{\ \(\backslash\) }}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\ \ \ \ DBG\_EXEC(debug\_init());\ \(\backslash\) }}
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\ \ \ \ DBG\_EXEC(sei());\ \(\backslash\) }}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\ \ \ \ DBG\_EXEC(breakpoint());\ \(\backslash\) }}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\ \ \ \ \} }}
+
+\end{DoxyCode}

@@ -1,0 +1,460 @@
+\doxysection{Referencia del archivo msg.\+cpp}
+\hypertarget{msg_8cpp}{}\label{msg_8cpp}\index{msg.cpp@{msg.cpp}}
+{\ttfamily \+\#include "{}system/\+msg/\+msg.\+h"{}}\newline
+Gráfico de dependencias incluidas en msg.\+cpp:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{msg_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{msg_8cpp_a6ef1ee9724c4aa2cdcd16023815c107a}{standard\+Message}} (const char \texorpdfstring{$\ast$}{*}message, const char \texorpdfstring{$\ast$}{*}file, const char \texorpdfstring{$\ast$}{*}function, const char \texorpdfstring{$\ast$}{*}date, const char \texorpdfstring{$\ast$}{*}time)
+\begin{DoxyCompactList}\small\item\em Imprime un mensaje estandarizado y formateado en el monitor serie. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{msg_8cpp_adde533a3eb738a72683661656b09ed23}{standard\+Header}} (const char \texorpdfstring{$\ast$}{*}message, uint16\+\_\+t width, char deco)
+\begin{DoxyCompactList}\small\item\em Imprime un encabezado decorativo con el mensaje centrado. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{msg_8cpp_abda2f504e4bfdbfbdd0cd8f8937f72f1}{standard\+Header\+Full}} (const char \texorpdfstring{$\ast$}{*}message, const char \texorpdfstring{$\ast$}{*}file, const char \texorpdfstring{$\ast$}{*}function, const char \texorpdfstring{$\ast$}{*}date, const char \texorpdfstring{$\ast$}{*}time, uint16\+\_\+t width, char deco)
+\begin{DoxyCompactList}\small\item\em Imprime un encabezado decorado con texto centrado y metadatos. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{msg_8cpp_aaf284eacfd5fa2ce8756262345d925e9}{standard\+Error\+Message}} (const char \texorpdfstring{$\ast$}{*}message, const char \texorpdfstring{$\ast$}{*}file, const char \texorpdfstring{$\ast$}{*}function, const char \texorpdfstring{$\ast$}{*}date, const char \texorpdfstring{$\ast$}{*}time, int line)
+\begin{DoxyCompactList}\small\item\em Imprime un mensaje de error enriquecido con información contextual. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{msg_8cpp_aff36c414af17efe4543ba01e5a18ccad}{show\+Configuration\+Message}} (const \doxymbox{\hyperlink{structconfiguracion_main}{configuracion\+Main}} \&configuration)
+\begin{DoxyCompactList}\small\item\em Muestra la configuración actual del sistema. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{msg_8cpp_ac6b570fad074b50622ffef6916bcea8f}{show\+Msg\+Prin\+Line}} (char c, int length)
+\begin{DoxyCompactList}\small\item\em Imprime una línea compuesta por un carácter repetido. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{msg_8cpp_acedf89272beec6e618703147664ef34c}{print\+Version}} (const char \texorpdfstring{$\ast$}{*}fw\+Version, const char \texorpdfstring{$\ast$}{*}fw\+Name, const char \texorpdfstring{$\ast$}{*}fw\+Date, const char \texorpdfstring{$\ast$}{*}fw\+Author, const char \texorpdfstring{$\ast$}{*}app\+Version, const char \texorpdfstring{$\ast$}{*}app\+Name, const char \texorpdfstring{$\ast$}{*}app\+Date)
+\begin{DoxyCompactList}\small\item\em Imprime la información de versión del firmware. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{msg_8cpp_doc-func-members}
+\doxysubsection{Documentación de funciones}
+\Hypertarget{msg_8cpp_acedf89272beec6e618703147664ef34c}\index{msg.cpp@{msg.cpp}!printVersion@{printVersion}}
+\index{printVersion@{printVersion}!msg.cpp@{msg.cpp}}
+\doxysubsubsection{\texorpdfstring{printVersion()}{printVersion()}}
+{\footnotesize\ttfamily \label{msg_8cpp_acedf89272beec6e618703147664ef34c} 
+void print\+Version (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{fw\+Version}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{fw\+Name}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{fw\+Date}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{fw\+Author}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{app\+Version}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{app\+Name}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{app\+Date}{}\end{DoxyParamCaption})}
+
+
+
+Imprime la información de versión del firmware. 
+
+Prints firmware version details to the serial monitor.
+
+Muestra:\+
+\begin{DoxyItemize}
+\item versión del firmware
+\item nombre
+\item fecha
+\item autor
+\item versión de la aplicación
+\item nombre de la aplicación
+\item fecha de la aplicación 
+\end{DoxyItemize}
+
+Definición en la línea \doxymbox{\hyperlink{msg_8cpp_source_l00248}{248}} del archivo \doxymbox{\hyperlink{msg_8cpp_source}{msg.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00255\ \ \ \ \ \doxymbox{\hyperlink{msg_8cpp_a6ef1ee9724c4aa2cdcd16023815c107a}{standardMessage}}(\textcolor{stringliteral}{"{}Firmware\ Version\ Information"{}},}
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_FILE\_\_,}
+\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_FUNCTION\_\_,}
+\DoxyCodeLine{00258\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_DATE\_\_,}
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_TIME\_\_);}
+\DoxyCodeLine{00260\ \ \ \ \ Serial.print(\textcolor{stringliteral}{"{}Firmware\ Version:\ "{}});\ Serial.println(fwVersion);}
+\DoxyCodeLine{00261\ \ \ \ \ Serial.print(\textcolor{stringliteral}{"{}Firmware\ Name:\ "{}});\ \ \ \ Serial.println(fwName);}
+\DoxyCodeLine{00262\ \ \ \ \ Serial.print(\textcolor{stringliteral}{"{}Firmware\ Date:\ "{}});\ \ \ \ Serial.println(fwDate);}
+\DoxyCodeLine{00263\ \ \ \ \ Serial.print(\textcolor{stringliteral}{"{}Firmware\ Author:\ "{}});\ \ Serial.println(fwAuthor);}
+\DoxyCodeLine{00264\ \ \ \ \ Serial.print(\textcolor{stringliteral}{"{}App\ Version:\ "{}});\ \ \ \ \ \ Serial.println(appVersion);}
+\DoxyCodeLine{00265\ \ \ \ \ Serial.print(\textcolor{stringliteral}{"{}App\ Name:\ "{}});\ \ \ \ \ \ \ \ \ Serial.println(appName);}
+\DoxyCodeLine{00266\ \ \ \ \ Serial.print(\textcolor{stringliteral}{"{}App\ Date:\ "{}});\ \ \ \ \ \ \ \ \ Serial.println(appDate);}
+\DoxyCodeLine{00267\ \}}
+
+\end{DoxyCode}
+Gráfico de llamadas de esta función:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{msg_8cpp_acedf89272beec6e618703147664ef34c_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=225pt]{msg_8cpp_acedf89272beec6e618703147664ef34c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{msg_8cpp_aff36c414af17efe4543ba01e5a18ccad}\index{msg.cpp@{msg.cpp}!showConfigurationMessage@{showConfigurationMessage}}
+\index{showConfigurationMessage@{showConfigurationMessage}!msg.cpp@{msg.cpp}}
+\doxysubsubsection{\texorpdfstring{showConfigurationMessage()}{showConfigurationMessage()}}
+{\footnotesize\ttfamily \label{msg_8cpp_aff36c414af17efe4543ba01e5a18ccad} 
+void show\+Configuration\+Message (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structconfiguracion_main}{configuracion\+Main}} \&}]{configuration}{}\end{DoxyParamCaption})}
+
+
+
+Muestra la configuración actual del sistema. 
+
+Displays the current system configuration status on the serial monitor.
+
+Presenta los valores de la estructura \doxylink{structconfiguracion_main}{configuracion\+Main} con un formato visual claro y amigable.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em configuration} & Estructura de configuración del sistema. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \doxymbox{\hyperlink{msg_8cpp_source_l00203}{203}} del archivo \doxymbox{\hyperlink{msg_8cpp_source}{msg.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00204\ \ \ \doxymbox{\hyperlink{msg_8cpp_a6ef1ee9724c4aa2cdcd16023815c107a}{standardMessage}}(\textcolor{stringliteral}{"{}Current\ System\ Configuration"{}},}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_FILE\_\_,}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_FUNCTION\_\_,}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_DATE\_\_,}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_TIME\_\_);}
+\DoxyCodeLine{00209\ \ \ Serial.print(\textcolor{stringliteral}{"{}🔧\ Debug\ mode:\ "{}});}
+\DoxyCodeLine{00210\ \ \ Serial.println(configuration.\doxymbox{\hyperlink{structconfiguracion_main_a5cdc0cc5a5232dc573e6429b06376bac}{debugMode}}\ ?\ \textcolor{stringliteral}{"{}Enabled"{}}\ :\ \textcolor{stringliteral}{"{}Disabled"{}});}
+\DoxyCodeLine{00211\ }
+\DoxyCodeLine{00212\ \ \ \doxymbox{\hyperlink{msg_8cpp_abda2f504e4bfdbfbdd0cd8f8937f72f1}{standardHeaderFull}}(\textcolor{stringliteral}{"{}End\ of\ Configuration"{}},}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_FILE\_\_,}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_FUNCTION\_\_,}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_DATE\_\_,}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_TIME\_\_,}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 120,}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{charliteral}{'-\/'});}
+\DoxyCodeLine{00219\ \}}
+
+\end{DoxyCode}
+Gráfico de llamadas de esta función:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{msg_8cpp_aff36c414af17efe4543ba01e5a18ccad_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{msg_8cpp_ac6b570fad074b50622ffef6916bcea8f}\index{msg.cpp@{msg.cpp}!showMsgPrinLine@{showMsgPrinLine}}
+\index{showMsgPrinLine@{showMsgPrinLine}!msg.cpp@{msg.cpp}}
+\doxysubsubsection{\texorpdfstring{showMsgPrinLine()}{showMsgPrinLine()}}
+{\footnotesize\ttfamily \label{msg_8cpp_ac6b570fad074b50622ffef6916bcea8f} 
+void show\+Msg\+Prin\+Line (\begin{DoxyParamCaption}\item[{char}]{c}{, }\item[{int}]{length}{}\end{DoxyParamCaption})}
+
+
+
+Imprime una línea compuesta por un carácter repetido. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em c} & Carácter a imprimir. \\
+\hline
+{\em length} & Número de repeticiones. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \doxymbox{\hyperlink{msg_8cpp_source_l00228}{228}} del archivo \doxymbox{\hyperlink{msg_8cpp_source}{msg.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00229\ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ length;\ i++)\ \{}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ Serial.print(c);}
+\DoxyCodeLine{00231\ \ \ \ \ \}}
+\DoxyCodeLine{00232\ \ \ \ \ Serial.println();}
+\DoxyCodeLine{00233\ \}}
+
+\end{DoxyCode}
+\Hypertarget{msg_8cpp_aaf284eacfd5fa2ce8756262345d925e9}\index{msg.cpp@{msg.cpp}!standardErrorMessage@{standardErrorMessage}}
+\index{standardErrorMessage@{standardErrorMessage}!msg.cpp@{msg.cpp}}
+\doxysubsubsection{\texorpdfstring{standardErrorMessage()}{standardErrorMessage()}}
+{\footnotesize\ttfamily \label{msg_8cpp_aaf284eacfd5fa2ce8756262345d925e9} 
+void standard\+Error\+Message (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{message}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{file}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{function}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{date}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{time}{, }\item[{int}]{line}{}\end{DoxyParamCaption})}
+
+
+
+Imprime un mensaje de error enriquecido con información contextual. 
+
+Prints an enriched error message to the serial monitor, including contextual information.
+
+Incluye:\+
+\begin{DoxyItemize}
+\item fecha y hora
+\item archivo
+\item función
+\item número de línea
+\item mensaje de error
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parámetros}
+{\em message} & Mensaje de error. \\
+\hline
+{\em file} & Archivo origen. \\
+\hline
+{\em function} & Función origen. \\
+\hline
+{\em date} & Fecha de compilación. \\
+\hline
+{\em time} & Hora de compilación. \\
+\hline
+{\em line} & Número de línea donde se invoca. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \doxymbox{\hyperlink{msg_8cpp_source_l00177}{177}} del archivo \doxymbox{\hyperlink{msg_8cpp_source}{msg.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00178\ \ \ Serial.println();}
+\DoxyCodeLine{00179\ \ \ Serial.print(\textcolor{stringliteral}{"{}["{}});}
+\DoxyCodeLine{00180\ \ \ Serial.print(date);}
+\DoxyCodeLine{00181\ \ \ Serial.print(\textcolor{stringliteral}{"{}\ "{}});}
+\DoxyCodeLine{00182\ \ \ Serial.print(time);}
+\DoxyCodeLine{00183\ \ \ Serial.print(\textcolor{stringliteral}{"{}]\ "{}});}
+\DoxyCodeLine{00184\ \ \ Serial.print(file);}
+\DoxyCodeLine{00185\ \ \ Serial.print(\textcolor{stringliteral}{"{}::"{}});}
+\DoxyCodeLine{00186\ \ \ Serial.print(function);}
+\DoxyCodeLine{00187\ \ \ Serial.print(\textcolor{stringliteral}{"{}\ (Line\ "{}});}
+\DoxyCodeLine{00188\ \ \ Serial.print(line);}
+\DoxyCodeLine{00189\ \ \ Serial.print(\textcolor{stringliteral}{"{})\ ❌\ ERROR\ ➤\ "{}});}
+\DoxyCodeLine{00190\ \ \ Serial.println(message);}
+\DoxyCodeLine{00191\ \ \ Serial.println();}
+\DoxyCodeLine{00192\ \}}
+
+\end{DoxyCode}
+\Hypertarget{msg_8cpp_adde533a3eb738a72683661656b09ed23}\index{msg.cpp@{msg.cpp}!standardHeader@{standardHeader}}
+\index{standardHeader@{standardHeader}!msg.cpp@{msg.cpp}}
+\doxysubsubsection{\texorpdfstring{standardHeader()}{standardHeader()}}
+{\footnotesize\ttfamily \label{msg_8cpp_adde533a3eb738a72683661656b09ed23} 
+void standard\+Header (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{message}{, }\item[{uint16\+\_\+t}]{width}{, }\item[{char}]{deco}{}\end{DoxyParamCaption})}
+
+
+
+Imprime un encabezado decorativo con el mensaje centrado. 
+
+Genera una línea con caracteres decorativos a ambos lados del texto, manteniendo un ancho total definido por el usuario.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em message} & Texto a centrar. \\
+\hline
+{\em width} & Ancho total de la línea. \\
+\hline
+{\em deco} & Carácter decorativo. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \doxymbox{\hyperlink{msg_8cpp_source_l00072}{72}} del archivo \doxymbox{\hyperlink{msg_8cpp_source}{msg.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{int}\ msgLen\ =\ strlen(message);}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{int}\ totalDeco\ =\ width\ -\/\ msgLen\ -\/\ 2;\ \textcolor{comment}{//\ Subtract\ 2\ for\ spacing\ around\ the\ message}}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordflow}{if}\ (totalDeco\ <\ 0)\ totalDeco\ =\ 0;}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{int}\ leftDeco\ =\ totalDeco\ /\ 2;}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{int}\ rightDeco\ =\ totalDeco\ -\/\ leftDeco;}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{comment}{//\ 🔹\ Blank\ line\ before\ the\ header}}
+\DoxyCodeLine{00083\ \ \ \ \ Serial.println();}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{comment}{//\ 🔹\ Left\ decorative\ padding}}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ leftDeco;\ i++)\ Serial.write(deco);}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{comment}{//\ 🔹\ Centered\ message\ with\ spacing}}
+\DoxyCodeLine{00089\ \ \ \ \ Serial.print(\textcolor{charliteral}{'\ '});}
+\DoxyCodeLine{00090\ \ \ \ \ Serial.print(message);}
+\DoxyCodeLine{00091\ \ \ \ \ Serial.print(\textcolor{charliteral}{'\ '});}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{comment}{//\ 🔹\ Right\ decorative\ padding}}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ rightDeco;\ i++)\ Serial.write(deco);}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{comment}{//\ 🔹\ Blank\ line\ after\ the\ header}}
+\DoxyCodeLine{00097\ \ \ \ \ Serial.println();}
+\DoxyCodeLine{00098\ \ \ \ \ Serial.println();}
+\DoxyCodeLine{00099\ \}}
+
+\end{DoxyCode}
+\Hypertarget{msg_8cpp_abda2f504e4bfdbfbdd0cd8f8937f72f1}\index{msg.cpp@{msg.cpp}!standardHeaderFull@{standardHeaderFull}}
+\index{standardHeaderFull@{standardHeaderFull}!msg.cpp@{msg.cpp}}
+\doxysubsubsection{\texorpdfstring{standardHeaderFull()}{standardHeaderFull()}}
+{\footnotesize\ttfamily \label{msg_8cpp_abda2f504e4bfdbfbdd0cd8f8937f72f1} 
+void standard\+Header\+Full (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{message}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{file}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{function}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{date}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{time}{, }\item[{uint16\+\_\+t}]{width}{, }\item[{char}]{deco}{}\end{DoxyParamCaption})}
+
+
+
+Imprime un encabezado decorado con texto centrado y metadatos. 
+
+Prints a decorated header with centered text and padding on both sides.
+
+Construye una línea única que incluye:\+
+\begin{DoxyItemize}
+\item mensaje principal
+\item archivo
+\item función
+\item fecha y hora
+\end{DoxyItemize}
+
+Todo ello centrado y rodeado de caracteres decorativos.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em message} & Mensaje principal. \\
+\hline
+{\em file} & Archivo origen. \\
+\hline
+{\em function} & Función origen. \\
+\hline
+{\em date} & Fecha de compilación. \\
+\hline
+{\em time} & Hora de compilación. \\
+\hline
+{\em width} & Ancho total de la línea. \\
+\hline
+{\em deco} & Carácter decorativo. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \doxymbox{\hyperlink{msg_8cpp_source_l00121}{121}} del archivo \doxymbox{\hyperlink{msg_8cpp_source}{msg.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keywordtype}{char}\ buffer[256];}
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{comment}{//\ Build\ the\ full\ message\ with\ metadata}}
+\DoxyCodeLine{00130\ \ \ \ \ snprintf(buffer,\ \textcolor{keyword}{sizeof}(buffer),\ \textcolor{stringliteral}{"{}\%s\ |\ \%s\ |\ \%s\ |\ \%s\ \%s"{}},}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ message,\ file,\ function,\ date,\ time);}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordtype}{int}\ msgLen\ =\ strlen(buffer);}
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{keywordtype}{int}\ totalDeco\ =\ width\ -\/\ msgLen\ -\/\ 2;\ \textcolor{comment}{//\ Subtract\ 2\ for\ spacing\ around\ the\ message}}
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keywordflow}{if}\ (totalDeco\ <\ 0)\ totalDeco\ =\ 0;\ \ \ \textcolor{comment}{//\ Prevent\ negative\ padding}}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordtype}{int}\ leftDeco\ =\ totalDeco\ /\ 2;}
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordtype}{int}\ rightDeco\ =\ totalDeco\ -\/\ leftDeco;}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{comment}{//\ 🔹\ Blank\ line\ before\ the\ header}}
+\DoxyCodeLine{00141\ \ \ \ \ Serial.println();}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{comment}{//\ 🔹\ Left\ decorative\ padding}}
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ leftDeco;\ i++)\ Serial.write(deco);}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{comment}{//\ 🔹\ Centered\ message\ with\ spacing}}
+\DoxyCodeLine{00147\ \ \ \ \ Serial.print(\textcolor{charliteral}{'\ '});}
+\DoxyCodeLine{00148\ \ \ \ \ Serial.print(buffer);}
+\DoxyCodeLine{00149\ \ \ \ \ Serial.print(\textcolor{charliteral}{'\ '});}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{comment}{//\ 🔹\ Right\ decorative\ padding}}
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ rightDeco;\ i++)\ Serial.write(deco);}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{comment}{//\ 🔹\ Blank\ lines\ after\ the\ header}}
+\DoxyCodeLine{00155\ \ \ \ \ Serial.println();}
+\DoxyCodeLine{00156\ \ \ \ \ Serial.println();}
+\DoxyCodeLine{00157\ \}}
+
+\end{DoxyCode}
+Gráfico de llamadas a esta función:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{msg_8cpp_abda2f504e4bfdbfbdd0cd8f8937f72f1_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{msg_8cpp_a6ef1ee9724c4aa2cdcd16023815c107a}\index{msg.cpp@{msg.cpp}!standardMessage@{standardMessage}}
+\index{standardMessage@{standardMessage}!msg.cpp@{msg.cpp}}
+\doxysubsubsection{\texorpdfstring{standardMessage()}{standardMessage()}}
+{\footnotesize\ttfamily \label{msg_8cpp_a6ef1ee9724c4aa2cdcd16023815c107a} 
+void standard\+Message (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{message}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{file}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{function}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{date}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{time}{}\end{DoxyParamCaption})}
+
+
+
+Imprime un mensaje estandarizado y formateado en el monitor serie. 
+
+Prints an enriched log message to the serial monitor.
+
+El mensaje aparece centrado entre dos líneas decorativas y acompañado de información contextual como archivo, función, fecha y hora.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em message} & Mensaje principal a mostrar. \\
+\hline
+{\em file} & Nombre del archivo origen. \\
+\hline
+{\em function} & Nombre de la función desde donde se llama. \\
+\hline
+{\em date} & Fecha de compilación o personalizada. \\
+\hline
+{\em time} & Hora de compilación o personalizada. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \doxymbox{\hyperlink{msg_8cpp_source_l00015}{15}} del archivo \doxymbox{\hyperlink{msg_8cpp_source}{msg.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{const}\ uint8\_t\ totalWidth\ =\ 200;\ \textcolor{comment}{//\ Total\ width\ of\ the\ decorative\ line}}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{int}\ msgLen\ =\ strlen(message);\ \ \ \textcolor{comment}{//\ Length\ of\ the\ message\ text}}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{int}\ padding\ =\ (totalWidth\ -\/\ msgLen)\ /\ 2;\ \textcolor{comment}{//\ Spaces\ to\ add\ on\ the\ left\ to\ center\ the\ text}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ Serial.println();}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{comment}{//\ ─────────────────────────────}}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{comment}{//\ Top\ decorative\ line}}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{comment}{//\ ─────────────────────────────}}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordflow}{for}\ (uint8\_t\ i\ =\ 0;\ i\ <\ totalWidth;\ i++)\ Serial.write(\textcolor{charliteral}{'-\/'});}
+\DoxyCodeLine{00030\ \ \ \ \ Serial.println();}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{comment}{//\ ─────────────────────────────}}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{comment}{//\ Centered\ message\ text}}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{comment}{//\ ─────────────────────────────}}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ padding;\ i++)\ Serial.write(\textcolor{charliteral}{'\ '});\ \textcolor{comment}{//\ Left\ padding}}
+\DoxyCodeLine{00036\ \ \ \ \ Serial.println(message);\ \textcolor{comment}{//\ Main\ message}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{comment}{//\ ─────────────────────────────}}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{comment}{//\ Bottom\ decorative\ line}}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{comment}{//\ ─────────────────────────────}}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordflow}{for}\ (uint8\_t\ i\ =\ 0;\ i\ <\ totalWidth;\ i++)\ Serial.write(\textcolor{charliteral}{'-\/'});}
+\DoxyCodeLine{00042\ \ \ \ \ Serial.println();}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{comment}{//\ ─────────────────────────────}}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{comment}{//\ Detailed\ information\ below\ the\ main\ message}}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{comment}{//\ ─────────────────────────────}}
+\DoxyCodeLine{00047\ \ \ \ \ Serial.print(\textcolor{stringliteral}{"{}["{}});}
+\DoxyCodeLine{00048\ \ \ \ \ Serial.print(date);}
+\DoxyCodeLine{00049\ \ \ \ \ Serial.print(\textcolor{stringliteral}{"{}\ "{}});}
+\DoxyCodeLine{00050\ \ \ \ \ Serial.print(time);}
+\DoxyCodeLine{00051\ \ \ \ \ Serial.print(\textcolor{stringliteral}{"{}]\ "{}});}
+\DoxyCodeLine{00052\ \ \ \ \ Serial.print(file);}
+\DoxyCodeLine{00053\ \ \ \ \ Serial.print(\textcolor{stringliteral}{"{}::"{}});}
+\DoxyCodeLine{00054\ \ \ \ \ Serial.print(function);}
+\DoxyCodeLine{00055\ \ \ \ \ Serial.print(\textcolor{stringliteral}{"{}\ ➤\ "{}});}
+\DoxyCodeLine{00056\ \ \ \ \ Serial.println(message);}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ Serial.println();}
+\DoxyCodeLine{00059\ \}}
+
+\end{DoxyCode}
+Gráfico de llamadas a esta función:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{msg_8cpp_a6ef1ee9724c4aa2cdcd16023815c107a_icgraph}
+\end{center}
+\end{figure}

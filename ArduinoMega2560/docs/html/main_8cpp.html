@@ -1,0 +1,520 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ArduinoMega2560_SPI: Referencia del archivo main.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ArduinoMega2560_SPI<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('main_8cpp.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia del archivo main.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Firmware principal del sistema. Configura diagnósticos, pines, UART, SPI, I2C, interrupciones, entradas analógicas, PWM, GPIO, motor paso a paso y <a class="el" href="class_p_i_d.html" title="Controlador PID con anti-windup, derivative-on-measurement y limitación de cambio de salida (slew-rat...">PID</a>.  
+<a href="#details">Más...</a></p>
+<div class="textblock"><code>#include &lt;Arduino.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="main_8h_source.html">main.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Gráfico de dependencias incluidas en main.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp__incl.png" border="0" usemap="#amain_8cpp" loading="lazy" alt=""/></div>
+<map name="amain_8cpp" id="amain_8cpp">
+<area shape="rect" title="Firmware principal del sistema. Configura diagnósticos, pines, UART, SPI, I2C, interrupciones,..." alt="" coords="224,5,299,31"/>
+<area shape="rect" title=" " alt="" coords="307,387,384,412"/>
+<area shape="poly" title=" " alt="" coords="224,27,160,40,124,51,89,66,57,85,31,109,14,137,8,171,8,254,10,275,16,294,39,326,72,351,114,369,160,382,208,390,293,396,292,401,207,395,159,387,112,374,70,356,35,330,11,297,5,276,3,254,3,170,9,135,27,105,54,81,87,62,122,46,159,35,223,21"/>
+<area shape="rect" href="main_8h.html" title="Archivo principal de cabecera del firmware. Contiene metadatos del firmware, includes del sistema,..." alt="" coords="487,79,548,104"/>
+<area shape="poly" title=" " alt="" coords="300,27,474,75,473,81,298,32"/>
+<area shape="rect" href="pinout_8h.html" title=" " alt="" coords="440,159,595,185"/>
+<area shape="poly" title=" " alt="" coords="520,104,520,145,515,145,515,104"/>
+<area shape="rect" href="config_8h.html" title=" " alt="" coords="327,313,479,339"/>
+<area shape="poly" title=" " alt="" coords="490,106,457,126,442,138,430,153,421,180,414,220,407,300,401,299,408,219,416,179,426,151,439,135,454,121,487,102"/>
+<area shape="rect" href="avr8-stub_8h.html" title=" " alt="" coords="813,159,899,185"/>
+<area shape="poly" title=" " alt="" coords="549,95,661,116,802,149,812,152,811,158,801,155,660,122,548,100"/>
+<area shape="rect" title=" " alt="" coords="669,159,789,185"/>
+<area shape="poly" title=" " alt="" coords="549,102,687,152,685,157,547,107"/>
+<area shape="rect" href="diagnostics_u_a_r_t_8h.html" title=" " alt="" coords="43,152,181,192"/>
+<area shape="poly" title=" " alt="" coords="487,100,195,155,194,149,486,95"/>
+<area shape="rect" href="diagnostics_e_e_p_r_o_m_8h.html" title=" " alt="" coords="205,152,365,192"/>
+<area shape="poly" title=" " alt="" coords="487,106,355,150,353,145,486,100"/>
+<area shape="rect" href="motor_step_8h.html" title=" " alt="" coords="553,313,711,339"/>
+<area shape="poly" title=" " alt="" coords="548,102,580,121,596,135,609,151,626,188,635,229,638,268,637,299,632,299,632,268,630,230,621,190,604,153,592,138,577,126,545,106"/>
+<area shape="rect" href="pid_8h.html" title=" " alt="" coords="816,313,891,339"/>
+<area shape="poly" title=" " alt="" coords="548,90,634,91,744,99,798,107,847,117,886,131,913,151,918,172,917,206,907,266,894,288,879,305,875,302,890,284,901,264,912,205,913,172,908,153,884,136,845,122,797,112,743,104,634,97,548,95"/>
+<area shape="poly" title=" " alt="" coords="522,185,524,215,523,256,514,300,505,321,493,340,473,360,449,374,398,392,397,387,446,370,469,356,489,337,500,319,509,298,517,255,519,215,516,185"/>
+<area shape="rect" href="msg_8h.html" title=" " alt="" coords="259,240,394,265"/>
+<area shape="poly" title=" " alt="" coords="491,187,368,237,366,232,489,182"/>
+<area shape="poly" title=" " alt="" coords="325,266,317,299,315,319,317,338,333,374,328,376,312,339,310,319,311,298,320,265"/>
+<area shape="poly" title=" " alt="" coords="341,263,382,302,378,306,337,267"/>
+<area shape="poly" title=" " alt="" coords="395,341,365,378,361,374,391,337"/>
+<area shape="rect" title=" " alt="" coords="741,240,803,265"/>
+<area shape="poly" title=" " alt="" coords="845,187,796,232,793,229,842,183"/>
+<area shape="rect" title=" " alt="" coords="827,240,893,265"/>
+<area shape="poly" title=" " alt="" coords="859,185,861,226,856,226,854,185"/>
+<area shape="poly" title=" " alt="" coords="99,193,81,228,78,247,84,264,103,290,127,312,182,347,241,371,294,386,292,391,239,376,180,352,123,316,99,293,79,267,73,247,76,226,94,191"/>
+<area shape="poly" title=" " alt="" coords="164,190,283,233,282,238,163,195"/>
+<area shape="poly" title=" " alt="" coords="271,193,252,227,247,246,249,265,264,297,283,327,324,375,320,378,279,330,259,300,244,266,242,245,247,225,267,191"/>
+<area shape="poly" title=" " alt="" coords="298,191,316,226,312,229,293,193"/>
+<area shape="rect" title=" " alt="" coords="93,240,184,265"/>
+<area shape="poly" title=" " alt="" coords="251,194,174,236,171,231,249,190"/>
+<area shape="poly" title=" " alt="" coords="587,341,398,388,397,383,585,336"/>
+<area shape="poly" title=" " alt="" coords="816,335,398,393,397,388,816,330"/>
+</map>
+</div>
+</div>
+<p><a href="main_8cpp_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a4fc01d736fe50cf5b977f755b675f11d" id="r_a4fc01d736fe50cf5b977f755b675f11d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a4fc01d736fe50cf5b977f755b675f11d">setup</a> ()</td></tr>
+<tr class="memdesc:a4fc01d736fe50cf5b977f755b675f11d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Arduino setup function (runs once at startup).  <br /></td></tr>
+<tr class="memitem:afe461d27b9c48d5921c00d521181f12f" id="r_afe461d27b9c48d5921c00d521181f12f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#afe461d27b9c48d5921c00d521181f12f">loop</a> ()</td></tr>
+<tr class="memdesc:afe461d27b9c48d5921c00d521181f12f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Arduino main loop. Ejecuta continuamente la configuración de pines, lectura analógica, control <a class="el" href="class_p_i_d.html" title="Controlador PID con anti-windup, derivative-on-measurement y limitación de cambio de salida (slew-rat...">PID</a> y movimiento del motor paso a paso.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Firmware principal del sistema. Configura diagnósticos, pines, UART, SPI, I2C, interrupciones, entradas analógicas, PWM, GPIO, motor paso a paso y <a class="el" href="class_p_i_d.html" title="Controlador PID con anti-windup, derivative-on-measurement y limitación de cambio de salida (slew-rat...">PID</a>. </p>
+
+<p class="definition">Definición en el archivo <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones</h2>
+<a id="afe461d27b9c48d5921c00d521181f12f" name="afe461d27b9c48d5921c00d521181f12f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe461d27b9c48d5921c00d521181f12f">&#9670;&#160;</a></span>loop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void loop </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Arduino main loop. Ejecuta continuamente la configuración de pines, lectura analógica, control <a class="el" href="class_p_i_d.html" title="Controlador PID con anti-windup, derivative-on-measurement y limitación de cambio de salida (slew-rat...">PID</a> y movimiento del motor paso a paso. </p>
+<p>UART: Asynchronous serial communication</p>
+<p>Variable | Pin array | Descripción -------------------------------------&mdash;|-------------------------------------&mdash;|-------------------------------------&mdash;</p>
+<p>SPI: Synchronous master-slave communication</p>
+<p>I2C / TWI: Two-wire communication</p>
+<p>External interrupts</p>
+<p>ANALOG: <a class="el" href="namespace_pins.html" title="Contiene todos los arrays de pines organizados por familia funcional.">Pins</a> with analog input capability (ADC)</p>
+<p>PWM: <a class="el" href="namespace_pins.html" title="Contiene todos los arrays de pines organizados por familia funcional.">Pins</a> with pulse-width modulation capability</p>
+<p>GPIO: General-purpose digital pins</p>
+
+<p class="definition">Definición en la línea <a class="el" href="main_8cpp_source.html#l00060">60</a> del archivo <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   60</span>            {<span class="comment"></span></div>
+<div class="line"><span class="lineno">   61</span><span class="comment">    /**</span></div>
+<div class="line"><span class="lineno">   62</span><span class="comment">     * @brief UART: Asynchronous serial communication</span></div>
+<div class="line"><span class="lineno">   63</span><span class="comment">     *</span></div>
+<div class="line"><span class="lineno">   64</span><span class="comment">     * Variable                                | Pin array                              | Descripción</span></div>
+<div class="line"><span class="lineno">   65</span><span class="comment">     * ----------------------------------------|----------------------------------------|----------------------------------------</span></div>
+<div class="line"><span class="lineno">   66</span><span class="comment">     */</span></div>
+<div class="line"><span class="lineno">   67</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> uartRx0  =         <a class="code hl_variable" href="namespace_pins.html#a514f49dc811240bdab1307083c50b97b">Pins::UART_RX</a>[0];                        <span class="comment">// RX0   → UART0 via USB                </span></div>
+<div class="line"><span class="lineno">   68</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> uartRx1  =         <a class="code hl_variable" href="namespace_pins.html#a514f49dc811240bdab1307083c50b97b">Pins::UART_RX</a>[1];                        <span class="comment">// RX1   → UART1 + INT4</span></div>
+<div class="line"><span class="lineno">   69</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> uartRx2  =         <a class="code hl_variable" href="namespace_pins.html#a514f49dc811240bdab1307083c50b97b">Pins::UART_RX</a>[2];                        <span class="comment">// RX2   → UART2</span></div>
+<div class="line"><span class="lineno">   70</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> uartRx3  =         <a class="code hl_variable" href="namespace_pins.html#a514f49dc811240bdab1307083c50b97b">Pins::UART_RX</a>[3];                        <span class="comment">// RX3   → UART3</span></div>
+<div class="line"><span class="lineno">   71</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> uartTx0  =         <a class="code hl_variable" href="namespace_pins.html#a61c1593e84b2bbb9bbf1cfe0d220d359">Pins::UART_TX</a>[0];                        <span class="comment">// TX0   → UART0 via USB</span></div>
+<div class="line"><span class="lineno">   72</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> uartTx1  =         <a class="code hl_variable" href="namespace_pins.html#a61c1593e84b2bbb9bbf1cfe0d220d359">Pins::UART_TX</a>[1];                        <span class="comment">// TX1   → UART1 + INT5</span></div>
+<div class="line"><span class="lineno">   73</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> uartTx2  =         <a class="code hl_variable" href="namespace_pins.html#a61c1593e84b2bbb9bbf1cfe0d220d359">Pins::UART_TX</a>[2];                        <span class="comment">// TX2   → UART2</span></div>
+<div class="line"><span class="lineno">   74</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> uartTx3  =         <a class="code hl_variable" href="namespace_pins.html#a61c1593e84b2bbb9bbf1cfe0d220d359">Pins::UART_TX</a>[3];                        <span class="comment">// TX3   → UART3</span></div>
+<div class="line"><span class="lineno">   75</span><span class="comment"></span> </div>
+<div class="line"><span class="lineno">   76</span><span class="comment">    /**</span></div>
+<div class="line"><span class="lineno">   77</span><span class="comment">     * @brief SPI: Synchronous master-slave communication</span></div>
+<div class="line"><span class="lineno">   78</span><span class="comment">     */</span></div>
+<div class="line"><span class="lineno">   79</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> spiMiso  =         <a class="code hl_variable" href="namespace_pins.html#a5089dee10b6e4321543c1a723bf6792c">Pins::SPI</a>[0];                            <span class="comment">// MISO  → pin 50</span></div>
+<div class="line"><span class="lineno">   80</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> spiMosi  =         <a class="code hl_variable" href="namespace_pins.html#a5089dee10b6e4321543c1a723bf6792c">Pins::SPI</a>[1];                            <span class="comment">// MOSI  → pin 51</span></div>
+<div class="line"><span class="lineno">   81</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> spiSck   =         <a class="code hl_variable" href="namespace_pins.html#a5089dee10b6e4321543c1a723bf6792c">Pins::SPI</a>[2];                            <span class="comment">// SCK   → pin 52</span></div>
+<div class="line"><span class="lineno">   82</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> spiSs    =         <a class="code hl_variable" href="namespace_pins.html#a5089dee10b6e4321543c1a723bf6792c">Pins::SPI</a>[3];                            <span class="comment">// SS    → pin 53</span></div>
+<div class="line"><span class="lineno">   83</span><span class="comment"></span> </div>
+<div class="line"><span class="lineno">   84</span><span class="comment">    /**</span></div>
+<div class="line"><span class="lineno">   85</span><span class="comment">     * @brief I2C / TWI: Two-wire communication</span></div>
+<div class="line"><span class="lineno">   86</span><span class="comment">     */</span></div>
+<div class="line"><span class="lineno">   87</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> i2cSda   =         <a class="code hl_variable" href="namespace_pins.html#a9ddf79c22d7505fb33ff5033502a8212">Pins::I2C</a>[0];                            <span class="comment">// SDA   → pin 20</span></div>
+<div class="line"><span class="lineno">   88</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> i2cScl   =         <a class="code hl_variable" href="namespace_pins.html#a9ddf79c22d7505fb33ff5033502a8212">Pins::I2C</a>[1];                            <span class="comment">// SCL   → pin 21</span></div>
+<div class="line"><span class="lineno">   89</span><span class="comment"></span> </div>
+<div class="line"><span class="lineno">   90</span><span class="comment">    /**</span></div>
+<div class="line"><span class="lineno">   91</span><span class="comment">     * @brief External interrupts</span></div>
+<div class="line"><span class="lineno">   92</span><span class="comment">     */</span></div>
+<div class="line"><span class="lineno">   93</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> int0     =         <a class="code hl_variable" href="namespace_pins.html#a096eab8385a7b7ef6e1ee9a41983f7ca">Pins::INTERRUPTS</a>[0];                     <span class="comment">// INT0  → pin 2</span></div>
+<div class="line"><span class="lineno">   94</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> int1     =         <a class="code hl_variable" href="namespace_pins.html#a096eab8385a7b7ef6e1ee9a41983f7ca">Pins::INTERRUPTS</a>[1];                     <span class="comment">// INT1  → pin 3</span></div>
+<div class="line"><span class="lineno">   95</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> int2     =         <a class="code hl_variable" href="namespace_pins.html#a096eab8385a7b7ef6e1ee9a41983f7ca">Pins::INTERRUPTS</a>[2];                     <span class="comment">// INT2  → pin 21</span></div>
+<div class="line"><span class="lineno">   96</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> int3     =         <a class="code hl_variable" href="namespace_pins.html#a096eab8385a7b7ef6e1ee9a41983f7ca">Pins::INTERRUPTS</a>[3];                     <span class="comment">// INT3  → pin 20</span></div>
+<div class="line"><span class="lineno">   97</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> int4     =         <a class="code hl_variable" href="namespace_pins.html#a096eab8385a7b7ef6e1ee9a41983f7ca">Pins::INTERRUPTS</a>[4];                     <span class="comment">// INT4  → pin 19</span></div>
+<div class="line"><span class="lineno">   98</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> int5     =         <a class="code hl_variable" href="namespace_pins.html#a096eab8385a7b7ef6e1ee9a41983f7ca">Pins::INTERRUPTS</a>[5];                     <span class="comment">// INT5  → pin 18</span></div>
+<div class="line"><span class="lineno">   99</span><span class="comment"></span> </div>
+<div class="line"><span class="lineno">  100</span><span class="comment">    /**</span></div>
+<div class="line"><span class="lineno">  101</span><span class="comment">     * @brief ANALOG: Pins with analog input capability (ADC)</span></div>
+<div class="line"><span class="lineno">  102</span><span class="comment">     */</span></div>
+<div class="line"><span class="lineno">  103</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> analog0  =         <a class="code hl_variable" href="namespace_pins.html#ae5f8eceff18d6f68e695cc390033d330">Pins::ANALOG</a>[0];                         <span class="comment">/* A0    → pin 54*/</span>        pinMode(analog0.<a class="code hl_variable" href="struct_pin_info.html#a01b05f88290fa5560587d73b2752a150">number</a>,  INPUT);</div>
+<div class="line"><span class="lineno">  104</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> analog1  =         <a class="code hl_variable" href="namespace_pins.html#ae5f8eceff18d6f68e695cc390033d330">Pins::ANALOG</a>[1];                         <span class="comment">/* A1    → pin 55*/</span>        pinMode(analog1.<a class="code hl_variable" href="struct_pin_info.html#a01b05f88290fa5560587d73b2752a150">number</a>,  INPUT);</div>
+<div class="line"><span class="lineno">  105</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> analog2  =         <a class="code hl_variable" href="namespace_pins.html#ae5f8eceff18d6f68e695cc390033d330">Pins::ANALOG</a>[2];                         <span class="comment">/* A2    → pin 56*/</span>        pinMode(analog2.<a class="code hl_variable" href="struct_pin_info.html#a01b05f88290fa5560587d73b2752a150">number</a>,  INPUT);</div>
+<div class="line"><span class="lineno">  106</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> analog3  =         <a class="code hl_variable" href="namespace_pins.html#ae5f8eceff18d6f68e695cc390033d330">Pins::ANALOG</a>[3];                         <span class="comment">/* A3    → pin 57*/</span>        pinMode(analog3.<a class="code hl_variable" href="struct_pin_info.html#a01b05f88290fa5560587d73b2752a150">number</a>,  INPUT);</div>
+<div class="line"><span class="lineno">  107</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> analog4  =         <a class="code hl_variable" href="namespace_pins.html#ae5f8eceff18d6f68e695cc390033d330">Pins::ANALOG</a>[4];                         <span class="comment">/* A4    → pin 58*/</span>        pinMode(analog4.<a class="code hl_variable" href="struct_pin_info.html#a01b05f88290fa5560587d73b2752a150">number</a>,  INPUT);</div>
+<div class="line"><span class="lineno">  108</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> analog5  =         <a class="code hl_variable" href="namespace_pins.html#ae5f8eceff18d6f68e695cc390033d330">Pins::ANALOG</a>[5];                         <span class="comment">/* A5    → pin 59*/</span>        pinMode(analog5.<a class="code hl_variable" href="struct_pin_info.html#a01b05f88290fa5560587d73b2752a150">number</a>,  INPUT);</div>
+<div class="line"><span class="lineno">  109</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> analog6  =         <a class="code hl_variable" href="namespace_pins.html#ae5f8eceff18d6f68e695cc390033d330">Pins::ANALOG</a>[6];                         <span class="comment">/* A6    → pin 60*/</span>        pinMode(analog6.<a class="code hl_variable" href="struct_pin_info.html#a01b05f88290fa5560587d73b2752a150">number</a>,  INPUT);</div>
+<div class="line"><span class="lineno">  110</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> analog7  =         <a class="code hl_variable" href="namespace_pins.html#ae5f8eceff18d6f68e695cc390033d330">Pins::ANALOG</a>[7];                         <span class="comment">/* A7    → pin 61*/</span>        pinMode(analog7.<a class="code hl_variable" href="struct_pin_info.html#a01b05f88290fa5560587d73b2752a150">number</a>,  INPUT);</div>
+<div class="line"><span class="lineno">  111</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> analog8  =         <a class="code hl_variable" href="namespace_pins.html#ae5f8eceff18d6f68e695cc390033d330">Pins::ANALOG</a>[8];                         <span class="comment">/* A8    → pin 62*/</span>        pinMode(analog8.<a class="code hl_variable" href="struct_pin_info.html#a01b05f88290fa5560587d73b2752a150">number</a>,  INPUT);</div>
+<div class="line"><span class="lineno">  112</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> analog9  =         <a class="code hl_variable" href="namespace_pins.html#ae5f8eceff18d6f68e695cc390033d330">Pins::ANALOG</a>[9];                         <span class="comment">/* A9    → pin 63*/</span>        pinMode(analog9.<a class="code hl_variable" href="struct_pin_info.html#a01b05f88290fa5560587d73b2752a150">number</a>,  INPUT);</div>
+<div class="line"><span class="lineno">  113</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> analog10 =         <a class="code hl_variable" href="namespace_pins.html#ae5f8eceff18d6f68e695cc390033d330">Pins::ANALOG</a>[10];                        <span class="comment">/* A10   → pin 64*/</span>        pinMode(analog10.<a class="code hl_variable" href="struct_pin_info.html#a01b05f88290fa5560587d73b2752a150">number</a>, INPUT);</div>
+<div class="line"><span class="lineno">  114</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> analog11 =         <a class="code hl_variable" href="namespace_pins.html#ae5f8eceff18d6f68e695cc390033d330">Pins::ANALOG</a>[11];                        <span class="comment">/* A11   → pin 65*/</span>        pinMode(analog11.<a class="code hl_variable" href="struct_pin_info.html#a01b05f88290fa5560587d73b2752a150">number</a>, INPUT);</div>
+<div class="line"><span class="lineno">  115</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> analog12 =         <a class="code hl_variable" href="namespace_pins.html#ae5f8eceff18d6f68e695cc390033d330">Pins::ANALOG</a>[12];                        <span class="comment">/* A12   → pin 66*/</span>        pinMode(analog12.<a class="code hl_variable" href="struct_pin_info.html#a01b05f88290fa5560587d73b2752a150">number</a>, INPUT);</div>
+<div class="line"><span class="lineno">  116</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> analog13 =         <a class="code hl_variable" href="namespace_pins.html#ae5f8eceff18d6f68e695cc390033d330">Pins::ANALOG</a>[13];                        <span class="comment">/* A13   → pin 67*/</span>        pinMode(analog13.<a class="code hl_variable" href="struct_pin_info.html#a01b05f88290fa5560587d73b2752a150">number</a>, INPUT);</div>
+<div class="line"><span class="lineno">  117</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> analog14 =         <a class="code hl_variable" href="namespace_pins.html#ae5f8eceff18d6f68e695cc390033d330">Pins::ANALOG</a>[14];                        <span class="comment">/* A14   → pin 68*/</span>        pinMode(analog14.<a class="code hl_variable" href="struct_pin_info.html#a01b05f88290fa5560587d73b2752a150">number</a>, INPUT);</div>
+<div class="line"><span class="lineno">  118</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> analog15 =         <a class="code hl_variable" href="namespace_pins.html#ae5f8eceff18d6f68e695cc390033d330">Pins::ANALOG</a>[15];                        <span class="comment">/* A15   → pin 69*/</span>        pinMode(analog15.<a class="code hl_variable" href="struct_pin_info.html#a01b05f88290fa5560587d73b2752a150">number</a>, INPUT);</div>
+<div class="line"><span class="lineno">  119</span><span class="comment"></span> </div>
+<div class="line"><span class="lineno">  120</span><span class="comment">    /**</span></div>
+<div class="line"><span class="lineno">  121</span><span class="comment">     * @brief PWM: Pins with pulse-width modulation capability</span></div>
+<div class="line"><span class="lineno">  122</span><span class="comment">     */</span></div>
+<div class="line"><span class="lineno">  123</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> pwm0     =         <a class="code hl_variable" href="namespace_pins.html#a71e46e5c9462e706226bb4e1a8fdeb1c">Pins::PWM</a>[0];                            <span class="comment">/* PWM02 → pin 2*/</span>         pinMode(pwm0.<a class="code hl_variable" href="struct_pin_info.html#a01b05f88290fa5560587d73b2752a150">number</a>,  OUTPUT);</div>
+<div class="line"><span class="lineno">  124</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> pwm1     =         <a class="code hl_variable" href="namespace_pins.html#a71e46e5c9462e706226bb4e1a8fdeb1c">Pins::PWM</a>[1];                            <span class="comment">/* PWM03 → pin 3*/</span>         pinMode(pwm1.<a class="code hl_variable" href="struct_pin_info.html#a01b05f88290fa5560587d73b2752a150">number</a>,  OUTPUT);</div>
+<div class="line"><span class="lineno">  125</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> pwm2     =         <a class="code hl_variable" href="namespace_pins.html#a71e46e5c9462e706226bb4e1a8fdeb1c">Pins::PWM</a>[2];                            <span class="comment">/* PWM04 → pin 4*/</span>         pinMode(pwm2.<a class="code hl_variable" href="struct_pin_info.html#a01b05f88290fa5560587d73b2752a150">number</a>,  OUTPUT);</div>
+<div class="line"><span class="lineno">  126</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> pwm3     =         <a class="code hl_variable" href="namespace_pins.html#a71e46e5c9462e706226bb4e1a8fdeb1c">Pins::PWM</a>[3];                            <span class="comment">/* PWM05 → pin 5*/</span>         pinMode(pwm3.<a class="code hl_variable" href="struct_pin_info.html#a01b05f88290fa5560587d73b2752a150">number</a>,  OUTPUT);</div>
+<div class="line"><span class="lineno">  127</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> pwm4     =         <a class="code hl_variable" href="namespace_pins.html#a71e46e5c9462e706226bb4e1a8fdeb1c">Pins::PWM</a>[4];                            <span class="comment">/* PWM06 → pin 6*/</span>         pinMode(pwm4.<a class="code hl_variable" href="struct_pin_info.html#a01b05f88290fa5560587d73b2752a150">number</a>,  OUTPUT);</div>
+<div class="line"><span class="lineno">  128</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> pwm5     =         <a class="code hl_variable" href="namespace_pins.html#a71e46e5c9462e706226bb4e1a8fdeb1c">Pins::PWM</a>[5];                            <span class="comment">/* PWM07 → pin 7*/</span>         pinMode(pwm5.<a class="code hl_variable" href="struct_pin_info.html#a01b05f88290fa5560587d73b2752a150">number</a>,  OUTPUT);</div>
+<div class="line"><span class="lineno">  129</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> pwm6     =         <a class="code hl_variable" href="namespace_pins.html#a71e46e5c9462e706226bb4e1a8fdeb1c">Pins::PWM</a>[6];                            <span class="comment">/* PWM08 → pin 8*/</span>         pinMode(pwm6.<a class="code hl_variable" href="struct_pin_info.html#a01b05f88290fa5560587d73b2752a150">number</a>,  OUTPUT);</div>
+<div class="line"><span class="lineno">  130</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> pwm7     =         <a class="code hl_variable" href="namespace_pins.html#a71e46e5c9462e706226bb4e1a8fdeb1c">Pins::PWM</a>[7];                            <span class="comment">/* PWM09 → pin 9*/</span>         pinMode(pwm7.<a class="code hl_variable" href="struct_pin_info.html#a01b05f88290fa5560587d73b2752a150">number</a>,  OUTPUT);</div>
+<div class="line"><span class="lineno">  131</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> pwm8     =         <a class="code hl_variable" href="namespace_pins.html#a71e46e5c9462e706226bb4e1a8fdeb1c">Pins::PWM</a>[8];                            <span class="comment">/* PWM10 → pin 10*/</span>        pinMode(pwm8.<a class="code hl_variable" href="struct_pin_info.html#a01b05f88290fa5560587d73b2752a150">number</a>,  OUTPUT);</div>
+<div class="line"><span class="lineno">  132</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> pwm9     =         <a class="code hl_variable" href="namespace_pins.html#a71e46e5c9462e706226bb4e1a8fdeb1c">Pins::PWM</a>[9];                            <span class="comment">/* PWM11 → pin 11*/</span>        pinMode(pwm9.<a class="code hl_variable" href="struct_pin_info.html#a01b05f88290fa5560587d73b2752a150">number</a>,  OUTPUT);</div>
+<div class="line"><span class="lineno">  133</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> pwm10    =         <a class="code hl_variable" href="namespace_pins.html#a71e46e5c9462e706226bb4e1a8fdeb1c">Pins::PWM</a>[10];                           <span class="comment">/* PWM12 → pin 12*/</span>        pinMode(pwm10.<a class="code hl_variable" href="struct_pin_info.html#a01b05f88290fa5560587d73b2752a150">number</a>, OUTPUT);</div>
+<div class="line"><span class="lineno">  134</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> pwm11    =         <a class="code hl_variable" href="namespace_pins.html#a71e46e5c9462e706226bb4e1a8fdeb1c">Pins::PWM</a>[11];                           <span class="comment">/* PWM44 → pin 44*/</span>        pinMode(pwm11.<a class="code hl_variable" href="struct_pin_info.html#a01b05f88290fa5560587d73b2752a150">number</a>, OUTPUT);</div>
+<div class="line"><span class="lineno">  135</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> pwm12    =         <a class="code hl_variable" href="namespace_pins.html#a71e46e5c9462e706226bb4e1a8fdeb1c">Pins::PWM</a>[12];                           <span class="comment">/* PWM45 → pin 45*/</span>        pinMode(pwm12.<a class="code hl_variable" href="struct_pin_info.html#a01b05f88290fa5560587d73b2752a150">number</a>, OUTPUT);</div>
+<div class="line"><span class="lineno">  136</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> pwm13    =         <a class="code hl_variable" href="namespace_pins.html#a71e46e5c9462e706226bb4e1a8fdeb1c">Pins::PWM</a>[13];                           <span class="comment">/* PWM46 → pin 46*/</span>        pinMode(pwm13.<a class="code hl_variable" href="struct_pin_info.html#a01b05f88290fa5560587d73b2752a150">number</a>, OUTPUT);</div>
+<div class="line"><span class="lineno">  137</span><span class="comment"></span> </div>
+<div class="line"><span class="lineno">  138</span><span class="comment">    /**</span></div>
+<div class="line"><span class="lineno">  139</span><span class="comment">     * @brief GPIO: General-purpose digital pins</span></div>
+<div class="line"><span class="lineno">  140</span><span class="comment">     */</span></div>
+<div class="line"><span class="lineno">  141</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> gpio0    =         <a class="code hl_variable" href="namespace_pins.html#a02d8a45378e890f65caf34971a2aee06">Pins::GPIO</a>[0];                           <span class="comment">/* GPIO13 → pin 13 */</span>      pinMode(gpio0.<a class="code hl_variable" href="struct_pin_info.html#a01b05f88290fa5560587d73b2752a150">number</a>,  OUTPUT);</div>
+<div class="line"><span class="lineno">  142</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> gpio1    =         <a class="code hl_variable" href="namespace_pins.html#a02d8a45378e890f65caf34971a2aee06">Pins::GPIO</a>[1];                           <span class="comment">/* GPIO22 → pin 22 */</span>      pinMode(gpio1.<a class="code hl_variable" href="struct_pin_info.html#a01b05f88290fa5560587d73b2752a150">number</a>,  OUTPUT);</div>
+<div class="line"><span class="lineno">  143</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> gpio2    =         <a class="code hl_variable" href="namespace_pins.html#a02d8a45378e890f65caf34971a2aee06">Pins::GPIO</a>[2];                           <span class="comment">/* GPIO23 → pin 23 */</span>      pinMode(gpio2.<a class="code hl_variable" href="struct_pin_info.html#a01b05f88290fa5560587d73b2752a150">number</a>,  OUTPUT);</div>
+<div class="line"><span class="lineno">  144</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> gpio3    =         <a class="code hl_variable" href="namespace_pins.html#a02d8a45378e890f65caf34971a2aee06">Pins::GPIO</a>[3];                           <span class="comment">/* GPIO24 → pin 24 */</span>      pinMode(gpio3.<a class="code hl_variable" href="struct_pin_info.html#a01b05f88290fa5560587d73b2752a150">number</a>,  OUTPUT);</div>
+<div class="line"><span class="lineno">  145</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> gpio4    =         <a class="code hl_variable" href="namespace_pins.html#a02d8a45378e890f65caf34971a2aee06">Pins::GPIO</a>[4];                           <span class="comment">/* GPIO25 → pin 25 */</span>      pinMode(gpio4.<a class="code hl_variable" href="struct_pin_info.html#a01b05f88290fa5560587d73b2752a150">number</a>,  OUTPUT);</div>
+<div class="line"><span class="lineno">  146</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> gpio5    =         <a class="code hl_variable" href="namespace_pins.html#a02d8a45378e890f65caf34971a2aee06">Pins::GPIO</a>[5];                           <span class="comment">/* GPIO26 → pin 26 */</span>      pinMode(gpio5.<a class="code hl_variable" href="struct_pin_info.html#a01b05f88290fa5560587d73b2752a150">number</a>,  OUTPUT);</div>
+<div class="line"><span class="lineno">  147</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> gpio6    =         <a class="code hl_variable" href="namespace_pins.html#a02d8a45378e890f65caf34971a2aee06">Pins::GPIO</a>[6];                           <span class="comment">/* GPIO27 → pin 27 */</span>      pinMode(gpio6.<a class="code hl_variable" href="struct_pin_info.html#a01b05f88290fa5560587d73b2752a150">number</a>,  OUTPUT);</div>
+<div class="line"><span class="lineno">  148</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> gpio7    =         <a class="code hl_variable" href="namespace_pins.html#a02d8a45378e890f65caf34971a2aee06">Pins::GPIO</a>[7];                           <span class="comment">/* GPIO28 → pin 28 */</span>      pinMode(gpio7.<a class="code hl_variable" href="struct_pin_info.html#a01b05f88290fa5560587d73b2752a150">number</a>,  OUTPUT);</div>
+<div class="line"><span class="lineno">  149</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> gpio8    =         <a class="code hl_variable" href="namespace_pins.html#a02d8a45378e890f65caf34971a2aee06">Pins::GPIO</a>[8];                           <span class="comment">/* GPIO29 → pin 29 */</span>      pinMode(gpio8.<a class="code hl_variable" href="struct_pin_info.html#a01b05f88290fa5560587d73b2752a150">number</a>,  OUTPUT);</div>
+<div class="line"><span class="lineno">  150</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> gpio9    =         <a class="code hl_variable" href="namespace_pins.html#a02d8a45378e890f65caf34971a2aee06">Pins::GPIO</a>[9];                           <span class="comment">/* GPIO30 → pin 30 */</span>      pinMode(gpio9.<a class="code hl_variable" href="struct_pin_info.html#a01b05f88290fa5560587d73b2752a150">number</a>,  OUTPUT);</div>
+<div class="line"><span class="lineno">  151</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> gpio10   =         <a class="code hl_variable" href="namespace_pins.html#a02d8a45378e890f65caf34971a2aee06">Pins::GPIO</a>[10];                          <span class="comment">/* GPIO31 → pin 31 */</span>      pinMode(gpio10.<a class="code hl_variable" href="struct_pin_info.html#a01b05f88290fa5560587d73b2752a150">number</a>, OUTPUT);</div>
+<div class="line"><span class="lineno">  152</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> gpio11   =         <a class="code hl_variable" href="namespace_pins.html#a02d8a45378e890f65caf34971a2aee06">Pins::GPIO</a>[11];                          <span class="comment">/* GPIO32 → pin 32 */</span>      pinMode(gpio11.<a class="code hl_variable" href="struct_pin_info.html#a01b05f88290fa5560587d73b2752a150">number</a>, OUTPUT);</div>
+<div class="line"><span class="lineno">  153</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> gpio12   =         <a class="code hl_variable" href="namespace_pins.html#a02d8a45378e890f65caf34971a2aee06">Pins::GPIO</a>[12];                          <span class="comment">/* GPIO33 → pin 33 */</span>      pinMode(gpio12.<a class="code hl_variable" href="struct_pin_info.html#a01b05f88290fa5560587d73b2752a150">number</a>, OUTPUT);</div>
+<div class="line"><span class="lineno">  154</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> gpio13   =         <a class="code hl_variable" href="namespace_pins.html#a02d8a45378e890f65caf34971a2aee06">Pins::GPIO</a>[13];                          <span class="comment">/* GPIO34 → pin 34 */</span>      pinMode(gpio13.<a class="code hl_variable" href="struct_pin_info.html#a01b05f88290fa5560587d73b2752a150">number</a>, OUTPUT);</div>
+<div class="line"><span class="lineno">  155</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> gpio14   =         <a class="code hl_variable" href="namespace_pins.html#a02d8a45378e890f65caf34971a2aee06">Pins::GPIO</a>[14];                          <span class="comment">/* GPIO35 → pin 35 */</span>      pinMode(gpio14.<a class="code hl_variable" href="struct_pin_info.html#a01b05f88290fa5560587d73b2752a150">number</a>, OUTPUT);</div>
+<div class="line"><span class="lineno">  156</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> gpio15   =         <a class="code hl_variable" href="namespace_pins.html#a02d8a45378e890f65caf34971a2aee06">Pins::GPIO</a>[15];                          <span class="comment">/* GPIO36 → pin 36 */</span>      pinMode(gpio15.<a class="code hl_variable" href="struct_pin_info.html#a01b05f88290fa5560587d73b2752a150">number</a>, OUTPUT);</div>
+<div class="line"><span class="lineno">  157</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> gpio16   =         <a class="code hl_variable" href="namespace_pins.html#a02d8a45378e890f65caf34971a2aee06">Pins::GPIO</a>[16];                          <span class="comment">/* GPIO37 → pin 37 */</span>      pinMode(gpio16.<a class="code hl_variable" href="struct_pin_info.html#a01b05f88290fa5560587d73b2752a150">number</a>, OUTPUT);</div>
+<div class="line"><span class="lineno">  158</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> gpio17   =         <a class="code hl_variable" href="namespace_pins.html#a02d8a45378e890f65caf34971a2aee06">Pins::GPIO</a>[17];                          <span class="comment">/* GPIO38 → pin 38 */</span>      pinMode(gpio17.<a class="code hl_variable" href="struct_pin_info.html#a01b05f88290fa5560587d73b2752a150">number</a>, OUTPUT);</div>
+<div class="line"><span class="lineno">  159</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> gpio18   =         <a class="code hl_variable" href="namespace_pins.html#a02d8a45378e890f65caf34971a2aee06">Pins::GPIO</a>[18];                          <span class="comment">/* GPIO39 → pin 39 */</span>      pinMode(gpio18.<a class="code hl_variable" href="struct_pin_info.html#a01b05f88290fa5560587d73b2752a150">number</a>, OUTPUT);</div>
+<div class="line"><span class="lineno">  160</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> gpio19   =         <a class="code hl_variable" href="namespace_pins.html#a02d8a45378e890f65caf34971a2aee06">Pins::GPIO</a>[19];                          <span class="comment">/* GPIO40 → pin 40 */</span>      pinMode(gpio19.<a class="code hl_variable" href="struct_pin_info.html#a01b05f88290fa5560587d73b2752a150">number</a>, OUTPUT);</div>
+<div class="line"><span class="lineno">  161</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> gpio20   =         <a class="code hl_variable" href="namespace_pins.html#a02d8a45378e890f65caf34971a2aee06">Pins::GPIO</a>[20];                          <span class="comment">/* GPIO41 → pin 41 */</span>      pinMode(gpio20.<a class="code hl_variable" href="struct_pin_info.html#a01b05f88290fa5560587d73b2752a150">number</a>, OUTPUT);</div>
+<div class="line"><span class="lineno">  162</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> gpio21   =         <a class="code hl_variable" href="namespace_pins.html#a02d8a45378e890f65caf34971a2aee06">Pins::GPIO</a>[21];                          <span class="comment">/* GPIO42 → pin 42 */</span>      pinMode(gpio21.<a class="code hl_variable" href="struct_pin_info.html#a01b05f88290fa5560587d73b2752a150">number</a>, OUTPUT);</div>
+<div class="line"><span class="lineno">  163</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> gpio22   =         <a class="code hl_variable" href="namespace_pins.html#a02d8a45378e890f65caf34971a2aee06">Pins::GPIO</a>[22];                          <span class="comment">/* GPIO43 → pin 43 */</span>      pinMode(gpio22.<a class="code hl_variable" href="struct_pin_info.html#a01b05f88290fa5560587d73b2752a150">number</a>, OUTPUT);</div>
+<div class="line"><span class="lineno">  164</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> gpio23   =         <a class="code hl_variable" href="namespace_pins.html#a02d8a45378e890f65caf34971a2aee06">Pins::GPIO</a>[23];                          <span class="comment">/* GPIO44 → pin 44 */</span>      pinMode(gpio23.<a class="code hl_variable" href="struct_pin_info.html#a01b05f88290fa5560587d73b2752a150">number</a>, OUTPUT);</div>
+<div class="line"><span class="lineno">  165</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> gpio24   =         <a class="code hl_variable" href="namespace_pins.html#a02d8a45378e890f65caf34971a2aee06">Pins::GPIO</a>[24];                          <span class="comment">/* GPIO45 → pin 45 */</span>      pinMode(gpio24.<a class="code hl_variable" href="struct_pin_info.html#a01b05f88290fa5560587d73b2752a150">number</a>, OUTPUT);</div>
+<div class="line"><span class="lineno">  166</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> gpio25   =         <a class="code hl_variable" href="namespace_pins.html#a02d8a45378e890f65caf34971a2aee06">Pins::GPIO</a>[25];                          <span class="comment">/* GPIO46 → pin 46 */</span>      pinMode(gpio25.<a class="code hl_variable" href="struct_pin_info.html#a01b05f88290fa5560587d73b2752a150">number</a>, OUTPUT);</div>
+<div class="line"><span class="lineno">  167</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> gpio26   =         <a class="code hl_variable" href="namespace_pins.html#a02d8a45378e890f65caf34971a2aee06">Pins::GPIO</a>[26];                          <span class="comment">/* GPIO47 → pin 47 */</span>      pinMode(gpio26.<a class="code hl_variable" href="struct_pin_info.html#a01b05f88290fa5560587d73b2752a150">number</a>, OUTPUT);</div>
+<div class="line"><span class="lineno">  168</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> gpio27   =         <a class="code hl_variable" href="namespace_pins.html#a02d8a45378e890f65caf34971a2aee06">Pins::GPIO</a>[27];                          <span class="comment">/* GPIO48 → pin 48 */</span>      pinMode(gpio27.<a class="code hl_variable" href="struct_pin_info.html#a01b05f88290fa5560587d73b2752a150">number</a>, OUTPUT);</div>
+<div class="line"><span class="lineno">  169</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> gpio28   =         <a class="code hl_variable" href="namespace_pins.html#a02d8a45378e890f65caf34971a2aee06">Pins::GPIO</a>[28];                          <span class="comment">/* GPIO49 → pin 49 */</span>      pinMode(gpio28.<a class="code hl_variable" href="struct_pin_info.html#a01b05f88290fa5560587d73b2752a150">number</a>, OUTPUT);</div>
+<div class="line"><span class="lineno">  170</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> gpio29   =         <a class="code hl_variable" href="namespace_pins.html#a02d8a45378e890f65caf34971a2aee06">Pins::GPIO</a>[29];                          <span class="comment">/* GPIO50 → pin 50 */</span>      pinMode(gpio29.<a class="code hl_variable" href="struct_pin_info.html#a01b05f88290fa5560587d73b2752a150">number</a>, OUTPUT);</div>
+<div class="line"><span class="lineno">  171</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> gpio30   =         <a class="code hl_variable" href="namespace_pins.html#a02d8a45378e890f65caf34971a2aee06">Pins::GPIO</a>[30];                          <span class="comment">/* GPIO51 → pin 51 */</span>      pinMode(gpio30.<a class="code hl_variable" href="struct_pin_info.html#a01b05f88290fa5560587d73b2752a150">number</a>, OUTPUT);</div>
+<div class="line"><span class="lineno">  172</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> gpio31   =         <a class="code hl_variable" href="namespace_pins.html#a02d8a45378e890f65caf34971a2aee06">Pins::GPIO</a>[31];                          <span class="comment">/* GPIO52 → pin 52 */</span>      pinMode(gpio31.<a class="code hl_variable" href="struct_pin_info.html#a01b05f88290fa5560587d73b2752a150">number</a>, OUTPUT);</div>
+<div class="line"><span class="lineno">  173</span>    [[maybe_unused]] <a class="code hl_struct" href="struct_pin_info.html">PinInfo</a> gpio32   =         <a class="code hl_variable" href="namespace_pins.html#a02d8a45378e890f65caf34971a2aee06">Pins::GPIO</a>[32];                          <span class="comment">/* GPIO53 → pin 53 */</span>      pinMode(gpio32.<a class="code hl_variable" href="struct_pin_info.html#a01b05f88290fa5560587d73b2752a150">number</a>, OUTPUT);</div>
+<div class="line"><span class="lineno">  174</span> </div>
+<div class="line"><span class="lineno">  175</span>   <span class="comment">// Motor de pasos: Control de motores paso a paso</span></div>
+<div class="line"><span class="lineno">  176</span>   <span class="keyword">static</span> <a class="code hl_class" href="class_motor_paso.html">MotorPaso</a> motor(gpio10.<a class="code hl_variable" href="struct_pin_info.html#a01b05f88290fa5560587d73b2752a150">number</a>, gpio12.<a class="code hl_variable" href="struct_pin_info.html#a01b05f88290fa5560587d73b2752a150">number</a>, gpio14.<a class="code hl_variable" href="struct_pin_info.html#a01b05f88290fa5560587d73b2752a150">number</a>, gpio16.<a class="code hl_variable" href="struct_pin_info.html#a01b05f88290fa5560587d73b2752a150">number</a>);   </div>
+<div class="line"><span class="lineno">  177</span>   motor.fijarVelocidad(15.0);  <span class="comment">// Establece la velocidad a 20 RPM</span></div>
+<div class="line"><span class="lineno">  178</span> </div>
+<div class="line"><span class="lineno">  179</span>   <span class="comment">// Configuración de PID: Control de sistemas con retroalimentación</span></div>
+<div class="line"><span class="lineno">  180</span>   <span class="keyword">static</span> <a class="code hl_class" href="class_p_i_d.html">PID</a> pid(2.0, 0.5, 1.0, 0.0, 360.0, 0.5, 0.5); <span class="comment">// Kp=2.0, Ki=0.5, Kd=1.0, output limits [-255, 255], dt=0.1s, slew-rate=50</span></div>
+<div class="line"><span class="lineno">  181</span>   </div>
+<div class="line"><span class="lineno">  182</span>   Serial.println(analogRead(analog0.<a class="code hl_variable" href="struct_pin_info.html#a01b05f88290fa5560587d73b2752a150">number</a>));</div>
+<div class="line"><span class="lineno">  183</span>   motor.movimientoPosicionRelativo(pid.calculoPID(450, analogRead(analog0.<a class="code hl_variable" href="struct_pin_info.html#a01b05f88290fa5560587d73b2752a150">number</a>), <span class="keyword">true</span>), <span class="keyword">true</span>); </div>
+<div class="line"><span class="lineno">  184</span> </div>
+<div class="line"><span class="lineno">  185</span>   delay(1000); <span class="comment">// Pequeña pausa para evitar saturar el loop</span></div>
+<div class="line"><span class="lineno">  186</span>};</div>
+<div class="ttc" id="aclass_motor_paso_html"><div class="ttname"><a href="class_motor_paso.html">MotorPaso</a></div><div class="ttdoc">Controlador para motores paso a paso 28BYJ-48 con driver ULN2003.</div><div class="ttdef"><b>Definition</b> <a href="motor_step_8h_source.html#l00022">motorStep.h:22</a></div></div>
+<div class="ttc" id="aclass_p_i_d_html"><div class="ttname"><a href="class_p_i_d.html">PID</a></div><div class="ttdoc">Controlador PID con anti-windup, derivative-on-measurement y limitación de cambio de salida (slew-rat...</div><div class="ttdef"><b>Definition</b> <a href="pid_8h_source.html#l00014">pid.h:15</a></div></div>
+<div class="ttc" id="anamespace_pins_html_a02d8a45378e890f65caf34971a2aee06"><div class="ttname"><a href="namespace_pins.html#a02d8a45378e890f65caf34971a2aee06">Pins::GPIO</a></div><div class="ttdeci">constexpr PinInfo GPIO[]</div><div class="ttdoc">Pines GPIO (entrada/salida digital general).</div><div class="ttdef"><b>Definition</b> <a href="pinout_8h_source.html#l00140">pinout.h:140</a></div></div>
+<div class="ttc" id="anamespace_pins_html_a096eab8385a7b7ef6e1ee9a41983f7ca"><div class="ttname"><a href="namespace_pins.html#a096eab8385a7b7ef6e1ee9a41983f7ca">Pins::INTERRUPTS</a></div><div class="ttdeci">constexpr PinInfo INTERRUPTS[]</div><div class="ttdoc">Pines de interrupciones externas.</div><div class="ttdef"><b>Definition</b> <a href="pinout_8h_source.html#l00086">pinout.h:86</a></div></div>
+<div class="ttc" id="anamespace_pins_html_a5089dee10b6e4321543c1a723bf6792c"><div class="ttname"><a href="namespace_pins.html#a5089dee10b6e4321543c1a723bf6792c">Pins::SPI</a></div><div class="ttdeci">constexpr PinInfo SPI[]</div><div class="ttdoc">Pines SPI (comunicación síncrona maestro-esclavo).</div><div class="ttdef"><b>Definition</b> <a href="pinout_8h_source.html#l00068">pinout.h:68</a></div></div>
+<div class="ttc" id="anamespace_pins_html_a514f49dc811240bdab1307083c50b97b"><div class="ttname"><a href="namespace_pins.html#a514f49dc811240bdab1307083c50b97b">Pins::UART_RX</a></div><div class="ttdeci">constexpr PinInfo UART_RX[]</div><div class="ttdoc">Pines UART RX (recepción serie asíncrona).</div><div class="ttdef"><b>Definition</b> <a href="pinout_8h_source.html#l00048">pinout.h:48</a></div></div>
+<div class="ttc" id="anamespace_pins_html_a61c1593e84b2bbb9bbf1cfe0d220d359"><div class="ttname"><a href="namespace_pins.html#a61c1593e84b2bbb9bbf1cfe0d220d359">Pins::UART_TX</a></div><div class="ttdeci">constexpr PinInfo UART_TX[]</div><div class="ttdoc">Pines UART TX (transmisión serie asíncrona).</div><div class="ttdef"><b>Definition</b> <a href="pinout_8h_source.html#l00058">pinout.h:58</a></div></div>
+<div class="ttc" id="anamespace_pins_html_a71e46e5c9462e706226bb4e1a8fdeb1c"><div class="ttname"><a href="namespace_pins.html#a71e46e5c9462e706226bb4e1a8fdeb1c">Pins::PWM</a></div><div class="ttdeci">constexpr PinInfo PWM[]</div><div class="ttdoc">Pines PWM (modulación por ancho de pulso).</div><div class="ttdef"><b>Definition</b> <a href="pinout_8h_source.html#l00120">pinout.h:120</a></div></div>
+<div class="ttc" id="anamespace_pins_html_a9ddf79c22d7505fb33ff5033502a8212"><div class="ttname"><a href="namespace_pins.html#a9ddf79c22d7505fb33ff5033502a8212">Pins::I2C</a></div><div class="ttdeci">constexpr PinInfo I2C[]</div><div class="ttdoc">Pines I2C / TWI (comunicación de dos hilos).</div><div class="ttdef"><b>Definition</b> <a href="pinout_8h_source.html#l00078">pinout.h:78</a></div></div>
+<div class="ttc" id="anamespace_pins_html_ae5f8eceff18d6f68e695cc390033d330"><div class="ttname"><a href="namespace_pins.html#ae5f8eceff18d6f68e695cc390033d330">Pins::ANALOG</a></div><div class="ttdeci">constexpr PinInfo ANALOG[]</div><div class="ttdoc">Pines analógicos (ADC).</div><div class="ttdef"><b>Definition</b> <a href="pinout_8h_source.html#l00098">pinout.h:98</a></div></div>
+<div class="ttc" id="astruct_pin_info_html"><div class="ttname"><a href="struct_pin_info.html">PinInfo</a></div><div class="ttdoc">Representa un pin del sistema con nombre simbólico, número físico y familia funcional.</div><div class="ttdef"><b>Definition</b> <a href="pinout_8h_source.html#l00018">pinout.h:18</a></div></div>
+<div class="ttc" id="astruct_pin_info_html_a01b05f88290fa5560587d73b2752a150"><div class="ttname"><a href="struct_pin_info.html#a01b05f88290fa5560587d73b2752a150">PinInfo::number</a></div><div class="ttdeci">int number</div><div class="ttdef"><b>Definition</b> <a href="pinout_8h_source.html#l00020">pinout.h:20</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Gráfico de llamadas de esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp_afe461d27b9c48d5921c00d521181f12f_cgraph.png" border="0" usemap="#amain_8cpp_afe461d27b9c48d5921c00d521181f12f_cgraph" loading="lazy" alt=""/></div>
+<map name="amain_8cpp_afe461d27b9c48d5921c00d521181f12f_cgraph" id="amain_8cpp_afe461d27b9c48d5921c00d521181f12f_cgraph">
+<area shape="rect" title="Arduino main loop. Ejecuta continuamente la configuración de pines, lectura analógica,..." alt="" coords="5,104,52,129"/>
+<area shape="rect" href="class_p_i_d.html#af0cfbed86d613536bbd2b6220139d0c4" title="Calcula la salida del controlador PID." alt="" coords="147,23,261,48"/>
+<area shape="poly" title=" " alt="" coords="51,104,162,52,164,56,53,109"/>
+<area shape="rect" href="class_motor_paso.html#ae45688954caa95057df7ac86389a7700" title="Establece la velocidad del motor en RPM." alt="" coords="119,104,289,129"/>
+<area shape="poly" title=" " alt="" coords="52,114,105,114,105,119,52,119"/>
+<area shape="rect" href="class_motor_paso.html#a3bf0f1a5f2d26c41e405408be4ec47b4" title="Mueve el motor hacia un ángulo relativo usando el camino más corto." alt="" coords="100,218,308,258"/>
+<area shape="poly" title=" " alt="" coords="50,127,164,208,161,212,47,132"/>
+<area shape="rect" href="class_p_i_d.html#a7263b32d21a2759144d935442db72191" title="Imprime información de depuración del PID." alt="" coords="401,5,535,31"/>
+<area shape="poly" title=" " alt="" coords="261,29,387,21,387,26,261,34"/>
+<area shape="rect" href="class_motor_paso.html#aa054bdf42608a37c3fbc9e5037c417e9" title="Convierte grados a pasos del motor." alt="" coords="377,55,559,95"/>
+<area shape="poly" title=" " alt="" coords="225,216,292,154,355,105,369,98,371,103,357,110,295,158,228,219"/>
+<area shape="rect" href="class_motor_paso.html#af1f50306108a5f69c298367da9e96e3c" title="Imprime información detallada del movimiento relativo." alt="" coords="371,119,565,159"/>
+<area shape="poly" title=" " alt="" coords="246,215,355,169,378,161,380,166,357,174,248,220"/>
+<area shape="rect" href="class_motor_paso.html#a5e3740ade4968870d145a97dfaa6378b" title="Calcula la diferencia circular entre dos ángulos." alt="" coords="372,184,564,209"/>
+<area shape="poly" title=" " alt="" coords="308,219,372,209,373,214,309,224"/>
+<area shape="rect" href="class_motor_paso.html#aa9331c4fc40047c1b7856cfebc9220bc" title="Actualiza y devuelve los grados recorridos durante el movimiento." alt="" coords="356,234,580,274"/>
+<area shape="poly" title=" " alt="" coords="308,242,342,244,342,249,308,247"/>
+<area shape="rect" href="class_motor_paso.html#afdcaa01d882749cc9a8de8ea6397a12c" title="Normaliza un ángulo al rango 0–360 grados." alt="" coords="371,299,565,324"/>
+<area shape="poly" title=" " alt="" coords="265,256,357,283,394,293,393,298,355,289,264,261"/>
+<area shape="rect" href="class_motor_paso.html#aeb003102ac4f885226a4a4a1e4121fa5" title="Avanza un paso en la secuencia del motor." alt="" coords="382,348,554,373"/>
+<area shape="poly" title=" " alt="" coords="231,256,287,296,357,334,378,342,376,347,355,339,284,301,228,260"/>
+<area shape="rect" href="class_motor_paso.html#a70e7b613b257ac6dab5a0dc38d389f3a" title="Retrocede un paso en la secuencia del motor." alt="" coords="392,397,544,423"/>
+<area shape="poly" title=" " alt="" coords="222,257,277,320,315,355,357,384,380,393,378,398,355,388,311,359,273,324,218,260"/>
+<area shape="rect" href="class_motor_paso.html#ac2b6d1c7bc1c04a0fb39839b1658721c" title="Convierte pasos del motor a grados." alt="" coords="628,234,807,274"/>
+<area shape="poly" title=" " alt="" coords="580,251,614,251,614,257,580,257"/>
+<area shape="rect" href="class_motor_paso.html#ac610d089d82aca423c7528f918e3e6f1" title="Aplica un paso específico de la secuencia (0–7)." alt="" coords="637,372,798,397"/>
+<area shape="poly" title=" " alt="" coords="554,366,623,373,622,378,554,372"/>
+<area shape="poly" title=" " alt="" coords="544,400,623,392,623,397,544,405"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4fc01d736fe50cf5b977f755b675f11d" name="a4fc01d736fe50cf5b977f755b675f11d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fc01d736fe50cf5b977f755b675f11d">&#9670;&#160;</a></span>setup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setup </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Arduino setup function (runs once at startup). </p>
+<p>Config System</p>
+<p>Byte 0 (bits 0–7):</p><ul>
+<li>Bit 0: debugMode</li>
+<li>Bit 1: fullDiagnosticsPins</li>
+<li>Bit 2: diagnoseAnalog</li>
+<li>Bit 3: diagnoseGPIO</li>
+<li>Bit 4: diagnosePWM</li>
+<li>Bit 5: diagnoseUART</li>
+<li>Bit 6: diagnoseEEPROM</li>
+<li>Bit 7: version</li>
+</ul>
+
+<p class="definition">Definición en la línea <a class="el" href="main_8cpp_source.html#l00013">13</a> del archivo <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   13</span>             {                                                 <span class="comment">// Arduino setup function (runs once at startup)</span></div>
+<div class="line"><span class="lineno">   14</span> </div>
+<div class="line"><span class="lineno">   15</span>                                                               <span class="comment">// Otherwise, run in normal execution mode</span></div>
+<div class="line"><span class="lineno">   16</span>    Serial.begin(57600);                                       <span class="comment">// start serial communication at 57600 baud</span></div>
+<div class="line"><span class="lineno">   17</span>    <span class="keywordflow">while</span> (!Serial);                                       </div>
+<div class="line"><span class="lineno">   18</span><span class="comment"></span> </div>
+<div class="line"><span class="lineno">   19</span><span class="comment">    /**</span></div>
+<div class="line"><span class="lineno">   20</span><span class="comment">     * @brief Config System</span></div>
+<div class="line"><span class="lineno">   21</span><span class="comment">     *</span></div>
+<div class="line"><span class="lineno">   22</span><span class="comment">     * Byte 0 (bits 0–7):</span></div>
+<div class="line"><span class="lineno">   23</span><span class="comment">     * - Bit 0: debugMode</span></div>
+<div class="line"><span class="lineno">   24</span><span class="comment">     * - Bit 1: fullDiagnosticsPins</span></div>
+<div class="line"><span class="lineno">   25</span><span class="comment">     * - Bit 2: diagnoseAnalog</span></div>
+<div class="line"><span class="lineno">   26</span><span class="comment">     * - Bit 3: diagnoseGPIO</span></div>
+<div class="line"><span class="lineno">   27</span><span class="comment">     * - Bit 4: diagnosePWM</span></div>
+<div class="line"><span class="lineno">   28</span><span class="comment">     * - Bit 5: diagnoseUART</span></div>
+<div class="line"><span class="lineno">   29</span><span class="comment">     * - Bit 6: diagnoseEEPROM</span></div>
+<div class="line"><span class="lineno">   30</span><span class="comment">     * - Bit 7: version</span></div>
+<div class="line"><span class="lineno">   31</span><span class="comment">     */</span></div>
+<div class="line"><span class="lineno">   32</span>    <a class="code hl_struct" href="structconfiguracion_main.html">configuracionMain</a> <a class="code hl_variable" href="config_8h.html#aab6a459f935e14cc07acc0516788c5f3">systemConfiguration</a> = {</div>
+<div class="line"><span class="lineno">   33</span>                                                                                                             <span class="comment">// Byte 0 (bits 0–7)</span></div>
+<div class="line"><span class="lineno">   34</span>        .debugMode = <span class="keyword">false</span>,                                    <span class="comment">// Enable debug mode                          | Byte 0, Bit 0 (LSB)</span></div>
+<div class="line"><span class="lineno">   35</span>        .fullDiagnosticsPins = <span class="keyword">true</span>,                           <span class="comment">// Run full pin diagnostics                   | Byte 0, Bit 1</span></div>
+<div class="line"><span class="lineno">   36</span>        .diagnoseAnalog = <span class="keyword">false</span>,                               <span class="comment">// Disable analog diagnostics                 | Byte 0, Bit 2</span></div>
+<div class="line"><span class="lineno">   37</span>        .diagnoseGPIO = <span class="keyword">false</span>,                                 <span class="comment">// Disable GPIO diagnostics                   | Byte 0, Bit 3</span></div>
+<div class="line"><span class="lineno">   38</span>        .diagnosePWM = <span class="keyword">false</span>,                                  <span class="comment">// Disable PWM diagnostics                    | Byte 0, Bit 4</span></div>
+<div class="line"><span class="lineno">   39</span>        .diagnoseUART = <span class="keyword">true</span>,                                  <span class="comment">// Enable UART diagnostics                    | Byte 0, Bit 5</span></div>
+<div class="line"><span class="lineno">   40</span>        .diagnoseEEPROM = <span class="keyword">true</span>,                                <span class="comment">// Disable EEPROM diagnostics                 | Byte 0, Bit 6</span></div>
+<div class="line"><span class="lineno">   41</span>        .version = <span class="keyword">true</span>                                        <span class="comment">// Byte 0, Bit 7 → reservado o libre (MSB)    | Byte 0, Bit 7</span></div>
+<div class="line"><span class="lineno">   42</span>    };</div>
+<div class="line"><span class="lineno">   43</span> </div>
+<div class="line"><span class="lineno">   44</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="config_8h.html#aab6a459f935e14cc07acc0516788c5f3">systemConfiguration</a>.fullDiagnosticsPins) <a class="code hl_function" href="pinout_8h.html#aa7a52c7f07b6793318c1e95e41b9c79a">fullDiagnosticsPins</a>();</div>
+<div class="line"><span class="lineno">   45</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="config_8h.html#aab6a459f935e14cc07acc0516788c5f3">systemConfiguration</a>.diagnoseAnalog) <a class="code hl_function" href="pinout_8h.html#a78f24fdab5ead1139f3f21bb83161147">diagnoseAnalog</a>();</div>
+<div class="line"><span class="lineno">   46</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="config_8h.html#aab6a459f935e14cc07acc0516788c5f3">systemConfiguration</a>.diagnoseGPIO) <a class="code hl_function" href="pinout_8h.html#ad6ad9404cb3845eca0a1c5bf2d2d1932">diagnoseGPIO</a>();</div>
+<div class="line"><span class="lineno">   47</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="config_8h.html#aab6a459f935e14cc07acc0516788c5f3">systemConfiguration</a>.diagnosePWM)  <a class="code hl_function" href="pinout_8h.html#a271cb6214ddcfd09c0090119ed5159a0">diagnosePWM</a>(); </div>
+<div class="line"><span class="lineno">   48</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="config_8h.html#aab6a459f935e14cc07acc0516788c5f3">systemConfiguration</a>.diagnoseUART) <a class="code hl_function" href="diagnostics_u_a_r_t_8h.html#acc8f8328b4a6e60100e91825f885bcb7">diagnoseAllUART</a>();</div>
+<div class="line"><span class="lineno">   49</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="config_8h.html#aab6a459f935e14cc07acc0516788c5f3">systemConfiguration</a>.diagnoseEEPROM) <a class="code hl_function" href="class_diagnostics_e_e_p_r_o_m.html#ac829dcc712fc300e26d11b51602fc5bb">DiagnosticsEEPROM::runTest</a>();</div>
+<div class="line"><span class="lineno">   50</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="config_8h.html#aab6a459f935e14cc07acc0516788c5f3">systemConfiguration</a>.debugMode) <a class="code hl_function" href="avr8-stub_8h.html#aa3ccab9eb015b12a84ffcd9dd3bd66a9">debug_init</a>(); </div>
+<div class="line"><span class="lineno">   51</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="config_8h.html#aab6a459f935e14cc07acc0516788c5f3">systemConfiguration</a>.version) <a class="code hl_function" href="msg_8h.html#acedf89272beec6e618703147664ef34c">printVersion</a>(<a class="code hl_define" href="main_8h.html#aa14dc39d52ab121ceb570f1a265385e0">FIRMWARE_VERSION</a>, <a class="code hl_define" href="main_8h.html#a53e29efbf83712dcee0878d27965aedf">FIRMWARE_NAME</a>, <a class="code hl_define" href="main_8h.html#a3ad9b4b06ce62adc531dface9bf82cb5">FIRMWARE_DATE</a>, <a class="code hl_define" href="main_8h.html#a741b54f6111da1cde82f0fce618a89ba">FIRMWARE_AUTHOR</a>, <a class="code hl_define" href="main_8h.html#a38b33acb5d5661010989f8868009749e">FIRMWARE_VERSION_APP</a>, <a class="code hl_define" href="main_8h.html#adab0450942968f1384ed7e716cce4e8f">FIRMWARE_NAME_APP</a>, <a class="code hl_define" href="main_8h.html#a1f08278ca8b35a571feec67789e62ea2">FIRMWARE_DATE_APP</a>);</div>
+<div class="line"><span class="lineno">   52</span>};</div>
+<div class="ttc" id="aavr8-stub_8h_html_aa3ccab9eb015b12a84ffcd9dd3bd66a9"><div class="ttname"><a href="avr8-stub_8h.html#aa3ccab9eb015b12a84ffcd9dd3bd66a9">debug_init</a></div><div class="ttdeci">void debug_init(void)</div></div>
+<div class="ttc" id="aclass_diagnostics_e_e_p_r_o_m_html_ac829dcc712fc300e26d11b51602fc5bb"><div class="ttname"><a href="class_diagnostics_e_e_p_r_o_m.html#ac829dcc712fc300e26d11b51602fc5bb">DiagnosticsEEPROM::runTest</a></div><div class="ttdeci">static bool runTest(int address=0)</div><div class="ttdoc">Runs a diagnostic test on the EEPROM at the specified address. Writes a test value,...</div><div class="ttdef"><b>Definition</b> <a href="diagnostics_e_e_p_r_o_m_8cpp_source.html#l00016">diagnosticsEEPROM.cpp:16</a></div></div>
+<div class="ttc" id="aconfig_8h_html_aab6a459f935e14cc07acc0516788c5f3"><div class="ttname"><a href="config_8h.html#aab6a459f935e14cc07acc0516788c5f3">systemConfiguration</a></div><div class="ttdeci">configuracionMain systemConfiguration</div></div>
+<div class="ttc" id="adiagnostics_u_a_r_t_8h_html_acc8f8328b4a6e60100e91825f885bcb7"><div class="ttname"><a href="diagnostics_u_a_r_t_8h.html#acc8f8328b4a6e60100e91825f885bcb7">diagnoseAllUART</a></div><div class="ttdeci">void diagnoseAllUART()</div><div class="ttdoc">Runs a complete diagnostic on all available UART ports.</div><div class="ttdef"><b>Definition</b> <a href="diagnostics_u_a_r_t_8cpp_source.html#l00015">diagnosticsUART.cpp:15</a></div></div>
+<div class="ttc" id="amain_8h_html_a1f08278ca8b35a571feec67789e62ea2"><div class="ttname"><a href="main_8h.html#a1f08278ca8b35a571feec67789e62ea2">FIRMWARE_DATE_APP</a></div><div class="ttdeci">#define FIRMWARE_DATE_APP</div><div class="ttdoc">Firmware compilation date.</div><div class="ttdef"><b>Definition</b> <a href="main_8h_source.html#l00052">main.h:52</a></div></div>
+<div class="ttc" id="amain_8h_html_a38b33acb5d5661010989f8868009749e"><div class="ttname"><a href="main_8h.html#a38b33acb5d5661010989f8868009749e">FIRMWARE_VERSION_APP</a></div><div class="ttdeci">#define FIRMWARE_VERSION_APP</div><div class="ttdoc">Firmware version for application.</div><div class="ttdef"><b>Definition</b> <a href="main_8h_source.html#l00050">main.h:50</a></div></div>
+<div class="ttc" id="amain_8h_html_a3ad9b4b06ce62adc531dface9bf82cb5"><div class="ttname"><a href="main_8h.html#a3ad9b4b06ce62adc531dface9bf82cb5">FIRMWARE_DATE</a></div><div class="ttdeci">#define FIRMWARE_DATE</div><div class="ttdoc">Firmware compilation date.</div><div class="ttdef"><b>Definition</b> <a href="main_8h_source.html#l00048">main.h:48</a></div></div>
+<div class="ttc" id="amain_8h_html_a53e29efbf83712dcee0878d27965aedf"><div class="ttname"><a href="main_8h.html#a53e29efbf83712dcee0878d27965aedf">FIRMWARE_NAME</a></div><div class="ttdeci">#define FIRMWARE_NAME</div><div class="ttdoc">Firmware name.</div><div class="ttdef"><b>Definition</b> <a href="main_8h_source.html#l00047">main.h:47</a></div></div>
+<div class="ttc" id="amain_8h_html_a741b54f6111da1cde82f0fce618a89ba"><div class="ttname"><a href="main_8h.html#a741b54f6111da1cde82f0fce618a89ba">FIRMWARE_AUTHOR</a></div><div class="ttdeci">#define FIRMWARE_AUTHOR</div><div class="ttdoc">Firmware author.</div><div class="ttdef"><b>Definition</b> <a href="main_8h_source.html#l00049">main.h:49</a></div></div>
+<div class="ttc" id="amain_8h_html_aa14dc39d52ab121ceb570f1a265385e0"><div class="ttname"><a href="main_8h.html#aa14dc39d52ab121ceb570f1a265385e0">FIRMWARE_VERSION</a></div><div class="ttdeci">#define FIRMWARE_VERSION</div><div class="ttdoc">Includes del sistema y librerías necesarias para el firmware.</div><div class="ttdef"><b>Definition</b> <a href="main_8h_source.html#l00046">main.h:46</a></div></div>
+<div class="ttc" id="amain_8h_html_adab0450942968f1384ed7e716cce4e8f"><div class="ttname"><a href="main_8h.html#adab0450942968f1384ed7e716cce4e8f">FIRMWARE_NAME_APP</a></div><div class="ttdeci">#define FIRMWARE_NAME_APP</div><div class="ttdoc">Firmware name.</div><div class="ttdef"><b>Definition</b> <a href="main_8h_source.html#l00051">main.h:51</a></div></div>
+<div class="ttc" id="amsg_8h_html_acedf89272beec6e618703147664ef34c"><div class="ttname"><a href="msg_8h.html#acedf89272beec6e618703147664ef34c">printVersion</a></div><div class="ttdeci">void printVersion(const char *fwVersion, const char *fwName, const char *fwDate, const char *fwAuthor, const char *appVersion, const char *appName, const char *appDate)</div><div class="ttdoc">Prints firmware version details to the serial monitor.</div><div class="ttdef"><b>Definition</b> <a href="msg_8cpp_source.html#l00248">msg.cpp:248</a></div></div>
+<div class="ttc" id="apinout_8h_html_a271cb6214ddcfd09c0090119ed5159a0"><div class="ttname"><a href="pinout_8h.html#a271cb6214ddcfd09c0090119ed5159a0">diagnosePWM</a></div><div class="ttdeci">void diagnosePWM()</div><div class="ttdoc">Diagnóstico de pines PWM.</div><div class="ttdef"><b>Definition</b> <a href="pinout_8cpp_source.html#l00126">pinout.cpp:126</a></div></div>
+<div class="ttc" id="apinout_8h_html_a78f24fdab5ead1139f3f21bb83161147"><div class="ttname"><a href="pinout_8h.html#a78f24fdab5ead1139f3f21bb83161147">diagnoseAnalog</a></div><div class="ttdeci">void diagnoseAnalog()</div><div class="ttdoc">Diagnóstico de pines analógicos.</div><div class="ttdef"><b>Definition</b> <a href="pinout_8cpp_source.html#l00037">pinout.cpp:37</a></div></div>
+<div class="ttc" id="apinout_8h_html_aa7a52c7f07b6793318c1e95e41b9c79a"><div class="ttname"><a href="pinout_8h.html#aa7a52c7f07b6793318c1e95e41b9c79a">fullDiagnosticsPins</a></div><div class="ttdeci">void fullDiagnosticsPins()</div><div class="ttdoc">Ejecuta todos los diagnósticos de pines.</div><div class="ttdef"><b>Definition</b> <a href="pinout_8cpp_source.html#l00016">pinout.cpp:16</a></div></div>
+<div class="ttc" id="apinout_8h_html_ad6ad9404cb3845eca0a1c5bf2d2d1932"><div class="ttname"><a href="pinout_8h.html#ad6ad9404cb3845eca0a1c5bf2d2d1932">diagnoseGPIO</a></div><div class="ttdeci">void diagnoseGPIO()</div><div class="ttdoc">Diagnóstico de pines GPIO.</div><div class="ttdef"><b>Definition</b> <a href="pinout_8cpp_source.html#l00085">pinout.cpp:85</a></div></div>
+<div class="ttc" id="astructconfiguracion_main_html"><div class="ttname"><a href="structconfiguracion_main.html">configuracionMain</a></div><div class="ttdoc">Main configuration structure for the project.</div><div class="ttdef"><b>Definition</b> <a href="config_8h_source.html#l00013">config.h:13</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Gráfico de llamadas de esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp_a4fc01d736fe50cf5b977f755b675f11d_cgraph.png" border="0" usemap="#amain_8cpp_a4fc01d736fe50cf5b977f755b675f11d_cgraph" loading="lazy" alt=""/></div>
+<map name="amain_8cpp_a4fc01d736fe50cf5b977f755b675f11d_cgraph" id="amain_8cpp_a4fc01d736fe50cf5b977f755b675f11d_cgraph">
+<area shape="rect" title="Arduino setup function (runs once at startup)." alt="" coords="5,231,60,256"/>
+<area shape="rect" href="avr8-stub_8h.html#aa3ccab9eb015b12a84ffcd9dd3bd66a9" title=" " alt="" coords="145,55,226,80"/>
+<area shape="poly" title=" " alt="" coords="34,230,42,201,56,163,77,124,106,89,131,75,133,80,110,93,81,127,60,166,47,203,39,231"/>
+<area shape="rect" href="diagnostics_u_a_r_t_8cpp.html#acc8f8328b4a6e60100e91825f885bcb7" title="Runs a complete diagnostic on all available UART ports." alt="" coords="124,104,247,129"/>
+<area shape="poly" title=" " alt="" coords="39,229,65,189,84,167,106,147,129,133,132,137,110,151,88,170,70,193,43,232"/>
+<area shape="rect" href="pinout_8cpp.html#a78f24fdab5ead1139f3f21bb83161147" title="Diagnóstico de pines analógicos." alt="" coords="331,156,445,181"/>
+<area shape="poly" title=" " alt="" coords="59,228,107,210,217,186,316,172,317,178,218,192,109,215,61,233"/>
+<area shape="rect" href="pinout_8cpp.html#ad6ad9404cb3845eca0a1c5bf2d2d1932" title="Diagnóstico de pines GPIO." alt="" coords="335,205,441,231"/>
+<area shape="poly" title=" " alt="" coords="60,239,321,220,321,225,61,244"/>
+<area shape="rect" href="pinout_8cpp.html#a271cb6214ddcfd09c0090119ed5159a0" title="Diagnóstico de pines PWM." alt="" coords="335,307,441,332"/>
+<area shape="poly" title=" " alt="" coords="50,254,76,274,109,292,163,307,219,315,321,320,321,325,219,321,162,312,107,296,73,279,46,258"/>
+<area shape="rect" href="pinout_8cpp.html#aa7a52c7f07b6793318c1e95e41b9c79a" title="Ejecuta todos los diagnósticos de pines." alt="" coords="119,256,251,281"/>
+<area shape="poly" title=" " alt="" coords="61,245,106,253,105,258,60,250"/>
+<area shape="rect" href="msg_8cpp.html#acedf89272beec6e618703147664ef34c" title="Prints firmware version details to the serial monitor." alt="" coords="140,357,231,383"/>
+<area shape="poly" title=" " alt="" coords="43,255,70,294,88,316,110,336,132,349,129,354,106,340,84,320,65,297,39,258"/>
+<area shape="rect" href="class_diagnostics_e_e_p_r_o_m.html#ac829dcc712fc300e26d11b51602fc5bb" title="Runs a diagnostic test on the EEPROM at the specified address. Writes a test value,..." alt="" coords="108,407,263,447"/>
+<area shape="poly" title=" " alt="" coords="39,255,62,320,82,359,110,393,114,397,111,401,106,397,78,362,57,322,34,257"/>
+<area shape="rect" href="diagnostics_u_a_r_t_8cpp.html#abee9102ec0a3103a14af4e810b02ea01" title="Ejecuta diagnóstico sobre Serial1 (UART1), si está disponible." alt="" coords="331,5,445,31"/>
+<area shape="poly" title=" " alt="" coords="235,101,261,89,275,77,284,65,294,52,309,40,321,34,323,38,312,44,298,56,289,68,279,81,264,94,238,106"/>
+<area shape="rect" href="diagnostics_u_a_r_t_8cpp.html#ab1adb888a9bf884d3315d094a9e71ff2" title="Ejecuta diagnóstico sobre Serial2 (UART2), si está disponible." alt="" coords="331,55,445,80"/>
+<area shape="poly" title=" " alt="" coords="238,101,321,81,323,86,239,107"/>
+<area shape="rect" href="msg_8cpp.html#abda2f504e4bfdbfbdd0cd8f8937f72f1" title="Prints a decorated header with centered text and padding on both sides." alt="" coords="521,231,656,256"/>
+<area shape="poly" title=" " alt="" coords="247,110,295,111,351,115,410,125,466,142,497,158,525,178,569,219,566,223,522,182,494,163,464,147,409,130,351,120,295,116,247,116"/>
+<area shape="rect" href="msg_8cpp.html#a6ef1ee9724c4aa2cdcd16023815c107a" title="Prints an enriched log message to the serial monitor." alt="" coords="325,356,451,381"/>
+<area shape="poly" title=" " alt="" coords="197,128,265,243,277,273,284,298,293,320,313,343,318,347,315,351,309,347,288,323,279,300,272,275,260,246,193,131"/>
+<area shape="rect" href="diagnostics_u_a_r_t_8cpp.html#a4563ddd7762002687f3b4a852169ef36" title="Realiza un diagnóstico sobre un puerto UART específico." alt="" coords="513,31,664,56"/>
+<area shape="poly" title=" " alt="" coords="446,23,500,30,500,35,445,28"/>
+<area shape="poly" title=" " alt="" coords="445,58,500,51,500,57,446,63"/>
+<area shape="poly" title=" " alt="" coords="430,179,466,191,545,223,544,228,464,197,428,184"/>
+<area shape="poly" title=" " alt="" coords="442,222,508,230,507,236,441,227"/>
+<area shape="poly" title=" " alt="" coords="422,304,540,258,542,263,423,309"/>
+<area shape="poly" title=" " alt="" coords="251,262,508,246,508,251,252,267"/>
+<area shape="poly" title=" " alt="" coords="206,279,253,310,312,342,329,349,327,354,310,347,250,315,203,284"/>
+<area shape="poly" title=" " alt="" coords="203,254,250,223,310,192,329,183,331,188,312,196,253,228,206,258"/>
+<area shape="poly" title=" " alt="" coords="236,253,323,231,324,237,238,258"/>
+<area shape="poly" title=" " alt="" coords="238,279,324,301,323,306,236,284"/>
+<area shape="poly" title=" " alt="" coords="231,367,311,367,312,372,231,372"/>
+<area shape="poly" title=" " alt="" coords="263,431,310,430,362,424,415,412,464,392,500,365,531,332,555,297,573,267,577,270,560,300,535,335,504,369,467,396,417,417,363,430,311,435,263,436"/>
+<area shape="poly" title=" " alt="" coords="254,405,329,383,331,388,256,410"/>
+<area shape="rect" href="class_diagnostics_e_e_p_r_o_m.html#ab5c18556e9ae3808c4aae242c9682d20" title="Clears the EEPROM at the specified address by writing 0xFF." alt="" coords="311,457,465,497"/>
+<area shape="poly" title=" " alt="" coords="263,444,297,452,296,457,262,449"/>
+<area shape="rect" href="class_diagnostics_e_e_p_r_o_m.html#a33eee4f3578863e963ae78ccbecdec35" title="Estimates the amount of free RAM available on the system. Works on AVR&#45;based boards like Arduino Mega..." alt="" coords="311,521,465,561"/>
+<area shape="poly" title=" " alt="" coords="216,445,260,476,312,506,324,513,322,517,309,511,257,480,213,450"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="main_8cpp.html">main.cpp</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

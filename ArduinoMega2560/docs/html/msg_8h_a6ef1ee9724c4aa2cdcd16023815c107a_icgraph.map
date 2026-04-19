@@ -1,0 +1,18 @@
+<map id="standardMessage" name="standardMessage">
+<area shape="rect" id="Node000001" title="Prints an enriched log message to the serial monitor." alt="" coords="336,104,461,129"/>
+<area shape="rect" id="Node000002" href="$diagnostics_u_a_r_t_8cpp.html#acc8f8328b4a6e60100e91825f885bcb7" title="Runs a complete diagnostic on all available UART ports." alt="" coords="137,5,259,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="370,97,332,70,287,44,257,33,258,28,289,40,335,65,373,93"/>
+<area shape="rect" id="Node000004" href="$pinout_8cpp.html#aa7a52c7f07b6793318c1e95e41b9c79a" title="Ejecuta todos los diagnósticos de pines." alt="" coords="132,55,264,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="333,103,250,83,251,77,334,98"/>
+<area shape="rect" id="Node000005" href="$msg_8cpp.html#acedf89272beec6e618703147664ef34c" title="Prints firmware version details to the serial monitor." alt="" coords="153,104,243,129"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="322,119,244,119,244,114,322,114"/>
+<area shape="rect" id="Node000006" href="$class_diagnostics_e_e_p_r_o_m.html#ac829dcc712fc300e26d11b51602fc5bb" title="Runs a diagnostic test on the EEPROM at the specified address. Writes a test value,..." alt="" coords="121,154,275,194"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="341,136,269,157,268,151,339,131"/>
+<area shape="rect" id="Node000007" href="$msg_8cpp.html#aff36c414af17efe4543ba01e5a18ccad" title="Displays the current system configuration status on the serial monitor." alt="" coords="108,219,288,244"/>
+<area shape="poly" id="edge9_Node000001_Node000007" title=" " alt="" coords="377,141,338,176,289,208,258,221,256,216,287,204,335,171,374,137"/>
+<area shape="rect" id="Node000003" href="$main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title="Arduino setup function (runs once at startup)." alt="" coords="5,80,60,105"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="126,37,109,44,77,63,51,82,48,78,75,58,107,40,124,33"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="119,82,61,91,60,86,118,77"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="139,111,60,99,61,94,140,106"/>
+<area shape="poly" id="edge8_Node000006_Node000003" title=" " alt="" coords="124,151,107,143,50,108,53,103,109,138,126,146"/>
+</map>

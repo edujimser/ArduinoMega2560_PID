@@ -1,0 +1,171 @@
+\doxysection{Referencia del archivo diagnostics\+UART.\+h}
+\hypertarget{diagnostics_u_a_r_t_8h}{}\label{diagnostics_u_a_r_t_8h}\index{diagnosticsUART.h@{diagnosticsUART.h}}
+{\ttfamily \+\#include $<$Arduino.\+h$>$}\newline
+{\ttfamily \+\#include "{}system/\+msg/\+msg.\+h"{}}\newline
+Gráfico de dependencias incluidas en diagnostics\+UART.\+h:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=271pt]{diagnostics_u_a_r_t_8h__incl}
+\end{center}
+\end{figure}
+Gráfico de los archivos que directa o indirectamente incluyen a este archivo:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=259pt]{diagnostics_u_a_r_t_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{diagnostics_u_a_r_t_8h_acc8f8328b4a6e60100e91825f885bcb7}{diagnose\+All\+UART}} ()
+\begin{DoxyCompactList}\small\item\em Runs a complete diagnostic on all available UART ports. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{diagnostics_u_a_r_t_8h_abee9102ec0a3103a14af4e810b02ea01}{diagnose\+Serial1}} ()
+\begin{DoxyCompactList}\small\item\em Performs a diagnostic on Serial1 (UART1). \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{diagnostics_u_a_r_t_8h_ab1adb888a9bf884d3315d094a9e71ff2}{diagnose\+Serial2}} ()
+\begin{DoxyCompactList}\small\item\em Performs a diagnostic on Serial2 (UART2). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{diagnostics_u_a_r_t_8h_doc-func-members}
+\doxysubsection{Documentación de funciones}
+\Hypertarget{diagnostics_u_a_r_t_8h_acc8f8328b4a6e60100e91825f885bcb7}\index{diagnosticsUART.h@{diagnosticsUART.h}!diagnoseAllUART@{diagnoseAllUART}}
+\index{diagnoseAllUART@{diagnoseAllUART}!diagnosticsUART.h@{diagnosticsUART.h}}
+\doxysubsubsection{\texorpdfstring{diagnoseAllUART()}{diagnoseAllUART()}}
+{\footnotesize\ttfamily \label{diagnostics_u_a_r_t_8h_acc8f8328b4a6e60100e91825f885bcb7} 
+void diagnose\+All\+UART (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Runs a complete diagnostic on all available UART ports. 
+
+Runs a complete diagnostic on all available UART ports.
+
+Esta función:\+
+\begin{DoxyItemize}
+\item Muestra un mensaje de inicio del diagnóstico.
+\item Ejecuta \doxylink{diagnostics_u_a_r_t_8h_abee9102ec0a3103a14af4e810b02ea01}{diagnose\+Serial1()} y \doxylink{diagnostics_u_a_r_t_8h_ab1adb888a9bf884d3315d094a9e71ff2}{diagnose\+Serial2()}.
+\item Muestra un mensaje de finalización del diagnóstico.
+\end{DoxyItemize}
+
+Actualmente incluye:\+
+\begin{DoxyItemize}
+\item UART1 (Serial1)
+\item UART2 (Serial2) 
+\end{DoxyItemize}
+
+Definición en la línea \doxymbox{\hyperlink{diagnostics_u_a_r_t_8cpp_source_l00015}{15}} del archivo \doxymbox{\hyperlink{diagnostics_u_a_r_t_8cpp_source}{diagnostics\+UART.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \doxymbox{\hyperlink{msg_8h_a6ef1ee9724c4aa2cdcd16023815c107a}{standardMessage}}(\textcolor{stringliteral}{"{}Starting\ UART\ communication\ diagnostic"{}},\ \_\_FILE\_\_,\ \_\_FUNCTION\_\_,\ \_\_DATE\_\_,\ \_\_TIME\_\_);}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \doxymbox{\hyperlink{diagnostics_u_a_r_t_8cpp_abee9102ec0a3103a14af4e810b02ea01}{diagnoseSerial1}}();}
+\DoxyCodeLine{00019\ \ \ \ \ \doxymbox{\hyperlink{diagnostics_u_a_r_t_8cpp_ab1adb888a9bf884d3315d094a9e71ff2}{diagnoseSerial2}}();}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \doxymbox{\hyperlink{msg_8h_ab596236a4ffe692e3e8da3dac004ef9c}{standardHeaderFull}}(\textcolor{stringliteral}{"{}Completed\ UART\ diagnostic"{}},\ \_\_FILE\_\_,\ \_\_FUNCTION\_\_,\ \_\_DATE\_\_,\ \_\_TIME\_\_);}
+\DoxyCodeLine{00022\ \}}
+
+\end{DoxyCode}
+Gráfico de llamadas de esta función:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{diagnostics_u_a_r_t_8h_acc8f8328b4a6e60100e91825f885bcb7_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=249pt]{diagnostics_u_a_r_t_8h_acc8f8328b4a6e60100e91825f885bcb7_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{diagnostics_u_a_r_t_8h_abee9102ec0a3103a14af4e810b02ea01}\index{diagnosticsUART.h@{diagnosticsUART.h}!diagnoseSerial1@{diagnoseSerial1}}
+\index{diagnoseSerial1@{diagnoseSerial1}!diagnosticsUART.h@{diagnosticsUART.h}}
+\doxysubsubsection{\texorpdfstring{diagnoseSerial1()}{diagnoseSerial1()}}
+{\footnotesize\ttfamily \label{diagnostics_u_a_r_t_8h_abee9102ec0a3103a14af4e810b02ea01} 
+void diagnose\+Serial1 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Performs a diagnostic on Serial1 (UART1). 
+
+Performs a diagnostic on Serial1 (UART1).
+
+Esta función solo se compila si HAVE\+\_\+\+HWSERIAL1 está definido. 
+
+Definición en la línea \doxymbox{\hyperlink{diagnostics_u_a_r_t_8cpp_source_l00075}{75}} del archivo \doxymbox{\hyperlink{diagnostics_u_a_r_t_8cpp_source}{diagnostics\+UART.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\#if\ defined(HAVE\_HWSERIAL1) }}
+\DoxyCodeLine{00077\ \ \ \ \ \doxymbox{\hyperlink{diagnostics_u_a_r_t_8cpp_a4563ddd7762002687f3b4a852169ef36}{diagnoseUARTStream}}(Serial1,\ \textcolor{stringliteral}{"{}Serial1"{}});}
+\DoxyCodeLine{00078\ \textcolor{preprocessor}{\#endif }}
+\DoxyCodeLine{00079\ \}}
+
+\end{DoxyCode}
+Gráfico de llamadas de esta función:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=315pt]{diagnostics_u_a_r_t_8h_abee9102ec0a3103a14af4e810b02ea01_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{diagnostics_u_a_r_t_8h_abee9102ec0a3103a14af4e810b02ea01_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{diagnostics_u_a_r_t_8h_ab1adb888a9bf884d3315d094a9e71ff2}\index{diagnosticsUART.h@{diagnosticsUART.h}!diagnoseSerial2@{diagnoseSerial2}}
+\index{diagnoseSerial2@{diagnoseSerial2}!diagnosticsUART.h@{diagnosticsUART.h}}
+\doxysubsubsection{\texorpdfstring{diagnoseSerial2()}{diagnoseSerial2()}}
+{\footnotesize\ttfamily \label{diagnostics_u_a_r_t_8h_ab1adb888a9bf884d3315d094a9e71ff2} 
+void diagnose\+Serial2 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Performs a diagnostic on Serial2 (UART2). 
+
+Performs a diagnostic on Serial2 (UART2).
+
+Esta función solo se compila si HAVE\+\_\+\+HWSERIAL2 está definido. 
+
+Definición en la línea \doxymbox{\hyperlink{diagnostics_u_a_r_t_8cpp_source_l00086}{86}} del archivo \doxymbox{\hyperlink{diagnostics_u_a_r_t_8cpp_source}{diagnostics\+UART.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00087\ \textcolor{preprocessor}{\#if\ defined(HAVE\_HWSERIAL2) }}
+\DoxyCodeLine{00088\ \ \ \ \ \doxymbox{\hyperlink{diagnostics_u_a_r_t_8cpp_a4563ddd7762002687f3b4a852169ef36}{diagnoseUARTStream}}(Serial2,\ \textcolor{stringliteral}{"{}Serial2"{}});}
+\DoxyCodeLine{00089\ \textcolor{preprocessor}{\#endif }}
+\DoxyCodeLine{00090\ \}}
+
+\end{DoxyCode}
+Gráfico de llamadas de esta función:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=315pt]{diagnostics_u_a_r_t_8h_ab1adb888a9bf884d3315d094a9e71ff2_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{diagnostics_u_a_r_t_8h_ab1adb888a9bf884d3315d094a9e71ff2_icgraph}
+\end{center}
+\end{figure}

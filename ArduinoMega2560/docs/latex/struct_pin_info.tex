@@ -1,0 +1,109 @@
+\doxysection{Referencia de la estructura Pin\+Info}
+\hypertarget{struct_pin_info}{}\label{struct_pin_info}\index{PinInfo@{PinInfo}}
+
+
+Representa un pin del sistema con nombre simbólico, número físico y familia funcional.  
+
+
+
+
+{\ttfamily \+\#include $<$pinout.\+h$>$}
+
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+constexpr \doxymbox{\hyperlink{struct_pin_info_ab4f945b344bf337ac1cb5dadbc659fda}{Pin\+Info}} (const char \texorpdfstring{$\ast$}{*}n, int num, const char \texorpdfstring{$\ast$}{*}fam)
+\begin{DoxyCompactList}\small\item\em Constructor constexpr para permitir uso en evaluaciones de tiempo de compilación. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos públicos}
+\begin{DoxyCompactItemize}
+\item 
+const char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{struct_pin_info_aa9b1dd89dbd7e3a466ed96ced6b68b31}{name}}
+\item 
+int \doxymbox{\hyperlink{struct_pin_info_a01b05f88290fa5560587d73b2752a150}{number}}
+\item 
+const char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{struct_pin_info_a63c475cd60899349b559d2c9703f0c40}{family}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Representa un pin del sistema con nombre simbólico, número físico y familia funcional. 
+
+Esta estructura permite describir cada pin de forma clara y tipada, facilitando diagnósticos, documentación y uso en tiempo de compilación.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em \doxylink{struct_pin_info_aa9b1dd89dbd7e3a466ed96ced6b68b31}{name}} & Nombre simbólico del pin (ej. "{}\+PIN\+\_\+\+PWM\+\_\+10"{}). \\
+\hline
+{\em \doxylink{struct_pin_info_a01b05f88290fa5560587d73b2752a150}{number}} & Número físico del pin en la placa Arduino. \\
+\hline
+{\em \doxylink{struct_pin_info_a63c475cd60899349b559d2c9703f0c40}{family}} & Familia funcional (ej. "{}\+GPIO"{}, "{}\+PWM"{}, "{}\+ANALOG"{}, "{}\+UART\+\_\+\+RX"{}). \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \doxymbox{\hyperlink{pinout_8h_source_l00018}{18}} del archivo \doxymbox{\hyperlink{pinout_8h_source}{pinout.\+h}}.
+
+
+
+\label{doc-constructors}
+\Hypertarget{struct_pin_info_doc-constructors}
+\doxysubsection{Documentación de constructores y destructores}
+\Hypertarget{struct_pin_info_ab4f945b344bf337ac1cb5dadbc659fda}\index{PinInfo@{PinInfo}!PinInfo@{PinInfo}}
+\index{PinInfo@{PinInfo}!PinInfo@{PinInfo}}
+\doxysubsubsection{\texorpdfstring{PinInfo()}{PinInfo()}}
+{\footnotesize\ttfamily \label{struct_pin_info_ab4f945b344bf337ac1cb5dadbc659fda} 
+Pin\+Info::\+\+Pin\+Info (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{n}{, }\item[{int}]{num}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{fam}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+Constructor constexpr para permitir uso en evaluaciones de tiempo de compilación. 
+
+
+
+Definición en la línea \doxymbox{\hyperlink{pinout_8h_source_l00024}{24}} del archivo \doxymbox{\hyperlink{pinout_8h_source}{pinout.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00024\ :\ \doxymbox{\hyperlink{struct_pin_info_aa9b1dd89dbd7e3a466ed96ced6b68b31}{name}}(n),\ \doxymbox{\hyperlink{struct_pin_info_a01b05f88290fa5560587d73b2752a150}{number}}(num),\ \doxymbox{\hyperlink{struct_pin_info_a63c475cd60899349b559d2c9703f0c40}{family}}(fam)\ \{\}}
+
+\end{DoxyCode}
+
+
+\label{doc-variable-members}
+\Hypertarget{struct_pin_info_doc-variable-members}
+\doxysubsection{Documentación de datos miembro}
+\Hypertarget{struct_pin_info_a63c475cd60899349b559d2c9703f0c40}\index{PinInfo@{PinInfo}!family@{family}}
+\index{family@{family}!PinInfo@{PinInfo}}
+\doxysubsubsection{\texorpdfstring{family}{family}}
+{\footnotesize\ttfamily \label{struct_pin_info_a63c475cd60899349b559d2c9703f0c40} 
+const char\texorpdfstring{$\ast$}{*} Pin\+Info::\+family}
+
+
+
+Definición en la línea \doxymbox{\hyperlink{pinout_8h_source_l00021}{21}} del archivo \doxymbox{\hyperlink{pinout_8h_source}{pinout.\+h}}.
+
+\Hypertarget{struct_pin_info_aa9b1dd89dbd7e3a466ed96ced6b68b31}\index{PinInfo@{PinInfo}!name@{name}}
+\index{name@{name}!PinInfo@{PinInfo}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily \label{struct_pin_info_aa9b1dd89dbd7e3a466ed96ced6b68b31} 
+const char\texorpdfstring{$\ast$}{*} Pin\+Info::\+name}
+
+
+
+Definición en la línea \doxymbox{\hyperlink{pinout_8h_source_l00019}{19}} del archivo \doxymbox{\hyperlink{pinout_8h_source}{pinout.\+h}}.
+
+\Hypertarget{struct_pin_info_a01b05f88290fa5560587d73b2752a150}\index{PinInfo@{PinInfo}!number@{number}}
+\index{number@{number}!PinInfo@{PinInfo}}
+\doxysubsubsection{\texorpdfstring{number}{number}}
+{\footnotesize\ttfamily \label{struct_pin_info_a01b05f88290fa5560587d73b2752a150} 
+int Pin\+Info::\+number}
+
+
+
+Definición en la línea \doxymbox{\hyperlink{pinout_8h_source_l00020}{20}} del archivo \doxymbox{\hyperlink{pinout_8h_source}{pinout.\+h}}.
+
+
+
+La documentación de esta estructura está generada del siguiente archivo:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{pinout_8h}{pinout.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,5 @@
+<map id="diagnosePWM" name="diagnosePWM">
+<area shape="rect" id="Node000001" title="Diagnóstico de pines PWM." alt="" coords="5,5,112,31"/>
+<area shape="rect" id="Node000002" href="$msg_8cpp.html#abda2f504e4bfdbfbdd0cd8f8937f72f1" title="Prints a decorated header with centered text and padding on both sides." alt="" coords="160,5,295,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="112,15,146,15,146,21,112,21"/>
+</map>

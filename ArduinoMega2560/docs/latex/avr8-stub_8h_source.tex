@@ -1,0 +1,308 @@
+\doxysection{avr8-\/stub.h}
+\hypertarget{avr8-stub_8h_source}{}\label{avr8-stub_8h_source}\index{avr8-\/stub.h@{avr8-\/stub.h}}
+\doxymbox{\hyperlink{avr8-stub_8h}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00001}00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00002}00002\ \textcolor{comment}{\ *\ avr8-\/stub.h}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00003}00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00004}00004\ \textcolor{comment}{\ *\ \ Created\ on:\ 25.\ 3.\ 2015}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00005}00005\ \textcolor{comment}{\ *\ \ \ \ \ \ Author:\ Jan\ Dolinay}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00006}00006\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00007}00007\ \textcolor{comment}{\ *\ \ Header\ file\ for}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00008}00008\ \textcolor{comment}{\ *\ \ GDB\ Debugging\ Agent\ (GDB\ stub)\ for\ ATMega328\ and\ ATMega1280\ and\ ATMega2560}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00009}00009\ \textcolor{comment}{\ *\ This\ code\ is\ actually\ "{}gdb\ stub"{}\ -\/\ code\ which\ runs\ in\ the\ debugged\ MCU\ and}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00010}00010\ \textcolor{comment}{\ *\ communicates\ with\ the\ gdb\ debugger.\ It\ uses\ gdb\ RCP\ protocol.}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00011}00011\ \textcolor{comment}{\ *\ The\ code\ needs\ to\ handle\ UART\ Receive\ interrupt\ and\ an\ interrupt\ for\ simulating}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00012}00012\ \textcolor{comment}{\ *\ software\ interrupt\ (EXT\ INT).}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00013}00013\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00014}00014\ \textcolor{comment}{\ *\ Configuration\ options}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00015}00015\ \textcolor{comment}{\ *\ You\ can\ pass\ the\ symbols\ to\ compiler\ or\ change\ the\ value\ below}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00016}00016\ \textcolor{comment}{\ *\ (For\ details\ see\ the\ defines\ in\ the\ code\ below)}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00017}00017\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00018}00018\ \textcolor{comment}{\ *\ AVR8\_BREAKPOINT\_MODE\ -\/\ how\ to\ implement\ breakpoints\ and\ stepping.}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00019}00019\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00020}00020\ \textcolor{comment}{\ *\ AVR8\_SWINT\_SOURCE\ -\/\ which\ external\ interrupt\ is\ used\ by\ the\ debugger\ (the\ corresponding\ pin\ cannot\ be\ used\ by\ user\ program!)}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00021}00021\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00022}00022\ \textcolor{comment}{\ *\ AVR8\_USE\_TIMER0\_INSTEAD\_OF\_WDT\ -\/\ use\ timer0\ instead\ of\ watchdog\ to\ detect\ breakpoints.}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00023}00023\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00024}00024\ \textcolor{comment}{\ *\ AVR8\_LOAD\_SUPPORT\ -\/\ whether\ the\ stub\ should\ support\ loading\ the\ program\ by\ GDB.\ Then\ you\ can\ upload\ the\ program}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00025}00025\ \textcolor{comment}{\ *\ \ and\ start\ debugging\ with\ single\ click\ in\ eclipse\ IDE.}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00026}00026\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00027}00027\ \textcolor{comment}{\ *\ AVR8\_USER\_BAUDRATE\ -\/\ serial\ port\ baud\ rate\ for\ communication\ with\ the\ debugger.}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00028}00028\ \textcolor{comment}{\ *\ \ \ If\ not\ provided,\ default\ is\ 115200\ for\ Arduino\ Uno,\ Mega,\ etc.}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00029}00029\ \textcolor{comment}{\ *\ \ \ Example:\ AVR8\_USER\_BAUDRATE=9600}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00030}00030\ \textcolor{comment}{\ *\ }}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00031}00031\ \textcolor{comment}{\ *\ AVR8\_UART\_NUMBER\ -\/\ which\ USART\ is\ used\ by\ the\ debugger.\ Default\ is\ 0\ (use\ USART0).\ }}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00032}00032\ \textcolor{comment}{\ *\ \ \ On\ Arduino\ Mega,\ by\ using\ other\ USART\ than\ the\ UART0\ you\ can\ use\ this\ debugger\ together\ with\ }}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00033}00033\ \textcolor{comment}{\ *\ \ \ the\ Arduino\ Serial\ functions.\ On\ Arduino\ Uno\ and\ other\ boards\ based\ on\ ATmega328\ only\ 0\ is\ available.}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00034}00034\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00035}00035\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00036}00036\ \textcolor{comment}{\ *\ The\ following\ project\ were\ used\ (and\ combined)\ to\ create\ this\ stub:}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00037}00037\ \textcolor{comment}{\ *\ 1)\ AVR-\/GDBServer\ (https://github.com/rouming/AVR-\/GDBServer)}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00038}00038\ \textcolor{comment}{\ *\ 2)\ avr-\/stub\ from\ uOS\ -\/\ embedded\ operating\ system\ (https://code.google.com/p/uos-\/embedded/)}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00039}00039\ \textcolor{comment}{\ *\ 3)\ AVR\ gdbstub\ (http://zevv.nl/play/code/avr-\/gdbstub/)}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00040}00040\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00041}00041\ \textcolor{comment}{\ *\ The\ API\ is\ inspired\ by\ the\ GDB\ documentation\ for\ stubs:\ (quote)}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00042}00042\ \textcolor{comment}{\ *\ The\ debugging\ stub\ for\ your\ architecture\ supplies\ these\ three\ subroutines:}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00043}00043\ \textcolor{comment}{\ *\ set\_debug\_traps}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00044}00044\ \textcolor{comment}{\ *\ This\ routine\ arranges\ for\ handle\_exception\ to\ run\ when\ your\ program\ stops.\ You\ must\ call\ this\ subroutine\ explicitly\ in\ your\ program's\ startup\ code.}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00045}00045\ \textcolor{comment}{\ *\ handle\_exception}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00046}00046\ \textcolor{comment}{\ *\ This\ is\ the\ central\ workhorse,\ but\ your\ program\ never\ calls\ it\ explicitly{\ucr}the\ setup\ code\ arranges\ for\ handle\_exception\ to\ run\ when\ a\ trap\ is\ triggered.}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00047}00047\ \textcolor{comment}{\ *\ handle\_exception\ takes\ control\ when\ your\ program\ stops\ during\ execution\ (for\ example,\ on\ a\ breakpoint),\ and\ mediates\ communications\ with\ gdb\ on\ the\ host\ machine.\ This\ is\ where\ the\ communications\ protocol\ is\ implemented;\ handle\_exception\ acts\ as\ the\ gdb\ representative\ on\ the\ target\ machine.\ It\ begins\ by\ sending\ summary\ information\ on\ the\ state\ of\ your\ program,\ then\ continues\ to\ execute,\ retrieving\ and\ transmitting\ any\ information\ gdb\ needs,\ until\ you\ execute\ a\ gdb\ command\ that\ makes\ your\ program\ resume;\ at\ that\ point,\ handle\_exception\ returns\ control\ to\ your\ own\ code\ on\ the\ target\ machine.}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00048}00048\ \textcolor{comment}{\ *\ breakpoint}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00049}00049\ \textcolor{comment}{\ *\ Use\ this\ auxiliary\ subroutine\ to\ make\ your\ program\ contain\ a\ breakpoint.\ Depending\ on\ the\ particular\ situation,\ this\ may\ be\ the\ only\ way\ for\ gdb\ to\ get\ control.\ For\ instance,\ if\ your\ target\ machine\ has\ some\ sort\ of\ interrupt\ button,\ you\ won't\ need\ to\ call\ this;\ pressing\ the\ interrupt\ button\ transfers\ control\ to\ handle\_exception{\ucr}in\ effect,\ to\ gdb.\ On\ some\ machines,\ simply\ receiving\ characters\ on\ the\ serial\ port\ may\ also\ trigger\ a\ trap;\ again,\ in\ that\ situation,\ you\ don't\ need\ to\ call\ breakpoint\ from\ your\ own\ program{\ucr}simply\ running\ {\ucr}target\ remote{\ucr}\ from\ the\ host\ gdb\ session\ gets\ control.}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00050}00050\ \textcolor{comment}{\ *\ Call\ breakpoint\ if\ none\ of\ these\ is\ true,\ or\ if\ you\ simply\ want\ to\ make\ certain\ your\ program\ stops\ at\ a\ predetermined\ point\ for\ the\ start\ of\ your\ debugging\ session.}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00051}00051\ \textcolor{comment}{\ *\ (end\ quote)}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00052}00052\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00053}00053\ \textcolor{comment}{\ *\ Note\ about\ porting\ to\ other\ AVR\ MCUs:}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00054}00054\ \textcolor{comment}{\ *\ You\ need\ to\ change:}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00055}00055\ \textcolor{comment}{\ *\ 1)\ UART\ code\ in\ uart\_init,\ putChar\ and\ getChar}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00056}00056\ \textcolor{comment}{\ *\ 2)\ Code\ for\ software\ interrupt\ emulation\ in\ gdb\_enable\_swinterrupt\ and\ gdb\_disable\_swinterrupt}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00057}00057\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00058}00058\ \textcolor{comment}{\ *\ Port\ to\ Atmega\ 1280\ (2560),\ Arduino\ Mega}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00059}00059\ \textcolor{comment}{\ *\ USART\ routines\ work\ as\ is;\ ISR\ name\ changes.}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00060}00060\ \textcolor{comment}{\ *\ PC\ is\ 3\ bytes\ on\ Mega2560\ and\ 2\ bytes\ on\ 1280\ as\ follows\ from\ Stack\ Pointer\ chapter\ in\ the\ datasheet:}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00061}00061\ \textcolor{comment}{\ *\ The\ ATmega48A/PA/88A/PA/168A/PA/328/P\ Program\ Counter\ (PC)\ is\ 11/12/13/14\ bits\ wide}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00062}00062\ \textcolor{comment}{\ *\ The\ ATmega640/1280/1281/2560/2561\ Program\ Counter\ (PC)\ is\ 15/16/17\ bits\ wide}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00063}00063\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00064}00064\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00065}00065\ \textcolor{comment}{\ *\ This\ is\ free\ software;\ you\ can\ redistribute\ it\ and/or}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00066}00066\ \textcolor{comment}{\ *\ modify\ it\ under\ the\ terms\ of\ the\ GNU\ Lesser\ General\ Public}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00067}00067\ \textcolor{comment}{\ *\ License\ as\ published\ by\ the\ Free\ Software\ Foundation;\ either}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00068}00068\ \textcolor{comment}{\ *\ version\ 3\ of\ the\ License,\ or\ (at\ your\ option)\ any\ later\ version.}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00069}00069\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00070}00070\ \textcolor{comment}{\ *\ This\ library\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00071}00071\ \textcolor{comment}{\ *\ but\ WITHOUT\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty\ of}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00072}00072\ \textcolor{comment}{\ *\ MERCHANTABILITY\ or\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00073}00073\ \textcolor{comment}{\ *\ See\ the\ GNU\ Lesser\ General\ Public\ License\ for\ more\ details.}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00074}00074\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00075}00075\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00077}00077\ \textcolor{preprocessor}{\#ifndef\ DRV\_DEBUG\_H\_}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00078}00078\ \textcolor{preprocessor}{\#define\ DRV\_DEBUG\_H\_}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00079}00079\ }
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00081}00081\ \textcolor{preprocessor}{\#include\ <avr/io.h>}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00082}00082\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00084}00084\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00085}00085\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00086}00086\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00088}00088\ }
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00089}00089\ \textcolor{comment}{/*\ \ -\/-\/-\/-\/-\/-\/-\/-\/-\/\ Configuration\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}\textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00090}00090\ \textcolor{comment}{/**\ AVR8\_BREAKPOINT\_MODE}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00091}00091\ \textcolor{comment}{\ *\ Select\ the\ mode\ for\ handling\ breakpoints\ and\ step\ command.}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00092}00092\ \textcolor{comment}{\ *\ Options:}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00093}00093\ \textcolor{comment}{\ *\ \ 0\ -\/\ FLASH\ breakpoints\ with\ avr-\/stub\ bootloader}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00094}00094\ \textcolor{comment}{\ *\ \ 1\ -\/\ RAM\ only\ -\/\ RAM\ breakpoints\ and\ stepping}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00095}00095\ \textcolor{comment}{\ *\ \ 2\ -\/\ FLASH\ breakpoints\ with\ Optiboot\ bootloader\ (using\ do\_spm()\ function)}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00096}00096\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00097}00097\ \textcolor{comment}{\ *\ More\ info:}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00098}00098\ \textcolor{comment}{\ *\ RAM\ breakpoints\ -\/\ use\ external\ interrupt\ to\ stop\ the\ program\ after\ each\ instruction\ and\ compare\ PC}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00099}00099\ \textcolor{comment}{\ *\ \ with\ breakpoints.\ If\ any\ BP\ address\ is\ reached,\ the\ program\ is\ halted.\ Program\ runs\ slow\ with\ BP\ enabled.}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00100}00100\ \textcolor{comment}{\ *\ (+)\ No\ wear\ of\ flash\ memory}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00101}00101\ \textcolor{comment}{\ *\ (-\/)\ Debugged\ program\ runs\ slowly\ -\/\ interrupt\ occurs\ after\ every\ instruction}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00102}00102\ \textcolor{comment}{\ *\ \ \ \ \ \ and\ in\ the\ ISR\ there\ are\ perhaps\ 100\ cycles\ needed\ to\ save\ and\ restore\ context.}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00103}00103\ \textcolor{comment}{\ *\ \ \ \ \ \ How\ much\ the\ debugged\ program\ is\ affected\ depends\ also\ on\ the\ design\ of\ the\ program,}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00104}00104\ \textcolor{comment}{\ *\ \ \ \ \ \ for\ example,\ blinking\ LED\ with\ delays\ based\ of\ poling\ timer\ value\ may\ be\ affected}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00105}00105\ \textcolor{comment}{\ *\ \ \ \ \ \ little,\ while\ delays\ using\ busy\ loop\ will\ be\ much\ much\ longer\ than\ expected.}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00106}00106\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00107}00107\ \textcolor{comment}{\ *\ Flash\ breakpoints\ -\/\ writes\ special\ instruction\ at\ the\ position\ where\ program\ should\ stop.}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00108}00108\ \textcolor{comment}{\ *\ (-\/)\ Flash\ memory\ is\ overwritten\ often\ during\ debug\ session.\ It\ should\ survive\ 10\ 000\ erase-\/write\ cycles.}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00109}00109\ \textcolor{comment}{\ *\ (+)\ Debugged\ program\ runs\ at\ normal\ (full)\ speed\ between\ breakpoints.}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00110}00110\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00111}00111\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00112}00112\ \textcolor{comment}{\ *\ Note:\ The\ step\ command\ (going\ to\ next\ line)\ is\ implemented\ by\ comparing\ the\ PC\ register}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00113}00113\ \textcolor{comment}{\ *\ with\ desired\ address\ even\ in\ FLASH\ breakpoints\ mode.\ In\ principle\ it\ would\ be\ possible\ to}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00114}00114\ \textcolor{comment}{\ *\ implement\ it\ by\ writing\ to\ flash\ but\ it\ would\ wear\ the\ flash\ memory\ very\ fast.\ There\ are}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00115}00115\ \textcolor{comment}{\ *\ about\ 10\ overwrites\ for\ a\ single\ step\ in\ the\ debugger\ in\ such\ case.}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00116}00116\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00117}00117\ \textcolor{comment}{\ *\ */}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00118}00118\ \textcolor{preprocessor}{\#ifndef\ AVR8\_BREAKPOINT\_MODE}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00119}\doxymbox{\hyperlink{avr8-stub_8h_a94bfb560a62870ebe85d7beca4b6c85d}{00119}}\ \textcolor{preprocessor}{\ \ \ \ \#define\ AVR8\_BREAKPOINT\_MODE\ \ \ \ (1)}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00120}00120\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00121}00121\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00122}00122\ \textcolor{comment}{/**\ AVR8\_USE\_TIMER0\_INSTEAD\_OF\_WDT}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00123}00123\ \textcolor{comment}{\ *\ Select\ one\ of\ the\ following\ options\ for\ the\ interrupt\ to\ detect\ that}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00124}00124\ \textcolor{comment}{\ *\ the\ program\ stopped\ on\ a\ breakpoint:}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00125}00125\ \textcolor{comment}{\ *\ 0\ -\/\ do\ not\ use\ TIMER0\ interrupts\ but\ the\ watchdog\ timer\ interrupt}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00126}00126\ \textcolor{comment}{\ *\ 1\ -\/\ use\ the\ output\ compare\ A\ interrupt\ of\ timer\ 0\ (the\ timer\ for\ millis\ and\ delays)}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00127}00127\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00128}00128\ \textcolor{comment}{\ *\ Using\ the\ watchdog\ timer\ is\ the\ default,\ but\ it\ means\ that\ we\ cannot\ use\ the\ watchdog\ timer}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00129}00129\ \textcolor{comment}{\ *\ in\ the\ user\ program.}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00130}00130\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00131}00131\ \textcolor{comment}{\ *\ The\ other\ option\ is\ to\ use\ the\ output\ compare\ interrupt\ A\ of\ timer0\ (TIMER0\ COMPA).}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00132}00132\ \textcolor{comment}{\ *\ To\ use\ this\ option\ your\ program\ must\ use\ the\ Arduino\ core\ and\ timer0\ must\ be\ configured}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00133}00133\ \textcolor{comment}{\ *\ by\ this\ core.\ Since\ the\ timer\ is\ used\ by\ Arduino\ for\ counting\ milliseconds,\ this\ is}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00134}00134\ \textcolor{comment}{\ *\ usually\ the\ case.}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00135}00135\ \textcolor{comment}{\ *\ With\ this\ option\ enabled,\ the\ user\ program\ can\ use\ watchdog\ timer.}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00136}00136\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00137}00137\ \textcolor{comment}{\ *\ */}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00138}00138\ \textcolor{preprocessor}{\#ifndef\ AVR8\_USE\_TIMER0\_INSTEAD\_OF\_WDT}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00139}\doxymbox{\hyperlink{avr8-stub_8h_ac91d56843b180cabc49d36748ac7c9d7}{00139}}\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ AVR8\_USE\_TIMER0\_INSTEAD\_OF\_WDT\ (0)}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00140}00140\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00141}00141\ \textcolor{preprocessor}{\#if\ AVR8\_BREAKPOINT\_MODE\ ==\ 1}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00142}00142\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \#undef\ AVR8\_USE\_TIMER0\_INSTEAD\_OF\_WDT}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00143}00143\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \#define\ AVR8\_USE\_TIMER0\_INSTEAD\_OF\_WDT\ (0)}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00144}00144\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00145}00145\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00146}00146\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00147}00147\ \textcolor{comment}{\ *\ AVR8\_SWINT\_SOURCE}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00148}00148\ \textcolor{comment}{\ *\ Source\ for\ software\ interrupt.}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00149}00149\ \textcolor{comment}{\ *\ Valid\ values\ are\ listed\ below.\ The\ pin\ selected\ here\ will\ be\ used\ for\ generating\ SW\ interrupt}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00150}00150\ \textcolor{comment}{\ *\ by\ the\ debugger\ and\ cannot\ be\ used\ for\ anything\ else\ -\/\ it\ becomes\ reserved\ for\ the\ debugger.}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00151}00151\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00152}00152\ \textcolor{comment}{\ *\ Supported\ values\ for\ Atmega328\ (UNO):}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00153}00153\ \textcolor{comment}{\ *\ 0\ -\/\ use\ INT0\ (pin\ PD2,\ Arduino\ pin\ 2)}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00154}00154\ \textcolor{comment}{\ *\ 1\ -\/\ use\ INT1\ (pin\ PD3,\ Arduino\ pin\ 3)}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00155}00155\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00156}00156\ \textcolor{comment}{\ *\ Supported\ values\ for\ ATmega1284(P):}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00157}00157\ \textcolor{comment}{\ *\ 0\ -\/\ use\ INT0\ (pin\ PD2)}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00158}00158\ \textcolor{comment}{\ *\ 1\ -\/\ use\ INT1\ (pin\ PD3)}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00159}00159\ \textcolor{comment}{\ *\ 2\ -\/\ use\ INT3\ (pin\ PB2)}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00160}00160\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00161}00161\ \textcolor{comment}{\ *\ Supported\ values\ for\ Atmega2560\ and\ Atmega1280:}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00162}00162\ \textcolor{comment}{\ *\ TIP:\ Use\ value\ 6\ or\ 7;\ the\ pins\ for\ these\ INTs\ are\ not\ connected\ on\ Arduino}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00163}00163\ \textcolor{comment}{\ *\ mega\ board,\ so\ you\ will\ not\ waste\ any\ pin.}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00164}00164\ \textcolor{comment}{\ *\ 0\ -\/\ INT0\ (pin\ PD0,\ Arduino\ pin\ 21)}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00165}00165\ \textcolor{comment}{\ *\ 1\ -\/\ INT1\ (pin\ PD1,\ Arduino\ pin\ 20)}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00166}00166\ \textcolor{comment}{\ *\ 2\ -\/\ INT2\ (pin\ PD2,\ Arduino\ pin\ 19)}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00167}00167\ \textcolor{comment}{\ *\ 3\ -\/\ INT3\ (pin\ PD3,\ Arduino\ pin\ 18)}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00168}00168\ \textcolor{comment}{\ *\ 4\ -\/\ INT4\ (pin\ PE4,\ Arduino\ pin\ 2)}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00169}00169\ \textcolor{comment}{\ *\ 5\ -\/\ INT5\ (pin\ PE5,\ Arduino\ pin\ 3)}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00170}00170\ \textcolor{comment}{\ *\ 6\ -\/\ INT6\ (pin\ PE6,\ not\ used\ on\ Arduino)}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00171}00171\ \textcolor{comment}{\ *\ 7\ -\/\ INT7\ (pin\ PE7,\ not\ used\ on\ Arduino)}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00172}00172\ \textcolor{comment}{\ *\ Note\ to\ implementors}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00173}00173\ \textcolor{comment}{\ *\ \ INT0-\/3\ uses\ EICRA\ reg.\ and\ port\ D}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00174}00174\ \textcolor{comment}{\ *\ \ INT4\ -\/\ 7\ uses\ EICRB\ reg.\ and\ port\ E}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00175}00175\ \textcolor{comment}{\ *\ \ Pins\ PE6\ and\ PE7\ are\ not\ connected\ on\ Arduino\ Mega\ boards.}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00176}00176\ \textcolor{comment}{\ *\ }}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00177}00177\ \textcolor{comment}{\ *\ NOTE:\ Special\ value\ -\/1\ can\ be\ defined\ to\ use\ output\ compare\ interrupt\ of\ timer0}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00178}00178\ \textcolor{comment}{\ *\ instead\ of\ external\ interrupt.}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00179}00179\ \textcolor{comment}{\ *\ IMPORTANT:}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00180}00180\ \textcolor{comment}{\ *\ \ -\/\ The\ debugger\ may\ not\ work\ properly\ if\ any\ interrupt\ with\ higher\ priority\ that\ the}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00181}00181\ \textcolor{comment}{\ *\ timer0\ compare\ interrupt\ (TIMER0\ COMPA)\ is\ enabled\ in\ the\ debugged\ program.}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00182}00182\ \textcolor{comment}{\ *\ \ -\/\ analogWrite\ for\ the\ pin\ connected\ to\ COMPA\ channel\ of\ timer0\ (pin\ 6\ \ on\ Arduino\ Uno)}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00183}00183\ \textcolor{comment}{\ *\ \ may\ be\ affected\ by\ this\ option.}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00184}00184\ \textcolor{comment}{\ *\ This\ option\ is\ only\ available\ if\ you\ use\ FLASH\ breakpoints\ (see\ AVR8\_BREAKPOINT\_MODE).}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00185}00185\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00186}00186\ \textcolor{comment}{\ *\ Note:\ Pin\ Change\ Interrupt\ (PCINT)\ could\ be\ used\ also.}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00187}00187\ \textcolor{comment}{\ *\ It\ could\ be\ one\ of\ the\ Arduino\ analog\ pins\ (PC0\ -\/\ PC5)\ which\ are\ less\ likely}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00188}00188\ \textcolor{comment}{\ *\ to\ be\ used\ by\ the\ user\ program.}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00189}00189\ \textcolor{comment}{\ *\ Note\ that\ if\ PCINT\ is\ used,\ then\ INT0\ and\ INT1\ used\ by\ the\ user\ program}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00190}00190\ \textcolor{comment}{\ *\ could\ cause\ troubles,\ because\ they\ have\ higher\ priority\ than\ PCINT\ and\ could\ prevent}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00191}00191\ \textcolor{comment}{\ *\ the\ debugger\ from\ catching\ the\ program\ properly...}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00192}00192\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00193}00193\ \ \ }
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00194}00194\ \textcolor{preprocessor}{\#ifndef\ AVR8\_SWINT\_SOURCE}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00195}\doxymbox{\hyperlink{avr8-stub_8h_a2e1c9314effc268a523b899d6c40dc7d}{00195}}\ \textcolor{preprocessor}{\ \ \ \ \#define\ AVR8\_SWINT\_SOURCE\ \ \ (0)}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00196}00196\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00197}00197\ }
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00198}00198\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00199}00199\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00200}00200\ \textcolor{comment}{\ \ AVR8\_LOAD\_SUPPORT}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00201}00201\ \textcolor{comment}{\ \ Enable\ or\ disable\ support\ for\ loading\ the\ program\ from\ the\ debugger.}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00202}00202\ \textcolor{comment}{\ \ If\ enabled\ you\ can\ just\ click\ the\ Debug\ button\ in\ IDE\ to\ upload\ new\ program}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00203}00203\ \textcolor{comment}{\ \ and\ debug\ it.}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00204}00204\ \textcolor{comment}{\ \ IMPORTANT:\ requires\ support\ in\ bootloader\ so\ the\ bootloader\ in\ Arduino\ must}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00205}00205\ \textcolor{comment}{\ \ \ be\ replaced\ with\ the\ bootloader\ provided\ in\ this\ package.}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00206}00206\ \textcolor{comment}{\ \ \ It\ doesn't\ work\ with\ the\ Optiboot\ bootloader}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00207}00207\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00208}00208\ \textcolor{comment}{\ \ \ Options:}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00209}00209\ \textcolor{comment}{\ \ \ \ 0\ -\/\ load\ from\ GDB\ disabled.\ Load\ the\ program\ using\ avrdude\ as\ usual.}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00210}00210\ \textcolor{comment}{\ \ \ \ 1\ -\/\ load\ from\ GDB\ enabled.}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00211}00211\ \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00212}00212\ \textcolor{preprocessor}{\#ifndef\ AVR8\_LOAD\_SUPPORT}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00213}\doxymbox{\hyperlink{avr8-stub_8h_a36f771683ca0a178cc8980afe536e1b4}{00213}}\ \textcolor{preprocessor}{\ \ \ \ \#define\ AVR8\_LOAD\_SUPPORT\ \ \ (0)}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00214}00214\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00215}00215\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00216}00216\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00217}00217\ \textcolor{comment}{\ *\ UART\ module\ used\ by\ the\ debugger.}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00218}00218\ \textcolor{comment}{\ *\ This\ select\ the\ serial\ communication\ peripheral\ used\ for\ communicating\ with\ the\ GDB.}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00219}00219\ \textcolor{comment}{\ *\ \ }}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00220}00220\ \textcolor{comment}{\ *\ This\ option\ only\ makes\ sense\ for\ Arduino\ Mega\ because\ the\ Atmega2560\ and\ 1280}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00221}00221\ \textcolor{comment}{\ *\ have\ 4\ hardware\ UARTs.\ By\ using\ other\ UART\ than\ the\ UART0\ you\ can\ use\ this\ debugger}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00222}00222\ \textcolor{comment}{\ *\ together\ with\ the\ Arduino\ Serial\ functions.}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00223}00223\ \textcolor{comment}{\ *\ For\ Arduino\ boards\ based\ on\ ATmega328\ (like\ Uno,\ Nano,...)\ the\ only\ valid}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00224}00224\ \textcolor{comment}{\ *\ option\ is\ 0\ (to\ use\ UART0)\ because\ there\ are\ no\ other\ hardware\ UARTs.}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00225}00225\ \textcolor{comment}{\ *\ }}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00226}00226\ \textcolor{comment}{\ *\ Supported\ values\ for\ Atmega328\ (UNO):}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00227}00227\ \textcolor{comment}{\ *\ 0\ -\/\ use\ USART0\ (Arduino\ Serial\ cannot\ be\ used\ with\ the\ debugger)}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00228}00228\ \textcolor{comment}{\ \ *}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00229}00229\ \textcolor{comment}{\ *\ Supported\ values\ for\ ATmega1284(P):}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00230}00230\ \textcolor{comment}{\ *\ 0\ -\/\ use\ USART0\ }}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00231}00231\ \textcolor{comment}{\ *\ 1\ -\/\ use\ USART1\ }}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00232}00232\ \textcolor{comment}{\ *\ }}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00233}00233\ \textcolor{comment}{\ *\ Supported\ values\ for\ Atmega2560\ and\ Atmega1280:}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00234}00234\ \textcolor{comment}{\ *\ 0\ -\/\ use\ USART0\ (Arduino\ Serial\ cannot\ be\ used\ with\ the\ debugger)}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00235}00235\ \textcolor{comment}{\ *\ 1\ -\/\ use\ USART1\ (Rx=PD2=D19,\ Tx=PD3=D18)}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00236}00236\ \textcolor{comment}{\ *\ 2\ -\/\ use\ USART2\ (Rx=PH0=D17,\ Tx=PH1=D16)}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00237}00237\ \textcolor{comment}{\ *\ 3\ -\/\ use\ USART3\ (Rx=PJ0=D15,\ Tx=PJ1=D14)}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00238}00238\ \textcolor{comment}{\ *\ }}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00239}00239\ \textcolor{comment}{\ *\ Note:\ the\ number\ in\ AVR8\_UART\_NUMBER\ is\ used\ to\ generate\ register\ names\ in\ macros;\ }}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00240}00240\ \textcolor{comment}{\ *\ don't\ put\ it\ into\ parentheses.}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00241}00241\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00242}00242\ \textcolor{preprocessor}{\#ifndef\ AVR8\_UART\_NUMBER}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00243}\doxymbox{\hyperlink{avr8-stub_8h_af29d064448a0f04ba01a38e526ae1711}{00243}}\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ AVR8\_UART\_NUMBER\ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00244}00244\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00245}00245\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00246}00246\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00247}00247\ \textcolor{comment}{\ *\ Maximum\ number\ of\ breakpoints\ supported.}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00248}00248\ \textcolor{comment}{\ *\ Note\ that\ gdb\ will\ set\ temporary\ breakpoint,\ for\ example,\ for\ step\ into\ function}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00249}00249\ \textcolor{comment}{\ *\ or\ the\ Run\ to\ line\ command,\ so\ the\ actual\ number\ of\ breakpoints\ user\ can\ set\ will}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00250}00250\ \textcolor{comment}{\ *\ be\ lower.}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00251}00251\ \textcolor{comment}{\ *\ For\ flash\ breakpoints\ it\ is\ better\ to\ use\ lower\ number\ -\/\ each\ breakpoint\ means}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00252}00252\ \textcolor{comment}{\ *\ writing\ to\ flash,\ user\ will\ often\ forget\ about\ old\ breakpoints\ and\ these\ will\ be}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00253}00253\ \textcolor{comment}{\ *\ rewritten\ to\ flash\ with\ no\ need...So\ it\ is\ better\ to\ limit\ the\ number\ and\ make}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00254}00254\ \textcolor{comment}{\ *\ the\ user\ delete\ breakpoints\ when\ not\ needed.\ It\ is\ quite\ possible\ to\ debug}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00255}00255\ \textcolor{comment}{\ *\ a\ program\ with\ single\ breakpoint.}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00256}00256\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00257}00257\ \textcolor{preprocessor}{\#if\ (AVR8\_BREAKPOINT\_MODE\ ==\ 1)\ }\textcolor{comment}{/*\ RAM\ only\ breakpoints;\ recommended\ 8\ breakpoints\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00258}\doxymbox{\hyperlink{avr8-stub_8h_a18c0e81851a764d849a3b78403f6602e}{00258}}\ \textcolor{preprocessor}{\ \ \ \ \#define\ AVR8\_MAX\_BREAKS\ \ \ \ \ \ \ (8)}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00259}00259\ \textcolor{preprocessor}{\#else\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ Flash\ breakpoints,\ RAM\ stepping;\ recommended\ 4\ breakpoints\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00260}00260\ \textcolor{preprocessor}{\ \ \ \ \#define\ AVR8\_MAX\_BREAKS\ \ \ \ \ \ \ (4)}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00261}00261\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00262}00262\ }
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00263}00263\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00264}00264\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00265}00265\ \textcolor{comment}{\ *\ Define\ this\ to\ enable\ some\ global\ variables\ to\ make\ it\ easier\ to\ debug\ this\ stub.}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00266}00266\ \textcolor{comment}{\ *\ This\ is\ for\ advanced\ users\ who\ need\ to\ debug\ the\ debugger\ (gbd\ stub)\ itself.}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00267}00267\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00268}00268\ \textcolor{comment}{/*\ \#define\ AVR8\_STUB\_DEBUG\ */}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00269}00269\ }
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00270}00270\ }
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00271}00271\ }
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00272}00272\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00273}00273\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00274}00274\ \textcolor{comment}{\ *\ Initialize\ the\ debugger\ driver}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00275}00275\ \textcolor{comment}{\ *\ ?\ Is\ this\ our\ version\ of\ set\_debug\_traps\ ?\ (see\ above)}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00276}00276\ \textcolor{comment}{\ *\ But\ the\ interrupts\ are\ re-\/directed\ in\ compile\ time,\ so\ we\ do\ not\ need\ such\ function.}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00277}00277\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00278}\doxymbox{\hyperlink{avr8-stub_8h_aa3ccab9eb015b12a84ffcd9dd3bd66a9}{00278}}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{avr8-stub_8h_aa3ccab9eb015b12a84ffcd9dd3bd66a9}{debug\_init}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00279}00279\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00280}00280\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00281}00281\ \textcolor{comment}{\ *\ Insert\ breakpoint\ at\ the\ position\ where\ this\ function\ is\ called.}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00282}00282\ \textcolor{comment}{\ *\ To\ set-\/up\ breakpoints\ before\ compilation.}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00283}00283\ \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00284}\doxymbox{\hyperlink{avr8-stub_8h_aef5ea7360080a589bedb934b57656cb9}{00284}}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{avr8-stub_8h_aef5ea7360080a589bedb934b57656cb9}{breakpoint}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00285}00285\ }
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00286}00286\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00287}00287\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00288}00288\ \textcolor{comment}{\ *\ Send\ text\ message\ to\ gdb\ console.}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00289}00289\ \textcolor{comment}{\ *\ The\ function\ appends\ "{}\(\backslash\)n"{}\ to\ the\ msg.}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00290}00290\ \textcolor{comment}{\ *\ Note\ that\ GDB\ will\ queue\ the\ messages\ until\ "{}\(\backslash\)n"{}\ (0x0a)\ is\ received;\ then}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00291}00291\ \textcolor{comment}{\ *\ it\ displays\ the\ messages\ in\ console.}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00292}00292\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00293}\doxymbox{\hyperlink{avr8-stub_8h_a99d9303d3a4634b31d88812a0954ab7a}{00293}}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{avr8-stub_8h_a99d9303d3a4634b31d88812a0954ab7a}{debug\_message}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ msg);}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00294}00294\ }
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00295}00295\ }
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00296}00296\ }
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00297}00297\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00298}00298\ \}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00299}00299\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00300}00300\ }
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00301}00301\ }
+\DoxyCodeLine{\Hypertarget{avr8-stub_8h_source_l00302}00302\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ DRV\_DEBUG\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

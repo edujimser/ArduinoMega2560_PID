@@ -1,0 +1,9 @@
+<map id="MotorPaso::pasoAdelante" name="MotorPaso::pasoAdelante">
+<area shape="rect" id="Node000001" title="Avanza un paso en la secuencia del motor." alt="" coords="357,35,529,60"/>
+<area shape="rect" id="Node000002" href="$class_motor_paso.html#a884b1a066e5684a4c1f25431efc6b316" title="Ejecuta movimiento continuo según la velocidad configurada." alt="" coords="100,5,309,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="343,38,308,33,308,28,344,32"/>
+<area shape="rect" id="Node000003" href="$class_motor_paso.html#a3bf0f1a5f2d26c41e405408be4ec47b4" title="Mueve el motor hacia un ángulo relativo usando el camino más corto." alt="" coords="101,55,309,95"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="344,62,309,66,308,60,343,56"/>
+<area shape="rect" id="Node000004" href="$main_8cpp.html#afe461d27b9c48d5921c00d521181f12f" title="Arduino main loop. Ejecuta continuamente la configuración de pines, lectura analógica,..." alt="" coords="5,63,52,88"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="87,78,52,78,52,73,87,73"/>
+</map>

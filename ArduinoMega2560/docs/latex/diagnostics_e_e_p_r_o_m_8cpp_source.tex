@@ -1,0 +1,100 @@
+\doxysection{diagnostics\+EEPROM.\+cpp}
+\hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source}{}\label{diagnostics_e_e_p_r_o_m_8cpp_source}\index{diagnosticsEEPROM.cpp@{diagnosticsEEPROM.cpp}}
+\doxymbox{\hyperlink{diagnostics_e_e_p_r_o_m_8cpp}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{diagnostics_e_e_p_r_o_m_8h}{system/diagnostics/diagnosticsEEPROM.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00002}00002\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00003}00003\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00004}00004\ \textcolor{comment}{\ *\ @brief\ Ejecuta\ un\ test\ de\ diagnóstico\ sobre\ la\ EEPROM\ en\ la\ dirección\ indicada.}}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00005}00005\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00006}00006\ \textcolor{comment}{\ *\ El\ procedimiento\ realiza:}}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00007}00007\ \textcolor{comment}{\ *\ -\/\ Escritura\ de\ un\ valor\ de\ prueba\ en\ la\ EEPROM.}}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00008}00008\ \textcolor{comment}{\ *\ -\/\ Lectura\ del\ valor\ almacenado.}}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00009}00009\ \textcolor{comment}{\ *\ -\/\ Comparación\ entre\ valor\ escrito\ y\ leído.}}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00010}00010\ \textcolor{comment}{\ *\ -\/\ Informe\ del\ estado\ de\ memoria\ libre\ y\ usada.}}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00011}00011\ \textcolor{comment}{\ *\ -\/\ Limpieza\ de\ la\ dirección\ probada.}}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00012}00012\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00013}00013\ \textcolor{comment}{\ *\ @param\ address\ Dirección\ de\ EEPROM\ a\ probar\ (por\ defecto\ 0).}}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00014}00014\ \textcolor{comment}{\ *\ @return\ true\ si\ la\ EEPROM\ responde\ correctamente,\ false\ en\ caso\ contrario.}}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00015}00015\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00016}\doxymbox{\hyperlink{class_diagnostics_e_e_p_r_o_m_ac829dcc712fc300e26d11b51602fc5bb}{00016}}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_diagnostics_e_e_p_r_o_m_ac829dcc712fc300e26d11b51602fc5bb}{DiagnosticsEEPROM::runTest}}(\textcolor{keywordtype}{int}\ address)\ \{}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00017}00017\ \ \ \ \ \doxymbox{\hyperlink{msg_8h_a6ef1ee9724c4aa2cdcd16023815c107a}{standardMessage}}(\textcolor{stringliteral}{"{}🧪\ Starting\ EEPROM\ diagnostic"{}},\ \_\_FILE\_\_,\ \_\_FUNCTION\_\_,\ \_\_DATE\_\_,\ \_\_TIME\_\_);}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00019}00019\ \ \ \ \ \textcolor{comment}{//\ Write\ test\ value}}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00020}00020\ \ \ \ \ EEPROM.write(address,\ \doxymbox{\hyperlink{class_diagnostics_e_e_p_r_o_m_a7a1685e2cc58ae4ed2a4b920a528b9d1}{testValue}});}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00021}00021\ \ \ \ \ delay(10);}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00023}00023\ \ \ \ \ \textcolor{comment}{//\ Read\ stored\ value}}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00024}00024\ \ \ \ \ \textcolor{keywordtype}{byte}\ readValue\ =\ EEPROM.read(address);}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00025}00025\ \ \ \ \ Serial.print(\textcolor{stringliteral}{"{}📥\ Value\ read\ from\ EEPROM["{}});}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00026}00026\ \ \ \ \ Serial.print(address);}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00027}00027\ \ \ \ \ Serial.print(\textcolor{stringliteral}{"{}]:\ "{}});}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00028}00028\ \ \ \ \ Serial.println(readValue);}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00030}00030\ \ \ \ \ \textcolor{comment}{//\ Show\ memory\ status}}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00031}00031\ \ \ \ \ \textcolor{keywordtype}{int}\ freeMem\ =\ \doxymbox{\hyperlink{class_diagnostics_e_e_p_r_o_m_a33eee4f3578863e963ae78ccbecdec35}{getFreeMemory}}();}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00032}00032\ \ \ \ \ Serial.print(\textcolor{stringliteral}{"{}📊\ Estimated\ free\ memory:\ "{}});}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00033}00033\ \ \ \ \ Serial.print(freeMem);}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00034}00034\ \ \ \ \ Serial.println(\textcolor{stringliteral}{"{}\ bytes"{}});}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00036}00036\ \ \ \ \ Serial.print(\textcolor{stringliteral}{"{}📦\ Estimated\ used\ memory:\ "{}});}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00037}00037\ \ \ \ \ Serial.print(RAMEND\ -\/\ freeMem);}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00038}00038\ \ \ \ \ Serial.println(\textcolor{stringliteral}{"{}\ bytes"{}});}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00040}00040\ \ \ \ \ \textcolor{comment}{//\ Check\ if\ value\ matches}}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00041}00041\ \ \ \ \ \textcolor{keywordflow}{if}\ (readValue\ ==\ \doxymbox{\hyperlink{class_diagnostics_e_e_p_r_o_m_a7a1685e2cc58ae4ed2a4b920a528b9d1}{testValue}})\ \{}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00042}00042\ \ \ \ \ \ \ \ \ Serial.println(\textcolor{stringliteral}{"{}✅\ EEPROM\ is\ responding\ correctly."{}});}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00043}00043\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_diagnostics_e_e_p_r_o_m_ab5c18556e9ae3808c4aae242c9682d20}{clearEEPROM}}(address);}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00044}00044\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{msg_8h_ab596236a4ffe692e3e8da3dac004ef9c}{standardHeaderFull}}(\textcolor{stringliteral}{"{}EEPROM\ diagnostic\ completed"{}},\ \_\_FILE\_\_,\ \_\_FUNCTION\_\_,\ \_\_DATE\_\_,\ \_\_TIME\_\_);}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00045}00045\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00046}00046\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00047}00047\ \ \ \ \ \ \ \ \ Serial.println(\textcolor{stringliteral}{"{}❌\ EEPROM\ error:\ value\ mismatch."{}});}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00048}00048\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_diagnostics_e_e_p_r_o_m_ab5c18556e9ae3808c4aae242c9682d20}{clearEEPROM}}(address);}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00049}00049\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{msg_8h_ab596236a4ffe692e3e8da3dac004ef9c}{standardHeaderFull}}(\textcolor{stringliteral}{"{}EEPROM\ diagnostic\ failed"{}},\ \_\_FILE\_\_,\ \_\_FUNCTION\_\_,\ \_\_DATE\_\_,\ \_\_TIME\_\_);}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00050}00050\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00051}00051\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00052}00052\ \}}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00054}00054\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00055}00055\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00056}00056\ \textcolor{comment}{\ *\ @brief\ Limpia\ la\ EEPROM\ en\ la\ dirección\ indicada\ escribiendo\ 0xFF.}}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00057}00057\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00058}00058\ \textcolor{comment}{\ *\ Tras\ limpiar,\ lee\ nuevamente\ el\ valor\ para\ verificar\ la\ operación.}}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00059}00059\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00060}00060\ \textcolor{comment}{\ *\ @param\ address\ Dirección\ de\ EEPROM\ a\ limpiar.}}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00061}00061\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00062}\doxymbox{\hyperlink{class_diagnostics_e_e_p_r_o_m_ab5c18556e9ae3808c4aae242c9682d20}{00062}}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_diagnostics_e_e_p_r_o_m_ab5c18556e9ae3808c4aae242c9682d20}{DiagnosticsEEPROM::clearEEPROM}}(\textcolor{keywordtype}{int}\ address)\ \{}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00063}00063\ \ \ \ \ EEPROM.write(address,\ 0xFF);}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00064}00064\ \ \ \ \ delay(10);}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00066}00066\ \ \ \ \ \textcolor{keywordtype}{byte}\ clearedValue\ =\ EEPROM.read(address);}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00067}00067\ \ \ \ \ Serial.print(\textcolor{stringliteral}{"{}🧹\ EEPROM\ cleared.\ New\ value\ at\ ["{}});}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00068}00068\ \ \ \ \ Serial.print(address);}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00069}00069\ \ \ \ \ Serial.print(\textcolor{stringliteral}{"{}]:\ "{}});}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00070}00070\ \ \ \ \ Serial.println(clearedValue);}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00071}00071\ \}}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00073}00073\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00074}00074\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00075}00075\ \textcolor{comment}{\ *\ @brief\ Estima\ la\ cantidad\ de\ memoria\ RAM\ libre\ disponible\ en\ el\ sistema.}}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00076}00076\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00077}00077\ \textcolor{comment}{\ *\ Este\ método\ funciona\ en\ placas\ basadas\ en\ AVR\ como\ Arduino\ Mega\ 2560.}}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00078}00078\ \textcolor{comment}{\ *\ Calcula\ la\ memoria\ libre\ comparando\ la\ posición\ actual\ de\ la\ pila\ con\ el\ heap.}}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00079}00079\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00080}00080\ \textcolor{comment}{\ *\ @return\ Número\ de\ bytes\ libres\ en\ RAM.}}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00081}00081\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00082}\doxymbox{\hyperlink{class_diagnostics_e_e_p_r_o_m_a33eee4f3578863e963ae78ccbecdec35}{00082}}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_diagnostics_e_e_p_r_o_m_a33eee4f3578863e963ae78ccbecdec35}{DiagnosticsEEPROM::getFreeMemory}}()\ \{}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00083}00083\ \ \ \ \ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \_\_heap\_start;}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00084}00084\ \ \ \ \ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ *\_\_brkval;}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00085}00085\ \ \ \ \ \textcolor{keywordtype}{int}\ freeMemory;}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00086}00086\ }
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00087}00087\ \ \ \ \ \textcolor{keywordflow}{if}\ ((\textcolor{keywordtype}{int})\_\_brkval\ ==\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00088}00088\ \ \ \ \ \ \ \ \ freeMemory\ =\ ((int)\&freeMemory)\ -\/\ ((\textcolor{keywordtype}{int})\&\_\_heap\_start);}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00089}00089\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00090}00090\ \ \ \ \ \ \ \ \ freeMemory\ =\ ((int)\&freeMemory)\ -\/\ ((\textcolor{keywordtype}{int})\_\_brkval);}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00091}00091\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00092}00092\ }
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00093}00093\ \ \ \ \ \textcolor{keywordflow}{return}\ freeMemory;}
+\DoxyCodeLine{\Hypertarget{diagnostics_e_e_p_r_o_m_8cpp_source_l00094}00094\ \}}
+
+\end{DoxyCode}

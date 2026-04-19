@@ -1,0 +1,7 @@
+<map id="showConfigurationMessage" name="showConfigurationMessage">
+<area shape="rect" id="Node000001" title="Displays the current system configuration status on the serial monitor." alt="" coords="5,31,185,56"/>
+<area shape="rect" id="Node000002" href="$msg_8cpp.html#abda2f504e4bfdbfbdd0cd8f8937f72f1" title="Imprime un encabezado decorado con texto centrado y metadatos." alt="" coords="233,5,368,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="185,30,219,25,220,31,186,35"/>
+<area shape="rect" id="Node000003" href="$msg_8cpp.html#a6ef1ee9724c4aa2cdcd16023815c107a" title="Imprime un mensaje estandarizado y formateado en el monitor serie." alt="" coords="238,55,363,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="186,51,225,56,224,61,185,57"/>
+</map>

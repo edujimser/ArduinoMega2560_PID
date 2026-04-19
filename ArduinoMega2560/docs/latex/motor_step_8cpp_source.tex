@@ -1,0 +1,233 @@
+\doxysection{motor\+Step.\+cpp}
+\hypertarget{motor_step_8cpp_source}{}\label{motor_step_8cpp_source}\index{motorStep.cpp@{motorStep.cpp}}
+\doxymbox{\hyperlink{motor_step_8cpp}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{motor_step_8h}{motorStep.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00003}00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00004}00004\ \textcolor{comment}{//\ =============================================================}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00005}00005\ \textcolor{comment}{//\ \ CONSTRUCTOR}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00006}00006\ \textcolor{comment}{//\ =============================================================}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00007}00007\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00008}00008\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00009}00009\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00010}00010\ \textcolor{comment}{\ *\ @brief\ Inicializa\ el\ motor\ paso\ a\ paso\ configurando\ los\ pines\ y\ el\ estado\ inicial.}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00011}00011\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00012}\doxymbox{\hyperlink{class_motor_paso_aab41ed5022adcbe4f89c5c2fdf73bcad}{00012}}\ \doxymbox{\hyperlink{class_motor_paso_aab41ed5022adcbe4f89c5c2fdf73bcad}{MotorPaso::MotorPaso}}(uint8\_t\ \doxymbox{\hyperlink{class_motor_paso_a9f8eddccee5fd302f15b251328639b5a}{pinA}},\ uint8\_t\ \doxymbox{\hyperlink{class_motor_paso_a5457b8c20cc470d18d7b67bf53405cda}{pinB}},\ uint8\_t\ \doxymbox{\hyperlink{class_motor_paso_ae1e9b8723a636ad3349bef9c153b7164}{pinC}},\ uint8\_t\ \doxymbox{\hyperlink{class_motor_paso_a030805e0b58b52b33950899e90998da3}{pinD}})}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00013}00013\ \ \ \ \ :\ \doxymbox{\hyperlink{class_motor_paso_a9f8eddccee5fd302f15b251328639b5a}{pinA}}(\doxymbox{\hyperlink{class_motor_paso_a9f8eddccee5fd302f15b251328639b5a}{pinA}}),\ \doxymbox{\hyperlink{class_motor_paso_a5457b8c20cc470d18d7b67bf53405cda}{pinB}}(\doxymbox{\hyperlink{class_motor_paso_a5457b8c20cc470d18d7b67bf53405cda}{pinB}}),\ \doxymbox{\hyperlink{class_motor_paso_ae1e9b8723a636ad3349bef9c153b7164}{pinC}}(\doxymbox{\hyperlink{class_motor_paso_ae1e9b8723a636ad3349bef9c153b7164}{pinC}}),\ \doxymbox{\hyperlink{class_motor_paso_a030805e0b58b52b33950899e90998da3}{pinD}}(\doxymbox{\hyperlink{class_motor_paso_a030805e0b58b52b33950899e90998da3}{pinD}}),}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00014}00014\ \ \ \ \ \ \ \doxymbox{\hyperlink{class_motor_paso_aa9426503a0b77432173ae0b5d9d16f75}{retardoPaso}}(2000),\ \doxymbox{\hyperlink{class_motor_paso_adf180b58f05bee5cc728b2026aebd30a}{tiempoUltimoPaso}}(0),\ \doxymbox{\hyperlink{class_motor_paso_a4dabb0433ba9843a7b0c44fff4ec4dfe}{pasoActual}}(0),}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00015}00015\ \ \ \ \ \ \ \doxymbox{\hyperlink{class_motor_paso_a6c19097335276ef185ddcfdab1cf6144}{gradoActual}}(0),\ \doxymbox{\hyperlink{class_motor_paso_aff13a3e505f907b684f6374b51596a05}{gradosObjetivo}}(0),\ \doxymbox{\hyperlink{class_motor_paso_a064c3f5e2d7c46c29e9b6bfd01aa1904}{gradosCorriendo}}(0),}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00016}00016\ \ \ \ \ \ \ \doxymbox{\hyperlink{class_motor_paso_a74ae1066fd043a6859e95804da2ff170}{direccionAdelante}}(false),\ \doxymbox{\hyperlink{class_motor_paso_acaa45dc69e19963021e7e68fa962460b}{direccionAtras}}(false)}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00017}00017\ \{}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00018}00018\ \ \ \ \ pinMode(\doxymbox{\hyperlink{class_motor_paso_a9f8eddccee5fd302f15b251328639b5a}{pinA}},\ OUTPUT);}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00019}00019\ \ \ \ \ pinMode(\doxymbox{\hyperlink{class_motor_paso_a5457b8c20cc470d18d7b67bf53405cda}{pinB}},\ OUTPUT);}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00020}00020\ \ \ \ \ pinMode(\doxymbox{\hyperlink{class_motor_paso_ae1e9b8723a636ad3349bef9c153b7164}{pinC}},\ OUTPUT);}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00021}00021\ \ \ \ \ pinMode(\doxymbox{\hyperlink{class_motor_paso_a030805e0b58b52b33950899e90998da3}{pinD}},\ OUTPUT);}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00022}00022\ \}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00024}00024\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00025}00025\ \textcolor{comment}{//\ =============================================================}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00026}00026\ \textcolor{comment}{//\ \ CONFIGURACIÓN\ GENERAL}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00027}00027\ \textcolor{comment}{//\ =============================================================}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00028}00028\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00029}00029\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00030}00030\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00031}00031\ \textcolor{comment}{\ *\ @brief\ Establece\ la\ velocidad\ del\ motor\ en\ RPM\ calculando\ el\ retardo\ entre\ pasos.}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00032}00032\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00033}\doxymbox{\hyperlink{class_motor_paso_ae45688954caa95057df7ac86389a7700}{00033}}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_motor_paso_ae45688954caa95057df7ac86389a7700}{MotorPaso::fijarVelocidad}}(\textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_motor_paso_af8abafcab50187207db982f024d2a981}{rpm}})\ \{}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00034}00034\ \ \ \ \ this-\/>\doxymbox{\hyperlink{class_motor_paso_aa9426503a0b77432173ae0b5d9d16f75}{retardoPaso}}\ =\ (60.0\ *\ 1000000.0)\ /\ (\doxymbox{\hyperlink{class_motor_paso_af8abafcab50187207db982f024d2a981}{rpm}}\ *\ this-\/>\doxymbox{\hyperlink{class_motor_paso_ad380b0d361ec87653d35b2113d4215da}{pasosPorVuelta}});}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00035}00035\ \ \ \ \ this-\/>rpm\ =\ \doxymbox{\hyperlink{class_motor_paso_af8abafcab50187207db982f024d2a981}{rpm}};}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00036}00036\ \}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00038}00038\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00039}00039\ \textcolor{comment}{//\ =============================================================}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00040}00040\ \textcolor{comment}{//\ \ CONTROL\ BÁSICO\ DE\ PASOS\ (SECUENCIA\ 0–7)}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00041}00041\ \textcolor{comment}{//\ =============================================================}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00042}00042\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00043}00043\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00044}00044\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00045}00045\ \textcolor{comment}{\ *\ @brief\ Avanza\ un\ paso\ en\ la\ secuencia\ del\ motor.}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00046}00046\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00047}\doxymbox{\hyperlink{class_motor_paso_aeb003102ac4f885226a4a4a1e4121fa5}{00047}}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_motor_paso_aeb003102ac4f885226a4a4a1e4121fa5}{MotorPaso::pasoAdelante}}()\ \{}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00048}00048\ \ \ \ \ this-\/>\doxymbox{\hyperlink{class_motor_paso_a4dabb0433ba9843a7b0c44fff4ec4dfe}{pasoActual}}++;}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00049}00049\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>\doxymbox{\hyperlink{class_motor_paso_a4dabb0433ba9843a7b0c44fff4ec4dfe}{pasoActual}}\ >\ 7)\ this-\/>\doxymbox{\hyperlink{class_motor_paso_a4dabb0433ba9843a7b0c44fff4ec4dfe}{pasoActual}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00051}00051\ \ \ \ \ this-\/>\doxymbox{\hyperlink{class_motor_paso_ac610d089d82aca423c7528f918e3e6f1}{aplicarPaso}}(this-\/>\doxymbox{\hyperlink{class_motor_paso_a4dabb0433ba9843a7b0c44fff4ec4dfe}{pasoActual}});}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00052}00052\ \ \ \ \ delayMicroseconds(this-\/>\doxymbox{\hyperlink{class_motor_paso_aa9426503a0b77432173ae0b5d9d16f75}{retardoPaso}});}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00053}00053\ \}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00054}00054\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00055}00055\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00056}00056\ \textcolor{comment}{\ *\ @brief\ Retrocede\ un\ paso\ en\ la\ secuencia\ del\ motor.}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00057}00057\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00058}\doxymbox{\hyperlink{class_motor_paso_a70e7b613b257ac6dab5a0dc38d389f3a}{00058}}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_motor_paso_a70e7b613b257ac6dab5a0dc38d389f3a}{MotorPaso::pasoAtras}}()\ \{}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00059}00059\ \ \ \ \ this-\/>\doxymbox{\hyperlink{class_motor_paso_a4dabb0433ba9843a7b0c44fff4ec4dfe}{pasoActual}}-\/-\/;}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00060}00060\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>\doxymbox{\hyperlink{class_motor_paso_a4dabb0433ba9843a7b0c44fff4ec4dfe}{pasoActual}}\ <\ 0)\ this-\/>\doxymbox{\hyperlink{class_motor_paso_a4dabb0433ba9843a7b0c44fff4ec4dfe}{pasoActual}}\ =\ 7;}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00062}00062\ \ \ \ \ this-\/>\doxymbox{\hyperlink{class_motor_paso_ac610d089d82aca423c7528f918e3e6f1}{aplicarPaso}}(this-\/>\doxymbox{\hyperlink{class_motor_paso_a4dabb0433ba9843a7b0c44fff4ec4dfe}{pasoActual}});}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00063}00063\ \ \ \ \ delayMicroseconds(this-\/>\doxymbox{\hyperlink{class_motor_paso_aa9426503a0b77432173ae0b5d9d16f75}{retardoPaso}});}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00064}00064\ \}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00065}00065\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00066}00066\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00067}00067\ \textcolor{comment}{\ *\ @brief\ Activa\ las\ bobinas\ según\ el\ índice\ de\ paso\ (0–7).}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00068}00068\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00069}\doxymbox{\hyperlink{class_motor_paso_ac610d089d82aca423c7528f918e3e6f1}{00069}}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_motor_paso_ac610d089d82aca423c7528f918e3e6f1}{MotorPaso::aplicarPaso}}(\textcolor{keywordtype}{int}\ i)\ \{}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00070}00070\ \ \ \ \ \textcolor{keywordflow}{switch}\ (i)\ \{}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00071}00071\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 0:\ digitalWrite(\doxymbox{\hyperlink{class_motor_paso_a9f8eddccee5fd302f15b251328639b5a}{pinA}},\ HIGH);\ digitalWrite(\doxymbox{\hyperlink{class_motor_paso_a5457b8c20cc470d18d7b67bf53405cda}{pinB}},\ LOW);\ \ digitalWrite(\doxymbox{\hyperlink{class_motor_paso_ae1e9b8723a636ad3349bef9c153b7164}{pinC}},\ LOW);\ \ digitalWrite(\doxymbox{\hyperlink{class_motor_paso_a030805e0b58b52b33950899e90998da3}{pinD}},\ LOW);\ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00072}00072\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 1:\ digitalWrite(\doxymbox{\hyperlink{class_motor_paso_a9f8eddccee5fd302f15b251328639b5a}{pinA}},\ HIGH);\ digitalWrite(\doxymbox{\hyperlink{class_motor_paso_a5457b8c20cc470d18d7b67bf53405cda}{pinB}},\ HIGH);\ digitalWrite(\doxymbox{\hyperlink{class_motor_paso_ae1e9b8723a636ad3349bef9c153b7164}{pinC}},\ LOW);\ \ digitalWrite(\doxymbox{\hyperlink{class_motor_paso_a030805e0b58b52b33950899e90998da3}{pinD}},\ LOW);\ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00073}00073\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 2:\ digitalWrite(\doxymbox{\hyperlink{class_motor_paso_a9f8eddccee5fd302f15b251328639b5a}{pinA}},\ LOW);\ \ digitalWrite(\doxymbox{\hyperlink{class_motor_paso_a5457b8c20cc470d18d7b67bf53405cda}{pinB}},\ HIGH);\ digitalWrite(\doxymbox{\hyperlink{class_motor_paso_ae1e9b8723a636ad3349bef9c153b7164}{pinC}},\ LOW);\ \ digitalWrite(\doxymbox{\hyperlink{class_motor_paso_a030805e0b58b52b33950899e90998da3}{pinD}},\ LOW);\ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00074}00074\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 3:\ digitalWrite(\doxymbox{\hyperlink{class_motor_paso_a9f8eddccee5fd302f15b251328639b5a}{pinA}},\ LOW);\ \ digitalWrite(\doxymbox{\hyperlink{class_motor_paso_a5457b8c20cc470d18d7b67bf53405cda}{pinB}},\ HIGH);\ digitalWrite(\doxymbox{\hyperlink{class_motor_paso_ae1e9b8723a636ad3349bef9c153b7164}{pinC}},\ HIGH);\ digitalWrite(\doxymbox{\hyperlink{class_motor_paso_a030805e0b58b52b33950899e90998da3}{pinD}},\ LOW);\ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00075}00075\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 4:\ digitalWrite(\doxymbox{\hyperlink{class_motor_paso_a9f8eddccee5fd302f15b251328639b5a}{pinA}},\ LOW);\ \ digitalWrite(\doxymbox{\hyperlink{class_motor_paso_a5457b8c20cc470d18d7b67bf53405cda}{pinB}},\ LOW);\ \ digitalWrite(\doxymbox{\hyperlink{class_motor_paso_ae1e9b8723a636ad3349bef9c153b7164}{pinC}},\ HIGH);\ digitalWrite(\doxymbox{\hyperlink{class_motor_paso_a030805e0b58b52b33950899e90998da3}{pinD}},\ LOW);\ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00076}00076\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 5:\ digitalWrite(\doxymbox{\hyperlink{class_motor_paso_a9f8eddccee5fd302f15b251328639b5a}{pinA}},\ LOW);\ \ digitalWrite(\doxymbox{\hyperlink{class_motor_paso_a5457b8c20cc470d18d7b67bf53405cda}{pinB}},\ LOW);\ \ digitalWrite(\doxymbox{\hyperlink{class_motor_paso_ae1e9b8723a636ad3349bef9c153b7164}{pinC}},\ HIGH);\ digitalWrite(\doxymbox{\hyperlink{class_motor_paso_a030805e0b58b52b33950899e90998da3}{pinD}},\ HIGH);\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00077}00077\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 6:\ digitalWrite(\doxymbox{\hyperlink{class_motor_paso_a9f8eddccee5fd302f15b251328639b5a}{pinA}},\ LOW);\ \ digitalWrite(\doxymbox{\hyperlink{class_motor_paso_a5457b8c20cc470d18d7b67bf53405cda}{pinB}},\ LOW);\ \ digitalWrite(\doxymbox{\hyperlink{class_motor_paso_ae1e9b8723a636ad3349bef9c153b7164}{pinC}},\ LOW);\ \ digitalWrite(\doxymbox{\hyperlink{class_motor_paso_a030805e0b58b52b33950899e90998da3}{pinD}},\ HIGH);\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00078}00078\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 7:\ digitalWrite(\doxymbox{\hyperlink{class_motor_paso_a9f8eddccee5fd302f15b251328639b5a}{pinA}},\ HIGH);\ digitalWrite(\doxymbox{\hyperlink{class_motor_paso_a5457b8c20cc470d18d7b67bf53405cda}{pinB}},\ LOW);\ \ digitalWrite(\doxymbox{\hyperlink{class_motor_paso_ae1e9b8723a636ad3349bef9c153b7164}{pinC}},\ LOW);\ \ digitalWrite(\doxymbox{\hyperlink{class_motor_paso_a030805e0b58b52b33950899e90998da3}{pinD}},\ HIGH);\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00079}00079\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00080}00080\ \}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00082}00082\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00083}00083\ \textcolor{comment}{//\ =============================================================}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00084}00084\ \textcolor{comment}{//\ \ MOVIMIENTO\ CONTINUO}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00085}00085\ \textcolor{comment}{//\ =============================================================}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00086}00086\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00087}00087\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00088}00088\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00089}00089\ \textcolor{comment}{\ *\ @brief\ Ejecuta\ movimiento\ continuo\ según\ la\ velocidad\ configurada.}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00090}00090\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00091}\doxymbox{\hyperlink{class_motor_paso_a884b1a066e5684a4c1f25431efc6b316}{00091}}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_motor_paso_a884b1a066e5684a4c1f25431efc6b316}{MotorPaso::movimientoContinuo}}()\ \{}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00092}00092\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ ahora\ =\ micros();}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00093}00093\ }
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00094}00094\ \ \ \ \ \textcolor{keywordflow}{if}\ (ahora\ -\/\ this-\/>\doxymbox{\hyperlink{class_motor_paso_adf180b58f05bee5cc728b2026aebd30a}{tiempoUltimoPaso}}\ >=\ this-\/>\doxymbox{\hyperlink{class_motor_paso_aa9426503a0b77432173ae0b5d9d16f75}{retardoPaso}})\ \{}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00095}00095\ \ \ \ \ \ \ \ \ this-\/>\doxymbox{\hyperlink{class_motor_paso_adf180b58f05bee5cc728b2026aebd30a}{tiempoUltimoPaso}}\ =\ ahora;}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00096}00096\ \ \ \ \ \ \ \ \ this-\/>\doxymbox{\hyperlink{class_motor_paso_aeb003102ac4f885226a4a4a1e4121fa5}{pasoAdelante}}();}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00097}00097\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00098}00098\ \}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00099}00099\ }
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00100}00100\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00101}00101\ \textcolor{comment}{//\ =============================================================}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00102}00102\ \textcolor{comment}{//\ \ MOVIMIENTO\ RELATIVO\ (ÁNGULOS)}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00103}00103\ \textcolor{comment}{//\ =============================================================}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00104}00104\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00105}00105\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00106}00106\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00107}00107\ \textcolor{comment}{\ *\ @brief\ Mueve\ el\ motor\ hacia\ un\ ángulo\ relativo\ usando\ el\ camino\ más\ corto.}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00108}00108\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00109}\doxymbox{\hyperlink{class_motor_paso_a3bf0f1a5f2d26c41e405408be4ec47b4}{00109}}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_motor_paso_a3bf0f1a5f2d26c41e405408be4ec47b4}{MotorPaso::movimientoPosicionRelativo}}(\textcolor{keywordtype}{float}\ grados,\ \textcolor{keywordtype}{bool}\ debugMSG)\ \{}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00110}00110\ }
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00111}00111\ \ \ \ \ this-\/>\doxymbox{\hyperlink{class_motor_paso_aef0c5e2a5b02be1ffee595aef622727e}{diferencia}}\ =\ this-\/>\doxymbox{\hyperlink{class_motor_paso_a5e3740ade4968870d145a97dfaa6378b}{diferenciaCircular}}(this-\/>\doxymbox{\hyperlink{class_motor_paso_a6c19097335276ef185ddcfdab1cf6144}{gradoActual}},\ grados);}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00112}00112\ \ \ \ \ this-\/>\doxymbox{\hyperlink{class_motor_paso_a45a17ca7197c7968adba7e667f51b492}{pasos}}\ =\ \doxymbox{\hyperlink{class_motor_paso_aa054bdf42608a37c3fbc9e5037c417e9}{convertirGradosAPasos}}(abs(this-\/>\doxymbox{\hyperlink{class_motor_paso_aef0c5e2a5b02be1ffee595aef622727e}{diferencia}}));}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00113}00113\ }
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00114}00114\ \ \ \ \ this-\/>\doxymbox{\hyperlink{class_motor_paso_a74ae1066fd043a6859e95804da2ff170}{direccionAdelante}}\ =\ (this-\/>\doxymbox{\hyperlink{class_motor_paso_aef0c5e2a5b02be1ffee595aef622727e}{diferencia}}\ >\ 0);}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00115}00115\ \ \ \ \ this-\/>\doxymbox{\hyperlink{class_motor_paso_acaa45dc69e19963021e7e68fa962460b}{direccionAtras}}\ \ \ \ =\ (this-\/>\doxymbox{\hyperlink{class_motor_paso_aef0c5e2a5b02be1ffee595aef622727e}{diferencia}}\ <\ 0);}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00116}00116\ }
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00117}00117\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>\doxymbox{\hyperlink{class_motor_paso_acaa45dc69e19963021e7e68fa962460b}{direccionAtras}})\ \{}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00118}00118\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ this-\/>\doxymbox{\hyperlink{class_motor_paso_a45a17ca7197c7968adba7e667f51b492}{pasos}};\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00119}00119\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\doxymbox{\hyperlink{class_motor_paso_a70e7b613b257ac6dab5a0dc38d389f3a}{pasoAtras}}();}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00120}00120\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_motor_paso_aa9331c4fc40047c1b7856cfebc9220bc}{movimientoDePosicionGradosCorriendo}}(i);}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00121}00121\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (debugMSG)\ \doxymbox{\hyperlink{class_motor_paso_af1f50306108a5f69c298367da9e96e3c}{debugMovimientoRelativo}}(i);}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00122}00122\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00123}00123\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00124}00124\ }
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00125}00125\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>\doxymbox{\hyperlink{class_motor_paso_a74ae1066fd043a6859e95804da2ff170}{direccionAdelante}})\ \{}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00126}00126\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ this-\/>\doxymbox{\hyperlink{class_motor_paso_a45a17ca7197c7968adba7e667f51b492}{pasos}};\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00127}00127\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\doxymbox{\hyperlink{class_motor_paso_aeb003102ac4f885226a4a4a1e4121fa5}{pasoAdelante}}();}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00128}00128\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_motor_paso_aa9331c4fc40047c1b7856cfebc9220bc}{movimientoDePosicionGradosCorriendo}}(i);}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00129}00129\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (debugMSG)\ \doxymbox{\hyperlink{class_motor_paso_af1f50306108a5f69c298367da9e96e3c}{debugMovimientoRelativo}}(i);}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00130}00130\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00131}00131\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00132}00132\ }
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00133}00133\ \ \ \ \ this-\/>\doxymbox{\hyperlink{class_motor_paso_a6c19097335276ef185ddcfdab1cf6144}{gradoActual}}\ =\ \doxymbox{\hyperlink{class_motor_paso_afdcaa01d882749cc9a8de8ea6397a12c}{normalizarGrados}}(grados);}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00134}00134\ \}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00135}00135\ }
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00136}00136\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00137}00137\ \textcolor{comment}{//\ =============================================================}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00138}00138\ \textcolor{comment}{//\ \ PROGRESO\ DURANTE\ EL\ MOVIMIENTO}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00139}00139\ \textcolor{comment}{//\ =============================================================}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00140}00140\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00141}00141\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00142}00142\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00143}00143\ \textcolor{comment}{\ *\ @brief\ Actualiza\ y\ devuelve\ los\ grados\ recorridos\ durante\ el\ movimiento.}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00144}00144\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00145}\doxymbox{\hyperlink{class_motor_paso_aa9331c4fc40047c1b7856cfebc9220bc}{00145}}\ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_motor_paso_aa9331c4fc40047c1b7856cfebc9220bc}{MotorPaso::movimientoDePosicionGradosCorriendo}}(\textcolor{keywordtype}{int}\ movimientoPasos)\ \{}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00146}00146\ \ \ \ \ this-\/>\doxymbox{\hyperlink{class_motor_paso_a064c3f5e2d7c46c29e9b6bfd01aa1904}{gradosCorriendo}}\ =\ \doxymbox{\hyperlink{class_motor_paso_ac2b6d1c7bc1c04a0fb39839b1658721c}{convertirPasosAGrados}}(movimientoPasos);}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00147}00147\ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>\doxymbox{\hyperlink{class_motor_paso_a064c3f5e2d7c46c29e9b6bfd01aa1904}{gradosCorriendo}};}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00148}00148\ \}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00149}00149\ }
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00150}00150\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00151}00151\ \textcolor{comment}{//\ =============================================================}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00152}00152\ \textcolor{comment}{//\ \ MATEMÁTICAS\ DE\ ÁNGULOS\ Y\ PASOS}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00153}00153\ \textcolor{comment}{//\ =============================================================}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00154}00154\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00155}00155\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00156}00156\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00157}00157\ \textcolor{comment}{\ *\ @brief\ Convierte\ grados\ a\ pasos\ del\ motor.}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00158}00158\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00159}\doxymbox{\hyperlink{class_motor_paso_aa054bdf42608a37c3fbc9e5037c417e9}{00159}}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_motor_paso_aa054bdf42608a37c3fbc9e5037c417e9}{MotorPaso::convertirGradosAPasos}}(\textcolor{keywordtype}{float}\ grados)\ \{}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00160}00160\ \ \ \ \ \textcolor{keywordflow}{return}\ (\textcolor{keywordtype}{int})(abs(grados)\ *\ this-\/>\doxymbox{\hyperlink{class_motor_paso_ad380b0d361ec87653d35b2113d4215da}{pasosPorVuelta}}\ /\ 360.0f);}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00161}00161\ \}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00162}00162\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00163}00163\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00164}00164\ \textcolor{comment}{\ *\ @brief\ Convierte\ pasos\ del\ motor\ a\ grados.}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00165}00165\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00166}\doxymbox{\hyperlink{class_motor_paso_ac2b6d1c7bc1c04a0fb39839b1658721c}{00166}}\ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_motor_paso_ac2b6d1c7bc1c04a0fb39839b1658721c}{MotorPaso::convertirPasosAGrados}}(\textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_motor_paso_a45a17ca7197c7968adba7e667f51b492}{pasos}})\ \{}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00167}00167\ \ \ \ \ \textcolor{keywordflow}{return}\ (\textcolor{keywordtype}{float})\doxymbox{\hyperlink{class_motor_paso_a45a17ca7197c7968adba7e667f51b492}{pasos}}\ *\ 360.0f\ /\ this-\/>\doxymbox{\hyperlink{class_motor_paso_ad380b0d361ec87653d35b2113d4215da}{pasosPorVuelta}};}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00168}00168\ \}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00169}00169\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00170}00170\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00171}00171\ \textcolor{comment}{\ *\ @brief\ Calcula\ la\ diferencia\ circular\ entre\ dos\ ángulos.}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00172}00172\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00173}\doxymbox{\hyperlink{class_motor_paso_a5e3740ade4968870d145a97dfaa6378b}{00173}}\ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_motor_paso_a5e3740ade4968870d145a97dfaa6378b}{MotorPaso::diferenciaCircular}}(\textcolor{keywordtype}{float}\ actual,\ \textcolor{keywordtype}{float}\ objetivo)\ \{}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00174}00174\ \ \ \ \ \textcolor{keywordtype}{float}\ diff\ =\ objetivo\ -\/\ actual;}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00175}00175\ }
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00176}00176\ \ \ \ \ \textcolor{keywordflow}{if}\ (diff\ >\ 180.0f)\ \ diff\ -\/=\ 360.0f;}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00177}00177\ \ \ \ \ \textcolor{keywordflow}{if}\ (diff\ <\ -\/180.0f)\ diff\ +=\ 360.0f;}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00178}00178\ }
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00179}00179\ \ \ \ \ \textcolor{keywordflow}{return}\ diff;}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00180}00180\ \}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00181}00181\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00182}00182\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00183}00183\ \textcolor{comment}{\ *\ @brief\ Normaliza\ un\ ángulo\ al\ rango\ 0–360\ grados.}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00184}00184\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00185}\doxymbox{\hyperlink{class_motor_paso_afdcaa01d882749cc9a8de8ea6397a12c}{00185}}\ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_motor_paso_afdcaa01d882749cc9a8de8ea6397a12c}{MotorPaso::normalizarGrados}}(\textcolor{keywordtype}{float}\ grados)\ \{}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00186}00186\ \ \ \ \ \textcolor{keywordtype}{float}\ g\ =\ fmod(grados,\ 360.0f);}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00187}00187\ \ \ \ \ \textcolor{keywordflow}{return}\ (g\ <\ 0)\ ?\ g\ +\ 360.0f\ :\ g;}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00188}00188\ \}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00189}00189\ }
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00190}00190\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00191}00191\ \textcolor{comment}{//\ =============================================================}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00192}00192\ \textcolor{comment}{//\ \ DEPURACIÓN}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00193}00193\ \textcolor{comment}{//\ =============================================================}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00194}00194\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00195}00195\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00196}00196\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00197}00197\ \textcolor{comment}{\ *\ @brief\ Imprime\ información\ detallada\ del\ movimiento\ relativo.}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00198}00198\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00199}\doxymbox{\hyperlink{class_motor_paso_af1f50306108a5f69c298367da9e96e3c}{00199}}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_motor_paso_af1f50306108a5f69c298367da9e96e3c}{MotorPaso::debugMovimientoRelativo}}(\textcolor{keywordtype}{int}\ pasoActualDelBucle)\ \{}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00200}00200\ }
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00201}00201\ \ \ \ \ Serial.println(\textcolor{stringliteral}{"{}===================================="{}});}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00202}00202\ \ \ \ \ Serial.print(\textcolor{stringliteral}{"{}Paso\ actual:\ "{}});}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00203}00203\ \ \ \ \ Serial.print(pasoActualDelBucle);}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00204}00204\ \ \ \ \ Serial.print(\textcolor{stringliteral}{"{}\ /\ "{}});}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00205}00205\ \ \ \ \ Serial.println(this-\/>\doxymbox{\hyperlink{class_motor_paso_a45a17ca7197c7968adba7e667f51b492}{pasos}});}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00206}00206\ }
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00207}00207\ \ \ \ \ Serial.print(\textcolor{stringliteral}{"{}Diferencia\ circular:\ "{}});}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00208}00208\ \ \ \ \ Serial.print(this-\/>\doxymbox{\hyperlink{class_motor_paso_aef0c5e2a5b02be1ffee595aef622727e}{diferencia}});}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00209}00209\ \ \ \ \ Serial.println(\textcolor{stringliteral}{"{}\ grados"{}});}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00210}00210\ }
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00211}00211\ \ \ \ \ Serial.print(\textcolor{stringliteral}{"{}Pasos\ totales\ calculados:\ "{}});}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00212}00212\ \ \ \ \ Serial.println(this-\/>\doxymbox{\hyperlink{class_motor_paso_a45a17ca7197c7968adba7e667f51b492}{pasos}});}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00213}00213\ }
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00214}00214\ \ \ \ \ Serial.print(\textcolor{stringliteral}{"{}Dirección:\ "{}});}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00215}00215\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>\doxymbox{\hyperlink{class_motor_paso_a74ae1066fd043a6859e95804da2ff170}{direccionAdelante}})\ Serial.println(\textcolor{stringliteral}{"{}Adelante\ (+)"{}});}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00216}00216\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (this-\/>\doxymbox{\hyperlink{class_motor_paso_acaa45dc69e19963021e7e68fa962460b}{direccionAtras}})\ Serial.println(\textcolor{stringliteral}{"{}Atrás\ (–)"{}});}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00217}00217\ \ \ \ \ \textcolor{keywordflow}{else}\ Serial.println(\textcolor{stringliteral}{"{}Sin\ movimiento"{}});}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00218}00218\ }
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00219}00219\ \ \ \ \ Serial.print(\textcolor{stringliteral}{"{}Grados\ recorridos\ hasta\ ahora:\ "{}});}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00220}00220\ \ \ \ \ Serial.print(this-\/>\doxymbox{\hyperlink{class_motor_paso_a064c3f5e2d7c46c29e9b6bfd01aa1904}{gradosCorriendo}});}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00221}00221\ \ \ \ \ Serial.println(\textcolor{stringliteral}{"{}\ grados"{}});}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00222}00222\ }
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00223}00223\ \ \ \ \ Serial.print(\textcolor{stringliteral}{"{}Grado\ actual\ (antes\ de\ normalizar):\ "{}});}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00224}00224\ \ \ \ \ Serial.println(this-\/>\doxymbox{\hyperlink{class_motor_paso_a6c19097335276ef185ddcfdab1cf6144}{gradoActual}});}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00225}00225\ }
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00226}00226\ \ \ \ \ Serial.println(\textcolor{stringliteral}{"{}===================================="{}});}
+\DoxyCodeLine{\Hypertarget{motor_step_8cpp_source_l00227}00227\ \}}
+
+\end{DoxyCode}

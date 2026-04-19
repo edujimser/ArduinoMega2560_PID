@@ -1,0 +1,7 @@
+<map id="PID::printDebugPID" name="PID::printDebugPID">
+<area shape="rect" id="Node000001" title="Imprime información de depuración del PID." alt="" coords="261,5,396,31"/>
+<area shape="rect" id="Node000002" href="$class_p_i_d.html#af0cfbed86d613536bbd2b6220139d0c4" title="Calcula la salida del controlador PID." alt="" coords="100,5,213,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="247,21,214,21,214,15,247,15"/>
+<area shape="rect" id="Node000003" href="$main_8cpp.html#afe461d27b9c48d5921c00d521181f12f" title="Arduino main loop. Ejecuta continuamente la configuración de pines, lectura analógica,..." alt="" coords="5,5,52,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="87,21,52,21,52,15,87,15"/>
+</map>

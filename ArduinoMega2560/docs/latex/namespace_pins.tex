@@ -1,0 +1,482 @@
+\doxysection{Referencia del espacio de nombres Pins}
+\hypertarget{namespace_pins}{}\label{namespace_pins}\index{Pins@{Pins}}
+
+
+Contiene todos los arrays de pines organizados por familia funcional.  
+
+
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+constexpr \doxymbox{\hyperlink{struct_pin_info}{Pin\+Info}} \doxymbox{\hyperlink{namespace_pins_a514f49dc811240bdab1307083c50b97b}{UART\+\_\+\+RX}} \+[$\,$]\+
+\begin{DoxyCompactList}\small\item\em Pines UART RX (recepción serie asíncrona). \end{DoxyCompactList}\item 
+constexpr \doxymbox{\hyperlink{struct_pin_info}{Pin\+Info}} \doxymbox{\hyperlink{namespace_pins_a61c1593e84b2bbb9bbf1cfe0d220d359}{UART\+\_\+\+TX}} \+[$\,$]\+
+\begin{DoxyCompactList}\small\item\em Pines UART TX (transmisión serie asíncrona). \end{DoxyCompactList}\item 
+constexpr \doxymbox{\hyperlink{struct_pin_info}{Pin\+Info}} \doxymbox{\hyperlink{namespace_pins_a5089dee10b6e4321543c1a723bf6792c}{SPI}} \+[$\,$]\+
+\begin{DoxyCompactList}\small\item\em Pines SPI (comunicación síncrona maestro-\/esclavo). \end{DoxyCompactList}\item 
+constexpr \doxymbox{\hyperlink{struct_pin_info}{Pin\+Info}} \doxymbox{\hyperlink{namespace_pins_a9ddf79c22d7505fb33ff5033502a8212}{I2C}} \+[$\,$]\+
+\begin{DoxyCompactList}\small\item\em Pines I2C /\+ TWI (comunicación de dos hilos). \end{DoxyCompactList}\item 
+constexpr \doxymbox{\hyperlink{struct_pin_info}{Pin\+Info}} \doxymbox{\hyperlink{namespace_pins_a096eab8385a7b7ef6e1ee9a41983f7ca}{INTERRUPTS}} \+[$\,$]\+
+\begin{DoxyCompactList}\small\item\em Pines de interrupciones externas. \end{DoxyCompactList}\item 
+constexpr \doxymbox{\hyperlink{struct_pin_info}{Pin\+Info}} \doxymbox{\hyperlink{namespace_pins_ae5f8eceff18d6f68e695cc390033d330}{ANALOG}} \+[$\,$]\+
+\begin{DoxyCompactList}\small\item\em Pines analógicos (ADC). \end{DoxyCompactList}\item 
+constexpr \doxymbox{\hyperlink{struct_pin_info}{Pin\+Info}} \doxymbox{\hyperlink{namespace_pins_a71e46e5c9462e706226bb4e1a8fdeb1c}{PWM}} \+[$\,$]\+
+\begin{DoxyCompactList}\small\item\em Pines PWM (modulación por ancho de pulso). \end{DoxyCompactList}\item 
+constexpr \doxymbox{\hyperlink{struct_pin_info}{Pin\+Info}} \doxymbox{\hyperlink{namespace_pins_a02d8a45378e890f65caf34971a2aee06}{GPIO}} \+[$\,$]\+
+\begin{DoxyCompactList}\small\item\em Pines GPIO (entrada/\+salida digital general). \end{DoxyCompactList}\item 
+constexpr size\+\_\+t \doxymbox{\hyperlink{namespace_pins_a76406a151484ce00c13ad8ebf87477e5}{NUM\+\_\+\+ANALOG}} = sizeof(\doxymbox{\hyperlink{namespace_pins_ae5f8eceff18d6f68e695cc390033d330}{ANALOG}}) /\+ sizeof(\doxymbox{\hyperlink{namespace_pins_ae5f8eceff18d6f68e695cc390033d330}{ANALOG}}\+[0]\+)
+\begin{DoxyCompactList}\small\item\em Número total de pines por familia. \end{DoxyCompactList}\item 
+constexpr size\+\_\+t \doxymbox{\hyperlink{namespace_pins_a102474240ce6b18bcb2e658bb28754af}{NUM\+\_\+\+GPIO}} = sizeof(\doxymbox{\hyperlink{namespace_pins_a02d8a45378e890f65caf34971a2aee06}{GPIO}}) /\+ sizeof(\doxymbox{\hyperlink{namespace_pins_a02d8a45378e890f65caf34971a2aee06}{GPIO}}\+[0]\+)
+\item 
+constexpr size\+\_\+t \doxymbox{\hyperlink{namespace_pins_ac4db2eceee724cbb769f8a079479a0c1}{NUM\+\_\+\+PWM}} = sizeof(\doxymbox{\hyperlink{namespace_pins_a71e46e5c9462e706226bb4e1a8fdeb1c}{PWM}}) /\+ sizeof(\doxymbox{\hyperlink{namespace_pins_a71e46e5c9462e706226bb4e1a8fdeb1c}{PWM}}\+[0]\+)
+\item 
+constexpr size\+\_\+t \doxymbox{\hyperlink{namespace_pins_a0ba3b15c986f3273ba00102b9659536f}{NUM\+\_\+\+UART\+\_\+\+RX}} = sizeof(\doxymbox{\hyperlink{namespace_pins_a514f49dc811240bdab1307083c50b97b}{UART\+\_\+\+RX}}) /\+ sizeof(\doxymbox{\hyperlink{namespace_pins_a514f49dc811240bdab1307083c50b97b}{UART\+\_\+\+RX}}\+[0]\+)
+\item 
+constexpr size\+\_\+t \doxymbox{\hyperlink{namespace_pins_abf3e7fc586a0e40934feb7540768903b}{NUM\+\_\+\+UART\+\_\+\+TX}} = sizeof(\doxymbox{\hyperlink{namespace_pins_a61c1593e84b2bbb9bbf1cfe0d220d359}{UART\+\_\+\+TX}}) /\+ sizeof(\doxymbox{\hyperlink{namespace_pins_a61c1593e84b2bbb9bbf1cfe0d220d359}{UART\+\_\+\+TX}}\+[0]\+)
+\item 
+constexpr size\+\_\+t \doxymbox{\hyperlink{namespace_pins_a3c8477bacb5373d82db68deb45533f96}{NUM\+\_\+\+SPI}} = sizeof(\doxymbox{\hyperlink{namespace_pins_a5089dee10b6e4321543c1a723bf6792c}{SPI}}) /\+ sizeof(\doxymbox{\hyperlink{namespace_pins_a5089dee10b6e4321543c1a723bf6792c}{SPI}}\+[0]\+)
+\item 
+constexpr size\+\_\+t \doxymbox{\hyperlink{namespace_pins_a939659def1a253523f4e85a96cfc6230}{NUM\+\_\+\+I2C}} = sizeof(\doxymbox{\hyperlink{namespace_pins_a9ddf79c22d7505fb33ff5033502a8212}{I2C}}) /\+ sizeof(\doxymbox{\hyperlink{namespace_pins_a9ddf79c22d7505fb33ff5033502a8212}{I2C}}\+[0]\+)
+\item 
+constexpr size\+\_\+t \doxymbox{\hyperlink{namespace_pins_a1b68e0261ac91f25a8fc1d720bf84ee7}{NUM\+\_\+\+INTERRUPTS}} = sizeof(\doxymbox{\hyperlink{namespace_pins_a096eab8385a7b7ef6e1ee9a41983f7ca}{INTERRUPTS}}) /\+ sizeof(\doxymbox{\hyperlink{namespace_pins_a096eab8385a7b7ef6e1ee9a41983f7ca}{INTERRUPTS}}\+[0]\+)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Contiene todos los arrays de pines organizados por familia funcional. 
+
+Este namespace agrupa:\+
+\begin{DoxyItemize}
+\item UART RX/\+\+TX
+\item SPI
+\item I2C
+\item INTERRUPTS
+\item ANALOG
+\item PWM
+\item GPIO
+\end{DoxyItemize}
+
+Además, define constantes con el número total de pines por familia. 
+
+\label{doc-var-members}
+\Hypertarget{namespace_pins_doc-var-members}
+\doxysubsection{Documentación de variables}
+\Hypertarget{namespace_pins_ae5f8eceff18d6f68e695cc390033d330}\index{Pins@{Pins}!ANALOG@{ANALOG}}
+\index{ANALOG@{ANALOG}!Pins@{Pins}}
+\doxysubsubsection{\texorpdfstring{ANALOG}{ANALOG}}
+{\footnotesize\ttfamily \label{namespace_pins_ae5f8eceff18d6f68e695cc390033d330} 
+\doxymbox{\hyperlink{struct_pin_info}{Pin\+Info}} Pins::\+\+ANALOG\+[$\,$]\+\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+{\bfseries Valor inicial:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ \{}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_ANALOG\_A00"{}},\ 54,\ \textcolor{stringliteral}{"{}ANALOG"{}}\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_ANALOG\_A01"{}},\ 55,\ \textcolor{stringliteral}{"{}ANALOG"{}}\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_ANALOG\_A02"{}},\ 56,\ \textcolor{stringliteral}{"{}ANALOG"{}}\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_ANALOG\_A03"{}},\ 57,\ \textcolor{stringliteral}{"{}ANALOG"{}}\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_ANALOG\_A04"{}},\ 58,\ \textcolor{stringliteral}{"{}ANALOG"{}}\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_ANALOG\_A05"{}},\ 59,\ \textcolor{stringliteral}{"{}ANALOG"{}}\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_ANALOG\_A06"{}},\ 60,\ \textcolor{stringliteral}{"{}ANALOG"{}}\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_ANALOG\_A07"{}},\ 61,\ \textcolor{stringliteral}{"{}ANALOG"{}}\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_ANALOG\_A08"{}},\ 62,\ \textcolor{stringliteral}{"{}ANALOG"{}}\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_ANALOG\_A90"{}},\ 63,\ \textcolor{stringliteral}{"{}ANALOG"{}}\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_ANALOG\_A10"{}},\ 64,\ \textcolor{stringliteral}{"{}ANALOG"{}}\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_ANALOG\_A11"{}},\ 65,\ \textcolor{stringliteral}{"{}ANALOG"{}}\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_ANALOG\_A12"{}},\ 66,\ \textcolor{stringliteral}{"{}ANALOG"{}}\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_ANALOG\_A13"{}},\ 67,\ \textcolor{stringliteral}{"{}ANALOG"{}}\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_ANALOG\_A14"{}},\ 68,\ \textcolor{stringliteral}{"{}ANALOG"{}}\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_ANALOG\_A15"{}},\ 69,\ \textcolor{stringliteral}{"{}ANALOG"{}}\},}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Pines analógicos (ADC). 
+
+
+
+Definición en la línea \doxymbox{\hyperlink{pinout_8h_source_l00098}{98}} del archivo \doxymbox{\hyperlink{pinout_8h_source}{pinout.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_ANALOG\_A00"{}},\ 54,\ \textcolor{stringliteral}{"{}ANALOG"{}}\},}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_ANALOG\_A01"{}},\ 55,\ \textcolor{stringliteral}{"{}ANALOG"{}}\},}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_ANALOG\_A02"{}},\ 56,\ \textcolor{stringliteral}{"{}ANALOG"{}}\},}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_ANALOG\_A03"{}},\ 57,\ \textcolor{stringliteral}{"{}ANALOG"{}}\},}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_ANALOG\_A04"{}},\ 58,\ \textcolor{stringliteral}{"{}ANALOG"{}}\},}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_ANALOG\_A05"{}},\ 59,\ \textcolor{stringliteral}{"{}ANALOG"{}}\},}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_ANALOG\_A06"{}},\ 60,\ \textcolor{stringliteral}{"{}ANALOG"{}}\},}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_ANALOG\_A07"{}},\ 61,\ \textcolor{stringliteral}{"{}ANALOG"{}}\},}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_ANALOG\_A08"{}},\ 62,\ \textcolor{stringliteral}{"{}ANALOG"{}}\},}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_ANALOG\_A90"{}},\ 63,\ \textcolor{stringliteral}{"{}ANALOG"{}}\},}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_ANALOG\_A10"{}},\ 64,\ \textcolor{stringliteral}{"{}ANALOG"{}}\},}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_ANALOG\_A11"{}},\ 65,\ \textcolor{stringliteral}{"{}ANALOG"{}}\},}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_ANALOG\_A12"{}},\ 66,\ \textcolor{stringliteral}{"{}ANALOG"{}}\},}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_ANALOG\_A13"{}},\ 67,\ \textcolor{stringliteral}{"{}ANALOG"{}}\},}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_ANALOG\_A14"{}},\ 68,\ \textcolor{stringliteral}{"{}ANALOG"{}}\},}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_ANALOG\_A15"{}},\ 69,\ \textcolor{stringliteral}{"{}ANALOG"{}}\},}
+\DoxyCodeLine{00115\ \ \ \ \ \};}
+
+\end{DoxyCode}
+\Hypertarget{namespace_pins_a02d8a45378e890f65caf34971a2aee06}\index{Pins@{Pins}!GPIO@{GPIO}}
+\index{GPIO@{GPIO}!Pins@{Pins}}
+\doxysubsubsection{\texorpdfstring{GPIO}{GPIO}}
+{\footnotesize\ttfamily \label{namespace_pins_a02d8a45378e890f65caf34971a2aee06} 
+\doxymbox{\hyperlink{struct_pin_info}{Pin\+Info}} Pins::\+\+GPIO\+[$\,$]\+\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+Pines GPIO (entrada/\+salida digital general). 
+
+
+
+Definición en la línea \doxymbox{\hyperlink{pinout_8h_source_l00140}{140}} del archivo \doxymbox{\hyperlink{pinout_8h_source}{pinout.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_GPIO\_13"{}},\ 13,\ \textcolor{stringliteral}{"{}GPIO"{}}\},}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_GPIO\_22"{}},\ 22,\ \textcolor{stringliteral}{"{}GPIO"{}}\},}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_GPIO\_23"{}},\ 23,\ \textcolor{stringliteral}{"{}GPIO"{}}\},}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_GPIO\_24"{}},\ 24,\ \textcolor{stringliteral}{"{}GPIO"{}}\},}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_GPIO\_25"{}},\ 25,\ \textcolor{stringliteral}{"{}GPIO"{}}\},}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_GPIO\_26"{}},\ 26,\ \textcolor{stringliteral}{"{}GPIO"{}}\},}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_GPIO\_27"{}},\ 27,\ \textcolor{stringliteral}{"{}GPIO"{}}\},}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_GPIO\_28"{}},\ 28,\ \textcolor{stringliteral}{"{}GPIO"{}}\},}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_GPIO\_29"{}},\ 29,\ \textcolor{stringliteral}{"{}GPIO"{}}\},}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_GPIO\_30"{}},\ 30,\ \textcolor{stringliteral}{"{}GPIO"{}}\},}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_GPIO\_31"{}},\ 31,\ \textcolor{stringliteral}{"{}GPIO"{}}\},}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_GPIO\_32"{}},\ 32,\ \textcolor{stringliteral}{"{}GPIO"{}}\},}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_GPIO\_33"{}},\ 33,\ \textcolor{stringliteral}{"{}GPIO"{}}\},}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_GPIO\_34"{}},\ 34,\ \textcolor{stringliteral}{"{}GPIO"{}}\},}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_GPIO\_35"{}},\ 35,\ \textcolor{stringliteral}{"{}GPIO"{}}\},}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_GPIO\_36"{}},\ 36,\ \textcolor{stringliteral}{"{}GPIO"{}}\},}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_GPIO\_37"{}},\ 37,\ \textcolor{stringliteral}{"{}GPIO"{}}\},}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_GPIO\_38"{}},\ 38,\ \textcolor{stringliteral}{"{}GPIO"{}}\},}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_GPIO\_39"{}},\ 39,\ \textcolor{stringliteral}{"{}GPIO"{}}\},}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_GPIO\_40"{}},\ 40,\ \textcolor{stringliteral}{"{}GPIO"{}}\},}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_GPIO\_41"{}},\ 41,\ \textcolor{stringliteral}{"{}GPIO"{}}\},}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_GPIO\_42"{}},\ 42,\ \textcolor{stringliteral}{"{}GPIO"{}}\},}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_GPIO\_43"{}},\ 43,\ \textcolor{stringliteral}{"{}GPIO"{}}\},}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_GPIO\_44"{}},\ 44,\ \textcolor{stringliteral}{"{}GPIO"{}}\},}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_GPIO\_45"{}},\ 45,\ \textcolor{stringliteral}{"{}GPIO"{}}\},}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_GPIO\_46"{}},\ 46,\ \textcolor{stringliteral}{"{}GPIO"{}}\},}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_GPIO\_47"{}},\ 47,\ \textcolor{stringliteral}{"{}GPIO"{}}\},}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_GPIO\_48"{}},\ 48,\ \textcolor{stringliteral}{"{}GPIO"{}}\},}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_GPIO\_49"{}},\ 49,\ \textcolor{stringliteral}{"{}GPIO"{}}\},}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_GPIO\_50"{}},\ 50,\ \textcolor{stringliteral}{"{}GPIO"{}}\},}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_GPIO\_51"{}},\ 51,\ \textcolor{stringliteral}{"{}GPIO"{}}\},}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_GPIO\_52"{}},\ 52,\ \textcolor{stringliteral}{"{}GPIO"{}}\},}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_GPIO\_53"{}},\ 53,\ \textcolor{stringliteral}{"{}GPIO"{}}\},}
+\DoxyCodeLine{00174\ \ \ \ \ \};}
+
+\end{DoxyCode}
+\Hypertarget{namespace_pins_a9ddf79c22d7505fb33ff5033502a8212}\index{Pins@{Pins}!I2C@{I2C}}
+\index{I2C@{I2C}!Pins@{Pins}}
+\doxysubsubsection{\texorpdfstring{I2C}{I2C}}
+{\footnotesize\ttfamily \label{namespace_pins_a9ddf79c22d7505fb33ff5033502a8212} 
+\doxymbox{\hyperlink{struct_pin_info}{Pin\+Info}} Pins::\+\+I2C\+[$\,$]\+\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+{\bfseries Valor inicial:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ \{}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_SDA"{}},\ 20,\ \textcolor{stringliteral}{"{}I2C"{}}\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_SCL"{}},\ 21,\ \textcolor{stringliteral}{"{}I2C"{}}\},}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Pines I2C /\+ TWI (comunicación de dos hilos). 
+
+
+
+Definición en la línea \doxymbox{\hyperlink{pinout_8h_source_l00078}{78}} del archivo \doxymbox{\hyperlink{pinout_8h_source}{pinout.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_SDA"{}},\ 20,\ \textcolor{stringliteral}{"{}I2C"{}}\},}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_SCL"{}},\ 21,\ \textcolor{stringliteral}{"{}I2C"{}}\},}
+\DoxyCodeLine{00081\ \ \ \ \ \};}
+
+\end{DoxyCode}
+\Hypertarget{namespace_pins_a096eab8385a7b7ef6e1ee9a41983f7ca}\index{Pins@{Pins}!INTERRUPTS@{INTERRUPTS}}
+\index{INTERRUPTS@{INTERRUPTS}!Pins@{Pins}}
+\doxysubsubsection{\texorpdfstring{INTERRUPTS}{INTERRUPTS}}
+{\footnotesize\ttfamily \label{namespace_pins_a096eab8385a7b7ef6e1ee9a41983f7ca} 
+\doxymbox{\hyperlink{struct_pin_info}{Pin\+Info}} Pins::\+\+INTERRUPTS\+[$\,$]\+\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+{\bfseries Valor inicial:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ \{}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}INT\_0"{}},\ 2,\ \ \textcolor{stringliteral}{"{}INTERRUPTS"{}}\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}INT\_1"{}},\ 3,\ \ \textcolor{stringliteral}{"{}INTERRUPTS"{}}\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}INT\_2"{}},\ 21,\ \textcolor{stringliteral}{"{}INTERRUPTS"{}}\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}INT\_3"{}},\ 20,\ \textcolor{stringliteral}{"{}INTERRUPTS"{}}\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}INT\_4"{}},\ 19,\ \textcolor{stringliteral}{"{}INTERRUPTS"{}}\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}INT\_5"{}},\ 18,\ \textcolor{stringliteral}{"{}INTERRUPTS"{}}\},}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Pines de interrupciones externas. 
+
+
+
+Definición en la línea \doxymbox{\hyperlink{pinout_8h_source_l00086}{86}} del archivo \doxymbox{\hyperlink{pinout_8h_source}{pinout.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}INT\_0"{}},\ 2,\ \ \textcolor{stringliteral}{"{}INTERRUPTS"{}}\},}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}INT\_1"{}},\ 3,\ \ \textcolor{stringliteral}{"{}INTERRUPTS"{}}\},}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}INT\_2"{}},\ 21,\ \textcolor{stringliteral}{"{}INTERRUPTS"{}}\},}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}INT\_3"{}},\ 20,\ \textcolor{stringliteral}{"{}INTERRUPTS"{}}\},}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}INT\_4"{}},\ 19,\ \textcolor{stringliteral}{"{}INTERRUPTS"{}}\},}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}INT\_5"{}},\ 18,\ \textcolor{stringliteral}{"{}INTERRUPTS"{}}\},}
+\DoxyCodeLine{00093\ \ \ \ \ \};}
+
+\end{DoxyCode}
+\Hypertarget{namespace_pins_a76406a151484ce00c13ad8ebf87477e5}\index{Pins@{Pins}!NUM\_ANALOG@{NUM\_ANALOG}}
+\index{NUM\_ANALOG@{NUM\_ANALOG}!Pins@{Pins}}
+\doxysubsubsection{\texorpdfstring{NUM\_ANALOG}{NUM\_ANALOG}}
+{\footnotesize\ttfamily \label{namespace_pins_a76406a151484ce00c13ad8ebf87477e5} 
+size\+\_\+t Pins::\+\+NUM\+\_\+\+ANALOG = sizeof(\doxymbox{\hyperlink{namespace_pins_ae5f8eceff18d6f68e695cc390033d330}{ANALOG}}) /\+ sizeof(\doxymbox{\hyperlink{namespace_pins_ae5f8eceff18d6f68e695cc390033d330}{ANALOG}}\+[0]\+)\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Número total de pines por familia. 
+
+
+
+Definición en la línea \doxymbox{\hyperlink{pinout_8h_source_l00177}{177}} del archivo \doxymbox{\hyperlink{pinout_8h_source}{pinout.\+h}}.
+
+\Hypertarget{namespace_pins_a102474240ce6b18bcb2e658bb28754af}\index{Pins@{Pins}!NUM\_GPIO@{NUM\_GPIO}}
+\index{NUM\_GPIO@{NUM\_GPIO}!Pins@{Pins}}
+\doxysubsubsection{\texorpdfstring{NUM\_GPIO}{NUM\_GPIO}}
+{\footnotesize\ttfamily \label{namespace_pins_a102474240ce6b18bcb2e658bb28754af} 
+size\+\_\+t Pins::\+\+NUM\+\_\+\+GPIO = sizeof(\doxymbox{\hyperlink{namespace_pins_a02d8a45378e890f65caf34971a2aee06}{GPIO}}) /\+ sizeof(\doxymbox{\hyperlink{namespace_pins_a02d8a45378e890f65caf34971a2aee06}{GPIO}}\+[0]\+)\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Definición en la línea \doxymbox{\hyperlink{pinout_8h_source_l00178}{178}} del archivo \doxymbox{\hyperlink{pinout_8h_source}{pinout.\+h}}.
+
+\Hypertarget{namespace_pins_a939659def1a253523f4e85a96cfc6230}\index{Pins@{Pins}!NUM\_I2C@{NUM\_I2C}}
+\index{NUM\_I2C@{NUM\_I2C}!Pins@{Pins}}
+\doxysubsubsection{\texorpdfstring{NUM\_I2C}{NUM\_I2C}}
+{\footnotesize\ttfamily \label{namespace_pins_a939659def1a253523f4e85a96cfc6230} 
+size\+\_\+t Pins::\+\+NUM\+\_\+\+I2C = sizeof(\doxymbox{\hyperlink{namespace_pins_a9ddf79c22d7505fb33ff5033502a8212}{I2C}}) /\+ sizeof(\doxymbox{\hyperlink{namespace_pins_a9ddf79c22d7505fb33ff5033502a8212}{I2C}}\+[0]\+)\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Definición en la línea \doxymbox{\hyperlink{pinout_8h_source_l00183}{183}} del archivo \doxymbox{\hyperlink{pinout_8h_source}{pinout.\+h}}.
+
+\Hypertarget{namespace_pins_a1b68e0261ac91f25a8fc1d720bf84ee7}\index{Pins@{Pins}!NUM\_INTERRUPTS@{NUM\_INTERRUPTS}}
+\index{NUM\_INTERRUPTS@{NUM\_INTERRUPTS}!Pins@{Pins}}
+\doxysubsubsection{\texorpdfstring{NUM\_INTERRUPTS}{NUM\_INTERRUPTS}}
+{\footnotesize\ttfamily \label{namespace_pins_a1b68e0261ac91f25a8fc1d720bf84ee7} 
+size\+\_\+t Pins::\+\+NUM\+\_\+\+INTERRUPTS = sizeof(\doxymbox{\hyperlink{namespace_pins_a096eab8385a7b7ef6e1ee9a41983f7ca}{INTERRUPTS}}) /\+ sizeof(\doxymbox{\hyperlink{namespace_pins_a096eab8385a7b7ef6e1ee9a41983f7ca}{INTERRUPTS}}\+[0]\+)\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Definición en la línea \doxymbox{\hyperlink{pinout_8h_source_l00184}{184}} del archivo \doxymbox{\hyperlink{pinout_8h_source}{pinout.\+h}}.
+
+\Hypertarget{namespace_pins_ac4db2eceee724cbb769f8a079479a0c1}\index{Pins@{Pins}!NUM\_PWM@{NUM\_PWM}}
+\index{NUM\_PWM@{NUM\_PWM}!Pins@{Pins}}
+\doxysubsubsection{\texorpdfstring{NUM\_PWM}{NUM\_PWM}}
+{\footnotesize\ttfamily \label{namespace_pins_ac4db2eceee724cbb769f8a079479a0c1} 
+size\+\_\+t Pins::\+\+NUM\+\_\+\+PWM = sizeof(\doxymbox{\hyperlink{namespace_pins_a71e46e5c9462e706226bb4e1a8fdeb1c}{PWM}}) /\+ sizeof(\doxymbox{\hyperlink{namespace_pins_a71e46e5c9462e706226bb4e1a8fdeb1c}{PWM}}\+[0]\+)\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Definición en la línea \doxymbox{\hyperlink{pinout_8h_source_l00179}{179}} del archivo \doxymbox{\hyperlink{pinout_8h_source}{pinout.\+h}}.
+
+\Hypertarget{namespace_pins_a3c8477bacb5373d82db68deb45533f96}\index{Pins@{Pins}!NUM\_SPI@{NUM\_SPI}}
+\index{NUM\_SPI@{NUM\_SPI}!Pins@{Pins}}
+\doxysubsubsection{\texorpdfstring{NUM\_SPI}{NUM\_SPI}}
+{\footnotesize\ttfamily \label{namespace_pins_a3c8477bacb5373d82db68deb45533f96} 
+size\+\_\+t Pins::\+\+NUM\+\_\+\+SPI = sizeof(\doxymbox{\hyperlink{namespace_pins_a5089dee10b6e4321543c1a723bf6792c}{SPI}}) /\+ sizeof(\doxymbox{\hyperlink{namespace_pins_a5089dee10b6e4321543c1a723bf6792c}{SPI}}\+[0]\+)\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Definición en la línea \doxymbox{\hyperlink{pinout_8h_source_l00182}{182}} del archivo \doxymbox{\hyperlink{pinout_8h_source}{pinout.\+h}}.
+
+\Hypertarget{namespace_pins_a0ba3b15c986f3273ba00102b9659536f}\index{Pins@{Pins}!NUM\_UART\_RX@{NUM\_UART\_RX}}
+\index{NUM\_UART\_RX@{NUM\_UART\_RX}!Pins@{Pins}}
+\doxysubsubsection{\texorpdfstring{NUM\_UART\_RX}{NUM\_UART\_RX}}
+{\footnotesize\ttfamily \label{namespace_pins_a0ba3b15c986f3273ba00102b9659536f} 
+size\+\_\+t Pins::\+\+NUM\+\_\+\+UART\+\_\+\+RX = sizeof(\doxymbox{\hyperlink{namespace_pins_a514f49dc811240bdab1307083c50b97b}{UART\+\_\+\+RX}}) /\+ sizeof(\doxymbox{\hyperlink{namespace_pins_a514f49dc811240bdab1307083c50b97b}{UART\+\_\+\+RX}}\+[0]\+)\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Definición en la línea \doxymbox{\hyperlink{pinout_8h_source_l00180}{180}} del archivo \doxymbox{\hyperlink{pinout_8h_source}{pinout.\+h}}.
+
+\Hypertarget{namespace_pins_abf3e7fc586a0e40934feb7540768903b}\index{Pins@{Pins}!NUM\_UART\_TX@{NUM\_UART\_TX}}
+\index{NUM\_UART\_TX@{NUM\_UART\_TX}!Pins@{Pins}}
+\doxysubsubsection{\texorpdfstring{NUM\_UART\_TX}{NUM\_UART\_TX}}
+{\footnotesize\ttfamily \label{namespace_pins_abf3e7fc586a0e40934feb7540768903b} 
+size\+\_\+t Pins::\+\+NUM\+\_\+\+UART\+\_\+\+TX = sizeof(\doxymbox{\hyperlink{namespace_pins_a61c1593e84b2bbb9bbf1cfe0d220d359}{UART\+\_\+\+TX}}) /\+ sizeof(\doxymbox{\hyperlink{namespace_pins_a61c1593e84b2bbb9bbf1cfe0d220d359}{UART\+\_\+\+TX}}\+[0]\+)\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Definición en la línea \doxymbox{\hyperlink{pinout_8h_source_l00181}{181}} del archivo \doxymbox{\hyperlink{pinout_8h_source}{pinout.\+h}}.
+
+\Hypertarget{namespace_pins_a71e46e5c9462e706226bb4e1a8fdeb1c}\index{Pins@{Pins}!PWM@{PWM}}
+\index{PWM@{PWM}!Pins@{Pins}}
+\doxysubsubsection{\texorpdfstring{PWM}{PWM}}
+{\footnotesize\ttfamily \label{namespace_pins_a71e46e5c9462e706226bb4e1a8fdeb1c} 
+\doxymbox{\hyperlink{struct_pin_info}{Pin\+Info}} Pins::\+\+PWM\+[$\,$]\+\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+{\bfseries Valor inicial:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ \{}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_PWM\_02"{}},\ 2,\ \ \textcolor{stringliteral}{"{}PWM"{}}\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_PWM\_03"{}},\ 3,\ \ \textcolor{stringliteral}{"{}PWM"{}}\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_PWM\_04"{}},\ 4,\ \ \textcolor{stringliteral}{"{}PWM"{}}\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_PWM\_05"{}},\ 5,\ \ \textcolor{stringliteral}{"{}PWM"{}}\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_PWM\_06"{}},\ 6,\ \ \textcolor{stringliteral}{"{}PWM"{}}\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_PWM\_07"{}},\ 7,\ \ \textcolor{stringliteral}{"{}PWM"{}}\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_PWM\_08"{}},\ 8,\ \ \textcolor{stringliteral}{"{}PWM"{}}\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_PWM\_09"{}},\ 9,\ \ \textcolor{stringliteral}{"{}PWM"{}}\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_PWM\_10"{}},\ 10,\ \textcolor{stringliteral}{"{}PWM"{}}\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_PWM\_11"{}},\ 11,\ \textcolor{stringliteral}{"{}PWM"{}}\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_PWM\_12"{}},\ 12,\ \textcolor{stringliteral}{"{}PWM"{}}\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_PWM\_44"{}},\ 44,\ \textcolor{stringliteral}{"{}PWM"{}}\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_PWM\_45"{}},\ 45,\ \textcolor{stringliteral}{"{}PWM"{}}\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_PWM\_46"{}},\ 46,\ \textcolor{stringliteral}{"{}PWM"{}}\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Pines PWM (modulación por ancho de pulso). 
+
+
+
+Definición en la línea \doxymbox{\hyperlink{pinout_8h_source_l00120}{120}} del archivo \doxymbox{\hyperlink{pinout_8h_source}{pinout.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_PWM\_02"{}},\ 2,\ \ \textcolor{stringliteral}{"{}PWM"{}}\},}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_PWM\_03"{}},\ 3,\ \ \textcolor{stringliteral}{"{}PWM"{}}\},}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_PWM\_04"{}},\ 4,\ \ \textcolor{stringliteral}{"{}PWM"{}}\},}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_PWM\_05"{}},\ 5,\ \ \textcolor{stringliteral}{"{}PWM"{}}\},}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_PWM\_06"{}},\ 6,\ \ \textcolor{stringliteral}{"{}PWM"{}}\},}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_PWM\_07"{}},\ 7,\ \ \textcolor{stringliteral}{"{}PWM"{}}\},}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_PWM\_08"{}},\ 8,\ \ \textcolor{stringliteral}{"{}PWM"{}}\},}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_PWM\_09"{}},\ 9,\ \ \textcolor{stringliteral}{"{}PWM"{}}\},}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_PWM\_10"{}},\ 10,\ \textcolor{stringliteral}{"{}PWM"{}}\},}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_PWM\_11"{}},\ 11,\ \textcolor{stringliteral}{"{}PWM"{}}\},}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_PWM\_12"{}},\ 12,\ \textcolor{stringliteral}{"{}PWM"{}}\},}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_PWM\_44"{}},\ 44,\ \textcolor{stringliteral}{"{}PWM"{}}\},}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_PWM\_45"{}},\ 45,\ \textcolor{stringliteral}{"{}PWM"{}}\},}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_PWM\_46"{}},\ 46,\ \textcolor{stringliteral}{"{}PWM"{}}\}}
+\DoxyCodeLine{00135\ \ \ \ \ \};}
+
+\end{DoxyCode}
+\Hypertarget{namespace_pins_a5089dee10b6e4321543c1a723bf6792c}\index{Pins@{Pins}!SPI@{SPI}}
+\index{SPI@{SPI}!Pins@{Pins}}
+\doxysubsubsection{\texorpdfstring{SPI}{SPI}}
+{\footnotesize\ttfamily \label{namespace_pins_a5089dee10b6e4321543c1a723bf6792c} 
+\doxymbox{\hyperlink{struct_pin_info}{Pin\+Info}} Pins::\+\+SPI\+[$\,$]\+\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+{\bfseries Valor inicial:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ \{}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_MISO"{}},\ 50,\ \textcolor{stringliteral}{"{}SPI"{}}\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_MOSI"{}},\ 51,\ \textcolor{stringliteral}{"{}SPI"{}}\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_SCK"{}},\ \ 52,\ \textcolor{stringliteral}{"{}SPI"{}}\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_SS"{}},\ \ \ 53,\ \textcolor{stringliteral}{"{}SPI"{}}\},}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Pines SPI (comunicación síncrona maestro-\/esclavo). 
+
+
+
+Definición en la línea \doxymbox{\hyperlink{pinout_8h_source_l00068}{68}} del archivo \doxymbox{\hyperlink{pinout_8h_source}{pinout.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_MISO"{}},\ 50,\ \textcolor{stringliteral}{"{}SPI"{}}\},}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_MOSI"{}},\ 51,\ \textcolor{stringliteral}{"{}SPI"{}}\},}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_SCK"{}},\ \ 52,\ \textcolor{stringliteral}{"{}SPI"{}}\},}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_SS"{}},\ \ \ 53,\ \textcolor{stringliteral}{"{}SPI"{}}\},}
+\DoxyCodeLine{00073\ \ \ \ \ \};}
+
+\end{DoxyCode}
+\Hypertarget{namespace_pins_a514f49dc811240bdab1307083c50b97b}\index{Pins@{Pins}!UART\_RX@{UART\_RX}}
+\index{UART\_RX@{UART\_RX}!Pins@{Pins}}
+\doxysubsubsection{\texorpdfstring{UART\_RX}{UART\_RX}}
+{\footnotesize\ttfamily \label{namespace_pins_a514f49dc811240bdab1307083c50b97b} 
+\doxymbox{\hyperlink{struct_pin_info}{Pin\+Info}} Pins::\+\+UART\+\_\+\+RX\+[$\,$]\+\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+{\bfseries Valor inicial:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ \{}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_RX0"{}},\ 0,\ \ \textcolor{stringliteral}{"{}UART\_RX"{}}\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_RX1"{}},\ 19,\ \textcolor{stringliteral}{"{}UART\_RX"{}}\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_RX2"{}},\ 17,\ \textcolor{stringliteral}{"{}UART\_RX"{}}\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_RX3"{}},\ 15,\ \textcolor{stringliteral}{"{}UART\_RX"{}}\},}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Pines UART RX (recepción serie asíncrona). 
+
+
+
+Definición en la línea \doxymbox{\hyperlink{pinout_8h_source_l00048}{48}} del archivo \doxymbox{\hyperlink{pinout_8h_source}{pinout.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_RX0"{}},\ 0,\ \ \textcolor{stringliteral}{"{}UART\_RX"{}}\},}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_RX1"{}},\ 19,\ \textcolor{stringliteral}{"{}UART\_RX"{}}\},}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_RX2"{}},\ 17,\ \textcolor{stringliteral}{"{}UART\_RX"{}}\},}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_RX3"{}},\ 15,\ \textcolor{stringliteral}{"{}UART\_RX"{}}\},}
+\DoxyCodeLine{00053\ \ \ \ \ \};}
+
+\end{DoxyCode}
+\Hypertarget{namespace_pins_a61c1593e84b2bbb9bbf1cfe0d220d359}\index{Pins@{Pins}!UART\_TX@{UART\_TX}}
+\index{UART\_TX@{UART\_TX}!Pins@{Pins}}
+\doxysubsubsection{\texorpdfstring{UART\_TX}{UART\_TX}}
+{\footnotesize\ttfamily \label{namespace_pins_a61c1593e84b2bbb9bbf1cfe0d220d359} 
+\doxymbox{\hyperlink{struct_pin_info}{Pin\+Info}} Pins::\+\+UART\+\_\+\+TX\+[$\,$]\+\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+{\bfseries Valor inicial:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ \{}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_TX0"{}},\ 1,\ \ \textcolor{stringliteral}{"{}UART\_TX"{}}\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_TX1"{}},\ 18,\ \textcolor{stringliteral}{"{}UART\_TX"{}}\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_TX2"{}},\ 16,\ \textcolor{stringliteral}{"{}UART\_TX"{}}\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_TX3"{}},\ 14,\ \textcolor{stringliteral}{"{}UART\_TX"{}}\},}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Pines UART TX (transmisión serie asíncrona). 
+
+
+
+Definición en la línea \doxymbox{\hyperlink{pinout_8h_source_l00058}{58}} del archivo \doxymbox{\hyperlink{pinout_8h_source}{pinout.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_TX0"{}},\ 1,\ \ \textcolor{stringliteral}{"{}UART\_TX"{}}\},}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_TX1"{}},\ 18,\ \textcolor{stringliteral}{"{}UART\_TX"{}}\},}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_TX2"{}},\ 16,\ \textcolor{stringliteral}{"{}UART\_TX"{}}\},}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}PIN\_TX3"{}},\ 14,\ \textcolor{stringliteral}{"{}UART\_TX"{}}\},}
+\DoxyCodeLine{00063\ \ \ \ \ \};}
+
+\end{DoxyCode}

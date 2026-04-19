@@ -1,0 +1,12 @@
+<map id="diagnoseUARTStream" name="diagnoseUARTStream">
+<area shape="rect" id="Node000001" title="Realiza un diagnóstico sobre un puerto UART específico." alt="" coords="441,31,592,56"/>
+<area shape="rect" id="Node000002" href="$diagnostics_u_a_r_t_8cpp.html#abee9102ec0a3103a14af4e810b02ea01" title="Performs a diagnostic on Serial1 (UART1)." alt="" coords="279,5,393,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="427,33,393,29,394,23,428,28"/>
+<area shape="rect" id="Node000005" href="$diagnostics_u_a_r_t_8cpp.html#ab1adb888a9bf884d3315d094a9e71ff2" title="Performs a diagnostic on Serial2 (UART2)." alt="" coords="279,55,393,80"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="428,58,394,62,393,57,427,53"/>
+<area shape="rect" id="Node000003" href="$diagnostics_u_a_r_t_8cpp.html#acc8f8328b4a6e60100e91825f885bcb7" title="Runs a complete diagnostic on all available UART ports." alt="" coords="108,31,231,56"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="265,31,232,37,231,31,264,26"/>
+<area shape="rect" id="Node000004" href="$main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title="Arduino setup function (runs once at startup)." alt="" coords="5,31,60,56"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="94,46,60,46,60,41,94,41"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="264,60,231,55,232,50,265,54"/>
+</map>

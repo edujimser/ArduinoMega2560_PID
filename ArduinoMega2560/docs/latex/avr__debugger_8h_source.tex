@@ -1,0 +1,53 @@
+\doxysection{avr\+\_\+debugger.\+h}
+\hypertarget{avr__debugger_8h_source}{}\label{avr__debugger_8h_source}\index{avr\_debugger.h@{avr\_debugger.h}}
+\doxymbox{\hyperlink{avr__debugger_8h}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{avr__debugger_8h_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{avr8-stub_8h}{avr8-\/stub.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{avr__debugger_8h_source_l00002}00002\ \textcolor{preprocessor}{\#include\ <avr/interrupt.h>}}
+\DoxyCodeLine{\Hypertarget{avr__debugger_8h_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{avr__debugger_8h_source_l00004}00004\ \textcolor{preprocessor}{\#ifndef\ AVR\_DEBUGGER\_H\_}}
+\DoxyCodeLine{\Hypertarget{avr__debugger_8h_source_l00005}00005\ \textcolor{preprocessor}{\#define\ AVR\_DEBUGGER\_H\_}}
+\DoxyCodeLine{\Hypertarget{avr__debugger_8h_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{avr__debugger_8h_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{avr__debugger_8h_source_l00008}00008\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{avr__debugger_8h_source_l00009}00009\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{\Hypertarget{avr__debugger_8h_source_l00010}00010\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{avr__debugger_8h_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{avr__debugger_8h_source_l00012}00012\ \textcolor{preprocessor}{\#if\ defined(PLATFORMIO)\ \&\&\ defined(\_\_PLATFORMIO\_BUILD\_DEBUG\_\_)}}
+\DoxyCodeLine{\Hypertarget{avr__debugger_8h_source_l00013}00013\ \textcolor{preprocessor}{\ \ \ \ \#ifndef\ \_\_DEBUG\_\_}}
+\DoxyCodeLine{\Hypertarget{avr__debugger_8h_source_l00014}00014\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ \_\_DEBUG\_\_}}
+\DoxyCodeLine{\Hypertarget{avr__debugger_8h_source_l00015}00015\ \textcolor{preprocessor}{\ \ \ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{avr__debugger_8h_source_l00016}00016\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{avr__debugger_8h_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{avr__debugger_8h_source_l00018}00018\ \textcolor{preprocessor}{\#if\ defined(\_\_DEBUG\_\_)}}
+\DoxyCodeLine{\Hypertarget{avr__debugger_8h_source_l00019}00019\ \textcolor{preprocessor}{\ \ \ \ \#define\ DBG\_EXEC(x)\ x}}
+\DoxyCodeLine{\Hypertarget{avr__debugger_8h_source_l00020}00020\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{avr__debugger_8h_source_l00021}\doxymbox{\hyperlink{avr__debugger_8h_a09198f76a02dcebf8ceec0099ac75329}{00021}}\ \textcolor{preprocessor}{\ \ \ \ \#define\ DBG\_EXEC(x)}}
+\DoxyCodeLine{\Hypertarget{avr__debugger_8h_source_l00022}00022\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{avr__debugger_8h_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{avr__debugger_8h_source_l00024}\doxymbox{\hyperlink{avr__debugger_8h_a89b4ba809a03664538a2b453d49b1eef}{00024}}\ \textcolor{preprocessor}{\#define\ dbg\_breakpoint()\ \{\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{avr__debugger_8h_source_l00025}00025\ \textcolor{preprocessor}{\ \ \ \ DBG\_EXEC(breakpoint());\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{avr__debugger_8h_source_l00026}00026\ \textcolor{preprocessor}{\ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{avr__debugger_8h_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{avr__debugger_8h_source_l00028}\doxymbox{\hyperlink{avr__debugger_8h_a62599516a7b5bb90d35d402af65b8b9c}{00028}}\ \textcolor{preprocessor}{\#define\ dbg\_init()\ \ \ \ \ \ \ \{\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{avr__debugger_8h_source_l00029}00029\ \textcolor{preprocessor}{\ \ \ \ DBG\_EXEC(debug\_init());\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{avr__debugger_8h_source_l00030}00030\ \textcolor{preprocessor}{\ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{avr__debugger_8h_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{avr__debugger_8h_source_l00032}\doxymbox{\hyperlink{avr__debugger_8h_a1b849ac55a1cf76e60c221b78b6ef47e}{00032}}\ \textcolor{preprocessor}{\#define\ dbg\_message(x)\ \{\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{avr__debugger_8h_source_l00033}00033\ \textcolor{preprocessor}{\ \ \ \ DBG\_EXEC(debug\_message(x));\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{avr__debugger_8h_source_l00034}00034\ \textcolor{preprocessor}{\ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{avr__debugger_8h_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{avr__debugger_8h_source_l00036}\doxymbox{\hyperlink{avr__debugger_8h_ad1f9490adcaacd00a1e0559cad282cea}{00036}}\ \textcolor{preprocessor}{\#define\ dbg\_start()\ \ \ \ \ \ \{\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{avr__debugger_8h_source_l00037}00037\ \textcolor{preprocessor}{\ \ \ \ DBG\_EXEC(debug\_init());\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{avr__debugger_8h_source_l00038}00038\ \textcolor{preprocessor}{\ \ \ \ DBG\_EXEC(sei());\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{avr__debugger_8h_source_l00039}00039\ \textcolor{preprocessor}{\ \ \ \ DBG\_EXEC(breakpoint());\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{avr__debugger_8h_source_l00040}00040\ \textcolor{preprocessor}{\ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{avr__debugger_8h_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{avr__debugger_8h_source_l00042}00042\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{avr__debugger_8h_source_l00043}00043\ \}}
+\DoxyCodeLine{\Hypertarget{avr__debugger_8h_source_l00044}00044\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{avr__debugger_8h_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{avr__debugger_8h_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{avr__debugger_8h_source_l00047}00047\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ AVR\_DEBUGGER\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

@@ -1,0 +1,7 @@
+<map id="diagnoseSerial1" name="diagnoseSerial1">
+<area shape="rect" id="Node000001" title="Performs a diagnostic on Serial1 (UART1)." alt="" coords="279,5,393,31"/>
+<area shape="rect" id="Node000002" href="$diagnostics_u_a_r_t_8cpp.html#acc8f8328b4a6e60100e91825f885bcb7" title="Runs a complete diagnostic on all available UART ports." alt="" coords="108,5,231,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="265,21,231,21,231,15,265,15"/>
+<area shape="rect" id="Node000003" href="$main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title="Arduino setup function (runs once at startup)." alt="" coords="5,5,60,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="94,21,60,21,60,15,94,15"/>
+</map>

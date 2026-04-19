@@ -1,0 +1,783 @@
+\doxysection{Referencia de la clase PID}
+\hypertarget{class_p_i_d}{}\label{class_p_i_d}\index{PID@{PID}}
+
+
+Controlador \doxylink{class_p_i_d}{PID} con anti-\/windup, derivative-\/on-\/measurement y limitación de cambio de salida (slew-\/rate limit).  
+
+
+
+
+{\ttfamily \+\#include $<$pid.\+h$>$}
+
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_p_i_d_a4125833122b985f732eef6f3e6d728c3}{PID}} (float \doxymbox{\hyperlink{class_p_i_d_a67f2b50c209d4de6a20c710b33b62f0e}{Kp}}, float \doxymbox{\hyperlink{class_p_i_d_ab48eeec8704e5d517a64b91fbe4fba57}{Ki}}, float \doxymbox{\hyperlink{class_p_i_d_a105396cb94f3ec2f352b3d116529112b}{Kd}}, float \doxymbox{\hyperlink{class_p_i_d_a996d72c3183fc2e68260efd49db30521}{output\+Min}}, float \doxymbox{\hyperlink{class_p_i_d_a5867b916c0c69eeeebf997701c8157b2}{output\+Max}}, float \doxymbox{\hyperlink{class_p_i_d_aa2ba5bce664ff9fd12efcf22bf6be7a9}{dt}}, float \doxymbox{\hyperlink{class_p_i_d_a84fa4441b8b7275ea55d0d2c6a44febf}{output\+Max\+Changed}})
+\begin{DoxyCompactList}\small\item\em Constructor del controlador \doxylink{class_p_i_d}{PID}. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{class_p_i_d_af0cfbed86d613536bbd2b6220139d0c4}{calculo\+PID}} (float setpoint, float feedback, bool debug\+MSG=false)
+\begin{DoxyCompactList}\small\item\em Calcula la salida del controlador \doxylink{class_p_i_d}{PID}. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_p_i_d_af904362d0e2a6db02cd744af9edcf5bf}{set\+KPID}} (float \doxymbox{\hyperlink{class_p_i_d_a67f2b50c209d4de6a20c710b33b62f0e}{Kp}}, float \doxymbox{\hyperlink{class_p_i_d_ab48eeec8704e5d517a64b91fbe4fba57}{Ki}}, float \doxymbox{\hyperlink{class_p_i_d_a105396cb94f3ec2f352b3d116529112b}{Kd}})
+\begin{DoxyCompactList}\small\item\em Establece nuevas ganancias \doxylink{class_p_i_d}{PID}. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_p_i_d_a8de60a65c98638c43bc070b5bd32e77e}{set\+Output\+Limits}} (float \doxymbox{\hyperlink{class_p_i_d_a996d72c3183fc2e68260efd49db30521}{output\+Min}}, float \doxymbox{\hyperlink{class_p_i_d_a5867b916c0c69eeeebf997701c8157b2}{output\+Max}})
+\begin{DoxyCompactList}\small\item\em Establece los límites de salida del \doxylink{class_p_i_d}{PID}. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_p_i_d_ae55a80080d8196166d5a203c6b0131f5}{set\+Dt}} (float \doxymbox{\hyperlink{class_p_i_d_aa2ba5bce664ff9fd12efcf22bf6be7a9}{dt}})
+\begin{DoxyCompactList}\small\item\em Establece un nuevo tiempo de muestreo. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_p_i_d_a4ec46f614451079f4485319d4d5a7477}{reset\+PID}} ()
+\begin{DoxyCompactList}\small\item\em Reinicia el estado interno del \doxylink{class_p_i_d}{PID}. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{class_p_i_d_a5cdc6d7cb5e1520722dc764b21eb6f09}{statedt}} (float \doxymbox{\hyperlink{class_p_i_d_aa2ba5bce664ff9fd12efcf22bf6be7a9}{dt}})
+\begin{DoxyCompactList}\small\item\em Valida y corrige el tiempo de muestreo. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_p_i_d_a7263b32d21a2759144d935442db72191}{print\+Debug\+PID}} (float setpoint, float feedback)
+\begin{DoxyCompactList}\small\item\em Imprime información de depuración del \doxylink{class_p_i_d}{PID}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+float \doxymbox{\hyperlink{class_p_i_d_a67f2b50c209d4de6a20c710b33b62f0e}{Kp}}
+\begin{DoxyCompactList}\small\item\em Ganancia proporcional. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{class_p_i_d_ab48eeec8704e5d517a64b91fbe4fba57}{Ki}}
+\begin{DoxyCompactList}\small\item\em Ganancia integral. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{class_p_i_d_a105396cb94f3ec2f352b3d116529112b}{Kd}}
+\begin{DoxyCompactList}\small\item\em Ganancia derivativa. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{class_p_i_d_a996d72c3183fc2e68260efd49db30521}{output\+Min}}
+\begin{DoxyCompactList}\small\item\em Límite mínimo de salida. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{class_p_i_d_a5867b916c0c69eeeebf997701c8157b2}{output\+Max}}
+\begin{DoxyCompactList}\small\item\em Límite máximo de salida. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{class_p_i_d_aa2ba5bce664ff9fd12efcf22bf6be7a9}{dt}}
+\begin{DoxyCompactList}\small\item\em Tiempo de muestreo. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{class_p_i_d_a58024226a4cabe7c195ec7f8ec41523b}{error}}
+\begin{DoxyCompactList}\small\item\em Error actual. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{class_p_i_d_a482b5f6204d925cc2ed9079c06a1dbcd}{prev\+Error}}
+\begin{DoxyCompactList}\small\item\em Error previo. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{class_p_i_d_ab9dcad835103e9ad160c57f329f40e10}{proportional}}
+\begin{DoxyCompactList}\small\item\em Término proporcional. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{class_p_i_d_a0e5d49534b4925162583cc0b1e124a50}{integral}}
+\begin{DoxyCompactList}\small\item\em Acumulador integral. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{class_p_i_d_ad6f67ea0bed5ed7dd4e2a8d447d68a00}{pid\+No\+Integral}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_p_i_d}{PID} sin término integral. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_p_i_d_a1a5c8f27b61a74868f874cc6df3a2639}{saturated}}
+\begin{DoxyCompactList}\small\item\em Indica si el \doxylink{class_p_i_d}{PID} está saturado. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{class_p_i_d_a65e03137e6442acb9852b8626220b6d3}{derivative}}
+\begin{DoxyCompactList}\small\item\em Término derivativo. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{class_p_i_d_a5d214a65132fc8545eb5d58a537a804a}{output}}
+\begin{DoxyCompactList}\small\item\em Salida final del \doxylink{class_p_i_d}{PID}. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{class_p_i_d_a9760d4d6ce3a52353ac44cd997f50dc5}{raw\+Output}}
+\begin{DoxyCompactList}\small\item\em Salida sin limitación de cambio. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{class_p_i_d_aa93700f20d6bcefe7c96ca08240e748b}{prev\+Output}}
+\begin{DoxyCompactList}\small\item\em Salida previa. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{class_p_i_d_a50e3a777a99f13b048d9ece43dcf4dfc}{delta\+Output}}
+\begin{DoxyCompactList}\small\item\em Cambio entre salidas. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{class_p_i_d_ab1b409b1b5a3113d73c4b1d15946c6b1}{prev\+Feedback}}
+\begin{DoxyCompactList}\small\item\em Feedback previo para derivative-\/on-\/measurement. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{class_p_i_d_a84fa4441b8b7275ea55d0d2c6a44febf}{output\+Max\+Changed}}
+\begin{DoxyCompactList}\small\item\em Máximo cambio permitido por ciclo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Controlador \doxylink{class_p_i_d}{PID} con anti-\/windup, derivative-\/on-\/measurement y limitación de cambio de salida (slew-\/rate limit). 
+
+Este controlador está diseñado para sistemas sensibles como motores paso a paso, actuadores lentos o sistemas donde se requiere suavidad y estabilidad. 
+
+Definición en la línea \doxymbox{\hyperlink{pid_8h_source_l00014}{14}} del archivo \doxymbox{\hyperlink{pid_8h_source}{pid.\+h}}.
+
+
+
+\label{doc-constructors}
+\Hypertarget{class_p_i_d_doc-constructors}
+\doxysubsection{Documentación de constructores y destructores}
+\Hypertarget{class_p_i_d_a4125833122b985f732eef6f3e6d728c3}\index{PID@{PID}!PID@{PID}}
+\index{PID@{PID}!PID@{PID}}
+\doxysubsubsection{\texorpdfstring{PID()}{PID()}}
+{\footnotesize\ttfamily \label{class_p_i_d_a4125833122b985f732eef6f3e6d728c3} 
+PID::\+\+PID (\begin{DoxyParamCaption}\item[{float}]{Kp}{, }\item[{float}]{Ki}{, }\item[{float}]{Kd}{, }\item[{float}]{output\+Min}{, }\item[{float}]{output\+Max}{, }\item[{float}]{dt}{, }\item[{float}]{output\+Max\+Changed}{}\end{DoxyParamCaption})}
+
+
+
+Constructor del controlador \doxylink{class_p_i_d}{PID}. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em \doxylink{class_p_i_d_a67f2b50c209d4de6a20c710b33b62f0e}{Kp}} & Ganancia proporcional. \\
+\hline
+{\em \doxylink{class_p_i_d_ab48eeec8704e5d517a64b91fbe4fba57}{Ki}} & Ganancia integral. \\
+\hline
+{\em \doxylink{class_p_i_d_a105396cb94f3ec2f352b3d116529112b}{Kd}} & Ganancia derivativa. \\
+\hline
+{\em \doxylink{class_p_i_d_a996d72c3183fc2e68260efd49db30521}{output\+Min}} & Límite mínimo de salida. \\
+\hline
+{\em \doxylink{class_p_i_d_a5867b916c0c69eeeebf997701c8157b2}{output\+Max}} & Límite máximo de salida. \\
+\hline
+{\em \doxylink{class_p_i_d_aa2ba5bce664ff9fd12efcf22bf6be7a9}{dt}} & Tiempo de muestreo en segundos. \\
+\hline
+{\em \doxylink{class_p_i_d_a84fa4441b8b7275ea55d0d2c6a44febf}{output\+Max\+Changed}} & Máximo cambio permitido por ciclo (slew-\/rate). \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \doxymbox{\hyperlink{pid_8cpp_source_l00020}{20}} del archivo \doxymbox{\hyperlink{pid_8cpp_source}{pid.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00023\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ this-\/>\doxymbox{\hyperlink{class_p_i_d_a67f2b50c209d4de6a20c710b33b62f0e}{Kp}}\ =\ \doxymbox{\hyperlink{class_p_i_d_a67f2b50c209d4de6a20c710b33b62f0e}{Kp}};}
+\DoxyCodeLine{00025\ \ \ \ \ this-\/>\doxymbox{\hyperlink{class_p_i_d_ab48eeec8704e5d517a64b91fbe4fba57}{Ki}}\ =\ \doxymbox{\hyperlink{class_p_i_d_ab48eeec8704e5d517a64b91fbe4fba57}{Ki}};}
+\DoxyCodeLine{00026\ \ \ \ \ this-\/>\doxymbox{\hyperlink{class_p_i_d_a105396cb94f3ec2f352b3d116529112b}{Kd}}\ =\ \doxymbox{\hyperlink{class_p_i_d_a105396cb94f3ec2f352b3d116529112b}{Kd}};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ this-\/>\doxymbox{\hyperlink{class_p_i_d_a996d72c3183fc2e68260efd49db30521}{outputMin}}\ =\ \doxymbox{\hyperlink{class_p_i_d_a996d72c3183fc2e68260efd49db30521}{outputMin}};}
+\DoxyCodeLine{00029\ \ \ \ \ this-\/>\doxymbox{\hyperlink{class_p_i_d_a5867b916c0c69eeeebf997701c8157b2}{outputMax}}\ =\ \doxymbox{\hyperlink{class_p_i_d_a5867b916c0c69eeeebf997701c8157b2}{outputMax}};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ this-\/>\doxymbox{\hyperlink{class_p_i_d_aa2ba5bce664ff9fd12efcf22bf6be7a9}{dt}}\ =\ \doxymbox{\hyperlink{class_p_i_d_a5cdc6d7cb5e1520722dc764b21eb6f09}{statedt}}(\doxymbox{\hyperlink{class_p_i_d_aa2ba5bce664ff9fd12efcf22bf6be7a9}{dt}});}
+\DoxyCodeLine{00032\ \ \ \ \ this-\/>\doxymbox{\hyperlink{class_p_i_d_a84fa4441b8b7275ea55d0d2c6a44febf}{outputMaxChanged}}\ =\ \doxymbox{\hyperlink{class_p_i_d_a84fa4441b8b7275ea55d0d2c6a44febf}{outputMaxChanged}};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ this-\/>\doxymbox{\hyperlink{class_p_i_d_a58024226a4cabe7c195ec7f8ec41523b}{error}}\ =\ 0.0f;}
+\DoxyCodeLine{00035\ \ \ \ \ this-\/>\doxymbox{\hyperlink{class_p_i_d_a482b5f6204d925cc2ed9079c06a1dbcd}{prevError}}\ =\ 0.0f;}
+\DoxyCodeLine{00036\ \ \ \ \ this-\/>\doxymbox{\hyperlink{class_p_i_d_a0e5d49534b4925162583cc0b1e124a50}{integral}}\ =\ 0.0f;}
+\DoxyCodeLine{00037\ \ \ \ \ this-\/>\doxymbox{\hyperlink{class_p_i_d_a65e03137e6442acb9852b8626220b6d3}{derivative}}\ =\ 0.0f;}
+\DoxyCodeLine{00038\ \ \ \ \ this-\/>\doxymbox{\hyperlink{class_p_i_d_a5d214a65132fc8545eb5d58a537a804a}{output}}\ =\ 0.0f;}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ this-\/>\doxymbox{\hyperlink{class_p_i_d_ab1b409b1b5a3113d73c4b1d15946c6b1}{prevFeedback}}\ =\ 0.0f;}
+\DoxyCodeLine{00041\ \ \ \ \ this-\/>\doxymbox{\hyperlink{class_p_i_d_aa93700f20d6bcefe7c96ca08240e748b}{prevOutput}}\ =\ 0.0f;}
+\DoxyCodeLine{00042\ \}}
+
+\end{DoxyCode}
+Gráfico de llamadas de esta función:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{class_p_i_d_a4125833122b985f732eef6f3e6d728c3_cgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-func-members}
+\Hypertarget{class_p_i_d_doc-func-members}
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{class_p_i_d_af0cfbed86d613536bbd2b6220139d0c4}\index{PID@{PID}!calculoPID@{calculoPID}}
+\index{calculoPID@{calculoPID}!PID@{PID}}
+\doxysubsubsection{\texorpdfstring{calculoPID()}{calculoPID()}}
+{\footnotesize\ttfamily \label{class_p_i_d_af0cfbed86d613536bbd2b6220139d0c4} 
+float PID::\+calculo\+PID (\begin{DoxyParamCaption}\item[{float}]{setpoint}{, }\item[{float}]{feedback}{, }\item[{bool}]{debug\+MSG}{ = {\ttfamily false}}\end{DoxyParamCaption})}
+
+
+
+Calcula la salida del controlador \doxylink{class_p_i_d}{PID}. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em setpoint} & Valor deseado. \\
+\hline
+{\em feedback} & Valor medido. \\
+\hline
+{\em debug\+MSG} & Si es true, imprime información de depuración del \doxylink{class_p_i_d}{PID}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Salida del \doxylink{class_p_i_d}{PID}.
+\end{DoxyReturn}
+Implementa:\+
+\begin{DoxyItemize}
+\item Proporcional
+\item Integral con anti-\/windup condicional
+\item Derivative-\/on-\/measurement (evita derivative kick)
+\item Slew-\/rate limit (limitación de cambio por ciclo)
+\item Saturación final
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parámetros}
+{\em setpoint} & Valor deseado. \\
+\hline
+{\em feedback} & Valor medido. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Salida del controlador \doxylink{class_p_i_d}{PID}. 
+\end{DoxyReturn}
+
+
+Definición en la línea \doxymbox{\hyperlink{pid_8cpp_source_l00058}{58}} del archivo \doxymbox{\hyperlink{pid_8cpp_source}{pid.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00059\ \{}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{comment}{//\ 1)\ Error\ actual}}
+\DoxyCodeLine{00061\ \ \ \ \ this-\/>\doxymbox{\hyperlink{class_p_i_d_a58024226a4cabe7c195ec7f8ec41523b}{error}}\ =\ setpoint\ -\/\ feedback;}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{comment}{//\ 2)\ Proporcional}}
+\DoxyCodeLine{00064\ \ \ \ \ this-\/>\doxymbox{\hyperlink{class_p_i_d_ab9dcad835103e9ad160c57f329f40e10}{proportional}}\ =\ this-\/>\doxymbox{\hyperlink{class_p_i_d_a67f2b50c209d4de6a20c710b33b62f0e}{Kp}}\ *\ this-\/>\doxymbox{\hyperlink{class_p_i_d_a58024226a4cabe7c195ec7f8ec41523b}{error}};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{comment}{//\ Protección\ dt}}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>\doxymbox{\hyperlink{class_p_i_d_aa2ba5bce664ff9fd12efcf22bf6be7a9}{dt}}\ <=\ 0.0f)}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>\doxymbox{\hyperlink{class_p_i_d_a5d214a65132fc8545eb5d58a537a804a}{output}};}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{comment}{//\ 3)\ Derivada\ (derivative-\/on-\/measurement)}}
+\DoxyCodeLine{00071\ \ \ \ \ this-\/>\doxymbox{\hyperlink{class_p_i_d_a65e03137e6442acb9852b8626220b6d3}{derivative}}\ =\ -\/(feedback\ -\/\ this-\/>\doxymbox{\hyperlink{class_p_i_d_ab1b409b1b5a3113d73c4b1d15946c6b1}{prevFeedback}})\ /\ this-\/>\doxymbox{\hyperlink{class_p_i_d_aa2ba5bce664ff9fd12efcf22bf6be7a9}{dt}};}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{comment}{//\ 4)\ Anti-\/windup\ condicional}}
+\DoxyCodeLine{00074\ \ \ \ \ this-\/>\doxymbox{\hyperlink{class_p_i_d_ad6f67ea0bed5ed7dd4e2a8d447d68a00}{pidNoIntegral}}\ =\ this-\/>\doxymbox{\hyperlink{class_p_i_d_ab9dcad835103e9ad160c57f329f40e10}{proportional}}\ +\ this-\/>\doxymbox{\hyperlink{class_p_i_d_a105396cb94f3ec2f352b3d116529112b}{Kd}}\ *\ this-\/>\doxymbox{\hyperlink{class_p_i_d_a65e03137e6442acb9852b8626220b6d3}{derivative}};}
+\DoxyCodeLine{00075\ \ \ \ \ this-\/>\doxymbox{\hyperlink{class_p_i_d_a1a5c8f27b61a74868f874cc6df3a2639}{saturated}}\ =\ (this-\/>\doxymbox{\hyperlink{class_p_i_d_ad6f67ea0bed5ed7dd4e2a8d447d68a00}{pidNoIntegral}}\ >\ this-\/>\doxymbox{\hyperlink{class_p_i_d_a5867b916c0c69eeeebf997701c8157b2}{outputMax}})\ ||\ (this-\/>\doxymbox{\hyperlink{class_p_i_d_ad6f67ea0bed5ed7dd4e2a8d447d68a00}{pidNoIntegral\ <\ this-\/>}}\doxymbox{\hyperlink{class_p_i_d_a996d72c3183fc2e68260efd49db30521}{outputMin}});}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordflow}{if}\ (!this-\/>\doxymbox{\hyperlink{class_p_i_d_a1a5c8f27b61a74868f874cc6df3a2639}{saturated}})}
+\DoxyCodeLine{00078\ \ \ \ \ \{}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ this-\/>\doxymbox{\hyperlink{class_p_i_d_a0e5d49534b4925162583cc0b1e124a50}{integral}}\ +=\ this-\/>\doxymbox{\hyperlink{class_p_i_d_a58024226a4cabe7c195ec7f8ec41523b}{error}}\ *\ this-\/>\doxymbox{\hyperlink{class_p_i_d_aa2ba5bce664ff9fd12efcf22bf6be7a9}{dt}};}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>\doxymbox{\hyperlink{class_p_i_d_a0e5d49534b4925162583cc0b1e124a50}{integral}}\ >\ this-\/>\doxymbox{\hyperlink{class_p_i_d_a5867b916c0c69eeeebf997701c8157b2}{outputMax}})\ this-\/>\doxymbox{\hyperlink{class_p_i_d_a0e5d49534b4925162583cc0b1e124a50}{integral}}\ =\ this-\/>\doxymbox{\hyperlink{class_p_i_d_a5867b916c0c69eeeebf997701c8157b2}{outputMax}};}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>\doxymbox{\hyperlink{class_p_i_d_a0e5d49534b4925162583cc0b1e124a50}{integral\ <\ this-\/>}}\doxymbox{\hyperlink{class_p_i_d_a996d72c3183fc2e68260efd49db30521}{outputMin}})\ this-\/>\doxymbox{\hyperlink{class_p_i_d_a0e5d49534b4925162583cc0b1e124a50}{integral}}\ =\ this-\/>\doxymbox{\hyperlink{class_p_i_d_a996d72c3183fc2e68260efd49db30521}{outputMin}};}
+\DoxyCodeLine{00083\ \ \ \ \ \}}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{comment}{//\ 5)\ PID\ completo\ sin\ limitación\ de\ cambio}}
+\DoxyCodeLine{00086\ \ \ \ \ this-\/>\doxymbox{\hyperlink{class_p_i_d_a9760d4d6ce3a52353ac44cd997f50dc5}{rawOutput}}\ =\ this-\/>\doxymbox{\hyperlink{class_p_i_d_ab9dcad835103e9ad160c57f329f40e10}{proportional}}\ +}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (this-\/>\doxymbox{\hyperlink{class_p_i_d_ab48eeec8704e5d517a64b91fbe4fba57}{Ki}}\ *\ this-\/>\doxymbox{\hyperlink{class_p_i_d_a0e5d49534b4925162583cc0b1e124a50}{integral}})\ +}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (this-\/>\doxymbox{\hyperlink{class_p_i_d_a105396cb94f3ec2f352b3d116529112b}{Kd}}\ *\ this-\/>\doxymbox{\hyperlink{class_p_i_d_a65e03137e6442acb9852b8626220b6d3}{derivative}});}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{comment}{//\ 6)\ Slew-\/rate\ limit}}
+\DoxyCodeLine{00091\ \ \ \ \ this-\/>\doxymbox{\hyperlink{class_p_i_d_a50e3a777a99f13b048d9ece43dcf4dfc}{deltaOutput}}\ =\ this-\/>\doxymbox{\hyperlink{class_p_i_d_a9760d4d6ce3a52353ac44cd997f50dc5}{rawOutput}}\ -\/\ this-\/>\doxymbox{\hyperlink{class_p_i_d_aa93700f20d6bcefe7c96ca08240e748b}{prevOutput}};}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>\doxymbox{\hyperlink{class_p_i_d_a50e3a777a99f13b048d9ece43dcf4dfc}{deltaOutput}}\ >\ this-\/>\doxymbox{\hyperlink{class_p_i_d_a84fa4441b8b7275ea55d0d2c6a44febf}{outputMaxChanged}})}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ this-\/>\doxymbox{\hyperlink{class_p_i_d_a5d214a65132fc8545eb5d58a537a804a}{output}}\ =\ this-\/>\doxymbox{\hyperlink{class_p_i_d_aa93700f20d6bcefe7c96ca08240e748b}{prevOutput}}\ +\ this-\/>\doxymbox{\hyperlink{class_p_i_d_a84fa4441b8b7275ea55d0d2c6a44febf}{outputMaxChanged}};}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (this-\/>\doxymbox{\hyperlink{class_p_i_d_a50e3a777a99f13b048d9ece43dcf4dfc}{deltaOutput\ <\ -\/this-\/>}}\doxymbox{\hyperlink{class_p_i_d_a84fa4441b8b7275ea55d0d2c6a44febf}{outputMaxChanged}})}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ this-\/>\doxymbox{\hyperlink{class_p_i_d_a5d214a65132fc8545eb5d58a537a804a}{output}}\ =\ this-\/>\doxymbox{\hyperlink{class_p_i_d_aa93700f20d6bcefe7c96ca08240e748b}{prevOutput}}\ -\/\ this-\/>\doxymbox{\hyperlink{class_p_i_d_a84fa4441b8b7275ea55d0d2c6a44febf}{outputMaxChanged}};}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ this-\/>\doxymbox{\hyperlink{class_p_i_d_a5d214a65132fc8545eb5d58a537a804a}{output}}\ =\ this-\/>\doxymbox{\hyperlink{class_p_i_d_a9760d4d6ce3a52353ac44cd997f50dc5}{rawOutput}};}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{comment}{//\ 7)\ Saturación\ final}}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>\doxymbox{\hyperlink{class_p_i_d_a5d214a65132fc8545eb5d58a537a804a}{output}}\ >\ this-\/>\doxymbox{\hyperlink{class_p_i_d_a5867b916c0c69eeeebf997701c8157b2}{outputMax}})\ this-\/>\doxymbox{\hyperlink{class_p_i_d_a5d214a65132fc8545eb5d58a537a804a}{output}}\ =\ this-\/>\doxymbox{\hyperlink{class_p_i_d_a5867b916c0c69eeeebf997701c8157b2}{outputMax}};}
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>\doxymbox{\hyperlink{class_p_i_d_a5d214a65132fc8545eb5d58a537a804a}{output\ <\ this-\/>}}\doxymbox{\hyperlink{class_p_i_d_a996d72c3183fc2e68260efd49db30521}{outputMin}})\ this-\/>\doxymbox{\hyperlink{class_p_i_d_a5d214a65132fc8545eb5d58a537a804a}{output}}\ =\ this-\/>\doxymbox{\hyperlink{class_p_i_d_a996d72c3183fc2e68260efd49db30521}{outputMin}};}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{comment}{//\ 8)\ Guardar\ estado}}
+\DoxyCodeLine{00105\ \ \ \ \ this-\/>\doxymbox{\hyperlink{class_p_i_d_a482b5f6204d925cc2ed9079c06a1dbcd}{prevError}}\ =\ this-\/>\doxymbox{\hyperlink{class_p_i_d_a58024226a4cabe7c195ec7f8ec41523b}{error}};}
+\DoxyCodeLine{00106\ \ \ \ \ this-\/>\doxymbox{\hyperlink{class_p_i_d_ab1b409b1b5a3113d73c4b1d15946c6b1}{prevFeedback}}\ =\ feedback;}
+\DoxyCodeLine{00107\ \ \ \ \ this-\/>\doxymbox{\hyperlink{class_p_i_d_aa93700f20d6bcefe7c96ca08240e748b}{prevOutput}}\ =\ this-\/>\doxymbox{\hyperlink{class_p_i_d_a5d214a65132fc8545eb5d58a537a804a}{output}};}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{comment}{//\ 9)\ Debug}}
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordflow}{if}\ (debugMSG)\ \doxymbox{\hyperlink{class_p_i_d_a7263b32d21a2759144d935442db72191}{printDebugPID}}(setpoint,\ feedback);}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>\doxymbox{\hyperlink{class_p_i_d_a5d214a65132fc8545eb5d58a537a804a}{output}};}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \};}
+
+\end{DoxyCode}
+Gráfico de llamadas de esta función:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{class_p_i_d_af0cfbed86d613536bbd2b6220139d0c4_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{class_p_i_d_af0cfbed86d613536bbd2b6220139d0c4_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_p_i_d_a7263b32d21a2759144d935442db72191}\index{PID@{PID}!printDebugPID@{printDebugPID}}
+\index{printDebugPID@{printDebugPID}!PID@{PID}}
+\doxysubsubsection{\texorpdfstring{printDebugPID()}{printDebugPID()}}
+{\footnotesize\ttfamily \label{class_p_i_d_a7263b32d21a2759144d935442db72191} 
+void PID::\+print\+Debug\+PID (\begin{DoxyParamCaption}\item[{float}]{setpoint}{, }\item[{float}]{feedback}{}\end{DoxyParamCaption})}
+
+
+
+Imprime información de depuración del \doxylink{class_p_i_d}{PID}. 
+
+Muestra en consola el estado interno del \doxylink{class_p_i_d}{PID} en formato tabla.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em setpoint} & Valor deseado. \\
+\hline
+{\em feedback} & Valor medido. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \doxymbox{\hyperlink{pid_8cpp_source_l00188}{188}} del archivo \doxymbox{\hyperlink{pid_8cpp_source}{pid.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00189\ \{}
+\DoxyCodeLine{00190\ \ \ \ \ Serial.println(F(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}}));}
+\DoxyCodeLine{00191\ \ \ \ \ Serial.println(F(\textcolor{stringliteral}{"{}|\ \ SP\ \ |\ \ FB\ \ |\ Error\ |\ \ \ \ P\ \ \ \ \ |\ \ \ \ I\ \ \ \ \ |\ \ \ \ D\ \ \ \ \ |\ RawOut\ |\ \ Out\ \ |"{}}));}
+\DoxyCodeLine{00192\ \ \ \ \ Serial.println(F(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}}));}
+\DoxyCodeLine{00193\ }
+\DoxyCodeLine{00194\ \ \ \ \ Serial.print(F(\textcolor{stringliteral}{"{}|\ "{}}));}
+\DoxyCodeLine{00195\ \ \ \ \ Serial.print(setpoint,\ 3);}
+\DoxyCodeLine{00196\ \ \ \ \ Serial.print(F(\textcolor{stringliteral}{"{}\ |\ "{}}));}
+\DoxyCodeLine{00197\ }
+\DoxyCodeLine{00198\ \ \ \ \ Serial.print(feedback,\ 3);}
+\DoxyCodeLine{00199\ \ \ \ \ Serial.print(F(\textcolor{stringliteral}{"{}\ |\ "{}}));}
+\DoxyCodeLine{00200\ }
+\DoxyCodeLine{00201\ \ \ \ \ Serial.print(this-\/>\doxymbox{\hyperlink{class_p_i_d_a58024226a4cabe7c195ec7f8ec41523b}{error}},\ 3);}
+\DoxyCodeLine{00202\ \ \ \ \ Serial.print(F(\textcolor{stringliteral}{"{}\ |\ "{}}));}
+\DoxyCodeLine{00203\ }
+\DoxyCodeLine{00204\ \ \ \ \ Serial.print(this-\/>\doxymbox{\hyperlink{class_p_i_d_ab9dcad835103e9ad160c57f329f40e10}{proportional}},\ 3);}
+\DoxyCodeLine{00205\ \ \ \ \ Serial.print(F(\textcolor{stringliteral}{"{}\ |\ "{}}));}
+\DoxyCodeLine{00206\ }
+\DoxyCodeLine{00207\ \ \ \ \ Serial.print(this-\/>\doxymbox{\hyperlink{class_p_i_d_a0e5d49534b4925162583cc0b1e124a50}{integral}},\ 3);}
+\DoxyCodeLine{00208\ \ \ \ \ Serial.print(F(\textcolor{stringliteral}{"{}\ |\ "{}}));}
+\DoxyCodeLine{00209\ }
+\DoxyCodeLine{00210\ \ \ \ \ Serial.print(this-\/>\doxymbox{\hyperlink{class_p_i_d_a65e03137e6442acb9852b8626220b6d3}{derivative}},\ 3);}
+\DoxyCodeLine{00211\ \ \ \ \ Serial.print(F(\textcolor{stringliteral}{"{}\ |\ "{}}));}
+\DoxyCodeLine{00212\ }
+\DoxyCodeLine{00213\ \ \ \ \ Serial.print(this-\/>\doxymbox{\hyperlink{class_p_i_d_a9760d4d6ce3a52353ac44cd997f50dc5}{rawOutput}},\ 3);}
+\DoxyCodeLine{00214\ \ \ \ \ Serial.print(F(\textcolor{stringliteral}{"{}\ |\ "{}}));}
+\DoxyCodeLine{00215\ }
+\DoxyCodeLine{00216\ \ \ \ \ Serial.print(this-\/>\doxymbox{\hyperlink{class_p_i_d_a5d214a65132fc8545eb5d58a537a804a}{output}},\ 3);}
+\DoxyCodeLine{00217\ \ \ \ \ Serial.println(F(\textcolor{stringliteral}{"{}\ |"{}}));}
+\DoxyCodeLine{00218\ }
+\DoxyCodeLine{00219\ \ \ \ \ Serial.println(F(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}}));}
+\DoxyCodeLine{00220\ \}}
+
+\end{DoxyCode}
+Gráfico de llamadas a esta función:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_p_i_d_a7263b32d21a2759144d935442db72191_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_p_i_d_a4ec46f614451079f4485319d4d5a7477}\index{PID@{PID}!resetPID@{resetPID}}
+\index{resetPID@{resetPID}!PID@{PID}}
+\doxysubsubsection{\texorpdfstring{resetPID()}{resetPID()}}
+{\footnotesize\ttfamily \label{class_p_i_d_a4ec46f614451079f4485319d4d5a7477} 
+void PID::\+reset\+PID (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Reinicia el estado interno del \doxylink{class_p_i_d}{PID}. 
+
+
+
+Definición en la línea \doxymbox{\hyperlink{pid_8cpp_source_l00156}{156}} del archivo \doxymbox{\hyperlink{pid_8cpp_source}{pid.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00157\ \{}
+\DoxyCodeLine{00158\ \ \ \ \ this-\/>\doxymbox{\hyperlink{class_p_i_d_a58024226a4cabe7c195ec7f8ec41523b}{error}}\ =\ 0.0f;}
+\DoxyCodeLine{00159\ \ \ \ \ this-\/>\doxymbox{\hyperlink{class_p_i_d_a482b5f6204d925cc2ed9079c06a1dbcd}{prevError}}\ =\ 0.0f;}
+\DoxyCodeLine{00160\ \ \ \ \ this-\/>\doxymbox{\hyperlink{class_p_i_d_a0e5d49534b4925162583cc0b1e124a50}{integral}}\ =\ 0.0f;}
+\DoxyCodeLine{00161\ \ \ \ \ this-\/>\doxymbox{\hyperlink{class_p_i_d_a65e03137e6442acb9852b8626220b6d3}{derivative}}\ =\ 0.0f;}
+\DoxyCodeLine{00162\ \ \ \ \ this-\/>\doxymbox{\hyperlink{class_p_i_d_a5d214a65132fc8545eb5d58a537a804a}{output}}\ =\ 0.0f;}
+\DoxyCodeLine{00163\ \ \ \ \ this-\/>\doxymbox{\hyperlink{class_p_i_d_ab1b409b1b5a3113d73c4b1d15946c6b1}{prevFeedback}}\ =\ 0.0f;}
+\DoxyCodeLine{00164\ \ \ \ \ this-\/>\doxymbox{\hyperlink{class_p_i_d_aa93700f20d6bcefe7c96ca08240e748b}{prevOutput}}\ =\ 0.0f;}
+\DoxyCodeLine{00165\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_p_i_d_ae55a80080d8196166d5a203c6b0131f5}\index{PID@{PID}!setDt@{setDt}}
+\index{setDt@{setDt}!PID@{PID}}
+\doxysubsubsection{\texorpdfstring{setDt()}{setDt()}}
+{\footnotesize\ttfamily \label{class_p_i_d_ae55a80080d8196166d5a203c6b0131f5} 
+void PID::\+set\+Dt (\begin{DoxyParamCaption}\item[{float}]{dt}{}\end{DoxyParamCaption})}
+
+
+
+Establece un nuevo tiempo de muestreo. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em \doxylink{class_p_i_d_aa2ba5bce664ff9fd12efcf22bf6be7a9}{dt}} & Nuevo dt. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \doxymbox{\hyperlink{pid_8cpp_source_l00148}{148}} del archivo \doxymbox{\hyperlink{pid_8cpp_source}{pid.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00149\ \{}
+\DoxyCodeLine{00150\ \ \ \ \ this-\/>\doxymbox{\hyperlink{class_p_i_d_aa2ba5bce664ff9fd12efcf22bf6be7a9}{dt}}\ =\ \doxymbox{\hyperlink{class_p_i_d_a5cdc6d7cb5e1520722dc764b21eb6f09}{statedt}}(\doxymbox{\hyperlink{class_p_i_d_aa2ba5bce664ff9fd12efcf22bf6be7a9}{dt}});}
+\DoxyCodeLine{00151\ \}}
+
+\end{DoxyCode}
+Gráfico de llamadas de esta función:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{class_p_i_d_ae55a80080d8196166d5a203c6b0131f5_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_p_i_d_af904362d0e2a6db02cd744af9edcf5bf}\index{PID@{PID}!setKPID@{setKPID}}
+\index{setKPID@{setKPID}!PID@{PID}}
+\doxysubsubsection{\texorpdfstring{setKPID()}{setKPID()}}
+{\footnotesize\ttfamily \label{class_p_i_d_af904362d0e2a6db02cd744af9edcf5bf} 
+void PID::\+set\+KPID (\begin{DoxyParamCaption}\item[{float}]{Kp}{, }\item[{float}]{Ki}{, }\item[{float}]{Kd}{}\end{DoxyParamCaption})}
+
+
+
+Establece nuevas ganancias \doxylink{class_p_i_d}{PID}. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em \doxylink{class_p_i_d_a67f2b50c209d4de6a20c710b33b62f0e}{Kp}} & Nueva ganancia proporcional. \\
+\hline
+{\em \doxylink{class_p_i_d_ab48eeec8704e5d517a64b91fbe4fba57}{Ki}} & Nueva ganancia integral. \\
+\hline
+{\em \doxylink{class_p_i_d_a105396cb94f3ec2f352b3d116529112b}{Kd}} & Nueva ganancia derivativa. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \doxymbox{\hyperlink{pid_8cpp_source_l00124}{124}} del archivo \doxymbox{\hyperlink{pid_8cpp_source}{pid.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00125\ \{}
+\DoxyCodeLine{00126\ \ \ \ \ this-\/>\doxymbox{\hyperlink{class_p_i_d_a67f2b50c209d4de6a20c710b33b62f0e}{Kp}}\ =\ \doxymbox{\hyperlink{class_p_i_d_a67f2b50c209d4de6a20c710b33b62f0e}{Kp}};}
+\DoxyCodeLine{00127\ \ \ \ \ this-\/>\doxymbox{\hyperlink{class_p_i_d_ab48eeec8704e5d517a64b91fbe4fba57}{Ki}}\ =\ \doxymbox{\hyperlink{class_p_i_d_ab48eeec8704e5d517a64b91fbe4fba57}{Ki}};}
+\DoxyCodeLine{00128\ \ \ \ \ this-\/>\doxymbox{\hyperlink{class_p_i_d_a105396cb94f3ec2f352b3d116529112b}{Kd}}\ =\ \doxymbox{\hyperlink{class_p_i_d_a105396cb94f3ec2f352b3d116529112b}{Kd}};}
+\DoxyCodeLine{00129\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_p_i_d_a8de60a65c98638c43bc070b5bd32e77e}\index{PID@{PID}!setOutputLimits@{setOutputLimits}}
+\index{setOutputLimits@{setOutputLimits}!PID@{PID}}
+\doxysubsubsection{\texorpdfstring{setOutputLimits()}{setOutputLimits()}}
+{\footnotesize\ttfamily \label{class_p_i_d_a8de60a65c98638c43bc070b5bd32e77e} 
+void PID::\+set\+Output\+Limits (\begin{DoxyParamCaption}\item[{float}]{output\+Min}{, }\item[{float}]{output\+Max}{}\end{DoxyParamCaption})}
+
+
+
+Establece los límites de salida del \doxylink{class_p_i_d}{PID}. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em \doxylink{class_p_i_d_a996d72c3183fc2e68260efd49db30521}{output\+Min}} & Nuevo límite mínimo. \\
+\hline
+{\em \doxylink{class_p_i_d_a5867b916c0c69eeeebf997701c8157b2}{output\+Max}} & Nuevo límite máximo. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \doxymbox{\hyperlink{pid_8cpp_source_l00137}{137}} del archivo \doxymbox{\hyperlink{pid_8cpp_source}{pid.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00138\ \{}
+\DoxyCodeLine{00139\ \ \ \ \ this-\/>\doxymbox{\hyperlink{class_p_i_d_a996d72c3183fc2e68260efd49db30521}{outputMin}}\ =\ \doxymbox{\hyperlink{class_p_i_d_a996d72c3183fc2e68260efd49db30521}{outputMin}};}
+\DoxyCodeLine{00140\ \ \ \ \ this-\/>\doxymbox{\hyperlink{class_p_i_d_a5867b916c0c69eeeebf997701c8157b2}{outputMax}}\ =\ \doxymbox{\hyperlink{class_p_i_d_a5867b916c0c69eeeebf997701c8157b2}{outputMax}};}
+\DoxyCodeLine{00141\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_p_i_d_a5cdc6d7cb5e1520722dc764b21eb6f09}\index{PID@{PID}!statedt@{statedt}}
+\index{statedt@{statedt}!PID@{PID}}
+\doxysubsubsection{\texorpdfstring{statedt()}{statedt()}}
+{\footnotesize\ttfamily \label{class_p_i_d_a5cdc6d7cb5e1520722dc764b21eb6f09} 
+float PID::\+statedt (\begin{DoxyParamCaption}\item[{float}]{dt}{}\end{DoxyParamCaption})}
+
+
+
+Valida y corrige el tiempo de muestreo. 
+
+Valida el tiempo de muestreo.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em \doxylink{class_p_i_d_aa2ba5bce664ff9fd12efcf22bf6be7a9}{dt}} & Tiempo de muestreo solicitado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+dt válido (mínimo 0.\+1f). 
+\end{DoxyReturn}
+
+
+Definición en la línea \doxymbox{\hyperlink{pid_8cpp_source_l00173}{173}} del archivo \doxymbox{\hyperlink{pid_8cpp_source}{pid.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00174\ \{}
+\DoxyCodeLine{00175\ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_p_i_d_aa2ba5bce664ff9fd12efcf22bf6be7a9}{dt}}\ <=\ 0.0f)}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0.1f;}
+\DoxyCodeLine{00177\ }
+\DoxyCodeLine{00178\ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_p_i_d_aa2ba5bce664ff9fd12efcf22bf6be7a9}{dt}};}
+\DoxyCodeLine{00179\ \}}
+
+\end{DoxyCode}
+Gráfico de llamadas a esta función:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{class_p_i_d_a5cdc6d7cb5e1520722dc764b21eb6f09_icgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_p_i_d_doc-variable-members}
+\doxysubsection{Documentación de datos miembro}
+\Hypertarget{class_p_i_d_a50e3a777a99f13b048d9ece43dcf4dfc}\index{PID@{PID}!deltaOutput@{deltaOutput}}
+\index{deltaOutput@{deltaOutput}!PID@{PID}}
+\doxysubsubsection{\texorpdfstring{deltaOutput}{deltaOutput}}
+{\footnotesize\ttfamily \label{class_p_i_d_a50e3a777a99f13b048d9ece43dcf4dfc} 
+float PID::\+delta\+Output\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Cambio entre salidas. 
+
+
+
+Definición en la línea \doxymbox{\hyperlink{pid_8h_source_l00113}{113}} del archivo \doxymbox{\hyperlink{pid_8h_source}{pid.\+h}}.
+
+\Hypertarget{class_p_i_d_a65e03137e6442acb9852b8626220b6d3}\index{PID@{PID}!derivative@{derivative}}
+\index{derivative@{derivative}!PID@{PID}}
+\doxysubsubsection{\texorpdfstring{derivative}{derivative}}
+{\footnotesize\ttfamily \label{class_p_i_d_a65e03137e6442acb9852b8626220b6d3} 
+float PID::\+derivative\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Término derivativo. 
+
+
+
+Definición en la línea \doxymbox{\hyperlink{pid_8h_source_l00109}{109}} del archivo \doxymbox{\hyperlink{pid_8h_source}{pid.\+h}}.
+
+\Hypertarget{class_p_i_d_aa2ba5bce664ff9fd12efcf22bf6be7a9}\index{PID@{PID}!dt@{dt}}
+\index{dt@{dt}!PID@{PID}}
+\doxysubsubsection{\texorpdfstring{dt}{dt}}
+{\footnotesize\ttfamily \label{class_p_i_d_aa2ba5bce664ff9fd12efcf22bf6be7a9} 
+float PID::\+dt\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Tiempo de muestreo. 
+
+
+
+Definición en la línea \doxymbox{\hyperlink{pid_8h_source_l00100}{100}} del archivo \doxymbox{\hyperlink{pid_8h_source}{pid.\+h}}.
+
+\Hypertarget{class_p_i_d_a58024226a4cabe7c195ec7f8ec41523b}\index{PID@{PID}!error@{error}}
+\index{error@{error}!PID@{PID}}
+\doxysubsubsection{\texorpdfstring{error}{error}}
+{\footnotesize\ttfamily \label{class_p_i_d_a58024226a4cabe7c195ec7f8ec41523b} 
+float PID::\+error\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Error actual. 
+
+
+
+Definición en la línea \doxymbox{\hyperlink{pid_8h_source_l00103}{103}} del archivo \doxymbox{\hyperlink{pid_8h_source}{pid.\+h}}.
+
+\Hypertarget{class_p_i_d_a0e5d49534b4925162583cc0b1e124a50}\index{PID@{PID}!integral@{integral}}
+\index{integral@{integral}!PID@{PID}}
+\doxysubsubsection{\texorpdfstring{integral}{integral}}
+{\footnotesize\ttfamily \label{class_p_i_d_a0e5d49534b4925162583cc0b1e124a50} 
+float PID::\+integral\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Acumulador integral. 
+
+
+
+Definición en la línea \doxymbox{\hyperlink{pid_8h_source_l00106}{106}} del archivo \doxymbox{\hyperlink{pid_8h_source}{pid.\+h}}.
+
+\Hypertarget{class_p_i_d_a105396cb94f3ec2f352b3d116529112b}\index{PID@{PID}!Kd@{Kd}}
+\index{Kd@{Kd}!PID@{PID}}
+\doxysubsubsection{\texorpdfstring{Kd}{Kd}}
+{\footnotesize\ttfamily \label{class_p_i_d_a105396cb94f3ec2f352b3d116529112b} 
+float PID::\+\+Kd\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Ganancia derivativa. 
+
+
+
+Definición en la línea \doxymbox{\hyperlink{pid_8h_source_l00093}{93}} del archivo \doxymbox{\hyperlink{pid_8h_source}{pid.\+h}}.
+
+\Hypertarget{class_p_i_d_ab48eeec8704e5d517a64b91fbe4fba57}\index{PID@{PID}!Ki@{Ki}}
+\index{Ki@{Ki}!PID@{PID}}
+\doxysubsubsection{\texorpdfstring{Ki}{Ki}}
+{\footnotesize\ttfamily \label{class_p_i_d_ab48eeec8704e5d517a64b91fbe4fba57} 
+float PID::\+\+Ki\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Ganancia integral. 
+
+
+
+Definición en la línea \doxymbox{\hyperlink{pid_8h_source_l00092}{92}} del archivo \doxymbox{\hyperlink{pid_8h_source}{pid.\+h}}.
+
+\Hypertarget{class_p_i_d_a67f2b50c209d4de6a20c710b33b62f0e}\index{PID@{PID}!Kp@{Kp}}
+\index{Kp@{Kp}!PID@{PID}}
+\doxysubsubsection{\texorpdfstring{Kp}{Kp}}
+{\footnotesize\ttfamily \label{class_p_i_d_a67f2b50c209d4de6a20c710b33b62f0e} 
+float PID::\+\+Kp\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Ganancia proporcional. 
+
+
+
+Definición en la línea \doxymbox{\hyperlink{pid_8h_source_l00091}{91}} del archivo \doxymbox{\hyperlink{pid_8h_source}{pid.\+h}}.
+
+\Hypertarget{class_p_i_d_a5d214a65132fc8545eb5d58a537a804a}\index{PID@{PID}!output@{output}}
+\index{output@{output}!PID@{PID}}
+\doxysubsubsection{\texorpdfstring{output}{output}}
+{\footnotesize\ttfamily \label{class_p_i_d_a5d214a65132fc8545eb5d58a537a804a} 
+float PID::\+output\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Salida final del \doxylink{class_p_i_d}{PID}. 
+
+
+
+Definición en la línea \doxymbox{\hyperlink{pid_8h_source_l00110}{110}} del archivo \doxymbox{\hyperlink{pid_8h_source}{pid.\+h}}.
+
+\Hypertarget{class_p_i_d_a5867b916c0c69eeeebf997701c8157b2}\index{PID@{PID}!outputMax@{outputMax}}
+\index{outputMax@{outputMax}!PID@{PID}}
+\doxysubsubsection{\texorpdfstring{outputMax}{outputMax}}
+{\footnotesize\ttfamily \label{class_p_i_d_a5867b916c0c69eeeebf997701c8157b2} 
+float PID::\+output\+Max\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Límite máximo de salida. 
+
+
+
+Definición en la línea \doxymbox{\hyperlink{pid_8h_source_l00097}{97}} del archivo \doxymbox{\hyperlink{pid_8h_source}{pid.\+h}}.
+
+\Hypertarget{class_p_i_d_a84fa4441b8b7275ea55d0d2c6a44febf}\index{PID@{PID}!outputMaxChanged@{outputMaxChanged}}
+\index{outputMaxChanged@{outputMaxChanged}!PID@{PID}}
+\doxysubsubsection{\texorpdfstring{outputMaxChanged}{outputMaxChanged}}
+{\footnotesize\ttfamily \label{class_p_i_d_a84fa4441b8b7275ea55d0d2c6a44febf} 
+float PID::\+output\+Max\+Changed\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Máximo cambio permitido por ciclo. 
+
+
+
+Definición en la línea \doxymbox{\hyperlink{pid_8h_source_l00117}{117}} del archivo \doxymbox{\hyperlink{pid_8h_source}{pid.\+h}}.
+
+\Hypertarget{class_p_i_d_a996d72c3183fc2e68260efd49db30521}\index{PID@{PID}!outputMin@{outputMin}}
+\index{outputMin@{outputMin}!PID@{PID}}
+\doxysubsubsection{\texorpdfstring{outputMin}{outputMin}}
+{\footnotesize\ttfamily \label{class_p_i_d_a996d72c3183fc2e68260efd49db30521} 
+float PID::\+output\+Min\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Límite mínimo de salida. 
+
+
+
+Definición en la línea \doxymbox{\hyperlink{pid_8h_source_l00096}{96}} del archivo \doxymbox{\hyperlink{pid_8h_source}{pid.\+h}}.
+
+\Hypertarget{class_p_i_d_ad6f67ea0bed5ed7dd4e2a8d447d68a00}\index{PID@{PID}!pidNoIntegral@{pidNoIntegral}}
+\index{pidNoIntegral@{pidNoIntegral}!PID@{PID}}
+\doxysubsubsection{\texorpdfstring{pidNoIntegral}{pidNoIntegral}}
+{\footnotesize\ttfamily \label{class_p_i_d_ad6f67ea0bed5ed7dd4e2a8d447d68a00} 
+float PID::\+pid\+No\+Integral\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxylink{class_p_i_d}{PID} sin término integral. 
+
+
+
+Definición en la línea \doxymbox{\hyperlink{pid_8h_source_l00107}{107}} del archivo \doxymbox{\hyperlink{pid_8h_source}{pid.\+h}}.
+
+\Hypertarget{class_p_i_d_a482b5f6204d925cc2ed9079c06a1dbcd}\index{PID@{PID}!prevError@{prevError}}
+\index{prevError@{prevError}!PID@{PID}}
+\doxysubsubsection{\texorpdfstring{prevError}{prevError}}
+{\footnotesize\ttfamily \label{class_p_i_d_a482b5f6204d925cc2ed9079c06a1dbcd} 
+float PID::\+prev\+Error\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Error previo. 
+
+
+
+Definición en la línea \doxymbox{\hyperlink{pid_8h_source_l00104}{104}} del archivo \doxymbox{\hyperlink{pid_8h_source}{pid.\+h}}.
+
+\Hypertarget{class_p_i_d_ab1b409b1b5a3113d73c4b1d15946c6b1}\index{PID@{PID}!prevFeedback@{prevFeedback}}
+\index{prevFeedback@{prevFeedback}!PID@{PID}}
+\doxysubsubsection{\texorpdfstring{prevFeedback}{prevFeedback}}
+{\footnotesize\ttfamily \label{class_p_i_d_ab1b409b1b5a3113d73c4b1d15946c6b1} 
+float PID::\+prev\+Feedback\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Feedback previo para derivative-\/on-\/measurement. 
+
+
+
+Definición en la línea \doxymbox{\hyperlink{pid_8h_source_l00114}{114}} del archivo \doxymbox{\hyperlink{pid_8h_source}{pid.\+h}}.
+
+\Hypertarget{class_p_i_d_aa93700f20d6bcefe7c96ca08240e748b}\index{PID@{PID}!prevOutput@{prevOutput}}
+\index{prevOutput@{prevOutput}!PID@{PID}}
+\doxysubsubsection{\texorpdfstring{prevOutput}{prevOutput}}
+{\footnotesize\ttfamily \label{class_p_i_d_aa93700f20d6bcefe7c96ca08240e748b} 
+float PID::\+prev\+Output\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Salida previa. 
+
+
+
+Definición en la línea \doxymbox{\hyperlink{pid_8h_source_l00112}{112}} del archivo \doxymbox{\hyperlink{pid_8h_source}{pid.\+h}}.
+
+\Hypertarget{class_p_i_d_ab9dcad835103e9ad160c57f329f40e10}\index{PID@{PID}!proportional@{proportional}}
+\index{proportional@{proportional}!PID@{PID}}
+\doxysubsubsection{\texorpdfstring{proportional}{proportional}}
+{\footnotesize\ttfamily \label{class_p_i_d_ab9dcad835103e9ad160c57f329f40e10} 
+float PID::\+proportional\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Término proporcional. 
+
+
+
+Definición en la línea \doxymbox{\hyperlink{pid_8h_source_l00105}{105}} del archivo \doxymbox{\hyperlink{pid_8h_source}{pid.\+h}}.
+
+\Hypertarget{class_p_i_d_a9760d4d6ce3a52353ac44cd997f50dc5}\index{PID@{PID}!rawOutput@{rawOutput}}
+\index{rawOutput@{rawOutput}!PID@{PID}}
+\doxysubsubsection{\texorpdfstring{rawOutput}{rawOutput}}
+{\footnotesize\ttfamily \label{class_p_i_d_a9760d4d6ce3a52353ac44cd997f50dc5} 
+float PID::\+raw\+Output\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Salida sin limitación de cambio. 
+
+
+
+Definición en la línea \doxymbox{\hyperlink{pid_8h_source_l00111}{111}} del archivo \doxymbox{\hyperlink{pid_8h_source}{pid.\+h}}.
+
+\Hypertarget{class_p_i_d_a1a5c8f27b61a74868f874cc6df3a2639}\index{PID@{PID}!saturated@{saturated}}
+\index{saturated@{saturated}!PID@{PID}}
+\doxysubsubsection{\texorpdfstring{saturated}{saturated}}
+{\footnotesize\ttfamily \label{class_p_i_d_a1a5c8f27b61a74868f874cc6df3a2639} 
+bool PID::\+saturated\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Indica si el \doxylink{class_p_i_d}{PID} está saturado. 
+
+
+
+Definición en la línea \doxymbox{\hyperlink{pid_8h_source_l00108}{108}} del archivo \doxymbox{\hyperlink{pid_8h_source}{pid.\+h}}.
+
+
+
+La documentación de esta clase está generada de los siguientes archivos:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{pid_8h}{pid.\+h}}\item 
+\doxymbox{\hyperlink{pid_8cpp}{pid.\+cpp}}\end{DoxyCompactItemize}

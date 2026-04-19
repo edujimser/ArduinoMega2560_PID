@@ -1,0 +1,11 @@
+<map id="DiagnosticsEEPROM::runTest" name="DiagnosticsEEPROM::runTest">
+<area shape="rect" id="Node000001" title="Runs a diagnostic test on the EEPROM at the specified address. Writes a test value,..." alt="" coords="5,99,160,139"/>
+<area shape="rect" id="Node000002" href="$class_diagnostics_e_e_p_r_o_m.html#ab5c18556e9ae3808c4aae242c9682d20" title="Clears the EEPROM at the specified address by writing 0xFF." alt="" coords="208,5,363,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="122,96,207,55,222,48,224,53,209,60,125,101"/>
+<area shape="rect" id="Node000003" href="$class_diagnostics_e_e_p_r_o_m.html#a33eee4f3578863e963ae78ccbecdec35" title="Estimates the amount of free RAM available on the system. Works on AVR&#45;based boards like Arduino Mega..." alt="" coords="208,69,363,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="160,105,194,100,195,105,161,110"/>
+<area shape="rect" id="Node000004" href="$msg_8cpp.html#abda2f504e4bfdbfbdd0cd8f8937f72f1" title="Prints a decorated header with centered text and padding on both sides." alt="" coords="218,134,353,159"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="161,127,205,133,204,138,160,132"/>
+<area shape="rect" id="Node000005" href="$msg_8cpp.html#a6ef1ee9724c4aa2cdcd16023815c107a" title="Prints an enriched log message to the serial monitor." alt="" coords="223,183,348,209"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="131,136,209,168,232,176,230,181,207,173,129,141"/>
+</map>

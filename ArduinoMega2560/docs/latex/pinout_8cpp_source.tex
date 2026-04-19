@@ -1,0 +1,250 @@
+\doxysection{pinout.\+cpp}
+\hypertarget{pinout_8cpp_source}{}\label{pinout_8cpp_source}\index{pinout.cpp@{pinout.cpp}}
+\doxymbox{\hyperlink{pinout_8cpp}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00001}00001\ \textcolor{comment}{//\ Include\ the\ necessary\ headers}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ <Arduino.h>}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{pinout_8h}{system/pinout/pinout.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00005}00005\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00006}00006\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00007}00007\ \textcolor{comment}{\ *\ @brief\ Ejecuta\ un\ diagnóstico\ completo\ de\ los\ pines\ digitales\ GPIO,\ PWM\ y\ analógicos.}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00008}00008\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00009}00009\ \textcolor{comment}{\ *\ Esta\ función:}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00010}00010\ \textcolor{comment}{\ *\ -\/\ Muestra\ un\ mensaje\ de\ inicio\ del\ diagnóstico.}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00011}00011\ \textcolor{comment}{\ *\ -\/\ Llama\ a\ diagnoseAnalog(),\ diagnoseGPIO()\ y\ diagnosePWM().}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00012}00012\ \textcolor{comment}{\ *\ -\/\ Muestra\ un\ mensaje\ de\ finalización.}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00013}00013\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00014}00014\ \textcolor{comment}{\ *\ Útil\ como\ prueba\ inicial\ del\ hardware\ al\ arrancar\ el\ sistema.}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00015}00015\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00016}\doxymbox{\hyperlink{pinout_8h_aa7a52c7f07b6793318c1e95e41b9c79a}{00016}}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{pinout_8cpp_aa7a52c7f07b6793318c1e95e41b9c79a}{fullDiagnosticsPins}}()\ \{}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00017}00017\ \ \ \ \ \doxymbox{\hyperlink{msg_8h_a6ef1ee9724c4aa2cdcd16023815c107a}{standardMessage}}(\textcolor{stringliteral}{"{}Starting\ PINOUT\ diagnostic"{}},\ \_\_FILE\_\_,\ \_\_FUNCTION\_\_,\ \_\_DATE\_\_,\ \_\_TIME\_\_);}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00019}00019\ \ \ \ \ \doxymbox{\hyperlink{pinout_8cpp_a78f24fdab5ead1139f3f21bb83161147}{diagnoseAnalog}}();\ \textcolor{comment}{//\ ANALOG\ pin\ diagnostic}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00020}00020\ \ \ \ \ \doxymbox{\hyperlink{pinout_8cpp_ad6ad9404cb3845eca0a1c5bf2d2d1932}{diagnoseGPIO}}();\ \ \ \textcolor{comment}{//\ GPIO\ pin\ diagnostic}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00021}00021\ \ \ \ \ \doxymbox{\hyperlink{pinout_8cpp_a271cb6214ddcfd09c0090119ed5159a0}{diagnosePWM}}();\ \ \ \ \textcolor{comment}{//\ PWM\ pin\ diagnosticº}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00023}00023\ \ \ \ \ \doxymbox{\hyperlink{msg_8h_ab596236a4ffe692e3e8da3dac004ef9c}{standardHeaderFull}}(\textcolor{stringliteral}{"{}Full\ diagnostic\ complete."{}},\ \_\_FILE\_\_,\ \_\_FUNCTION\_\_,\ \_\_DATE\_\_,\ \_\_TIME\_\_);}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00024}00024\ \};}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00026}00026\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00027}00027\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00028}00028\ \textcolor{comment}{\ *\ @brief\ Diagnostica\ el\ voltaje\ presente\ en\ los\ pines\ analógicos\ del\ sistema.}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00029}00029\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00030}00030\ \textcolor{comment}{\ *\ Recorre\ todos\ los\ pines\ definidos\ en\ \`{}Pins::ANALOG`,\ los\ configura\ como\ entrada,}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00031}00031\ \textcolor{comment}{\ *\ estabiliza\ la\ señal\ y\ realiza\ una\ lectura\ analógica.\ Convierte\ el\ valor\ leído}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00032}00032\ \textcolor{comment}{\ *\ a\ voltaje\ (asumiendo\ referencia\ de\ 5V)\ y\ lo\ muestra\ por\ Serial.}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00033}00033\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00034}00034\ \textcolor{comment}{\ *\ @note\ Incluye\ pequeñas\ demoras\ para\ estabilizar\ la\ señal.}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00035}00035\ \textcolor{comment}{\ *\ @warning\ Asegúrate\ de\ que\ el\ sistema\ use\ referencia\ de\ 5V\ para\ lecturas\ precisas.}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00036}00036\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00037}\doxymbox{\hyperlink{pinout_8h_a78f24fdab5ead1139f3f21bb83161147}{00037}}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{pinout_8cpp_a78f24fdab5ead1139f3f21bb83161147}{diagnoseAnalog}}()\ \{}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00038}00038\ \ \ \ \ \doxymbox{\hyperlink{msg_8h_ab596236a4ffe692e3e8da3dac004ef9c}{standardHeaderFull}}(\textcolor{stringliteral}{"{}⚡\ Detecting\ external\ voltage\ on\ ANALOG\ pins:"{}},\ \_\_FILE\_\_,\ \_\_FUNCTION\_\_,\ \_\_DATE\_\_,\ \_\_TIME\_\_);}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00040}00040\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ \doxymbox{\hyperlink{namespace_pins_a76406a151484ce00c13ad8ebf87477e5}{Pins::NUM\_ANALOG}};\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00041}00041\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_pin_info}{PinInfo}}\&\ pin\ =\ \doxymbox{\hyperlink{namespace_pins_ae5f8eceff18d6f68e695cc390033d330}{Pins::ANALOG}}[i];}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Forze\ the\ pin\ to\ OUTPUT\ for\ redux\ noise\ and\ stabily\ electric\ system}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00044}00044\ \ \ \ \ \ \ \ \ pinMode(pin.\doxymbox{\hyperlink{struct_pin_info_a01b05f88290fa5560587d73b2752a150}{number}},\ OUTPUT);\ }
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00045}00045\ \ \ \ \ \ \ \ \ digitalWrite(pin.\doxymbox{\hyperlink{struct_pin_info_a01b05f88290fa5560587d73b2752a150}{number}},\ LOW);\ }
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00046}00046\ \ \ \ \ \ \ \ \ delay(20);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00048}00048\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Read\ the\ pin\ as\ INPUT\ to\ detect\ voltage}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00049}00049\ \ \ \ \ \ \ \ \ pinMode(pin.\doxymbox{\hyperlink{struct_pin_info_a01b05f88290fa5560587d73b2752a150}{number}},\ INPUT);\ }
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00050}00050\ \ \ \ \ \ \ \ \ delay(20);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00052}00052\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ value\ =\ analogRead(pin.\doxymbox{\hyperlink{struct_pin_info_a01b05f88290fa5560587d73b2752a150}{number}});\ \textcolor{comment}{//\ Read\ analog\ value}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00053}00053\ \ \ \ \ \ \ \ \ delay(20);}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00054}00054\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ voltage\ =\ value\ *\ (5.0\ /\ 1023.0);\ \textcolor{comment}{//\ Convert\ to\ voltage\ (assuming\ 5V\ reference)}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00056}00056\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Forze\ the\ pin\ to\ OUTPUT\ for\ redux\ noise\ and\ stabily\ electric\ system}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00057}00057\ \ \ \ \ \ \ \ \ pinMode(pin.\doxymbox{\hyperlink{struct_pin_info_a01b05f88290fa5560587d73b2752a150}{number}},\ OUTPUT);\ }
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00058}00058\ \ \ \ \ \ \ \ \ digitalWrite(pin.\doxymbox{\hyperlink{struct_pin_info_a01b05f88290fa5560587d73b2752a150}{number}},\ LOW);}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00059}00059\ \ \ \ \ \ \ \ \ delay(20);}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00061}00061\ \ \ \ \ \ \ \ \ \textcolor{comment}{//State\ for\ default\ pin\ for\ init\ system}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00062}00062\ \ \ \ \ \ \ \ \ pinMode(pin.\doxymbox{\hyperlink{struct_pin_info_a01b05f88290fa5560587d73b2752a150}{number}},\ INPUT);}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00063}00063\ \ \ \ \ \ \ \ \ delay(20);}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00065}00065\ \ \ \ \ \ \ \ \ Serial.print(\textcolor{stringliteral}{"{}•\ "{}});}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00066}00066\ \ \ \ \ \ \ \ \ Serial.print(pin.\doxymbox{\hyperlink{struct_pin_info_aa9b1dd89dbd7e3a466ed96ced6b68b31}{name}});}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00067}00067\ \ \ \ \ \ \ \ \ Serial.print(\textcolor{stringliteral}{"{}\ [\#"{}});}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00068}00068\ \ \ \ \ \ \ \ \ Serial.print(pin.\doxymbox{\hyperlink{struct_pin_info_a01b05f88290fa5560587d73b2752a150}{number}});}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00069}00069\ \ \ \ \ \ \ \ \ Serial.print(\textcolor{stringliteral}{"{}]\ →\ Voltage:\ "{}});}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00070}00070\ \ \ \ \ \ \ \ \ Serial.print(voltage,2);}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00071}00071\ \ \ \ \ \ \ \ \ Serial.println(\textcolor{stringliteral}{"{}\ V"{}});}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00072}00072\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00073}00073\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00074}00074\ \};}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00076}00076\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00077}00077\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00078}00078\ \textcolor{comment}{\ *\ @brief\ Diagnóstico\ de\ pines\ GPIO\ configurados\ como\ entrada.}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00079}00079\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00080}00080\ \textcolor{comment}{\ *\ Configura\ cada\ pin\ GPIO\ como\ INPUT,\ estabiliza\ la\ señal\ y\ lee\ su\ estado.}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00081}00081\ \textcolor{comment}{\ *\ Informa\ si\ el\ pin\ tiene\ voltaje\ externo\ (HIGH)\ o\ está\ en\ LOW/GND.}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00082}00082\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00083}00083\ \textcolor{comment}{\ *\ @note\ Útil\ para\ detectar\ si\ un\ pin\ está\ conectado\ a\ tierra\ o\ flotando.}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00084}00084\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00085}\doxymbox{\hyperlink{pinout_8h_ad6ad9404cb3845eca0a1c5bf2d2d1932}{00085}}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{pinout_8cpp_ad6ad9404cb3845eca0a1c5bf2d2d1932}{diagnoseGPIO}}()\{}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00086}00086\ \ \ \ \ \doxymbox{\hyperlink{msg_8h_ab596236a4ffe692e3e8da3dac004ef9c}{standardHeaderFull}}(\textcolor{stringliteral}{"{}⚡\ Detecting\ external\ voltage\ on\ GPIO\ pins:"{}},\ \_\_FILE\_\_,\ \_\_FUNCTION\_\_,\ \_\_DATE\_\_,\ \_\_TIME\_\_);}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00088}00088\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ \doxymbox{\hyperlink{namespace_pins_a102474240ce6b18bcb2e658bb28754af}{Pins::NUM\_GPIO}};\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00089}00089\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_pin_info}{PinInfo}}\&\ pin\ =\ \doxymbox{\hyperlink{namespace_pins_a02d8a45378e890f65caf34971a2aee06}{Pins::GPIO}}[i];}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00090}00090\ }
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00091}00091\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Forze\ the\ pin\ to\ OUTPUT\ for\ redux\ noise\ and\ stabily\ electric\ system}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00092}00092\ \ \ \ \ \ \ \ \ pinMode(pin.\doxymbox{\hyperlink{struct_pin_info_a01b05f88290fa5560587d73b2752a150}{number}},\ OUTPUT);\ }
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00093}00093\ \ \ \ \ \ \ \ \ digitalWrite(pin.\doxymbox{\hyperlink{struct_pin_info_a01b05f88290fa5560587d73b2752a150}{number}},\ LOW);\ }
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00094}00094\ \ \ \ \ \ \ \ \ delay(20);\ }
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00095}00095\ }
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00096}00096\ \ \ \ \ \ \ \ \ pinMode(pin.\doxymbox{\hyperlink{struct_pin_info_a01b05f88290fa5560587d73b2752a150}{number}},\ INPUT);\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Set\ pin\ as\ input\ without\ pull-\/up}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00097}00097\ \ \ \ \ \ \ \ \ delay(5);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Allow\ signal\ to\ stabilize}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00098}00098\ }
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00099}00099\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ state\ =\ digitalRead(pin.\doxymbox{\hyperlink{struct_pin_info_a01b05f88290fa5560587d73b2752a150}{number}});\ \textcolor{comment}{//\ Read\ pin\ state}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00100}00100\ }
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00101}00101\ \ \ \ \ \ \ \ \ Serial.print(\textcolor{stringliteral}{"{}•\ "{}});}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00102}00102\ \ \ \ \ \ \ \ \ Serial.print(pin.\doxymbox{\hyperlink{struct_pin_info_aa9b1dd89dbd7e3a466ed96ced6b68b31}{name}});}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00103}00103\ \ \ \ \ \ \ \ \ Serial.print(\textcolor{stringliteral}{"{}\ [\#"{}});}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00104}00104\ \ \ \ \ \ \ \ \ Serial.print(pin.\doxymbox{\hyperlink{struct_pin_info_a01b05f88290fa5560587d73b2752a150}{number}});}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00105}00105\ \ \ \ \ \ \ \ \ Serial.print(\textcolor{stringliteral}{"{}]\ →\ Voltage:\ "{}});}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00106}00106\ }
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00107}00107\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (state\ ==\ HIGH)\ \{}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ Serial.println(\textcolor{stringliteral}{"{}⚡\ External\ voltage\ detected\ (HIGH)"{}});}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00109}00109\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ Serial.println(\textcolor{stringliteral}{"{}🔻\ No\ voltage\ (LOW\ or\ connected\ to\ GND)"{}});}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00111}00111\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00112}00112\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00113}00113\ }
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00114}00114\ \}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00115}00115\ }
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00116}00116\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00117}00117\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00118}00118\ \textcolor{comment}{\ *\ @brief\ Detecta\ la\ presencia\ de\ voltaje\ externo\ en\ pines\ PWM.}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00119}00119\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00120}00120\ \textcolor{comment}{\ *\ Configura\ cada\ pin\ PWM\ como\ entrada,\ estabiliza\ la\ señal\ y\ lee\ su\ estado\ digital.}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00121}00121\ \textcolor{comment}{\ *\ Informa\ si\ hay\ voltaje\ (HIGH)\ o\ no\ (LOW/GND).}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00122}00122\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00123}00123\ \textcolor{comment}{\ *\ @note\ No\ mide\ voltaje\ real,\ solo\ estado\ lógico.}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00124}00124\ \textcolor{comment}{\ *\ @note\ Para\ medir\ voltaje\ real,\ usar\ pines\ analógicos.}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00125}00125\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00126}\doxymbox{\hyperlink{pinout_8h_a271cb6214ddcfd09c0090119ed5159a0}{00126}}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{pinout_8cpp_a271cb6214ddcfd09c0090119ed5159a0}{diagnosePWM}}()\ \{}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00127}00127\ \ \ \ \ \doxymbox{\hyperlink{msg_8h_ab596236a4ffe692e3e8da3dac004ef9c}{standardHeaderFull}}(\textcolor{stringliteral}{"{}⚡\ Detecting\ voltage\ on\ PWM\ pins:"{}},\ \_\_FILE\_\_,\ \_\_FUNCTION\_\_,\ \_\_DATE\_\_,\ \_\_TIME\_\_);}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00128}00128\ }
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00129}00129\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ \doxymbox{\hyperlink{namespace_pins_ac4db2eceee724cbb769f8a079479a0c1}{Pins::NUM\_PWM}};\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00130}00130\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_pin_info}{PinInfo}}\&\ pin\ =\ \doxymbox{\hyperlink{namespace_pins_a71e46e5c9462e706226bb4e1a8fdeb1c}{Pins::PWM}}[i];}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00131}00131\ }
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00132}00132\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Forze\ the\ pin\ to\ OUTPUT\ for\ redux\ noise\ and\ stabily\ electric\ system}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00133}00133\ \ \ \ \ \ \ \ \ pinMode(pin.\doxymbox{\hyperlink{struct_pin_info_a01b05f88290fa5560587d73b2752a150}{number}},\ OUTPUT);\ }
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00134}00134\ \ \ \ \ \ \ \ \ analogWrite(pin.\doxymbox{\hyperlink{struct_pin_info_a01b05f88290fa5560587d73b2752a150}{number}},\ 0);\ }
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00135}00135\ \ \ \ \ \ \ \ \ delay(20);\ }
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00136}00136\ }
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00137}00137\ \ \ \ \ \ \ \ \ pinMode(pin.\doxymbox{\hyperlink{struct_pin_info_a01b05f88290fa5560587d73b2752a150}{number}},\ INPUT);\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Set\ pin\ as\ input\ (no\ pull-\/up)}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00138}00138\ \ \ \ \ \ \ \ \ delay(5);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Brief\ delay\ to\ stabilize\ reading}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00139}00139\ }
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00140}00140\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ state\ =\ digitalRead(pin.\doxymbox{\hyperlink{struct_pin_info_a01b05f88290fa5560587d73b2752a150}{number}});\ \textcolor{comment}{//\ Read\ the\ electrical\ state\ of\ the\ pin}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00141}00141\ }
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00142}00142\ \ \ \ \ \ \ \ \ Serial.print(\textcolor{stringliteral}{"{}•\ "{}});}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00143}00143\ \ \ \ \ \ \ \ \ Serial.print(pin.\doxymbox{\hyperlink{struct_pin_info_aa9b1dd89dbd7e3a466ed96ced6b68b31}{name}});}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00144}00144\ \ \ \ \ \ \ \ \ Serial.print(\textcolor{stringliteral}{"{}\ [Pin\ "{}});}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00145}00145\ \ \ \ \ \ \ \ \ Serial.print(pin.\doxymbox{\hyperlink{struct_pin_info_a01b05f88290fa5560587d73b2752a150}{number}});}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00146}00146\ \ \ \ \ \ \ \ \ Serial.print(\textcolor{stringliteral}{"{}]\ →\ Voltage:\ "{}});}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00147}00147\ }
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00148}00148\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (state\ ==\ HIGH)\ \{}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00149}00149\ \ \ \ \ \ \ \ \ \ \ \ \ Serial.println(\textcolor{stringliteral}{"{}⚡\ Voltage\ detected\ (HIGH)"{}});}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00150}00150\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00151}00151\ \ \ \ \ \ \ \ \ \ \ \ \ Serial.println(\textcolor{stringliteral}{"{}🔻\ No\ voltage\ (LOW\ or\ connected\ to\ GND)"{}});}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00152}00152\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00153}00153\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00154}00154\ \};}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00155}00155\ }
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00156}00156\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00157}00157\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00158}00158\ \textcolor{comment}{\ *\ @brief\ Devuelve\ el\ número\ físico\ del\ pin.}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00159}00159\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00160}00160\ \textcolor{comment}{\ *\ @param\ pin\ Estructura\ PinInfo.}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00161}00161\ \textcolor{comment}{\ *\ @return\ Número\ del\ pin.}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00162}00162\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00163}\doxymbox{\hyperlink{pinout_8h_aaf2eba6a83cb34c672494d0c1235b6dc}{00163}}\ uint8\_t\ \doxymbox{\hyperlink{pinout_8cpp_aaf2eba6a83cb34c672494d0c1235b6dc}{pinNumber}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_pin_info}{PinInfo}}\ pin)\ \{}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00164}00164\ \ \ \ \ \textcolor{keywordflow}{return}\ pin.\doxymbox{\hyperlink{struct_pin_info_a01b05f88290fa5560587d73b2752a150}{number}};}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00165}00165\ \}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00166}00166\ }
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00167}00167\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00168}00168\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00169}00169\ \textcolor{comment}{\ *\ @brief\ Devuelve\ el\ nombre\ del\ pin.}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00170}00170\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00171}00171\ \textcolor{comment}{\ *\ @param\ pin\ Estructura\ PinInfo.}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00172}00172\ \textcolor{comment}{\ *\ @return\ Nombre\ del\ pin.}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00173}00173\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00174}\doxymbox{\hyperlink{pinout_8h_a8c40bc99659246cb14616b221c6c166c}{00174}}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \doxymbox{\hyperlink{pinout_8cpp_a8c40bc99659246cb14616b221c6c166c}{pinName}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_pin_info}{PinInfo}}\ pin)\ \{}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00175}00175\ \ \ \ \ \textcolor{keywordflow}{return}\ pin.\doxymbox{\hyperlink{struct_pin_info_aa9b1dd89dbd7e3a466ed96ced6b68b31}{name}};}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00176}00176\ \}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00177}00177\ }
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00178}00178\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00179}00179\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00180}00180\ \textcolor{comment}{\ *\ @brief\ Devuelve\ la\ familia\ del\ pin\ (GPIO,\ PWM,\ ANALOG,\ etc.).}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00181}00181\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00182}00182\ \textcolor{comment}{\ *\ @param\ pin\ Estructura\ PinInfo.}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00183}00183\ \textcolor{comment}{\ *\ @return\ Familia\ del\ pin.}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00184}00184\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00185}\doxymbox{\hyperlink{pinout_8h_a5cb75a14ef0e3d643e012ef07576fb89}{00185}}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \doxymbox{\hyperlink{pinout_8cpp_a5cb75a14ef0e3d643e012ef07576fb89}{pinFamily}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_pin_info}{PinInfo}}\ pin)\ \{}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00186}00186\ \ \ \ \ \textcolor{keywordflow}{return}\ pin.\doxymbox{\hyperlink{struct_pin_info_a63c475cd60899349b559d2c9703f0c40}{family}};}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00187}00187\ \}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00188}00188\ }
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00189}00189\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00190}00190\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00191}00191\ \textcolor{comment}{\ *\ @brief\ Verifica\ si\ un\ pin\ pertenece\ a\ la\ familia\ GPIO.}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00192}00192\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00193}00193\ \textcolor{comment}{\ *\ @param\ pin\ Pin\ a\ validar.}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00194}00194\ \textcolor{comment}{\ *\ @return\ true\ si\ es\ GPIO\ válido,\ false\ si\ no.}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00195}00195\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00196}\doxymbox{\hyperlink{pinout_8h_a0786cda67c357dd91acc0daed9f8bd68}{00196}}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{pinout_8cpp_a0786cda67c357dd91acc0daed9f8bd68}{isValidGPIO}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_pin_info}{PinInfo}}\&\ pin)\ \{}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00197}00197\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ \doxymbox{\hyperlink{namespace_pins_a102474240ce6b18bcb2e658bb28754af}{Pins::NUM\_GPIO}};\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00198}00198\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{namespace_pins_a02d8a45378e890f65caf34971a2aee06}{Pins::GPIO}}[i].number\ ==\ pin.\doxymbox{\hyperlink{struct_pin_info_a01b05f88290fa5560587d73b2752a150}{number}}\ \&\&}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00199}00199\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_pins_a02d8a45378e890f65caf34971a2aee06}{Pins::GPIO}}[i].family\ ==\ pin.\doxymbox{\hyperlink{struct_pin_info_a63c475cd60899349b559d2c9703f0c40}{family}})\ }
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00200}00200\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00201}00201\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00202}00202\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00203}00203\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00204}00204\ }
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00205}00205\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00206}00206\ \};}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00207}00207\ }
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00208}00208\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00209}00209\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00210}00210\ \textcolor{comment}{\ *\ @brief\ Verifica\ si\ un\ pin\ pertenece\ a\ la\ familia\ PWM.}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00211}00211\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00212}00212\ \textcolor{comment}{\ *\ @param\ pin\ Pin\ a\ validar.}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00213}00213\ \textcolor{comment}{\ *\ @return\ true\ si\ es\ PWM\ válido,\ false\ si\ no.}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00214}00214\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00215}\doxymbox{\hyperlink{pinout_8h_ad68faced8c42b2bd57d19e88517aaada}{00215}}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{pinout_8cpp_ad68faced8c42b2bd57d19e88517aaada}{isValidPWM}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_pin_info}{PinInfo}}\&\ pin)\ \{}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00216}00216\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ \doxymbox{\hyperlink{namespace_pins_ac4db2eceee724cbb769f8a079479a0c1}{Pins::NUM\_PWM}};\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00217}00217\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{namespace_pins_a71e46e5c9462e706226bb4e1a8fdeb1c}{Pins::PWM}}[i].number\ ==\ pin.\doxymbox{\hyperlink{struct_pin_info_a01b05f88290fa5560587d73b2752a150}{number}}\ \&\&}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00218}00218\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_pins_a71e46e5c9462e706226bb4e1a8fdeb1c}{Pins::PWM}}[i].family\ ==\ pin.\doxymbox{\hyperlink{struct_pin_info_a63c475cd60899349b559d2c9703f0c40}{family}})\ }
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00219}00219\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00220}00220\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00221}00221\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00222}00222\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00223}00223\ }
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00224}00224\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00225}00225\ \};}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00226}00226\ }
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00227}00227\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00228}00228\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00229}00229\ \textcolor{comment}{\ *\ @brief\ Verifica\ si\ un\ pin\ pertenece\ a\ la\ familia\ ANALOG.}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00230}00230\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00231}00231\ \textcolor{comment}{\ *\ @param\ pin\ Pin\ a\ validar.}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00232}00232\ \textcolor{comment}{\ *\ @return\ true\ si\ es\ ANALOG\ válido,\ false\ si\ no.}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00233}00233\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00234}\doxymbox{\hyperlink{pinout_8h_a1c83f6978a16bab2c4c38a8e296e5c03}{00234}}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{pinout_8cpp_a1c83f6978a16bab2c4c38a8e296e5c03}{isValidAnalog}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_pin_info}{PinInfo}}\&\ pin)\ \{}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00235}00235\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ \doxymbox{\hyperlink{namespace_pins_a76406a151484ce00c13ad8ebf87477e5}{Pins::NUM\_ANALOG}};\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00236}00236\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{namespace_pins_ae5f8eceff18d6f68e695cc390033d330}{Pins::ANALOG}}[i].number\ ==\ pin.\doxymbox{\hyperlink{struct_pin_info_a01b05f88290fa5560587d73b2752a150}{number}}\ \&\&}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00237}00237\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_pins_ae5f8eceff18d6f68e695cc390033d330}{Pins::ANALOG}}[i].family\ ==\ pin.\doxymbox{\hyperlink{struct_pin_info_a63c475cd60899349b559d2c9703f0c40}{family}})\ }
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00238}00238\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00239}00239\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00240}00240\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00241}00241\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00242}00242\ }
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00243}00243\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{pinout_8cpp_source_l00244}00244\ \};}
+
+\end{DoxyCode}

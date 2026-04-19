@@ -1,0 +1,109 @@
+\doxysection{app\+\_\+api.\+h}
+\hypertarget{app__api_8h_source}{}\label{app__api_8h_source}\index{app\_api.h@{app\_api.h}}
+\doxymbox{\hyperlink{app__api_8h}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00001}00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00002}00002\ \textcolor{comment}{\ *\ app\_api.h}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00003}00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00004}00004\ \textcolor{comment}{\ *\ Define\ the\ API\ for\ the\ user\ applications\ to\ call\ the\ bootloader.}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00005}00005\ \textcolor{comment}{\ *\ This\ file\ is\ used\ in\ the\ user\ application\ code\ only!}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00006}00006\ \textcolor{comment}{\ *\ User\ bootloader\ should\ include\ bootapi.h\ file\ only.}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00007}00007\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00008}00008\ \textcolor{comment}{\ *\ NOTE\ to\ implementors:}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00009}00009\ \textcolor{comment}{\ *\ The\ app\_api.h\ and\ bootapi.h\ files\ should\ be\ kept\ in\ sync\ (the\ jump\ table\ structure)}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00010}00010\ \textcolor{comment}{\ *\ but\ it\ is\ not\ good\ to\ have\ a\ single\ file\ as\ the\ app\ version\ will\ have\ some\ extra\ functions}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00011}00011\ \textcolor{comment}{\ *\ and\ the\ functions\ are\ actually\ different\ in\ app\ than\ in\ bootloader.}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00012}00012\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00013}00013\ \textcolor{comment}{\ *\ \ Created\ on:\ 16.\ 3.\ 2017}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00014}00014\ \textcolor{comment}{\ *\ \ \ \ \ \ Author:\ jan\ dolinay}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00015}00015\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00017}00017\ \textcolor{preprocessor}{\#ifndef\ APP\_API\_H\_}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00018}00018\ \textcolor{preprocessor}{\#define\ APP\_API\_H\_}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00021}00021\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00022}00022\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00023}00023\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00026}00026\ \textcolor{comment}{/*\ Error\ codes\ */}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00027}\doxymbox{\hyperlink{app__api_8h_ad8a2d51386948571d322e0905fbe8823}{00027}}\ \textcolor{preprocessor}{\#define\ BOOT\_OK\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (0)\ }\textcolor{comment}{/*\ no\ error,\ success\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00028}\doxymbox{\hyperlink{app__api_8h_abb3c34c561f0644d9f55eaf700fed7b2}{00028}}\ \textcolor{preprocessor}{\#define\ BOOT\_ERROR\ \ \ \ \ \ \ \ \ \ \ \ \ \ (1)\ }\textcolor{comment}{/*\ unspecified\ error\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00029}\doxymbox{\hyperlink{app__api_8h_ac8ffc07300ba259bfde532c6c560bee2}{00029}}\ \textcolor{preprocessor}{\#define\ BOOT\_FUNCTION\_INVALID\ \ \ (2)\ }\textcolor{comment}{/*\ The\ function\ address\ in\ jump\ table\ was\ not\ valid\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00030}\doxymbox{\hyperlink{app__api_8h_ae4cd3d175162645b06865e1b8cfa5b7d}{00030}}\ \textcolor{preprocessor}{\#define\ BOOT\_VERSION\_INVALID\ \ \ \ (3)\ }\textcolor{comment}{/*\ The\ version\ of\ the\ jump\ table\ in\ bootloader\ does\ not\ match\ the\ version\ of\ this\ code\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00031}\doxymbox{\hyperlink{app__api_8h_a0f30c1558839c101aa7607ad0afd396a}{00031}}\ \textcolor{preprocessor}{\#define\ BOOT\_ID\_INVALID\ \ \ \ \ \ \ \ \ (4)\ }\textcolor{comment}{/*\ The\ ID\ of\ the\ bootloader\ API\ does\ not\ match\ the\ ID\ expected\ by\ this\ code\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00034}\doxymbox{\hyperlink{app__api_8h_a0737dbb422f8332818fb6f6795f7e8a4}{00034}}\ \textcolor{preprocessor}{\#define\ BOOT\_API\_VERSION\ \ \ \ (2)\ \ \ \ \ }\textcolor{comment}{/*\ Version\ of\ the\ API\ expected\ by\ this\ code.\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00035}00035\ \ \ \ \ \textcolor{comment}{/*\ See\ the\ "{}ver"{}\ field\ in\ jump\ table\ struct\ avrdbgboot\_jump\_table\_s\ in\ app\_api.c\ \ */}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00038}00038\ \textcolor{comment}{/*\ Helper\ functions\ */}\textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00039}00039\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00040}00040\ \textcolor{comment}{\ *\ Must\ be\ called\ to\ initialize\ the\ API\ and\ verify\ that\ it\ is\ OK\ before}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00041}00041\ \textcolor{comment}{\ *\ using\ any\ other\ function\ of\ this\ API.}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00042}00042\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00043}\doxymbox{\hyperlink{app__api_8h_aeedbe8067955df9ce6aa7aebe626be0a}{00043}}\ uint8\_t\ \doxymbox{\hyperlink{app__api_8h_aeedbe8067955df9ce6aa7aebe626be0a}{dboot\_init\_api}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00046}00046\ \textcolor{comment}{/*\ Bootloader\ API\ functions\ -\/\ the\ functions\ in\ the\ bootloader\ */}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00047}00047\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00048}00048\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00049}00049\ \textcolor{comment}{\ *\ Read\ the\ verison\ of\ the\ API.}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00050}00050\ \textcolor{comment}{\ *\ This\ is\ the\ value\ of\ the\ "{}ver"{}\ field\ in\ the\ jump\ table\ struct\ avrdbgboot\_jump\_table\_s}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00051}00051\ \textcolor{comment}{\ *\ @param\ ver\ (out)\ -\/\ the\ version\ of\ the\ API}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00052}00052\ \textcolor{comment}{\ *\ @return\ BOOT\_OK\ on\ success.}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00053}00053\ \textcolor{comment}{\ *\ */}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00054}\doxymbox{\hyperlink{app__api_8h_a187c006526fbdc1759c52c0c99f54916}{00054}}\ uint8\_t\ \doxymbox{\hyperlink{app__api_8h_a187c006526fbdc1759c52c0c99f54916}{dboot\_get\_api\_version}}(uint8\_t\ *ver);}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00055}00055\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00056}00056\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00057}00057\ \textcolor{comment}{\ *\ Read\ the\ version\ of\ the\ bootloader\ from\ bootloader\ memory.}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00058}00058\ \textcolor{comment}{\ *\ This\ is\ the\ version\ of\ the\ bootloader,\ not\ the\ version\ of\ the\ API.}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00059}00059\ \textcolor{comment}{\ *\ The\ bootloader\ verison\ is\ (AVRDBG\_BOOT\_VERSION\_MAJOR\ <<\ 8)\ |\ (AVRDBG\_BOOT\_VERSION\_MINOR)}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00060}00060\ \textcolor{comment}{\ *\ as\ defined\ in\ bootapi.c}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00061}00061\ \textcolor{comment}{\ *\ @param\ ver\ (out)\ -\/\ the\ version\ of\ the\ bootloader}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00062}00062\ \textcolor{comment}{\ *\ @return\ BOOT\_OK\ on\ success.}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00063}00063\ \textcolor{comment}{\ *\ */}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00064}\doxymbox{\hyperlink{app__api_8h_ae6e016717dbb8bf9834ddd4420d62d3b}{00064}}\ uint8\_t\ \doxymbox{\hyperlink{app__api_8h_ae6e016717dbb8bf9834ddd4420d62d3b}{dboot\_get\_version}}(uint16\_t\ *ver);}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00066}00066\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00067}00067\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00068}00068\ \textcolor{comment}{\ *\ Toggle\ the\ on-\/board\ LED}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00069}00069\ \textcolor{comment}{\ *\ This\ is\ only\ available\ if\ AVR8\_STUB\_DEBUG\ is\ defined.\ If\ not\ defined,}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00070}00070\ \textcolor{comment}{\ *\ it\ just\ returns\ BOOT\_VERSION\_INVALID.}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00071}00071\ \textcolor{comment}{\ *\ @return\ BOOT\_OK\ on\ success.}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00072}00072\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00073}\doxymbox{\hyperlink{app__api_8h_a1c2fa2e40a00daec01fc34581d6eefde}{00073}}\ uint8\_t\ \doxymbox{\hyperlink{app__api_8h_a1c2fa2e40a00daec01fc34581d6eefde}{dboot\_led\_toggle}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00075}00075\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00076}00076\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00077}00077\ \textcolor{comment}{\ *\ Initialize\ the\ pin\ for\ on-\/board\ LED\ (PB5)}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00078}00078\ \textcolor{comment}{\ *\ This\ is\ only\ available\ if\ AVR8\_STUB\_DEBUG\ is\ defined.\ If\ not\ defined,}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00079}00079\ \textcolor{comment}{\ *\ it\ just\ returns\ BOOT\_VERSION\_INVALID.}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00080}00080\ \textcolor{comment}{\ *\ @return\ BOOT\_OK\ on\ success.}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00081}00081\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00082}\doxymbox{\hyperlink{app__api_8h_a43c82e1f8931999e0c92def081484010}{00082}}\ uint8\_t\ \doxymbox{\hyperlink{app__api_8h_a43c82e1f8931999e0c92def081484010}{dboot\_led\_init}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00083}00083\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00084}00084\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00085}00085\ \textcolor{comment}{\ *\ Write\ to\ program\ memory\ from\ RAM\ buffer.}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00086}00086\ \textcolor{comment}{\ *\ rom\_addr\ -\/\ in\ words,}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00087}00087\ \textcolor{comment}{\ *\ sz\ -\/\ in\ bytes\ and\ must\ be\ multiple\ of\ two.}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00088}00088\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00089}\doxymbox{\hyperlink{app__api_8h_a87164cc63c2a9b72a157d2569c4f981b}{00089}}\ uint8\_t\ \doxymbox{\hyperlink{app__api_8h_a87164cc63c2a9b72a157d2569c4f981b}{dboot\_safe\_pgm\_write}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ *ram\_addr,\ uint16\_t\ rom\_addr,\ uint16\_t\ sz);}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00090}00090\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00091}00091\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00092}00092\ \textcolor{comment}{\ *\ Handle\ X\ load\ command\ from\ GDB\ that\ is\ load\ new\ application\ to\ memory}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00093}00093\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00094}\doxymbox{\hyperlink{app__api_8h_a40304c671ecdf39592c1e4a215b9b90d}{00094}}\ uint8\_t\ \doxymbox{\hyperlink{app__api_8h_a40304c671ecdf39592c1e4a215b9b90d}{dboot\_handle\_xload}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00095}00095\ }
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00096}00096\ }
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00097}00097\ }
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00098}00098\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00099}00099\ \}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00100}00100\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00101}00101\ }
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00102}00102\ }
+\DoxyCodeLine{\Hypertarget{app__api_8h_source_l00103}00103\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ APP\_API\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

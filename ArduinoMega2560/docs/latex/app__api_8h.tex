@@ -1,0 +1,169 @@
+\doxysection{Referencia del archivo app\+\_\+api.\+h}
+\hypertarget{app__api_8h}{}\label{app__api_8h}\index{app\_api.h@{app\_api.h}}
+\doxysubsubsection*{defines}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{app__api_8h_ad8a2d51386948571d322e0905fbe8823}{BOOT\+\_\+\+OK}}~(0) /\+\texorpdfstring{$\ast$}{*} no error, success \texorpdfstring{$\ast$}{*}/\+
+\item 
+\+\#define \doxymbox{\hyperlink{app__api_8h_abb3c34c561f0644d9f55eaf700fed7b2}{BOOT\+\_\+\+ERROR}}~(1) /\+\texorpdfstring{$\ast$}{*} unspecified error \texorpdfstring{$\ast$}{*}/\+
+\item 
+\+\#define \doxymbox{\hyperlink{app__api_8h_ac8ffc07300ba259bfde532c6c560bee2}{BOOT\+\_\+\+FUNCTION\+\_\+\+INVALID}}~(2) /\+\texorpdfstring{$\ast$}{*} The function address in jump table was not valid \texorpdfstring{$\ast$}{*}/\+
+\item 
+\+\#define \doxymbox{\hyperlink{app__api_8h_ae4cd3d175162645b06865e1b8cfa5b7d}{BOOT\+\_\+\+VERSION\+\_\+\+INVALID}}~(3) /\+\texorpdfstring{$\ast$}{*} The version of the jump table in bootloader does not match the version of this code \texorpdfstring{$\ast$}{*}/\+
+\item 
+\+\#define \doxymbox{\hyperlink{app__api_8h_a0f30c1558839c101aa7607ad0afd396a}{BOOT\+\_\+\+ID\+\_\+\+INVALID}}~(4) /\+\texorpdfstring{$\ast$}{*} The ID of the bootloader API does not match the ID expected by this code \texorpdfstring{$\ast$}{*}/\+
+\item 
+\+\#define \doxymbox{\hyperlink{app__api_8h_a0737dbb422f8332818fb6f6795f7e8a4}{BOOT\+\_\+\+API\+\_\+\+VERSION}}~(2)     /\+\texorpdfstring{$\ast$}{*} Version of the API expected by this code. \texorpdfstring{$\ast$}{*}/\+
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \doxymbox{\hyperlink{app__api_8h_aeedbe8067955df9ce6aa7aebe626be0a}{dboot\+\_\+init\+\_\+api}} (void)
+\item 
+uint8\+\_\+t \doxymbox{\hyperlink{app__api_8h_a187c006526fbdc1759c52c0c99f54916}{dboot\+\_\+get\+\_\+api\+\_\+version}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}ver)
+\item 
+uint8\+\_\+t \doxymbox{\hyperlink{app__api_8h_ae6e016717dbb8bf9834ddd4420d62d3b}{dboot\+\_\+get\+\_\+version}} (uint16\+\_\+t \texorpdfstring{$\ast$}{*}ver)
+\item 
+uint8\+\_\+t \doxymbox{\hyperlink{app__api_8h_a1c2fa2e40a00daec01fc34581d6eefde}{dboot\+\_\+led\+\_\+toggle}} (void)
+\item 
+uint8\+\_\+t \doxymbox{\hyperlink{app__api_8h_a43c82e1f8931999e0c92def081484010}{dboot\+\_\+led\+\_\+init}} (void)
+\item 
+uint8\+\_\+t \doxymbox{\hyperlink{app__api_8h_a87164cc63c2a9b72a157d2569c4f981b}{dboot\+\_\+safe\+\_\+pgm\+\_\+write}} (const void \texorpdfstring{$\ast$}{*}ram\+\_\+addr, uint16\+\_\+t rom\+\_\+addr, uint16\+\_\+t sz)
+\item 
+uint8\+\_\+t \doxymbox{\hyperlink{app__api_8h_a40304c671ecdf39592c1e4a215b9b90d}{dboot\+\_\+handle\+\_\+xload}} (void)
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{app__api_8h_doc-define-members}
+\doxysubsection{Documentación de «define»}
+\Hypertarget{app__api_8h_a0737dbb422f8332818fb6f6795f7e8a4}\index{app\_api.h@{app\_api.h}!BOOT\_API\_VERSION@{BOOT\_API\_VERSION}}
+\index{BOOT\_API\_VERSION@{BOOT\_API\_VERSION}!app\_api.h@{app\_api.h}}
+\doxysubsubsection{\texorpdfstring{BOOT\_API\_VERSION}{BOOT\_API\_VERSION}}
+{\footnotesize\ttfamily \label{app__api_8h_a0737dbb422f8332818fb6f6795f7e8a4} 
+\+\#define BOOT\+\_\+\+API\+\_\+\+VERSION~(2)     /\+\texorpdfstring{$\ast$}{*} Version of the API expected by this code. \texorpdfstring{$\ast$}{*}/\+}
+
+
+
+Definición en la línea \doxymbox{\hyperlink{app__api_8h_source_l00034}{34}} del archivo \doxymbox{\hyperlink{app__api_8h_source}{app\+\_\+api.\+h}}.
+
+\Hypertarget{app__api_8h_abb3c34c561f0644d9f55eaf700fed7b2}\index{app\_api.h@{app\_api.h}!BOOT\_ERROR@{BOOT\_ERROR}}
+\index{BOOT\_ERROR@{BOOT\_ERROR}!app\_api.h@{app\_api.h}}
+\doxysubsubsection{\texorpdfstring{BOOT\_ERROR}{BOOT\_ERROR}}
+{\footnotesize\ttfamily \label{app__api_8h_abb3c34c561f0644d9f55eaf700fed7b2} 
+\+\#define BOOT\+\_\+\+ERROR~(1) /\+\texorpdfstring{$\ast$}{*} unspecified error \texorpdfstring{$\ast$}{*}/\+}
+
+
+
+Definición en la línea \doxymbox{\hyperlink{app__api_8h_source_l00028}{28}} del archivo \doxymbox{\hyperlink{app__api_8h_source}{app\+\_\+api.\+h}}.
+
+\Hypertarget{app__api_8h_ac8ffc07300ba259bfde532c6c560bee2}\index{app\_api.h@{app\_api.h}!BOOT\_FUNCTION\_INVALID@{BOOT\_FUNCTION\_INVALID}}
+\index{BOOT\_FUNCTION\_INVALID@{BOOT\_FUNCTION\_INVALID}!app\_api.h@{app\_api.h}}
+\doxysubsubsection{\texorpdfstring{BOOT\_FUNCTION\_INVALID}{BOOT\_FUNCTION\_INVALID}}
+{\footnotesize\ttfamily \label{app__api_8h_ac8ffc07300ba259bfde532c6c560bee2} 
+\+\#define BOOT\+\_\+\+FUNCTION\+\_\+\+INVALID~(2) /\+\texorpdfstring{$\ast$}{*} The function address in jump table was not valid \texorpdfstring{$\ast$}{*}/\+}
+
+
+
+Definición en la línea \doxymbox{\hyperlink{app__api_8h_source_l00029}{29}} del archivo \doxymbox{\hyperlink{app__api_8h_source}{app\+\_\+api.\+h}}.
+
+\Hypertarget{app__api_8h_a0f30c1558839c101aa7607ad0afd396a}\index{app\_api.h@{app\_api.h}!BOOT\_ID\_INVALID@{BOOT\_ID\_INVALID}}
+\index{BOOT\_ID\_INVALID@{BOOT\_ID\_INVALID}!app\_api.h@{app\_api.h}}
+\doxysubsubsection{\texorpdfstring{BOOT\_ID\_INVALID}{BOOT\_ID\_INVALID}}
+{\footnotesize\ttfamily \label{app__api_8h_a0f30c1558839c101aa7607ad0afd396a} 
+\+\#define BOOT\+\_\+\+ID\+\_\+\+INVALID~(4) /\+\texorpdfstring{$\ast$}{*} The ID of the bootloader API does not match the ID expected by this code \texorpdfstring{$\ast$}{*}/\+}
+
+
+
+Definición en la línea \doxymbox{\hyperlink{app__api_8h_source_l00031}{31}} del archivo \doxymbox{\hyperlink{app__api_8h_source}{app\+\_\+api.\+h}}.
+
+\Hypertarget{app__api_8h_ad8a2d51386948571d322e0905fbe8823}\index{app\_api.h@{app\_api.h}!BOOT\_OK@{BOOT\_OK}}
+\index{BOOT\_OK@{BOOT\_OK}!app\_api.h@{app\_api.h}}
+\doxysubsubsection{\texorpdfstring{BOOT\_OK}{BOOT\_OK}}
+{\footnotesize\ttfamily \label{app__api_8h_ad8a2d51386948571d322e0905fbe8823} 
+\+\#define BOOT\+\_\+\+OK~(0) /\+\texorpdfstring{$\ast$}{*} no error, success \texorpdfstring{$\ast$}{*}/\+}
+
+
+
+Definición en la línea \doxymbox{\hyperlink{app__api_8h_source_l00027}{27}} del archivo \doxymbox{\hyperlink{app__api_8h_source}{app\+\_\+api.\+h}}.
+
+\Hypertarget{app__api_8h_ae4cd3d175162645b06865e1b8cfa5b7d}\index{app\_api.h@{app\_api.h}!BOOT\_VERSION\_INVALID@{BOOT\_VERSION\_INVALID}}
+\index{BOOT\_VERSION\_INVALID@{BOOT\_VERSION\_INVALID}!app\_api.h@{app\_api.h}}
+\doxysubsubsection{\texorpdfstring{BOOT\_VERSION\_INVALID}{BOOT\_VERSION\_INVALID}}
+{\footnotesize\ttfamily \label{app__api_8h_ae4cd3d175162645b06865e1b8cfa5b7d} 
+\+\#define BOOT\+\_\+\+VERSION\+\_\+\+INVALID~(3) /\+\texorpdfstring{$\ast$}{*} The version of the jump table in bootloader does not match the version of this code \texorpdfstring{$\ast$}{*}/\+}
+
+
+
+Definición en la línea \doxymbox{\hyperlink{app__api_8h_source_l00030}{30}} del archivo \doxymbox{\hyperlink{app__api_8h_source}{app\+\_\+api.\+h}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{app__api_8h_doc-func-members}
+\doxysubsection{Documentación de funciones}
+\Hypertarget{app__api_8h_a187c006526fbdc1759c52c0c99f54916}\index{app\_api.h@{app\_api.h}!dboot\_get\_api\_version@{dboot\_get\_api\_version}}
+\index{dboot\_get\_api\_version@{dboot\_get\_api\_version}!app\_api.h@{app\_api.h}}
+\doxysubsubsection{\texorpdfstring{dboot\_get\_api\_version()}{dboot\_get\_api\_version()}}
+{\footnotesize\ttfamily \label{app__api_8h_a187c006526fbdc1759c52c0c99f54916} 
+uint8\+\_\+t dboot\+\_\+get\+\_\+api\+\_\+version (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{ver}{}\end{DoxyParamCaption})}
+
+Read the verison of the API. This is the value of the "{}ver"{} field in the jump table struct avrdbgboot\+\_\+jump\+\_\+table\+\_\+s 
+\begin{DoxyParams}{Parámetros}
+{\em ver} & (out) -\/ the version of the API \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+BOOT\+\_\+\+OK on success. 
+\end{DoxyReturn}
+\Hypertarget{app__api_8h_ae6e016717dbb8bf9834ddd4420d62d3b}\index{app\_api.h@{app\_api.h}!dboot\_get\_version@{dboot\_get\_version}}
+\index{dboot\_get\_version@{dboot\_get\_version}!app\_api.h@{app\_api.h}}
+\doxysubsubsection{\texorpdfstring{dboot\_get\_version()}{dboot\_get\_version()}}
+{\footnotesize\ttfamily \label{app__api_8h_ae6e016717dbb8bf9834ddd4420d62d3b} 
+uint8\+\_\+t dboot\+\_\+get\+\_\+version (\begin{DoxyParamCaption}\item[{uint16\+\_\+t \texorpdfstring{$\ast$}{*}}]{ver}{}\end{DoxyParamCaption})}
+
+Read the version of the bootloader from bootloader memory. This is the version of the bootloader, not the version of the API. The bootloader verison is (AVRDBG\+\_\+\+BOOT\+\_\+\+VERSION\+\_\+\+MAJOR \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 8) \texorpdfstring{$\vert$}{|} (AVRDBG\+\_\+\+BOOT\+\_\+\+VERSION\+\_\+\+MINOR) as defined in bootapi.\+c 
+\begin{DoxyParams}{Parámetros}
+{\em ver} & (out) -\/ the version of the bootloader \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+BOOT\+\_\+\+OK on success. 
+\end{DoxyReturn}
+\Hypertarget{app__api_8h_a40304c671ecdf39592c1e4a215b9b90d}\index{app\_api.h@{app\_api.h}!dboot\_handle\_xload@{dboot\_handle\_xload}}
+\index{dboot\_handle\_xload@{dboot\_handle\_xload}!app\_api.h@{app\_api.h}}
+\doxysubsubsection{\texorpdfstring{dboot\_handle\_xload()}{dboot\_handle\_xload()}}
+{\footnotesize\ttfamily \label{app__api_8h_a40304c671ecdf39592c1e4a215b9b90d} 
+uint8\+\_\+t dboot\+\_\+handle\+\_\+xload (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Handle X load command from GDB that is load new application to memory \Hypertarget{app__api_8h_aeedbe8067955df9ce6aa7aebe626be0a}\index{app\_api.h@{app\_api.h}!dboot\_init\_api@{dboot\_init\_api}}
+\index{dboot\_init\_api@{dboot\_init\_api}!app\_api.h@{app\_api.h}}
+\doxysubsubsection{\texorpdfstring{dboot\_init\_api()}{dboot\_init\_api()}}
+{\footnotesize\ttfamily \label{app__api_8h_aeedbe8067955df9ce6aa7aebe626be0a} 
+uint8\+\_\+t dboot\+\_\+init\+\_\+api (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Must be called to initialize the API and verify that it is OK before using any other function of this API. \Hypertarget{app__api_8h_a43c82e1f8931999e0c92def081484010}\index{app\_api.h@{app\_api.h}!dboot\_led\_init@{dboot\_led\_init}}
+\index{dboot\_led\_init@{dboot\_led\_init}!app\_api.h@{app\_api.h}}
+\doxysubsubsection{\texorpdfstring{dboot\_led\_init()}{dboot\_led\_init()}}
+{\footnotesize\ttfamily \label{app__api_8h_a43c82e1f8931999e0c92def081484010} 
+uint8\+\_\+t dboot\+\_\+led\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Initialize the pin for on-\/board LED (PB5) This is only available if AVR8\+\_\+\+STUB\+\_\+\+DEBUG is defined. If not defined, it just returns BOOT\+\_\+\+VERSION\+\_\+\+INVALID. \begin{DoxyReturn}{Devuelve}
+BOOT\+\_\+\+OK on success. 
+\end{DoxyReturn}
+\Hypertarget{app__api_8h_a1c2fa2e40a00daec01fc34581d6eefde}\index{app\_api.h@{app\_api.h}!dboot\_led\_toggle@{dboot\_led\_toggle}}
+\index{dboot\_led\_toggle@{dboot\_led\_toggle}!app\_api.h@{app\_api.h}}
+\doxysubsubsection{\texorpdfstring{dboot\_led\_toggle()}{dboot\_led\_toggle()}}
+{\footnotesize\ttfamily \label{app__api_8h_a1c2fa2e40a00daec01fc34581d6eefde} 
+uint8\+\_\+t dboot\+\_\+led\+\_\+toggle (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Toggle the on-\/board LED This is only available if AVR8\+\_\+\+STUB\+\_\+\+DEBUG is defined. If not defined, it just returns BOOT\+\_\+\+VERSION\+\_\+\+INVALID. \begin{DoxyReturn}{Devuelve}
+BOOT\+\_\+\+OK on success. 
+\end{DoxyReturn}
+\Hypertarget{app__api_8h_a87164cc63c2a9b72a157d2569c4f981b}\index{app\_api.h@{app\_api.h}!dboot\_safe\_pgm\_write@{dboot\_safe\_pgm\_write}}
+\index{dboot\_safe\_pgm\_write@{dboot\_safe\_pgm\_write}!app\_api.h@{app\_api.h}}
+\doxysubsubsection{\texorpdfstring{dboot\_safe\_pgm\_write()}{dboot\_safe\_pgm\_write()}}
+{\footnotesize\ttfamily \label{app__api_8h_a87164cc63c2a9b72a157d2569c4f981b} 
+uint8\+\_\+t dboot\+\_\+safe\+\_\+pgm\+\_\+write (\begin{DoxyParamCaption}\item[{const void \texorpdfstring{$\ast$}{*}}]{ram\+\_\+addr}{, }\item[{uint16\+\_\+t}]{rom\+\_\+addr}{, }\item[{uint16\+\_\+t}]{sz}{}\end{DoxyParamCaption})}
+
+Write to program memory from RAM buffer. rom\+\_\+addr -\/ in words, sz -\/ in bytes and must be multiple of two. 

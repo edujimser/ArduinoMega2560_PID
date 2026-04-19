@@ -1,0 +1,5 @@
+<map id="PID::calculoPID" name="PID::calculoPID">
+<area shape="rect" id="Node000001" title="Calcula la salida del controlador PID." alt="" coords="5,5,119,31"/>
+<area shape="rect" id="Node000002" href="$class_p_i_d.html#a7263b32d21a2759144d935442db72191" title="Imprime información de depuración del PID." alt="" coords="167,5,301,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="119,15,153,15,153,21,119,21"/>
+</map>

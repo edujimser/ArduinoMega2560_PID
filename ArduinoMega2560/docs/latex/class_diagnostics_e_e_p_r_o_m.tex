@@ -1,0 +1,262 @@
+\doxysection{Referencia de la clase Diagnostics\+EEPROM}
+\hypertarget{class_diagnostics_e_e_p_r_o_m}{}\label{class_diagnostics_e_e_p_r_o_m}\index{DiagnosticsEEPROM@{DiagnosticsEEPROM}}
+
+
+Provides diagnostic utilities for testing and managing EEPROM memory.  
+
+
+
+
+{\ttfamily \+\#include $<$diagnostics\+EEPROM.\+h$>$}
+
+\doxysubsubsection*{Métodos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static bool \doxymbox{\hyperlink{class_diagnostics_e_e_p_r_o_m_ac829dcc712fc300e26d11b51602fc5bb}{run\+Test}} (int address=0)
+\begin{DoxyCompactList}\small\item\em Runs a diagnostic test on the EEPROM at the specified address. Writes a test value, reads it back, and verifies integrity. \end{DoxyCompactList}\item 
+static int \doxymbox{\hyperlink{class_diagnostics_e_e_p_r_o_m_a33eee4f3578863e963ae78ccbecdec35}{get\+Free\+Memory}} ()
+\begin{DoxyCompactList}\small\item\em Estimates the amount of free RAM available on the system. Works on AVR-\/based boards like Arduino Mega 2560. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Métodos privados estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static void \doxymbox{\hyperlink{class_diagnostics_e_e_p_r_o_m_ab5c18556e9ae3808c4aae242c9682d20}{clear\+EEPROM}} (int address)
+\begin{DoxyCompactList}\small\item\em Clears the EEPROM at the specified address by writing 0x\+FF. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos estáticos privados}
+\begin{DoxyCompactItemize}
+\item 
+static const byte \doxymbox{\hyperlink{class_diagnostics_e_e_p_r_o_m_a7a1685e2cc58ae4ed2a4b920a528b9d1}{test\+Value}} = 123
+\begin{DoxyCompactList}\small\item\em Value used for EEPROM testing. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Provides diagnostic utilities for testing and managing EEPROM memory. 
+
+Definición en la línea \doxymbox{\hyperlink{diagnostics_e_e_p_r_o_m_8h_source_l00011}{11}} del archivo \doxymbox{\hyperlink{diagnostics_e_e_p_r_o_m_8h_source}{diagnostics\+EEPROM.\+h}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_diagnostics_e_e_p_r_o_m_doc-func-members}
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{class_diagnostics_e_e_p_r_o_m_ab5c18556e9ae3808c4aae242c9682d20}\index{DiagnosticsEEPROM@{DiagnosticsEEPROM}!clearEEPROM@{clearEEPROM}}
+\index{clearEEPROM@{clearEEPROM}!DiagnosticsEEPROM@{DiagnosticsEEPROM}}
+\doxysubsubsection{\texorpdfstring{clearEEPROM()}{clearEEPROM()}}
+{\footnotesize\ttfamily \label{class_diagnostics_e_e_p_r_o_m_ab5c18556e9ae3808c4aae242c9682d20} 
+void Diagnostics\+EEPROM::\+clear\+EEPROM (\begin{DoxyParamCaption}\item[{int}]{address}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Clears the EEPROM at the specified address by writing 0x\+FF. 
+
+Limpia la EEPROM en la dirección indicada escribiendo 0x\+FF.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em address} & EEPROM address to clear.\\
+\hline
+\end{DoxyParams}
+Tras limpiar, lee nuevamente el valor para verificar la operación.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em address} & Dirección de EEPROM a limpiar. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \doxymbox{\hyperlink{diagnostics_e_e_p_r_o_m_8cpp_source_l00062}{62}} del archivo \doxymbox{\hyperlink{diagnostics_e_e_p_r_o_m_8cpp_source}{diagnostics\+EEPROM.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00063\ \ \ \ \ EEPROM.write(address,\ 0xFF);}
+\DoxyCodeLine{00064\ \ \ \ \ delay(10);}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{byte}\ clearedValue\ =\ EEPROM.read(address);}
+\DoxyCodeLine{00067\ \ \ \ \ Serial.print(\textcolor{stringliteral}{"{}🧹\ EEPROM\ cleared.\ New\ value\ at\ ["{}});}
+\DoxyCodeLine{00068\ \ \ \ \ Serial.print(address);}
+\DoxyCodeLine{00069\ \ \ \ \ Serial.print(\textcolor{stringliteral}{"{}]:\ "{}});}
+\DoxyCodeLine{00070\ \ \ \ \ Serial.println(clearedValue);}
+\DoxyCodeLine{00071\ \}}
+
+\end{DoxyCode}
+Gráfico de llamadas a esta función:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_diagnostics_e_e_p_r_o_m_ab5c18556e9ae3808c4aae242c9682d20_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_diagnostics_e_e_p_r_o_m_a33eee4f3578863e963ae78ccbecdec35}\index{DiagnosticsEEPROM@{DiagnosticsEEPROM}!getFreeMemory@{getFreeMemory}}
+\index{getFreeMemory@{getFreeMemory}!DiagnosticsEEPROM@{DiagnosticsEEPROM}}
+\doxysubsubsection{\texorpdfstring{getFreeMemory()}{getFreeMemory()}}
+{\footnotesize\ttfamily \label{class_diagnostics_e_e_p_r_o_m_a33eee4f3578863e963ae78ccbecdec35} 
+int Diagnostics\+EEPROM::\+get\+Free\+Memory (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Estimates the amount of free RAM available on the system. Works on AVR-\/based boards like Arduino Mega 2560. 
+
+Estima la cantidad de memoria RAM libre disponible en el sistema.
+
+\begin{DoxyReturn}{Devuelve}
+Number of free bytes in RAM.
+\end{DoxyReturn}
+Este método funciona en placas basadas en AVR como Arduino Mega 2560. Calcula la memoria libre comparando la posición actual de la pila con el heap.
+
+\begin{DoxyReturn}{Devuelve}
+Número de bytes libres en RAM. 
+\end{DoxyReturn}
+
+
+Definición en la línea \doxymbox{\hyperlink{diagnostics_e_e_p_r_o_m_8cpp_source_l00082}{82}} del archivo \doxymbox{\hyperlink{diagnostics_e_e_p_r_o_m_8cpp_source}{diagnostics\+EEPROM.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \_\_heap\_start;}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ *\_\_brkval;}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{int}\ freeMemory;}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordflow}{if}\ ((\textcolor{keywordtype}{int})\_\_brkval\ ==\ 0)\ \{}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ freeMemory\ =\ ((int)\&freeMemory)\ -\/\ ((\textcolor{keywordtype}{int})\&\_\_heap\_start);}
+\DoxyCodeLine{00089\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ freeMemory\ =\ ((int)\&freeMemory)\ -\/\ ((\textcolor{keywordtype}{int})\_\_brkval);}
+\DoxyCodeLine{00091\ \ \ \ \ \}}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordflow}{return}\ freeMemory;}
+\DoxyCodeLine{00094\ \}}
+
+\end{DoxyCode}
+Gráfico de llamadas a esta función:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_diagnostics_e_e_p_r_o_m_a33eee4f3578863e963ae78ccbecdec35_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_diagnostics_e_e_p_r_o_m_ac829dcc712fc300e26d11b51602fc5bb}\index{DiagnosticsEEPROM@{DiagnosticsEEPROM}!runTest@{runTest}}
+\index{runTest@{runTest}!DiagnosticsEEPROM@{DiagnosticsEEPROM}}
+\doxysubsubsection{\texorpdfstring{runTest()}{runTest()}}
+{\footnotesize\ttfamily \label{class_diagnostics_e_e_p_r_o_m_ac829dcc712fc300e26d11b51602fc5bb} 
+bool Diagnostics\+EEPROM::\+run\+Test (\begin{DoxyParamCaption}\item[{int}]{address}{ = {\ttfamily 0}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Runs a diagnostic test on the EEPROM at the specified address. Writes a test value, reads it back, and verifies integrity. 
+
+Ejecuta un test de diagnóstico sobre la EEPROM en la dirección indicada.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em address} & EEPROM address to test (default is 0). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+true if EEPROM responds correctly, false otherwise.
+\end{DoxyReturn}
+El procedimiento realiza:\+
+\begin{DoxyItemize}
+\item Escritura de un valor de prueba en la EEPROM.
+\item Lectura del valor almacenado.
+\item Comparación entre valor escrito y leído.
+\item Informe del estado de memoria libre y usada.
+\item Limpieza de la dirección probada.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parámetros}
+{\em address} & Dirección de EEPROM a probar (por defecto 0). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+true si la EEPROM responde correctamente, false en caso contrario. 
+\end{DoxyReturn}
+
+
+Definición en la línea \doxymbox{\hyperlink{diagnostics_e_e_p_r_o_m_8cpp_source_l00016}{16}} del archivo \doxymbox{\hyperlink{diagnostics_e_e_p_r_o_m_8cpp_source}{diagnostics\+EEPROM.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \doxymbox{\hyperlink{msg_8h_a6ef1ee9724c4aa2cdcd16023815c107a}{standardMessage}}(\textcolor{stringliteral}{"{}🧪\ Starting\ EEPROM\ diagnostic"{}},\ \_\_FILE\_\_,\ \_\_FUNCTION\_\_,\ \_\_DATE\_\_,\ \_\_TIME\_\_);}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{comment}{//\ Write\ test\ value}}
+\DoxyCodeLine{00020\ \ \ \ \ EEPROM.write(address,\ \doxymbox{\hyperlink{class_diagnostics_e_e_p_r_o_m_a7a1685e2cc58ae4ed2a4b920a528b9d1}{testValue}});}
+\DoxyCodeLine{00021\ \ \ \ \ delay(10);}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{comment}{//\ Read\ stored\ value}}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{byte}\ readValue\ =\ EEPROM.read(address);}
+\DoxyCodeLine{00025\ \ \ \ \ Serial.print(\textcolor{stringliteral}{"{}📥\ Value\ read\ from\ EEPROM["{}});}
+\DoxyCodeLine{00026\ \ \ \ \ Serial.print(address);}
+\DoxyCodeLine{00027\ \ \ \ \ Serial.print(\textcolor{stringliteral}{"{}]:\ "{}});}
+\DoxyCodeLine{00028\ \ \ \ \ Serial.println(readValue);}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{comment}{//\ Show\ memory\ status}}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{int}\ freeMem\ =\ \doxymbox{\hyperlink{class_diagnostics_e_e_p_r_o_m_a33eee4f3578863e963ae78ccbecdec35}{getFreeMemory}}();}
+\DoxyCodeLine{00032\ \ \ \ \ Serial.print(\textcolor{stringliteral}{"{}📊\ Estimated\ free\ memory:\ "{}});}
+\DoxyCodeLine{00033\ \ \ \ \ Serial.print(freeMem);}
+\DoxyCodeLine{00034\ \ \ \ \ Serial.println(\textcolor{stringliteral}{"{}\ bytes"{}});}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ Serial.print(\textcolor{stringliteral}{"{}📦\ Estimated\ used\ memory:\ "{}});}
+\DoxyCodeLine{00037\ \ \ \ \ Serial.print(RAMEND\ -\/\ freeMem);}
+\DoxyCodeLine{00038\ \ \ \ \ Serial.println(\textcolor{stringliteral}{"{}\ bytes"{}});}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{comment}{//\ Check\ if\ value\ matches}}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordflow}{if}\ (readValue\ ==\ \doxymbox{\hyperlink{class_diagnostics_e_e_p_r_o_m_a7a1685e2cc58ae4ed2a4b920a528b9d1}{testValue}})\ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ Serial.println(\textcolor{stringliteral}{"{}✅\ EEPROM\ is\ responding\ correctly."{}});}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_diagnostics_e_e_p_r_o_m_ab5c18556e9ae3808c4aae242c9682d20}{clearEEPROM}}(address);}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{msg_8h_ab596236a4ffe692e3e8da3dac004ef9c}{standardHeaderFull}}(\textcolor{stringliteral}{"{}EEPROM\ diagnostic\ completed"{}},\ \_\_FILE\_\_,\ \_\_FUNCTION\_\_,\ \_\_DATE\_\_,\ \_\_TIME\_\_);}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00046\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ Serial.println(\textcolor{stringliteral}{"{}❌\ EEPROM\ error:\ value\ mismatch."{}});}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_diagnostics_e_e_p_r_o_m_ab5c18556e9ae3808c4aae242c9682d20}{clearEEPROM}}(address);}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{msg_8h_ab596236a4ffe692e3e8da3dac004ef9c}{standardHeaderFull}}(\textcolor{stringliteral}{"{}EEPROM\ diagnostic\ failed"{}},\ \_\_FILE\_\_,\ \_\_FUNCTION\_\_,\ \_\_DATE\_\_,\ \_\_TIME\_\_);}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00051\ \ \ \ \ \}}
+\DoxyCodeLine{00052\ \}}
+
+\end{DoxyCode}
+Gráfico de llamadas de esta función:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{class_diagnostics_e_e_p_r_o_m_ac829dcc712fc300e26d11b51602fc5bb_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{class_diagnostics_e_e_p_r_o_m_ac829dcc712fc300e26d11b51602fc5bb_icgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_diagnostics_e_e_p_r_o_m_doc-variable-members}
+\doxysubsection{Documentación de datos miembro}
+\Hypertarget{class_diagnostics_e_e_p_r_o_m_a7a1685e2cc58ae4ed2a4b920a528b9d1}\index{DiagnosticsEEPROM@{DiagnosticsEEPROM}!testValue@{testValue}}
+\index{testValue@{testValue}!DiagnosticsEEPROM@{DiagnosticsEEPROM}}
+\doxysubsubsection{\texorpdfstring{testValue}{testValue}}
+{\footnotesize\ttfamily \label{class_diagnostics_e_e_p_r_o_m_a7a1685e2cc58ae4ed2a4b920a528b9d1} 
+const byte Diagnostics\+EEPROM::\+test\+Value = 123\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Value used for EEPROM testing. 
+
+
+
+Definición en la línea \doxymbox{\hyperlink{diagnostics_e_e_p_r_o_m_8h_source_l00034}{34}} del archivo \doxymbox{\hyperlink{diagnostics_e_e_p_r_o_m_8h_source}{diagnostics\+EEPROM.\+h}}.
+
+
+
+La documentación de esta clase está generada de los siguientes archivos:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{diagnostics_e_e_p_r_o_m_8h}{diagnostics\+EEPROM.\+h}}\item 
+\doxymbox{\hyperlink{diagnostics_e_e_p_r_o_m_8cpp}{diagnostics\+EEPROM.\+cpp}}\end{DoxyCompactItemize}

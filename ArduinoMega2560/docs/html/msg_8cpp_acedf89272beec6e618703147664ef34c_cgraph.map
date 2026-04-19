@@ -1,0 +1,5 @@
+<map id="printVersion" name="printVersion">
+<area shape="rect" id="Node000001" title="Imprime la información de versión del firmware." alt="" coords="5,5,96,31"/>
+<area shape="rect" id="Node000002" href="$msg_8cpp.html#a6ef1ee9724c4aa2cdcd16023815c107a" title="Imprime un mensaje estandarizado y formateado en el monitor serie." alt="" coords="144,5,269,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="96,15,130,15,130,21,96,21"/>
+</map>

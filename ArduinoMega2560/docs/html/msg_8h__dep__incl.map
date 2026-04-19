@@ -1,0 +1,25 @@
+<map id="msg.h" name="msg.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="405,5,464,31"/>
+<area shape="rect" id="Node000002" href="$diagnostics_e_e_p_r_o_m_8h.html" title=" " alt="" coords="125,79,281,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="393,35,241,81,239,76,391,30"/>
+<area shape="rect" id="Node000006" href="$diagnostics_u_a_r_t_8h.html" title=" " alt="" coords="305,79,439,104"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="417,43,384,80,380,77,413,39"/>
+<area shape="rect" id="Node000008" href="$msg_8cpp.html" title=" " alt="" coords="556,79,628,104"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="474,34,567,76,565,81,471,39"/>
+<area shape="rect" id="Node000009" href="$pinout_8h.html" title=" " alt="" coords="463,79,531,104"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="456,39,489,77,485,80,452,43"/>
+<area shape="rect" id="Node000003" href="$diagnostics_e_e_p_r_o_m_8cpp.html" title=" " alt="" coords="5,152,176,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="174,114,110,154,108,150,171,109"/>
+<area shape="rect" id="Node000004" href="$main_8h.html" title="Archivo principal de cabecera del firmware. Contiene metadatos del firmware, includes del sistema,..." alt="" coords="371,152,432,177"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="249,106,371,150,369,155,247,111"/>
+<area shape="rect" id="Node000005" href="$main_8cpp.html" title="Firmware principal del sistema. Configura diagnósticos, pines, UART, SPI, I2C, interrupciones,..." alt="" coords="364,225,439,251"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="404,191,404,225,399,225,399,191"/>
+<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="385,116,399,151,394,153,380,118"/>
+<area shape="rect" id="Node000007" href="$diagnostics_u_a_r_t_8cpp.html" title=" " alt="" coords="200,152,347,177"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="347,114,291,154,288,150,344,110"/>
+<area shape="poly" id="edge11_Node000009_Node000004" title=" " alt="" coords="472,114,419,154,415,150,469,110"/>
+<area shape="rect" id="Node000010" href="$config_8cpp.html" title=" " alt="" coords="563,152,645,177"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="527,109,588,150,585,154,524,114"/>
+<area shape="rect" id="Node000011" href="$pinout_8cpp.html" title=" " alt="" coords="456,152,539,177"/>
+<area shape="poly" id="edge12_Node000009_Node000011" title=" " alt="" coords="500,118,500,152,495,152,495,118"/>
+</map>

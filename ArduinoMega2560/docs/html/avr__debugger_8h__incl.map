@@ -1,0 +1,11 @@
+<map id="avr_debugger.h" name="avr_debugger.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="85,5,194,31"/>
+<area shape="rect" id="Node000002" href="$avr8-stub_8h.html" title=" " alt="" coords="38,79,123,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="132,33,101,70,97,67,128,29"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="148,79,248,104"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="151,29,182,67,178,70,147,33"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,152,68,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="76,106,53,142,49,139,71,103"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="92,152,157,177"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="90,103,113,139,108,142,86,106"/>
+</map>

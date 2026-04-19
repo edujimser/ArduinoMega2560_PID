@@ -1,0 +1,181 @@
+\doxysection{Referencia del archivo main.\+h}
+\hypertarget{main_8h}{}\label{main_8h}\index{main.h@{main.h}}
+
+
+Archivo principal de cabecera del firmware. Contiene metadatos del firmware, includes del sistema, configuración de pines, diagnósticos, motor paso a paso y controlador \doxylink{class_p_i_d}{PID}.  
+
+
+{\ttfamily \+\#include "{}system/\+pinout/\+pinout.\+h"{}}\newline
+{\ttfamily \+\#include $<$avr8-\/stub.\+h$>$}\newline
+{\ttfamily \+\#include $<$Hardware\+Serial.\+h$>$}\newline
+{\ttfamily \+\#include "{}system/\+diagnostics/\+diagnostics\+UART.\+h"{}}\newline
+{\ttfamily \+\#include "{}system/\+diagnostics/\+diagnostics\+EEPROM.\+h"{}}\newline
+{\ttfamily \+\#include "{}system/\+config/\+config.\+h"{}}\newline
+{\ttfamily \+\#include "{}Motor\+Step/\+motor\+Step.\+h"{}}\newline
+{\ttfamily \+\#include "{}PID/\+pid.\+h"{}}\newline
+Gráfico de dependencias incluidas en main.\+h:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8h__incl}
+\end{center}
+\end{figure}
+Gráfico de los archivos que directa o indirectamente incluyen a este archivo:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=136pt]{main_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{defines}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{main_8h_aa14dc39d52ab121ceb570f1a265385e0}{FIRMWARE\+\_\+\+VERSION}}~"{}1.\+0.B"{}
+\begin{DoxyCompactList}\small\item\em Includes del sistema y librerías necesarias para el firmware. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{main_8h_a53e29efbf83712dcee0878d27965aedf}{FIRMWARE\+\_\+\+NAME}}~"{}Arduino\+Mega2560"{}
+\begin{DoxyCompactList}\small\item\em Firmware name. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{main_8h_a3ad9b4b06ce62adc531dface9bf82cb5}{FIRMWARE\+\_\+\+DATE}}~"{}17/\+12/\+2025"{}
+\begin{DoxyCompactList}\small\item\em Firmware compilation date. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{main_8h_a741b54f6111da1cde82f0fce618a89ba}{FIRMWARE\+\_\+\+AUTHOR}}~"{}Eduardo Jimenez Serrato"{}
+\begin{DoxyCompactList}\small\item\em Firmware author. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{main_8h_a38b33acb5d5661010989f8868009749e}{FIRMWARE\+\_\+\+VERSION\+\_\+\+APP}}~"{}N.\+A"{}
+\begin{DoxyCompactList}\small\item\em Firmware version for application. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{main_8h_adab0450942968f1384ed7e716cce4e8f}{FIRMWARE\+\_\+\+NAME\+\_\+\+APP}}~"{}N.\+A"{}
+\begin{DoxyCompactList}\small\item\em Firmware name. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{main_8h_a1f08278ca8b35a571feec67789e62ea2}{FIRMWARE\+\_\+\+DATE\+\_\+\+APP}}~"{}N.\+A"{}
+\begin{DoxyCompactList}\small\item\em Firmware compilation date. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Archivo principal de cabecera del firmware. Contiene metadatos del firmware, includes del sistema, configuración de pines, diagnósticos, motor paso a paso y controlador \doxylink{class_p_i_d}{PID}. 
+
+Este archivo centraliza todas las dependencias necesarias para el funcionamiento del firmware en Arduino Mega 2560. 
+
+Definición en el archivo \doxymbox{\hyperlink{main_8h_source}{main.\+h}}.
+
+
+
+\label{doc-define-members}
+\Hypertarget{main_8h_doc-define-members}
+\doxysubsection{Documentación de «define»}
+\Hypertarget{main_8h_a741b54f6111da1cde82f0fce618a89ba}\index{main.h@{main.h}!FIRMWARE\_AUTHOR@{FIRMWARE\_AUTHOR}}
+\index{FIRMWARE\_AUTHOR@{FIRMWARE\_AUTHOR}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{FIRMWARE\_AUTHOR}{FIRMWARE\_AUTHOR}}
+{\footnotesize\ttfamily \label{main_8h_a741b54f6111da1cde82f0fce618a89ba} 
+\+\#define FIRMWARE\+\_\+\+AUTHOR~"{}Eduardo Jimenez Serrato"{}}
+
+
+
+Firmware author. 
+
+
+
+Definición en la línea \doxymbox{\hyperlink{main_8h_source_l00049}{49}} del archivo \doxymbox{\hyperlink{main_8h_source}{main.\+h}}.
+
+\Hypertarget{main_8h_a3ad9b4b06ce62adc531dface9bf82cb5}\index{main.h@{main.h}!FIRMWARE\_DATE@{FIRMWARE\_DATE}}
+\index{FIRMWARE\_DATE@{FIRMWARE\_DATE}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{FIRMWARE\_DATE}{FIRMWARE\_DATE}}
+{\footnotesize\ttfamily \label{main_8h_a3ad9b4b06ce62adc531dface9bf82cb5} 
+\+\#define FIRMWARE\+\_\+\+DATE~"{}17/\+12/\+2025"{}}
+
+
+
+Firmware compilation date. 
+
+
+
+Definición en la línea \doxymbox{\hyperlink{main_8h_source_l00048}{48}} del archivo \doxymbox{\hyperlink{main_8h_source}{main.\+h}}.
+
+\Hypertarget{main_8h_a1f08278ca8b35a571feec67789e62ea2}\index{main.h@{main.h}!FIRMWARE\_DATE\_APP@{FIRMWARE\_DATE\_APP}}
+\index{FIRMWARE\_DATE\_APP@{FIRMWARE\_DATE\_APP}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{FIRMWARE\_DATE\_APP}{FIRMWARE\_DATE\_APP}}
+{\footnotesize\ttfamily \label{main_8h_a1f08278ca8b35a571feec67789e62ea2} 
+\+\#define FIRMWARE\+\_\+\+DATE\+\_\+\+APP~"{}N.\+A"{}}
+
+
+
+Firmware compilation date. 
+
+
+
+Definición en la línea \doxymbox{\hyperlink{main_8h_source_l00052}{52}} del archivo \doxymbox{\hyperlink{main_8h_source}{main.\+h}}.
+
+\Hypertarget{main_8h_a53e29efbf83712dcee0878d27965aedf}\index{main.h@{main.h}!FIRMWARE\_NAME@{FIRMWARE\_NAME}}
+\index{FIRMWARE\_NAME@{FIRMWARE\_NAME}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{FIRMWARE\_NAME}{FIRMWARE\_NAME}}
+{\footnotesize\ttfamily \label{main_8h_a53e29efbf83712dcee0878d27965aedf} 
+\+\#define FIRMWARE\+\_\+\+NAME~"{}Arduino\+Mega2560"{}}
+
+
+
+Firmware name. 
+
+
+
+Definición en la línea \doxymbox{\hyperlink{main_8h_source_l00047}{47}} del archivo \doxymbox{\hyperlink{main_8h_source}{main.\+h}}.
+
+\Hypertarget{main_8h_adab0450942968f1384ed7e716cce4e8f}\index{main.h@{main.h}!FIRMWARE\_NAME\_APP@{FIRMWARE\_NAME\_APP}}
+\index{FIRMWARE\_NAME\_APP@{FIRMWARE\_NAME\_APP}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{FIRMWARE\_NAME\_APP}{FIRMWARE\_NAME\_APP}}
+{\footnotesize\ttfamily \label{main_8h_adab0450942968f1384ed7e716cce4e8f} 
+\+\#define FIRMWARE\+\_\+\+NAME\+\_\+\+APP~"{}N.\+A"{}}
+
+
+
+Firmware name. 
+
+
+
+Definición en la línea \doxymbox{\hyperlink{main_8h_source_l00051}{51}} del archivo \doxymbox{\hyperlink{main_8h_source}{main.\+h}}.
+
+\Hypertarget{main_8h_aa14dc39d52ab121ceb570f1a265385e0}\index{main.h@{main.h}!FIRMWARE\_VERSION@{FIRMWARE\_VERSION}}
+\index{FIRMWARE\_VERSION@{FIRMWARE\_VERSION}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{FIRMWARE\_VERSION}{FIRMWARE\_VERSION}}
+{\footnotesize\ttfamily \label{main_8h_aa14dc39d52ab121ceb570f1a265385e0} 
+\+\#define FIRMWARE\+\_\+\+VERSION~"{}1.\+0.B"{}}
+
+
+
+Includes del sistema y librerías necesarias para el firmware. 
+
+
+\begin{DoxyItemize}
+\item \doxylink{pinout_8h}{pinout.\+h}:\+ Definición de pines del sistema
+\item \doxylink{avr8-stub_8h}{avr8-\/stub.\+h}:\+ Soporte para depuración con GDB
+\item Hardware\+Serial.\+h:\+ Comunicación serie
+\item \doxylink{diagnostics_u_a_r_t_8h}{diagnostics\+UART.\+h}:\+ Diagnóstico de UART
+\item \doxylink{diagnostics_e_e_p_r_o_m_8h}{diagnostics\+EEPROM.\+h}:\+ Diagnóstico de EEPROM
+\item \doxylink{config_8h}{config.\+h}:\+ Parámetros de configuración del sistema
+\item \doxylink{motor_step_8h}{motor\+Step.\+h}:\+ Control del motor paso a paso
+\item \doxylink{pid_8h}{pid.\+h}:\+ Controlador \doxylink{class_p_i_d}{PID}
+\end{DoxyItemize}
+
+Metadatos del firmware.
+
+Incluye información sobre:\+
+\begin{DoxyItemize}
+\item versión del firmware
+\item nombre del firmware
+\item fecha de compilación
+\item autor
+\item metadatos de la aplicación asociada Firmware version 
+\end{DoxyItemize}
+
+Definición en la línea \doxymbox{\hyperlink{main_8h_source_l00046}{46}} del archivo \doxymbox{\hyperlink{main_8h_source}{main.\+h}}.
+
+\Hypertarget{main_8h_a38b33acb5d5661010989f8868009749e}\index{main.h@{main.h}!FIRMWARE\_VERSION\_APP@{FIRMWARE\_VERSION\_APP}}
+\index{FIRMWARE\_VERSION\_APP@{FIRMWARE\_VERSION\_APP}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{FIRMWARE\_VERSION\_APP}{FIRMWARE\_VERSION\_APP}}
+{\footnotesize\ttfamily \label{main_8h_a38b33acb5d5661010989f8868009749e} 
+\+\#define FIRMWARE\+\_\+\+VERSION\+\_\+\+APP~"{}N.\+A"{}}
+
+
+
+Firmware version for application. 
+
+
+
+Definición en la línea \doxymbox{\hyperlink{main_8h_source_l00050}{50}} del archivo \doxymbox{\hyperlink{main_8h_source}{main.\+h}}.
+

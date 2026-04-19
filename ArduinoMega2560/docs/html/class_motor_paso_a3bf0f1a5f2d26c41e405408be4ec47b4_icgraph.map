@@ -1,0 +1,5 @@
+<map id="MotorPaso::movimientoPosicionRelativo" name="MotorPaso::movimientoPosicionRelativo">
+<area shape="rect" id="Node000001" title="Mueve el motor hacia un ángulo relativo usando el camino más corto." alt="" coords="100,5,308,45"/>
+<area shape="rect" id="Node000002" href="$main_8cpp.html#afe461d27b9c48d5921c00d521181f12f" title="Arduino main loop. Ejecuta continuamente la configuración de pines, lectura analógica,..." alt="" coords="5,13,52,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="86,28,52,28,52,23,86,23"/>
+</map>

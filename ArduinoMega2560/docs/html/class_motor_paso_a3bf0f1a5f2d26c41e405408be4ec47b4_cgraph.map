@@ -1,0 +1,22 @@
+<map id="MotorPaso::movimientoPosicionRelativo" name="MotorPaso::movimientoPosicionRelativo">
+<area shape="rect" id="Node000001" title="Mueve el motor hacia un ángulo relativo usando el camino más corto." alt="" coords="5,184,213,224"/>
+<area shape="rect" id="Node000002" href="$class_motor_paso.html#aa054bdf42608a37c3fbc9e5037c417e9" title="Convierte grados a pasos del motor." alt="" coords="282,5,465,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="124,182,179,119,218,85,260,55,273,48,275,53,263,60,221,89,183,123,128,186"/>
+<area shape="rect" id="Node000003" href="$class_motor_paso.html#af1f50306108a5f69c298367da9e96e3c" title="Imprime información detallada del movimiento relativo." alt="" coords="277,69,470,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="141,181,196,150,260,119,280,111,282,116,262,124,198,155,144,186"/>
+<area shape="rect" id="Node000004" href="$class_motor_paso.html#a5e3740ade4968870d145a97dfaa6378b" title="Calcula la diferencia circular entre dos ángulos." alt="" coords="277,134,469,159"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="201,181,300,160,302,165,203,187"/>
+<area shape="rect" id="Node000005" href="$class_motor_paso.html#aa9331c4fc40047c1b7856cfebc9220bc" title="Actualiza y devuelve los grados recorridos durante el movimiento." alt="" coords="261,184,485,224"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="214,201,248,201,248,207,214,207"/>
+<area shape="rect" id="Node000007" href="$class_motor_paso.html#afdcaa01d882749cc9a8de8ea6397a12c" title="Normaliza un ángulo al rango 0–360 grados." alt="" coords="276,249,471,274"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="203,221,302,243,300,248,201,227"/>
+<area shape="rect" id="Node000008" href="$class_motor_paso.html#aeb003102ac4f885226a4a4a1e4121fa5" title="Avanza un paso en la secuencia del motor." alt="" coords="287,298,459,323"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="143,222,198,253,262,283,291,292,289,297,260,288,195,258,140,226"/>
+<area shape="rect" id="Node000010" href="$class_motor_paso.html#a70e7b613b257ac6dab5a0dc38d389f3a" title="Retrocede un paso en la secuencia del motor." alt="" coords="297,347,449,373"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="129,222,185,278,222,309,263,334,285,343,283,348,260,338,219,313,181,282,126,226"/>
+<area shape="rect" id="Node000006" href="$class_motor_paso.html#ac2b6d1c7bc1c04a0fb39839b1658721c" title="Convierte pasos del motor a grados." alt="" coords="533,184,712,224"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="485,201,520,201,520,207,485,207"/>
+<area shape="rect" id="Node000009" href="$class_motor_paso.html#ac610d089d82aca423c7528f918e3e6f1" title="Aplica un paso específico de la secuencia (0–7)." alt="" coords="542,322,703,347"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="460,316,528,323,528,328,459,322"/>
+<area shape="poly" id="edge10_Node000010_Node000009" title=" " alt="" coords="449,350,528,342,529,347,450,355"/>
+</map>

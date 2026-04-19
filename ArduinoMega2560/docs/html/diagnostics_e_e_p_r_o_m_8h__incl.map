@@ -1,0 +1,13 @@
+<map id="diagnosticsEEPROM.h" name="diagnosticsEEPROM.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,161,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="69,225,146,251"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="68,33,46,53,28,80,26,91,29,103,41,135,57,165,91,213,86,216,52,168,36,137,23,105,21,91,24,78,42,49,65,29"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="38,79,129,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="86,31,86,65,81,65,81,31"/>
+<area shape="rect" id="Node000004" href="$msg_8h.html" title=" " alt="" coords="153,79,288,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="107,28,187,70,185,75,104,33"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="196,106,164,126,135,154,120,183,113,212,108,211,115,181,131,150,161,122,193,102"/>
+<area shape="rect" id="Node000005" href="$config_8h.html" title=" " alt="" coords="145,152,297,177"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="223,104,223,138,218,138,218,104"/>
+<area shape="poly" id="edge6_Node000005_Node000002" title=" " alt="" coords="204,180,139,220,136,216,201,175"/>
+</map>

@@ -1,0 +1,30 @@
+<map id="loop" name="loop">
+<area shape="rect" id="Node000001" title="Arduino main loop. Ejecuta continuamente la configuración de pines, lectura analógica,..." alt="" coords="5,104,52,129"/>
+<area shape="rect" id="Node000002" href="$class_p_i_d.html#af0cfbed86d613536bbd2b6220139d0c4" title="Calcula la salida del controlador PID." alt="" coords="147,23,261,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="51,104,162,52,164,56,53,109"/>
+<area shape="rect" id="Node000004" href="$class_motor_paso.html#ae45688954caa95057df7ac86389a7700" title="Establece la velocidad del motor en RPM." alt="" coords="119,104,289,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="52,114,105,114,105,119,52,119"/>
+<area shape="rect" id="Node000005" href="$class_motor_paso.html#a3bf0f1a5f2d26c41e405408be4ec47b4" title="Mueve el motor hacia un ángulo relativo usando el camino más corto." alt="" coords="100,218,308,258"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="50,127,164,208,161,212,47,132"/>
+<area shape="rect" id="Node000003" href="$class_p_i_d.html#a7263b32d21a2759144d935442db72191" title="Imprime información de depuración del PID." alt="" coords="401,5,535,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="261,29,387,21,387,26,261,34"/>
+<area shape="rect" id="Node000006" href="$class_motor_paso.html#aa054bdf42608a37c3fbc9e5037c417e9" title="Convierte grados a pasos del motor." alt="" coords="377,55,559,95"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="225,216,292,154,355,105,369,98,371,103,357,110,295,158,228,219"/>
+<area shape="rect" id="Node000007" href="$class_motor_paso.html#af1f50306108a5f69c298367da9e96e3c" title="Imprime información detallada del movimiento relativo." alt="" coords="371,119,565,159"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="246,215,355,169,378,161,380,166,357,174,248,220"/>
+<area shape="rect" id="Node000008" href="$class_motor_paso.html#a5e3740ade4968870d145a97dfaa6378b" title="Calcula la diferencia circular entre dos ángulos." alt="" coords="372,184,564,209"/>
+<area shape="poly" id="edge7_Node000005_Node000008" title=" " alt="" coords="308,219,372,209,373,214,309,224"/>
+<area shape="rect" id="Node000009" href="$class_motor_paso.html#aa9331c4fc40047c1b7856cfebc9220bc" title="Actualiza y devuelve los grados recorridos durante el movimiento." alt="" coords="356,234,580,274"/>
+<area shape="poly" id="edge8_Node000005_Node000009" title=" " alt="" coords="308,242,342,244,342,249,308,247"/>
+<area shape="rect" id="Node000011" href="$class_motor_paso.html#afdcaa01d882749cc9a8de8ea6397a12c" title="Normaliza un ángulo al rango 0–360 grados." alt="" coords="371,299,565,324"/>
+<area shape="poly" id="edge10_Node000005_Node000011" title=" " alt="" coords="265,256,357,283,394,293,393,298,355,289,264,261"/>
+<area shape="rect" id="Node000012" href="$class_motor_paso.html#aeb003102ac4f885226a4a4a1e4121fa5" title="Avanza un paso en la secuencia del motor." alt="" coords="382,348,554,373"/>
+<area shape="poly" id="edge11_Node000005_Node000012" title=" " alt="" coords="231,256,287,296,357,334,378,342,376,347,355,339,284,301,228,260"/>
+<area shape="rect" id="Node000014" href="$class_motor_paso.html#a70e7b613b257ac6dab5a0dc38d389f3a" title="Retrocede un paso en la secuencia del motor." alt="" coords="392,397,544,423"/>
+<area shape="poly" id="edge13_Node000005_Node000014" title=" " alt="" coords="222,257,277,320,315,355,357,384,380,393,378,398,355,388,311,359,273,324,218,260"/>
+<area shape="rect" id="Node000010" href="$class_motor_paso.html#ac2b6d1c7bc1c04a0fb39839b1658721c" title="Convierte pasos del motor a grados." alt="" coords="628,234,807,274"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="580,251,614,251,614,257,580,257"/>
+<area shape="rect" id="Node000013" href="$class_motor_paso.html#ac610d089d82aca423c7528f918e3e6f1" title="Aplica un paso específico de la secuencia (0–7)." alt="" coords="637,372,798,397"/>
+<area shape="poly" id="edge12_Node000012_Node000013" title=" " alt="" coords="554,366,623,373,622,378,554,372"/>
+<area shape="poly" id="edge14_Node000014_Node000013" title=" " alt="" coords="544,400,623,392,623,397,544,405"/>
+</map>

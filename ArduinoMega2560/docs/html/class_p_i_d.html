@@ -1,0 +1,1201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ArduinoMega2560_SPI: Referencia de la clase PID</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ArduinoMega2560_SPI<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_p_i_d.html','','class_p_i_d-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia de la clase PID</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Controlador <a class="el" href="class_p_i_d.html" title="Controlador PID con anti-windup, derivative-on-measurement y limitación de cambio de salida (slew-rat...">PID</a> con anti-windup, derivative-on-measurement y limitación de cambio de salida (slew-rate limit).  
+ <a href="#details">Más...</a></p>
+
+<p><code>#include &lt;<a class="el" href="pid_8h_source.html">pid.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Métodos públicos</h2></td></tr>
+<tr class="memitem:a4125833122b985f732eef6f3e6d728c3" id="r_a4125833122b985f732eef6f3e6d728c3"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a4125833122b985f732eef6f3e6d728c3">PID</a> (float <a class="el" href="#a67f2b50c209d4de6a20c710b33b62f0e">Kp</a>, float <a class="el" href="#ab48eeec8704e5d517a64b91fbe4fba57">Ki</a>, float <a class="el" href="#a105396cb94f3ec2f352b3d116529112b">Kd</a>, float <a class="el" href="#a996d72c3183fc2e68260efd49db30521">outputMin</a>, float <a class="el" href="#a5867b916c0c69eeeebf997701c8157b2">outputMax</a>, float <a class="el" href="#aa2ba5bce664ff9fd12efcf22bf6be7a9">dt</a>, float <a class="el" href="#a84fa4441b8b7275ea55d0d2c6a44febf">outputMaxChanged</a>)</td></tr>
+<tr class="memdesc:a4125833122b985f732eef6f3e6d728c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor del controlador <a class="el" href="class_p_i_d.html" title="Controlador PID con anti-windup, derivative-on-measurement y limitación de cambio de salida (slew-rat...">PID</a>.  <br /></td></tr>
+<tr class="memitem:af0cfbed86d613536bbd2b6220139d0c4" id="r_af0cfbed86d613536bbd2b6220139d0c4"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#af0cfbed86d613536bbd2b6220139d0c4">calculoPID</a> (float setpoint, float feedback, bool debugMSG=false)</td></tr>
+<tr class="memdesc:af0cfbed86d613536bbd2b6220139d0c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcula la salida del controlador <a class="el" href="class_p_i_d.html" title="Controlador PID con anti-windup, derivative-on-measurement y limitación de cambio de salida (slew-rat...">PID</a>.  <br /></td></tr>
+<tr class="memitem:af904362d0e2a6db02cd744af9edcf5bf" id="r_af904362d0e2a6db02cd744af9edcf5bf"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af904362d0e2a6db02cd744af9edcf5bf">setKPID</a> (float <a class="el" href="#a67f2b50c209d4de6a20c710b33b62f0e">Kp</a>, float <a class="el" href="#ab48eeec8704e5d517a64b91fbe4fba57">Ki</a>, float <a class="el" href="#a105396cb94f3ec2f352b3d116529112b">Kd</a>)</td></tr>
+<tr class="memdesc:af904362d0e2a6db02cd744af9edcf5bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Establece nuevas ganancias <a class="el" href="class_p_i_d.html" title="Controlador PID con anti-windup, derivative-on-measurement y limitación de cambio de salida (slew-rat...">PID</a>.  <br /></td></tr>
+<tr class="memitem:a8de60a65c98638c43bc070b5bd32e77e" id="r_a8de60a65c98638c43bc070b5bd32e77e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8de60a65c98638c43bc070b5bd32e77e">setOutputLimits</a> (float <a class="el" href="#a996d72c3183fc2e68260efd49db30521">outputMin</a>, float <a class="el" href="#a5867b916c0c69eeeebf997701c8157b2">outputMax</a>)</td></tr>
+<tr class="memdesc:a8de60a65c98638c43bc070b5bd32e77e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Establece los límites de salida del <a class="el" href="class_p_i_d.html" title="Controlador PID con anti-windup, derivative-on-measurement y limitación de cambio de salida (slew-rat...">PID</a>.  <br /></td></tr>
+<tr class="memitem:ae55a80080d8196166d5a203c6b0131f5" id="r_ae55a80080d8196166d5a203c6b0131f5"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae55a80080d8196166d5a203c6b0131f5">setDt</a> (float <a class="el" href="#aa2ba5bce664ff9fd12efcf22bf6be7a9">dt</a>)</td></tr>
+<tr class="memdesc:ae55a80080d8196166d5a203c6b0131f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Establece un nuevo tiempo de muestreo.  <br /></td></tr>
+<tr class="memitem:a4ec46f614451079f4485319d4d5a7477" id="r_a4ec46f614451079f4485319d4d5a7477"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a4ec46f614451079f4485319d4d5a7477">resetPID</a> ()</td></tr>
+<tr class="memdesc:a4ec46f614451079f4485319d4d5a7477"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reinicia el estado interno del <a class="el" href="class_p_i_d.html" title="Controlador PID con anti-windup, derivative-on-measurement y limitación de cambio de salida (slew-rat...">PID</a>.  <br /></td></tr>
+<tr class="memitem:a5cdc6d7cb5e1520722dc764b21eb6f09" id="r_a5cdc6d7cb5e1520722dc764b21eb6f09"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a5cdc6d7cb5e1520722dc764b21eb6f09">statedt</a> (float <a class="el" href="#aa2ba5bce664ff9fd12efcf22bf6be7a9">dt</a>)</td></tr>
+<tr class="memdesc:a5cdc6d7cb5e1520722dc764b21eb6f09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valida y corrige el tiempo de muestreo.  <br /></td></tr>
+<tr class="memitem:a7263b32d21a2759144d935442db72191" id="r_a7263b32d21a2759144d935442db72191"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a7263b32d21a2759144d935442db72191">printDebugPID</a> (float setpoint, float feedback)</td></tr>
+<tr class="memdesc:a7263b32d21a2759144d935442db72191"><td class="mdescLeft">&#160;</td><td class="mdescRight">Imprime información de depuración del <a class="el" href="class_p_i_d.html" title="Controlador PID con anti-windup, derivative-on-measurement y limitación de cambio de salida (slew-rat...">PID</a>.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Atributos privados</h2></td></tr>
+<tr class="memitem:a67f2b50c209d4de6a20c710b33b62f0e" id="r_a67f2b50c209d4de6a20c710b33b62f0e"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a67f2b50c209d4de6a20c710b33b62f0e">Kp</a></td></tr>
+<tr class="memdesc:a67f2b50c209d4de6a20c710b33b62f0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ganancia proporcional.  <br /></td></tr>
+<tr class="memitem:ab48eeec8704e5d517a64b91fbe4fba57" id="r_ab48eeec8704e5d517a64b91fbe4fba57"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#ab48eeec8704e5d517a64b91fbe4fba57">Ki</a></td></tr>
+<tr class="memdesc:ab48eeec8704e5d517a64b91fbe4fba57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ganancia integral.  <br /></td></tr>
+<tr class="memitem:a105396cb94f3ec2f352b3d116529112b" id="r_a105396cb94f3ec2f352b3d116529112b"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a105396cb94f3ec2f352b3d116529112b">Kd</a></td></tr>
+<tr class="memdesc:a105396cb94f3ec2f352b3d116529112b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ganancia derivativa.  <br /></td></tr>
+<tr class="memitem:a996d72c3183fc2e68260efd49db30521" id="r_a996d72c3183fc2e68260efd49db30521"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a996d72c3183fc2e68260efd49db30521">outputMin</a></td></tr>
+<tr class="memdesc:a996d72c3183fc2e68260efd49db30521"><td class="mdescLeft">&#160;</td><td class="mdescRight">Límite mínimo de salida.  <br /></td></tr>
+<tr class="memitem:a5867b916c0c69eeeebf997701c8157b2" id="r_a5867b916c0c69eeeebf997701c8157b2"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a5867b916c0c69eeeebf997701c8157b2">outputMax</a></td></tr>
+<tr class="memdesc:a5867b916c0c69eeeebf997701c8157b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Límite máximo de salida.  <br /></td></tr>
+<tr class="memitem:aa2ba5bce664ff9fd12efcf22bf6be7a9" id="r_aa2ba5bce664ff9fd12efcf22bf6be7a9"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#aa2ba5bce664ff9fd12efcf22bf6be7a9">dt</a></td></tr>
+<tr class="memdesc:aa2ba5bce664ff9fd12efcf22bf6be7a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tiempo de muestreo.  <br /></td></tr>
+<tr class="memitem:a58024226a4cabe7c195ec7f8ec41523b" id="r_a58024226a4cabe7c195ec7f8ec41523b"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a58024226a4cabe7c195ec7f8ec41523b">error</a></td></tr>
+<tr class="memdesc:a58024226a4cabe7c195ec7f8ec41523b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Error actual.  <br /></td></tr>
+<tr class="memitem:a482b5f6204d925cc2ed9079c06a1dbcd" id="r_a482b5f6204d925cc2ed9079c06a1dbcd"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a482b5f6204d925cc2ed9079c06a1dbcd">prevError</a></td></tr>
+<tr class="memdesc:a482b5f6204d925cc2ed9079c06a1dbcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Error previo.  <br /></td></tr>
+<tr class="memitem:ab9dcad835103e9ad160c57f329f40e10" id="r_ab9dcad835103e9ad160c57f329f40e10"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#ab9dcad835103e9ad160c57f329f40e10">proportional</a></td></tr>
+<tr class="memdesc:ab9dcad835103e9ad160c57f329f40e10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Término proporcional.  <br /></td></tr>
+<tr class="memitem:a0e5d49534b4925162583cc0b1e124a50" id="r_a0e5d49534b4925162583cc0b1e124a50"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a0e5d49534b4925162583cc0b1e124a50">integral</a></td></tr>
+<tr class="memdesc:a0e5d49534b4925162583cc0b1e124a50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Acumulador integral.  <br /></td></tr>
+<tr class="memitem:ad6f67ea0bed5ed7dd4e2a8d447d68a00" id="r_ad6f67ea0bed5ed7dd4e2a8d447d68a00"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#ad6f67ea0bed5ed7dd4e2a8d447d68a00">pidNoIntegral</a></td></tr>
+<tr class="memdesc:ad6f67ea0bed5ed7dd4e2a8d447d68a00"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_p_i_d.html" title="Controlador PID con anti-windup, derivative-on-measurement y limitación de cambio de salida (slew-rat...">PID</a> sin término integral.  <br /></td></tr>
+<tr class="memitem:a1a5c8f27b61a74868f874cc6df3a2639" id="r_a1a5c8f27b61a74868f874cc6df3a2639"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a1a5c8f27b61a74868f874cc6df3a2639">saturated</a></td></tr>
+<tr class="memdesc:a1a5c8f27b61a74868f874cc6df3a2639"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indica si el <a class="el" href="class_p_i_d.html" title="Controlador PID con anti-windup, derivative-on-measurement y limitación de cambio de salida (slew-rat...">PID</a> está saturado.  <br /></td></tr>
+<tr class="memitem:a65e03137e6442acb9852b8626220b6d3" id="r_a65e03137e6442acb9852b8626220b6d3"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a65e03137e6442acb9852b8626220b6d3">derivative</a></td></tr>
+<tr class="memdesc:a65e03137e6442acb9852b8626220b6d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Término derivativo.  <br /></td></tr>
+<tr class="memitem:a5d214a65132fc8545eb5d58a537a804a" id="r_a5d214a65132fc8545eb5d58a537a804a"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a5d214a65132fc8545eb5d58a537a804a">output</a></td></tr>
+<tr class="memdesc:a5d214a65132fc8545eb5d58a537a804a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Salida final del <a class="el" href="class_p_i_d.html" title="Controlador PID con anti-windup, derivative-on-measurement y limitación de cambio de salida (slew-rat...">PID</a>.  <br /></td></tr>
+<tr class="memitem:a9760d4d6ce3a52353ac44cd997f50dc5" id="r_a9760d4d6ce3a52353ac44cd997f50dc5"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a9760d4d6ce3a52353ac44cd997f50dc5">rawOutput</a></td></tr>
+<tr class="memdesc:a9760d4d6ce3a52353ac44cd997f50dc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Salida sin limitación de cambio.  <br /></td></tr>
+<tr class="memitem:aa93700f20d6bcefe7c96ca08240e748b" id="r_aa93700f20d6bcefe7c96ca08240e748b"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#aa93700f20d6bcefe7c96ca08240e748b">prevOutput</a></td></tr>
+<tr class="memdesc:aa93700f20d6bcefe7c96ca08240e748b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Salida previa.  <br /></td></tr>
+<tr class="memitem:a50e3a777a99f13b048d9ece43dcf4dfc" id="r_a50e3a777a99f13b048d9ece43dcf4dfc"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a50e3a777a99f13b048d9ece43dcf4dfc">deltaOutput</a></td></tr>
+<tr class="memdesc:a50e3a777a99f13b048d9ece43dcf4dfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cambio entre salidas.  <br /></td></tr>
+<tr class="memitem:ab1b409b1b5a3113d73c4b1d15946c6b1" id="r_ab1b409b1b5a3113d73c4b1d15946c6b1"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#ab1b409b1b5a3113d73c4b1d15946c6b1">prevFeedback</a></td></tr>
+<tr class="memdesc:ab1b409b1b5a3113d73c4b1d15946c6b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Feedback previo para derivative-on-measurement.  <br /></td></tr>
+<tr class="memitem:a84fa4441b8b7275ea55d0d2c6a44febf" id="r_a84fa4441b8b7275ea55d0d2c6a44febf"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a84fa4441b8b7275ea55d0d2c6a44febf">outputMaxChanged</a></td></tr>
+<tr class="memdesc:a84fa4441b8b7275ea55d0d2c6a44febf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Máximo cambio permitido por ciclo.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Controlador <a class="el" href="class_p_i_d.html" title="Controlador PID con anti-windup, derivative-on-measurement y limitación de cambio de salida (slew-rat...">PID</a> con anti-windup, derivative-on-measurement y limitación de cambio de salida (slew-rate limit). </p>
+<p>Este controlador está diseñado para sistemas sensibles como motores paso a paso, actuadores lentos o sistemas donde se requiere suavidad y estabilidad. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="pid_8h_source.html#l00014">14</a> del archivo <a class="el" href="pid_8h_source.html">pid.h</a>.</p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Documentación de constructores y destructores</h2>
+<a id="a4125833122b985f732eef6f3e6d728c3" name="a4125833122b985f732eef6f3e6d728c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4125833122b985f732eef6f3e6d728c3">&#9670;&#160;</a></span>PID()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PID::PID </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>Kp</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>Ki</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>Kd</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>outputMin</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>outputMax</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>dt</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>outputMaxChanged</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor del controlador <a class="el" href="class_p_i_d.html" title="Controlador PID con anti-windup, derivative-on-measurement y limitación de cambio de salida (slew-rat...">PID</a>. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="#a67f2b50c209d4de6a20c710b33b62f0e" title="Ganancia proporcional.">Kp</a></td><td>Ganancia proporcional. </td></tr>
+    <tr><td class="paramname"><a class="el" href="#ab48eeec8704e5d517a64b91fbe4fba57" title="Ganancia integral.">Ki</a></td><td>Ganancia integral. </td></tr>
+    <tr><td class="paramname"><a class="el" href="#a105396cb94f3ec2f352b3d116529112b" title="Ganancia derivativa.">Kd</a></td><td>Ganancia derivativa. </td></tr>
+    <tr><td class="paramname"><a class="el" href="#a996d72c3183fc2e68260efd49db30521" title="Límite mínimo de salida.">outputMin</a></td><td>Límite mínimo de salida. </td></tr>
+    <tr><td class="paramname"><a class="el" href="#a5867b916c0c69eeeebf997701c8157b2" title="Límite máximo de salida.">outputMax</a></td><td>Límite máximo de salida. </td></tr>
+    <tr><td class="paramname"><a class="el" href="#aa2ba5bce664ff9fd12efcf22bf6be7a9" title="Tiempo de muestreo.">dt</a></td><td>Tiempo de muestreo en segundos. </td></tr>
+    <tr><td class="paramname"><a class="el" href="#a84fa4441b8b7275ea55d0d2c6a44febf" title="Máximo cambio permitido por ciclo.">outputMaxChanged</a></td><td>Máximo cambio permitido por ciclo (slew-rate). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="pid_8cpp_source.html#l00020">20</a> del archivo <a class="el" href="pid_8cpp_source.html">pid.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   23</span>{</div>
+<div class="line"><span class="lineno">   24</span>    this-&gt;<a class="code hl_variable" href="#a67f2b50c209d4de6a20c710b33b62f0e">Kp</a> = <a class="code hl_variable" href="#a67f2b50c209d4de6a20c710b33b62f0e">Kp</a>;</div>
+<div class="line"><span class="lineno">   25</span>    this-&gt;<a class="code hl_variable" href="#ab48eeec8704e5d517a64b91fbe4fba57">Ki</a> = <a class="code hl_variable" href="#ab48eeec8704e5d517a64b91fbe4fba57">Ki</a>;</div>
+<div class="line"><span class="lineno">   26</span>    this-&gt;<a class="code hl_variable" href="#a105396cb94f3ec2f352b3d116529112b">Kd</a> = <a class="code hl_variable" href="#a105396cb94f3ec2f352b3d116529112b">Kd</a>;</div>
+<div class="line"><span class="lineno">   27</span> </div>
+<div class="line"><span class="lineno">   28</span>    this-&gt;<a class="code hl_variable" href="#a996d72c3183fc2e68260efd49db30521">outputMin</a> = <a class="code hl_variable" href="#a996d72c3183fc2e68260efd49db30521">outputMin</a>;</div>
+<div class="line"><span class="lineno">   29</span>    this-&gt;<a class="code hl_variable" href="#a5867b916c0c69eeeebf997701c8157b2">outputMax</a> = <a class="code hl_variable" href="#a5867b916c0c69eeeebf997701c8157b2">outputMax</a>;</div>
+<div class="line"><span class="lineno">   30</span> </div>
+<div class="line"><span class="lineno">   31</span>    this-&gt;<a class="code hl_variable" href="#aa2ba5bce664ff9fd12efcf22bf6be7a9">dt</a> = <a class="code hl_function" href="#a5cdc6d7cb5e1520722dc764b21eb6f09">statedt</a>(<a class="code hl_variable" href="#aa2ba5bce664ff9fd12efcf22bf6be7a9">dt</a>);</div>
+<div class="line"><span class="lineno">   32</span>    this-&gt;<a class="code hl_variable" href="#a84fa4441b8b7275ea55d0d2c6a44febf">outputMaxChanged</a> = <a class="code hl_variable" href="#a84fa4441b8b7275ea55d0d2c6a44febf">outputMaxChanged</a>;</div>
+<div class="line"><span class="lineno">   33</span> </div>
+<div class="line"><span class="lineno">   34</span>    this-&gt;<a class="code hl_variable" href="#a58024226a4cabe7c195ec7f8ec41523b">error</a> = 0.0f;</div>
+<div class="line"><span class="lineno">   35</span>    this-&gt;<a class="code hl_variable" href="#a482b5f6204d925cc2ed9079c06a1dbcd">prevError</a> = 0.0f;</div>
+<div class="line"><span class="lineno">   36</span>    this-&gt;<a class="code hl_variable" href="#a0e5d49534b4925162583cc0b1e124a50">integral</a> = 0.0f;</div>
+<div class="line"><span class="lineno">   37</span>    this-&gt;<a class="code hl_variable" href="#a65e03137e6442acb9852b8626220b6d3">derivative</a> = 0.0f;</div>
+<div class="line"><span class="lineno">   38</span>    this-&gt;<a class="code hl_variable" href="#a5d214a65132fc8545eb5d58a537a804a">output</a> = 0.0f;</div>
+<div class="line"><span class="lineno">   39</span> </div>
+<div class="line"><span class="lineno">   40</span>    this-&gt;<a class="code hl_variable" href="#ab1b409b1b5a3113d73c4b1d15946c6b1">prevFeedback</a> = 0.0f;</div>
+<div class="line"><span class="lineno">   41</span>    this-&gt;<a class="code hl_variable" href="#aa93700f20d6bcefe7c96ca08240e748b">prevOutput</a> = 0.0f;</div>
+<div class="line"><span class="lineno">   42</span>}</div>
+<div class="ttc" id="aclass_p_i_d_html_a0e5d49534b4925162583cc0b1e124a50"><div class="ttname"><a href="#a0e5d49534b4925162583cc0b1e124a50">PID::integral</a></div><div class="ttdeci">float integral</div><div class="ttdoc">Acumulador integral.</div><div class="ttdef"><b>Definition</b> <a href="pid_8h_source.html#l00106">pid.h:106</a></div></div>
+<div class="ttc" id="aclass_p_i_d_html_a105396cb94f3ec2f352b3d116529112b"><div class="ttname"><a href="#a105396cb94f3ec2f352b3d116529112b">PID::Kd</a></div><div class="ttdeci">float Kd</div><div class="ttdoc">Ganancia derivativa.</div><div class="ttdef"><b>Definition</b> <a href="pid_8h_source.html#l00093">pid.h:93</a></div></div>
+<div class="ttc" id="aclass_p_i_d_html_a482b5f6204d925cc2ed9079c06a1dbcd"><div class="ttname"><a href="#a482b5f6204d925cc2ed9079c06a1dbcd">PID::prevError</a></div><div class="ttdeci">float prevError</div><div class="ttdoc">Error previo.</div><div class="ttdef"><b>Definition</b> <a href="pid_8h_source.html#l00104">pid.h:104</a></div></div>
+<div class="ttc" id="aclass_p_i_d_html_a58024226a4cabe7c195ec7f8ec41523b"><div class="ttname"><a href="#a58024226a4cabe7c195ec7f8ec41523b">PID::error</a></div><div class="ttdeci">float error</div><div class="ttdoc">Error actual.</div><div class="ttdef"><b>Definition</b> <a href="pid_8h_source.html#l00103">pid.h:103</a></div></div>
+<div class="ttc" id="aclass_p_i_d_html_a5867b916c0c69eeeebf997701c8157b2"><div class="ttname"><a href="#a5867b916c0c69eeeebf997701c8157b2">PID::outputMax</a></div><div class="ttdeci">float outputMax</div><div class="ttdoc">Límite máximo de salida.</div><div class="ttdef"><b>Definition</b> <a href="pid_8h_source.html#l00097">pid.h:97</a></div></div>
+<div class="ttc" id="aclass_p_i_d_html_a5cdc6d7cb5e1520722dc764b21eb6f09"><div class="ttname"><a href="#a5cdc6d7cb5e1520722dc764b21eb6f09">PID::statedt</a></div><div class="ttdeci">float statedt(float dt)</div><div class="ttdoc">Valida y corrige el tiempo de muestreo.</div><div class="ttdef"><b>Definition</b> <a href="pid_8cpp_source.html#l00173">pid.cpp:173</a></div></div>
+<div class="ttc" id="aclass_p_i_d_html_a5d214a65132fc8545eb5d58a537a804a"><div class="ttname"><a href="#a5d214a65132fc8545eb5d58a537a804a">PID::output</a></div><div class="ttdeci">float output</div><div class="ttdoc">Salida final del PID.</div><div class="ttdef"><b>Definition</b> <a href="pid_8h_source.html#l00110">pid.h:110</a></div></div>
+<div class="ttc" id="aclass_p_i_d_html_a65e03137e6442acb9852b8626220b6d3"><div class="ttname"><a href="#a65e03137e6442acb9852b8626220b6d3">PID::derivative</a></div><div class="ttdeci">float derivative</div><div class="ttdoc">Término derivativo.</div><div class="ttdef"><b>Definition</b> <a href="pid_8h_source.html#l00109">pid.h:109</a></div></div>
+<div class="ttc" id="aclass_p_i_d_html_a67f2b50c209d4de6a20c710b33b62f0e"><div class="ttname"><a href="#a67f2b50c209d4de6a20c710b33b62f0e">PID::Kp</a></div><div class="ttdeci">float Kp</div><div class="ttdoc">Ganancia proporcional.</div><div class="ttdef"><b>Definition</b> <a href="pid_8h_source.html#l00091">pid.h:91</a></div></div>
+<div class="ttc" id="aclass_p_i_d_html_a84fa4441b8b7275ea55d0d2c6a44febf"><div class="ttname"><a href="#a84fa4441b8b7275ea55d0d2c6a44febf">PID::outputMaxChanged</a></div><div class="ttdeci">float outputMaxChanged</div><div class="ttdoc">Máximo cambio permitido por ciclo.</div><div class="ttdef"><b>Definition</b> <a href="pid_8h_source.html#l00117">pid.h:117</a></div></div>
+<div class="ttc" id="aclass_p_i_d_html_a996d72c3183fc2e68260efd49db30521"><div class="ttname"><a href="#a996d72c3183fc2e68260efd49db30521">PID::outputMin</a></div><div class="ttdeci">float outputMin</div><div class="ttdoc">Límite mínimo de salida.</div><div class="ttdef"><b>Definition</b> <a href="pid_8h_source.html#l00096">pid.h:96</a></div></div>
+<div class="ttc" id="aclass_p_i_d_html_aa2ba5bce664ff9fd12efcf22bf6be7a9"><div class="ttname"><a href="#aa2ba5bce664ff9fd12efcf22bf6be7a9">PID::dt</a></div><div class="ttdeci">float dt</div><div class="ttdoc">Tiempo de muestreo.</div><div class="ttdef"><b>Definition</b> <a href="pid_8h_source.html#l00100">pid.h:100</a></div></div>
+<div class="ttc" id="aclass_p_i_d_html_aa93700f20d6bcefe7c96ca08240e748b"><div class="ttname"><a href="#aa93700f20d6bcefe7c96ca08240e748b">PID::prevOutput</a></div><div class="ttdeci">float prevOutput</div><div class="ttdoc">Salida previa.</div><div class="ttdef"><b>Definition</b> <a href="pid_8h_source.html#l00112">pid.h:112</a></div></div>
+<div class="ttc" id="aclass_p_i_d_html_ab1b409b1b5a3113d73c4b1d15946c6b1"><div class="ttname"><a href="#ab1b409b1b5a3113d73c4b1d15946c6b1">PID::prevFeedback</a></div><div class="ttdeci">float prevFeedback</div><div class="ttdoc">Feedback previo para derivative-on-measurement.</div><div class="ttdef"><b>Definition</b> <a href="pid_8h_source.html#l00114">pid.h:114</a></div></div>
+<div class="ttc" id="aclass_p_i_d_html_ab48eeec8704e5d517a64b91fbe4fba57"><div class="ttname"><a href="#ab48eeec8704e5d517a64b91fbe4fba57">PID::Ki</a></div><div class="ttdeci">float Ki</div><div class="ttdoc">Ganancia integral.</div><div class="ttdef"><b>Definition</b> <a href="pid_8h_source.html#l00092">pid.h:92</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Gráfico de llamadas de esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_p_i_d_a4125833122b985f732eef6f3e6d728c3_cgraph.png" border="0" usemap="#aclass_p_i_d_a4125833122b985f732eef6f3e6d728c3_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_p_i_d_a4125833122b985f732eef6f3e6d728c3_cgraph" id="aclass_p_i_d_a4125833122b985f732eef6f3e6d728c3_cgraph">
+<area shape="rect" title="Constructor del controlador PID." alt="" coords="5,5,77,31"/>
+<area shape="rect" href="class_p_i_d.html#a5cdc6d7cb5e1520722dc764b21eb6f09" title="Valida y corrige el tiempo de muestreo." alt="" coords="125,5,216,31"/>
+<area shape="poly" title=" " alt="" coords="78,15,112,15,112,21,78,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones miembro</h2>
+<a id="af0cfbed86d613536bbd2b6220139d0c4" name="af0cfbed86d613536bbd2b6220139d0c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0cfbed86d613536bbd2b6220139d0c4">&#9670;&#160;</a></span>calculoPID()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PID::calculoPID </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>setpoint</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>feedback</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>debugMSG</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calcula la salida del controlador <a class="el" href="class_p_i_d.html" title="Controlador PID con anti-windup, derivative-on-measurement y limitación de cambio de salida (slew-rat...">PID</a>. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">setpoint</td><td>Valor deseado. </td></tr>
+    <tr><td class="paramname">feedback</td><td>Valor medido. </td></tr>
+    <tr><td class="paramname">debugMSG</td><td>Si es true, imprime información de depuración del <a class="el" href="class_p_i_d.html" title="Controlador PID con anti-windup, derivative-on-measurement y limitación de cambio de salida (slew-rat...">PID</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Salida del <a class="el" href="class_p_i_d.html" title="Controlador PID con anti-windup, derivative-on-measurement y limitación de cambio de salida (slew-rat...">PID</a>.</dd></dl>
+<p>Implementa:</p><ul>
+<li>Proporcional</li>
+<li>Integral con anti-windup condicional</li>
+<li>Derivative-on-measurement (evita derivative kick)</li>
+<li>Slew-rate limit (limitación de cambio por ciclo)</li>
+<li>Saturación final</li>
+</ul>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">setpoint</td><td>Valor deseado. </td></tr>
+    <tr><td class="paramname">feedback</td><td>Valor medido. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Salida del controlador <a class="el" href="class_p_i_d.html" title="Controlador PID con anti-windup, derivative-on-measurement y limitación de cambio de salida (slew-rat...">PID</a>. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="pid_8cpp_source.html#l00058">58</a> del archivo <a class="el" href="pid_8cpp_source.html">pid.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   59</span>{</div>
+<div class="line"><span class="lineno">   60</span>    <span class="comment">// 1) Error actual</span></div>
+<div class="line"><span class="lineno">   61</span>    this-&gt;<a class="code hl_variable" href="#a58024226a4cabe7c195ec7f8ec41523b">error</a> = setpoint - feedback;</div>
+<div class="line"><span class="lineno">   62</span> </div>
+<div class="line"><span class="lineno">   63</span>    <span class="comment">// 2) Proporcional</span></div>
+<div class="line"><span class="lineno">   64</span>    this-&gt;<a class="code hl_variable" href="#ab9dcad835103e9ad160c57f329f40e10">proportional</a> = this-&gt;<a class="code hl_variable" href="#a67f2b50c209d4de6a20c710b33b62f0e">Kp</a> * this-&gt;<a class="code hl_variable" href="#a58024226a4cabe7c195ec7f8ec41523b">error</a>;</div>
+<div class="line"><span class="lineno">   65</span> </div>
+<div class="line"><span class="lineno">   66</span>    <span class="comment">// Protección dt</span></div>
+<div class="line"><span class="lineno">   67</span>    <span class="keywordflow">if</span> (this-&gt;<a class="code hl_variable" href="#aa2ba5bce664ff9fd12efcf22bf6be7a9">dt</a> &lt;= 0.0f)</div>
+<div class="line"><span class="lineno">   68</span>        <span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="#a5d214a65132fc8545eb5d58a537a804a">output</a>;</div>
+<div class="line"><span class="lineno">   69</span> </div>
+<div class="line"><span class="lineno">   70</span>    <span class="comment">// 3) Derivada (derivative-on-measurement)</span></div>
+<div class="line"><span class="lineno">   71</span>    this-&gt;<a class="code hl_variable" href="#a65e03137e6442acb9852b8626220b6d3">derivative</a> = -(feedback - this-&gt;<a class="code hl_variable" href="#ab1b409b1b5a3113d73c4b1d15946c6b1">prevFeedback</a>) / this-&gt;<a class="code hl_variable" href="#aa2ba5bce664ff9fd12efcf22bf6be7a9">dt</a>;</div>
+<div class="line"><span class="lineno">   72</span> </div>
+<div class="line"><span class="lineno">   73</span>    <span class="comment">// 4) Anti-windup condicional</span></div>
+<div class="line"><span class="lineno">   74</span>    this-&gt;<a class="code hl_variable" href="#ad6f67ea0bed5ed7dd4e2a8d447d68a00">pidNoIntegral</a> = this-&gt;<a class="code hl_variable" href="#ab9dcad835103e9ad160c57f329f40e10">proportional</a> + this-&gt;<a class="code hl_variable" href="#a105396cb94f3ec2f352b3d116529112b">Kd</a> * this-&gt;<a class="code hl_variable" href="#a65e03137e6442acb9852b8626220b6d3">derivative</a>;</div>
+<div class="line"><span class="lineno">   75</span>    this-&gt;<a class="code hl_variable" href="#a1a5c8f27b61a74868f874cc6df3a2639">saturated</a> = (this-&gt;<a class="code hl_variable" href="#ad6f67ea0bed5ed7dd4e2a8d447d68a00">pidNoIntegral</a> &gt; this-&gt;<a class="code hl_variable" href="#a5867b916c0c69eeeebf997701c8157b2">outputMax</a>) || (this-&gt;<a class="code hl_variable" href="#ad6f67ea0bed5ed7dd4e2a8d447d68a00">pidNoIntegral &lt; this-&gt;</a><a class="code hl_variable" href="#a996d72c3183fc2e68260efd49db30521">outputMin</a>);</div>
+<div class="line"><span class="lineno">   76</span> </div>
+<div class="line"><span class="lineno">   77</span>    <span class="keywordflow">if</span> (!this-&gt;<a class="code hl_variable" href="#a1a5c8f27b61a74868f874cc6df3a2639">saturated</a>)</div>
+<div class="line"><span class="lineno">   78</span>    {</div>
+<div class="line"><span class="lineno">   79</span>        this-&gt;<a class="code hl_variable" href="#a0e5d49534b4925162583cc0b1e124a50">integral</a> += this-&gt;<a class="code hl_variable" href="#a58024226a4cabe7c195ec7f8ec41523b">error</a> * this-&gt;<a class="code hl_variable" href="#aa2ba5bce664ff9fd12efcf22bf6be7a9">dt</a>;</div>
+<div class="line"><span class="lineno">   80</span> </div>
+<div class="line"><span class="lineno">   81</span>        <span class="keywordflow">if</span> (this-&gt;<a class="code hl_variable" href="#a0e5d49534b4925162583cc0b1e124a50">integral</a> &gt; this-&gt;<a class="code hl_variable" href="#a5867b916c0c69eeeebf997701c8157b2">outputMax</a>) this-&gt;<a class="code hl_variable" href="#a0e5d49534b4925162583cc0b1e124a50">integral</a> = this-&gt;<a class="code hl_variable" href="#a5867b916c0c69eeeebf997701c8157b2">outputMax</a>;</div>
+<div class="line"><span class="lineno">   82</span>        <span class="keywordflow">if</span> (this-&gt;<a class="code hl_variable" href="#a0e5d49534b4925162583cc0b1e124a50">integral &lt; this-&gt;</a><a class="code hl_variable" href="#a996d72c3183fc2e68260efd49db30521">outputMin</a>) this-&gt;<a class="code hl_variable" href="#a0e5d49534b4925162583cc0b1e124a50">integral</a> = this-&gt;<a class="code hl_variable" href="#a996d72c3183fc2e68260efd49db30521">outputMin</a>;</div>
+<div class="line"><span class="lineno">   83</span>    }</div>
+<div class="line"><span class="lineno">   84</span> </div>
+<div class="line"><span class="lineno">   85</span>    <span class="comment">// 5) PID completo sin limitación de cambio</span></div>
+<div class="line"><span class="lineno">   86</span>    this-&gt;<a class="code hl_variable" href="#a9760d4d6ce3a52353ac44cd997f50dc5">rawOutput</a> = this-&gt;<a class="code hl_variable" href="#ab9dcad835103e9ad160c57f329f40e10">proportional</a> +</div>
+<div class="line"><span class="lineno">   87</span>                      (this-&gt;<a class="code hl_variable" href="#ab48eeec8704e5d517a64b91fbe4fba57">Ki</a> * this-&gt;<a class="code hl_variable" href="#a0e5d49534b4925162583cc0b1e124a50">integral</a>) +</div>
+<div class="line"><span class="lineno">   88</span>                      (this-&gt;<a class="code hl_variable" href="#a105396cb94f3ec2f352b3d116529112b">Kd</a> * this-&gt;<a class="code hl_variable" href="#a65e03137e6442acb9852b8626220b6d3">derivative</a>);</div>
+<div class="line"><span class="lineno">   89</span> </div>
+<div class="line"><span class="lineno">   90</span>    <span class="comment">// 6) Slew-rate limit</span></div>
+<div class="line"><span class="lineno">   91</span>    this-&gt;<a class="code hl_variable" href="#a50e3a777a99f13b048d9ece43dcf4dfc">deltaOutput</a> = this-&gt;<a class="code hl_variable" href="#a9760d4d6ce3a52353ac44cd997f50dc5">rawOutput</a> - this-&gt;<a class="code hl_variable" href="#aa93700f20d6bcefe7c96ca08240e748b">prevOutput</a>;</div>
+<div class="line"><span class="lineno">   92</span> </div>
+<div class="line"><span class="lineno">   93</span>    <span class="keywordflow">if</span> (this-&gt;<a class="code hl_variable" href="#a50e3a777a99f13b048d9ece43dcf4dfc">deltaOutput</a> &gt; this-&gt;<a class="code hl_variable" href="#a84fa4441b8b7275ea55d0d2c6a44febf">outputMaxChanged</a>)</div>
+<div class="line"><span class="lineno">   94</span>        this-&gt;<a class="code hl_variable" href="#a5d214a65132fc8545eb5d58a537a804a">output</a> = this-&gt;<a class="code hl_variable" href="#aa93700f20d6bcefe7c96ca08240e748b">prevOutput</a> + this-&gt;<a class="code hl_variable" href="#a84fa4441b8b7275ea55d0d2c6a44febf">outputMaxChanged</a>;</div>
+<div class="line"><span class="lineno">   95</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (this-&gt;<a class="code hl_variable" href="#a50e3a777a99f13b048d9ece43dcf4dfc">deltaOutput &lt; -this-&gt;</a><a class="code hl_variable" href="#a84fa4441b8b7275ea55d0d2c6a44febf">outputMaxChanged</a>)</div>
+<div class="line"><span class="lineno">   96</span>        this-&gt;<a class="code hl_variable" href="#a5d214a65132fc8545eb5d58a537a804a">output</a> = this-&gt;<a class="code hl_variable" href="#aa93700f20d6bcefe7c96ca08240e748b">prevOutput</a> - this-&gt;<a class="code hl_variable" href="#a84fa4441b8b7275ea55d0d2c6a44febf">outputMaxChanged</a>;</div>
+<div class="line"><span class="lineno">   97</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   98</span>        this-&gt;<a class="code hl_variable" href="#a5d214a65132fc8545eb5d58a537a804a">output</a> = this-&gt;<a class="code hl_variable" href="#a9760d4d6ce3a52353ac44cd997f50dc5">rawOutput</a>;</div>
+<div class="line"><span class="lineno">   99</span> </div>
+<div class="line"><span class="lineno">  100</span>    <span class="comment">// 7) Saturación final</span></div>
+<div class="line"><span class="lineno">  101</span>    <span class="keywordflow">if</span> (this-&gt;<a class="code hl_variable" href="#a5d214a65132fc8545eb5d58a537a804a">output</a> &gt; this-&gt;<a class="code hl_variable" href="#a5867b916c0c69eeeebf997701c8157b2">outputMax</a>) this-&gt;<a class="code hl_variable" href="#a5d214a65132fc8545eb5d58a537a804a">output</a> = this-&gt;<a class="code hl_variable" href="#a5867b916c0c69eeeebf997701c8157b2">outputMax</a>;</div>
+<div class="line"><span class="lineno">  102</span>    <span class="keywordflow">if</span> (this-&gt;<a class="code hl_variable" href="#a5d214a65132fc8545eb5d58a537a804a">output &lt; this-&gt;</a><a class="code hl_variable" href="#a996d72c3183fc2e68260efd49db30521">outputMin</a>) this-&gt;<a class="code hl_variable" href="#a5d214a65132fc8545eb5d58a537a804a">output</a> = this-&gt;<a class="code hl_variable" href="#a996d72c3183fc2e68260efd49db30521">outputMin</a>;</div>
+<div class="line"><span class="lineno">  103</span> </div>
+<div class="line"><span class="lineno">  104</span>    <span class="comment">// 8) Guardar estado</span></div>
+<div class="line"><span class="lineno">  105</span>    this-&gt;<a class="code hl_variable" href="#a482b5f6204d925cc2ed9079c06a1dbcd">prevError</a> = this-&gt;<a class="code hl_variable" href="#a58024226a4cabe7c195ec7f8ec41523b">error</a>;</div>
+<div class="line"><span class="lineno">  106</span>    this-&gt;<a class="code hl_variable" href="#ab1b409b1b5a3113d73c4b1d15946c6b1">prevFeedback</a> = feedback;</div>
+<div class="line"><span class="lineno">  107</span>    this-&gt;<a class="code hl_variable" href="#aa93700f20d6bcefe7c96ca08240e748b">prevOutput</a> = this-&gt;<a class="code hl_variable" href="#a5d214a65132fc8545eb5d58a537a804a">output</a>;</div>
+<div class="line"><span class="lineno">  108</span> </div>
+<div class="line"><span class="lineno">  109</span> </div>
+<div class="line"><span class="lineno">  110</span>    <span class="comment">// 9) Debug</span></div>
+<div class="line"><span class="lineno">  111</span>    <span class="keywordflow">if</span> (debugMSG) <a class="code hl_function" href="#a7263b32d21a2759144d935442db72191">printDebugPID</a>(setpoint, feedback);</div>
+<div class="line"><span class="lineno">  112</span> </div>
+<div class="line"><span class="lineno">  113</span>    <span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="#a5d214a65132fc8545eb5d58a537a804a">output</a>;</div>
+<div class="line"><span class="lineno">  114</span> </div>
+<div class="line"><span class="lineno">  115</span>};</div>
+<div class="ttc" id="aclass_p_i_d_html_a1a5c8f27b61a74868f874cc6df3a2639"><div class="ttname"><a href="#a1a5c8f27b61a74868f874cc6df3a2639">PID::saturated</a></div><div class="ttdeci">bool saturated</div><div class="ttdoc">Indica si el PID está saturado.</div><div class="ttdef"><b>Definition</b> <a href="pid_8h_source.html#l00108">pid.h:108</a></div></div>
+<div class="ttc" id="aclass_p_i_d_html_a50e3a777a99f13b048d9ece43dcf4dfc"><div class="ttname"><a href="#a50e3a777a99f13b048d9ece43dcf4dfc">PID::deltaOutput</a></div><div class="ttdeci">float deltaOutput</div><div class="ttdoc">Cambio entre salidas.</div><div class="ttdef"><b>Definition</b> <a href="pid_8h_source.html#l00113">pid.h:113</a></div></div>
+<div class="ttc" id="aclass_p_i_d_html_a7263b32d21a2759144d935442db72191"><div class="ttname"><a href="#a7263b32d21a2759144d935442db72191">PID::printDebugPID</a></div><div class="ttdeci">void printDebugPID(float setpoint, float feedback)</div><div class="ttdoc">Imprime información de depuración del PID.</div><div class="ttdef"><b>Definition</b> <a href="pid_8cpp_source.html#l00188">pid.cpp:188</a></div></div>
+<div class="ttc" id="aclass_p_i_d_html_a9760d4d6ce3a52353ac44cd997f50dc5"><div class="ttname"><a href="#a9760d4d6ce3a52353ac44cd997f50dc5">PID::rawOutput</a></div><div class="ttdeci">float rawOutput</div><div class="ttdoc">Salida sin limitación de cambio.</div><div class="ttdef"><b>Definition</b> <a href="pid_8h_source.html#l00111">pid.h:111</a></div></div>
+<div class="ttc" id="aclass_p_i_d_html_ab9dcad835103e9ad160c57f329f40e10"><div class="ttname"><a href="#ab9dcad835103e9ad160c57f329f40e10">PID::proportional</a></div><div class="ttdeci">float proportional</div><div class="ttdoc">Término proporcional.</div><div class="ttdef"><b>Definition</b> <a href="pid_8h_source.html#l00105">pid.h:105</a></div></div>
+<div class="ttc" id="aclass_p_i_d_html_ad6f67ea0bed5ed7dd4e2a8d447d68a00"><div class="ttname"><a href="#ad6f67ea0bed5ed7dd4e2a8d447d68a00">PID::pidNoIntegral</a></div><div class="ttdeci">float pidNoIntegral</div><div class="ttdoc">PID sin término integral.</div><div class="ttdef"><b>Definition</b> <a href="pid_8h_source.html#l00107">pid.h:107</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Gráfico de llamadas de esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_p_i_d_af0cfbed86d613536bbd2b6220139d0c4_cgraph.png" border="0" usemap="#aclass_p_i_d_af0cfbed86d613536bbd2b6220139d0c4_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_p_i_d_af0cfbed86d613536bbd2b6220139d0c4_cgraph" id="aclass_p_i_d_af0cfbed86d613536bbd2b6220139d0c4_cgraph">
+<area shape="rect" title="Calcula la salida del controlador PID." alt="" coords="5,5,119,31"/>
+<area shape="rect" href="class_p_i_d.html#a7263b32d21a2759144d935442db72191" title="Imprime información de depuración del PID." alt="" coords="167,5,301,31"/>
+<area shape="poly" title=" " alt="" coords="119,15,153,15,153,21,119,21"/>
+</map>
+</div>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_p_i_d_af0cfbed86d613536bbd2b6220139d0c4_icgraph.png" border="0" usemap="#aclass_p_i_d_af0cfbed86d613536bbd2b6220139d0c4_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_p_i_d_af0cfbed86d613536bbd2b6220139d0c4_icgraph" id="aclass_p_i_d_af0cfbed86d613536bbd2b6220139d0c4_icgraph">
+<area shape="rect" title="Calcula la salida del controlador PID." alt="" coords="100,5,213,31"/>
+<area shape="rect" href="main_8cpp.html#afe461d27b9c48d5921c00d521181f12f" title="Arduino main loop. Ejecuta continuamente la configuración de pines, lectura analógica,..." alt="" coords="5,5,52,31"/>
+<area shape="poly" title=" " alt="" coords="87,21,52,21,52,15,87,15"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7263b32d21a2759144d935442db72191" name="a7263b32d21a2759144d935442db72191"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7263b32d21a2759144d935442db72191">&#9670;&#160;</a></span>printDebugPID()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PID::printDebugPID </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>setpoint</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>feedback</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Imprime información de depuración del <a class="el" href="class_p_i_d.html" title="Controlador PID con anti-windup, derivative-on-measurement y limitación de cambio de salida (slew-rat...">PID</a>. </p>
+<p>Muestra en consola el estado interno del <a class="el" href="class_p_i_d.html" title="Controlador PID con anti-windup, derivative-on-measurement y limitación de cambio de salida (slew-rat...">PID</a> en formato tabla.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">setpoint</td><td>Valor deseado. </td></tr>
+    <tr><td class="paramname">feedback</td><td>Valor medido. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="pid_8cpp_source.html#l00188">188</a> del archivo <a class="el" href="pid_8cpp_source.html">pid.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  189</span>{</div>
+<div class="line"><span class="lineno">  190</span>    Serial.println(F(<span class="stringliteral">&quot;--------------------------------------------------------------------------&quot;</span>));</div>
+<div class="line"><span class="lineno">  191</span>    Serial.println(F(<span class="stringliteral">&quot;|  SP  |  FB  | Error |    P     |    I     |    D     | RawOut |  Out  |&quot;</span>));</div>
+<div class="line"><span class="lineno">  192</span>    Serial.println(F(<span class="stringliteral">&quot;--------------------------------------------------------------------------&quot;</span>));</div>
+<div class="line"><span class="lineno">  193</span> </div>
+<div class="line"><span class="lineno">  194</span>    Serial.print(F(<span class="stringliteral">&quot;| &quot;</span>));</div>
+<div class="line"><span class="lineno">  195</span>    Serial.print(setpoint, 3);</div>
+<div class="line"><span class="lineno">  196</span>    Serial.print(F(<span class="stringliteral">&quot; | &quot;</span>));</div>
+<div class="line"><span class="lineno">  197</span> </div>
+<div class="line"><span class="lineno">  198</span>    Serial.print(feedback, 3);</div>
+<div class="line"><span class="lineno">  199</span>    Serial.print(F(<span class="stringliteral">&quot; | &quot;</span>));</div>
+<div class="line"><span class="lineno">  200</span> </div>
+<div class="line"><span class="lineno">  201</span>    Serial.print(this-&gt;<a class="code hl_variable" href="#a58024226a4cabe7c195ec7f8ec41523b">error</a>, 3);</div>
+<div class="line"><span class="lineno">  202</span>    Serial.print(F(<span class="stringliteral">&quot; | &quot;</span>));</div>
+<div class="line"><span class="lineno">  203</span> </div>
+<div class="line"><span class="lineno">  204</span>    Serial.print(this-&gt;<a class="code hl_variable" href="#ab9dcad835103e9ad160c57f329f40e10">proportional</a>, 3);</div>
+<div class="line"><span class="lineno">  205</span>    Serial.print(F(<span class="stringliteral">&quot; | &quot;</span>));</div>
+<div class="line"><span class="lineno">  206</span> </div>
+<div class="line"><span class="lineno">  207</span>    Serial.print(this-&gt;<a class="code hl_variable" href="#a0e5d49534b4925162583cc0b1e124a50">integral</a>, 3);</div>
+<div class="line"><span class="lineno">  208</span>    Serial.print(F(<span class="stringliteral">&quot; | &quot;</span>));</div>
+<div class="line"><span class="lineno">  209</span> </div>
+<div class="line"><span class="lineno">  210</span>    Serial.print(this-&gt;<a class="code hl_variable" href="#a65e03137e6442acb9852b8626220b6d3">derivative</a>, 3);</div>
+<div class="line"><span class="lineno">  211</span>    Serial.print(F(<span class="stringliteral">&quot; | &quot;</span>));</div>
+<div class="line"><span class="lineno">  212</span> </div>
+<div class="line"><span class="lineno">  213</span>    Serial.print(this-&gt;<a class="code hl_variable" href="#a9760d4d6ce3a52353ac44cd997f50dc5">rawOutput</a>, 3);</div>
+<div class="line"><span class="lineno">  214</span>    Serial.print(F(<span class="stringliteral">&quot; | &quot;</span>));</div>
+<div class="line"><span class="lineno">  215</span> </div>
+<div class="line"><span class="lineno">  216</span>    Serial.print(this-&gt;<a class="code hl_variable" href="#a5d214a65132fc8545eb5d58a537a804a">output</a>, 3);</div>
+<div class="line"><span class="lineno">  217</span>    Serial.println(F(<span class="stringliteral">&quot; |&quot;</span>));</div>
+<div class="line"><span class="lineno">  218</span> </div>
+<div class="line"><span class="lineno">  219</span>    Serial.println(F(<span class="stringliteral">&quot;--------------------------------------------------------------------------&quot;</span>));</div>
+<div class="line"><span class="lineno">  220</span>}</div>
+</div><!-- fragment --><div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_p_i_d_a7263b32d21a2759144d935442db72191_icgraph.png" border="0" usemap="#aclass_p_i_d_a7263b32d21a2759144d935442db72191_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_p_i_d_a7263b32d21a2759144d935442db72191_icgraph" id="aclass_p_i_d_a7263b32d21a2759144d935442db72191_icgraph">
+<area shape="rect" title="Imprime información de depuración del PID." alt="" coords="261,5,396,31"/>
+<area shape="rect" href="class_p_i_d.html#af0cfbed86d613536bbd2b6220139d0c4" title="Calcula la salida del controlador PID." alt="" coords="100,5,213,31"/>
+<area shape="poly" title=" " alt="" coords="247,21,214,21,214,15,247,15"/>
+<area shape="rect" href="main_8cpp.html#afe461d27b9c48d5921c00d521181f12f" title="Arduino main loop. Ejecuta continuamente la configuración de pines, lectura analógica,..." alt="" coords="5,5,52,31"/>
+<area shape="poly" title=" " alt="" coords="87,21,52,21,52,15,87,15"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4ec46f614451079f4485319d4d5a7477" name="a4ec46f614451079f4485319d4d5a7477"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ec46f614451079f4485319d4d5a7477">&#9670;&#160;</a></span>resetPID()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PID::resetPID </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reinicia el estado interno del <a class="el" href="class_p_i_d.html" title="Controlador PID con anti-windup, derivative-on-measurement y limitación de cambio de salida (slew-rat...">PID</a>. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="pid_8cpp_source.html#l00156">156</a> del archivo <a class="el" href="pid_8cpp_source.html">pid.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  157</span>{</div>
+<div class="line"><span class="lineno">  158</span>    this-&gt;<a class="code hl_variable" href="#a58024226a4cabe7c195ec7f8ec41523b">error</a> = 0.0f;</div>
+<div class="line"><span class="lineno">  159</span>    this-&gt;<a class="code hl_variable" href="#a482b5f6204d925cc2ed9079c06a1dbcd">prevError</a> = 0.0f;</div>
+<div class="line"><span class="lineno">  160</span>    this-&gt;<a class="code hl_variable" href="#a0e5d49534b4925162583cc0b1e124a50">integral</a> = 0.0f;</div>
+<div class="line"><span class="lineno">  161</span>    this-&gt;<a class="code hl_variable" href="#a65e03137e6442acb9852b8626220b6d3">derivative</a> = 0.0f;</div>
+<div class="line"><span class="lineno">  162</span>    this-&gt;<a class="code hl_variable" href="#a5d214a65132fc8545eb5d58a537a804a">output</a> = 0.0f;</div>
+<div class="line"><span class="lineno">  163</span>    this-&gt;<a class="code hl_variable" href="#ab1b409b1b5a3113d73c4b1d15946c6b1">prevFeedback</a> = 0.0f;</div>
+<div class="line"><span class="lineno">  164</span>    this-&gt;<a class="code hl_variable" href="#aa93700f20d6bcefe7c96ca08240e748b">prevOutput</a> = 0.0f;</div>
+<div class="line"><span class="lineno">  165</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae55a80080d8196166d5a203c6b0131f5" name="ae55a80080d8196166d5a203c6b0131f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae55a80080d8196166d5a203c6b0131f5">&#9670;&#160;</a></span>setDt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PID::setDt </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>dt</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Establece un nuevo tiempo de muestreo. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="#aa2ba5bce664ff9fd12efcf22bf6be7a9" title="Tiempo de muestreo.">dt</a></td><td>Nuevo dt. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="pid_8cpp_source.html#l00148">148</a> del archivo <a class="el" href="pid_8cpp_source.html">pid.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  149</span>{</div>
+<div class="line"><span class="lineno">  150</span>    this-&gt;<a class="code hl_variable" href="#aa2ba5bce664ff9fd12efcf22bf6be7a9">dt</a> = <a class="code hl_function" href="#a5cdc6d7cb5e1520722dc764b21eb6f09">statedt</a>(<a class="code hl_variable" href="#aa2ba5bce664ff9fd12efcf22bf6be7a9">dt</a>);</div>
+<div class="line"><span class="lineno">  151</span>}</div>
+</div><!-- fragment --><div class="dynheader">
+Gráfico de llamadas de esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_p_i_d_ae55a80080d8196166d5a203c6b0131f5_cgraph.png" border="0" usemap="#aclass_p_i_d_ae55a80080d8196166d5a203c6b0131f5_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_p_i_d_ae55a80080d8196166d5a203c6b0131f5_cgraph" id="aclass_p_i_d_ae55a80080d8196166d5a203c6b0131f5_cgraph">
+<area shape="rect" title="Establece un nuevo tiempo de muestreo." alt="" coords="5,5,88,31"/>
+<area shape="rect" href="class_p_i_d.html#a5cdc6d7cb5e1520722dc764b21eb6f09" title="Valida y corrige el tiempo de muestreo." alt="" coords="136,5,227,31"/>
+<area shape="poly" title=" " alt="" coords="88,15,122,15,122,21,88,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af904362d0e2a6db02cd744af9edcf5bf" name="af904362d0e2a6db02cd744af9edcf5bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af904362d0e2a6db02cd744af9edcf5bf">&#9670;&#160;</a></span>setKPID()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PID::setKPID </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>Kp</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>Ki</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>Kd</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Establece nuevas ganancias <a class="el" href="class_p_i_d.html" title="Controlador PID con anti-windup, derivative-on-measurement y limitación de cambio de salida (slew-rat...">PID</a>. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="#a67f2b50c209d4de6a20c710b33b62f0e" title="Ganancia proporcional.">Kp</a></td><td>Nueva ganancia proporcional. </td></tr>
+    <tr><td class="paramname"><a class="el" href="#ab48eeec8704e5d517a64b91fbe4fba57" title="Ganancia integral.">Ki</a></td><td>Nueva ganancia integral. </td></tr>
+    <tr><td class="paramname"><a class="el" href="#a105396cb94f3ec2f352b3d116529112b" title="Ganancia derivativa.">Kd</a></td><td>Nueva ganancia derivativa. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="pid_8cpp_source.html#l00124">124</a> del archivo <a class="el" href="pid_8cpp_source.html">pid.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  125</span>{</div>
+<div class="line"><span class="lineno">  126</span>    this-&gt;<a class="code hl_variable" href="#a67f2b50c209d4de6a20c710b33b62f0e">Kp</a> = <a class="code hl_variable" href="#a67f2b50c209d4de6a20c710b33b62f0e">Kp</a>;</div>
+<div class="line"><span class="lineno">  127</span>    this-&gt;<a class="code hl_variable" href="#ab48eeec8704e5d517a64b91fbe4fba57">Ki</a> = <a class="code hl_variable" href="#ab48eeec8704e5d517a64b91fbe4fba57">Ki</a>;</div>
+<div class="line"><span class="lineno">  128</span>    this-&gt;<a class="code hl_variable" href="#a105396cb94f3ec2f352b3d116529112b">Kd</a> = <a class="code hl_variable" href="#a105396cb94f3ec2f352b3d116529112b">Kd</a>;</div>
+<div class="line"><span class="lineno">  129</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a8de60a65c98638c43bc070b5bd32e77e" name="a8de60a65c98638c43bc070b5bd32e77e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8de60a65c98638c43bc070b5bd32e77e">&#9670;&#160;</a></span>setOutputLimits()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PID::setOutputLimits </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>outputMin</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>outputMax</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Establece los límites de salida del <a class="el" href="class_p_i_d.html" title="Controlador PID con anti-windup, derivative-on-measurement y limitación de cambio de salida (slew-rat...">PID</a>. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="#a996d72c3183fc2e68260efd49db30521" title="Límite mínimo de salida.">outputMin</a></td><td>Nuevo límite mínimo. </td></tr>
+    <tr><td class="paramname"><a class="el" href="#a5867b916c0c69eeeebf997701c8157b2" title="Límite máximo de salida.">outputMax</a></td><td>Nuevo límite máximo. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="pid_8cpp_source.html#l00137">137</a> del archivo <a class="el" href="pid_8cpp_source.html">pid.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  138</span>{</div>
+<div class="line"><span class="lineno">  139</span>    this-&gt;<a class="code hl_variable" href="#a996d72c3183fc2e68260efd49db30521">outputMin</a> = <a class="code hl_variable" href="#a996d72c3183fc2e68260efd49db30521">outputMin</a>;</div>
+<div class="line"><span class="lineno">  140</span>    this-&gt;<a class="code hl_variable" href="#a5867b916c0c69eeeebf997701c8157b2">outputMax</a> = <a class="code hl_variable" href="#a5867b916c0c69eeeebf997701c8157b2">outputMax</a>;</div>
+<div class="line"><span class="lineno">  141</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a5cdc6d7cb5e1520722dc764b21eb6f09" name="a5cdc6d7cb5e1520722dc764b21eb6f09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cdc6d7cb5e1520722dc764b21eb6f09">&#9670;&#160;</a></span>statedt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PID::statedt </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>dt</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Valida y corrige el tiempo de muestreo. </p>
+<p>Valida el tiempo de muestreo.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="#aa2ba5bce664ff9fd12efcf22bf6be7a9" title="Tiempo de muestreo.">dt</a></td><td>Tiempo de muestreo solicitado. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>dt válido (mínimo 0.1f). </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="pid_8cpp_source.html#l00173">173</a> del archivo <a class="el" href="pid_8cpp_source.html">pid.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  174</span>{</div>
+<div class="line"><span class="lineno">  175</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#aa2ba5bce664ff9fd12efcf22bf6be7a9">dt</a> &lt;= 0.0f)</div>
+<div class="line"><span class="lineno">  176</span>        <span class="keywordflow">return</span> 0.1f;</div>
+<div class="line"><span class="lineno">  177</span> </div>
+<div class="line"><span class="lineno">  178</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="#aa2ba5bce664ff9fd12efcf22bf6be7a9">dt</a>;</div>
+<div class="line"><span class="lineno">  179</span>}</div>
+</div><!-- fragment --><div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_p_i_d_a5cdc6d7cb5e1520722dc764b21eb6f09_icgraph.png" border="0" usemap="#aclass_p_i_d_a5cdc6d7cb5e1520722dc764b21eb6f09_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_p_i_d_a5cdc6d7cb5e1520722dc764b21eb6f09_icgraph" id="aclass_p_i_d_a5cdc6d7cb5e1520722dc764b21eb6f09_icgraph">
+<area shape="rect" title="Valida y corrige el tiempo de muestreo." alt="" coords="136,31,227,56"/>
+<area shape="rect" href="class_p_i_d.html#a4125833122b985f732eef6f3e6d728c3" title="Constructor del controlador PID." alt="" coords="11,5,83,31"/>
+<area shape="poly" title=" " alt="" coords="122,35,82,27,83,22,123,30"/>
+<area shape="rect" href="class_p_i_d.html#ae55a80080d8196166d5a203c6b0131f5" title="Establece un nuevo tiempo de muestreo." alt="" coords="5,55,88,80"/>
+<area shape="poly" title=" " alt="" coords="123,56,89,63,88,57,122,51"/>
+</map>
+</div>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Documentación de datos miembro</h2>
+<a id="a50e3a777a99f13b048d9ece43dcf4dfc" name="a50e3a777a99f13b048d9ece43dcf4dfc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50e3a777a99f13b048d9ece43dcf4dfc">&#9670;&#160;</a></span>deltaOutput</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PID::deltaOutput</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Cambio entre salidas. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="pid_8h_source.html#l00113">113</a> del archivo <a class="el" href="pid_8h_source.html">pid.h</a>.</p>
+
+</div>
+</div>
+<a id="a65e03137e6442acb9852b8626220b6d3" name="a65e03137e6442acb9852b8626220b6d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65e03137e6442acb9852b8626220b6d3">&#9670;&#160;</a></span>derivative</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PID::derivative</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Término derivativo. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="pid_8h_source.html#l00109">109</a> del archivo <a class="el" href="pid_8h_source.html">pid.h</a>.</p>
+
+</div>
+</div>
+<a id="aa2ba5bce664ff9fd12efcf22bf6be7a9" name="aa2ba5bce664ff9fd12efcf22bf6be7a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2ba5bce664ff9fd12efcf22bf6be7a9">&#9670;&#160;</a></span>dt</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PID::dt</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Tiempo de muestreo. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="pid_8h_source.html#l00100">100</a> del archivo <a class="el" href="pid_8h_source.html">pid.h</a>.</p>
+
+</div>
+</div>
+<a id="a58024226a4cabe7c195ec7f8ec41523b" name="a58024226a4cabe7c195ec7f8ec41523b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58024226a4cabe7c195ec7f8ec41523b">&#9670;&#160;</a></span>error</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PID::error</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Error actual. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="pid_8h_source.html#l00103">103</a> del archivo <a class="el" href="pid_8h_source.html">pid.h</a>.</p>
+
+</div>
+</div>
+<a id="a0e5d49534b4925162583cc0b1e124a50" name="a0e5d49534b4925162583cc0b1e124a50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e5d49534b4925162583cc0b1e124a50">&#9670;&#160;</a></span>integral</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PID::integral</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Acumulador integral. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="pid_8h_source.html#l00106">106</a> del archivo <a class="el" href="pid_8h_source.html">pid.h</a>.</p>
+
+</div>
+</div>
+<a id="a105396cb94f3ec2f352b3d116529112b" name="a105396cb94f3ec2f352b3d116529112b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a105396cb94f3ec2f352b3d116529112b">&#9670;&#160;</a></span>Kd</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PID::Kd</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Ganancia derivativa. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="pid_8h_source.html#l00093">93</a> del archivo <a class="el" href="pid_8h_source.html">pid.h</a>.</p>
+
+</div>
+</div>
+<a id="ab48eeec8704e5d517a64b91fbe4fba57" name="ab48eeec8704e5d517a64b91fbe4fba57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab48eeec8704e5d517a64b91fbe4fba57">&#9670;&#160;</a></span>Ki</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PID::Ki</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Ganancia integral. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="pid_8h_source.html#l00092">92</a> del archivo <a class="el" href="pid_8h_source.html">pid.h</a>.</p>
+
+</div>
+</div>
+<a id="a67f2b50c209d4de6a20c710b33b62f0e" name="a67f2b50c209d4de6a20c710b33b62f0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67f2b50c209d4de6a20c710b33b62f0e">&#9670;&#160;</a></span>Kp</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PID::Kp</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Ganancia proporcional. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="pid_8h_source.html#l00091">91</a> del archivo <a class="el" href="pid_8h_source.html">pid.h</a>.</p>
+
+</div>
+</div>
+<a id="a5d214a65132fc8545eb5d58a537a804a" name="a5d214a65132fc8545eb5d58a537a804a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d214a65132fc8545eb5d58a537a804a">&#9670;&#160;</a></span>output</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PID::output</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Salida final del <a class="el" href="class_p_i_d.html" title="Controlador PID con anti-windup, derivative-on-measurement y limitación de cambio de salida (slew-rat...">PID</a>. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="pid_8h_source.html#l00110">110</a> del archivo <a class="el" href="pid_8h_source.html">pid.h</a>.</p>
+
+</div>
+</div>
+<a id="a5867b916c0c69eeeebf997701c8157b2" name="a5867b916c0c69eeeebf997701c8157b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5867b916c0c69eeeebf997701c8157b2">&#9670;&#160;</a></span>outputMax</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PID::outputMax</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Límite máximo de salida. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="pid_8h_source.html#l00097">97</a> del archivo <a class="el" href="pid_8h_source.html">pid.h</a>.</p>
+
+</div>
+</div>
+<a id="a84fa4441b8b7275ea55d0d2c6a44febf" name="a84fa4441b8b7275ea55d0d2c6a44febf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84fa4441b8b7275ea55d0d2c6a44febf">&#9670;&#160;</a></span>outputMaxChanged</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PID::outputMaxChanged</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Máximo cambio permitido por ciclo. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="pid_8h_source.html#l00117">117</a> del archivo <a class="el" href="pid_8h_source.html">pid.h</a>.</p>
+
+</div>
+</div>
+<a id="a996d72c3183fc2e68260efd49db30521" name="a996d72c3183fc2e68260efd49db30521"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a996d72c3183fc2e68260efd49db30521">&#9670;&#160;</a></span>outputMin</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PID::outputMin</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Límite mínimo de salida. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="pid_8h_source.html#l00096">96</a> del archivo <a class="el" href="pid_8h_source.html">pid.h</a>.</p>
+
+</div>
+</div>
+<a id="ad6f67ea0bed5ed7dd4e2a8d447d68a00" name="ad6f67ea0bed5ed7dd4e2a8d447d68a00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6f67ea0bed5ed7dd4e2a8d447d68a00">&#9670;&#160;</a></span>pidNoIntegral</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PID::pidNoIntegral</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_p_i_d.html" title="Controlador PID con anti-windup, derivative-on-measurement y limitación de cambio de salida (slew-rat...">PID</a> sin término integral. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="pid_8h_source.html#l00107">107</a> del archivo <a class="el" href="pid_8h_source.html">pid.h</a>.</p>
+
+</div>
+</div>
+<a id="a482b5f6204d925cc2ed9079c06a1dbcd" name="a482b5f6204d925cc2ed9079c06a1dbcd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a482b5f6204d925cc2ed9079c06a1dbcd">&#9670;&#160;</a></span>prevError</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PID::prevError</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Error previo. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="pid_8h_source.html#l00104">104</a> del archivo <a class="el" href="pid_8h_source.html">pid.h</a>.</p>
+
+</div>
+</div>
+<a id="ab1b409b1b5a3113d73c4b1d15946c6b1" name="ab1b409b1b5a3113d73c4b1d15946c6b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1b409b1b5a3113d73c4b1d15946c6b1">&#9670;&#160;</a></span>prevFeedback</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PID::prevFeedback</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Feedback previo para derivative-on-measurement. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="pid_8h_source.html#l00114">114</a> del archivo <a class="el" href="pid_8h_source.html">pid.h</a>.</p>
+
+</div>
+</div>
+<a id="aa93700f20d6bcefe7c96ca08240e748b" name="aa93700f20d6bcefe7c96ca08240e748b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa93700f20d6bcefe7c96ca08240e748b">&#9670;&#160;</a></span>prevOutput</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PID::prevOutput</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Salida previa. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="pid_8h_source.html#l00112">112</a> del archivo <a class="el" href="pid_8h_source.html">pid.h</a>.</p>
+
+</div>
+</div>
+<a id="ab9dcad835103e9ad160c57f329f40e10" name="ab9dcad835103e9ad160c57f329f40e10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9dcad835103e9ad160c57f329f40e10">&#9670;&#160;</a></span>proportional</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PID::proportional</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Término proporcional. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="pid_8h_source.html#l00105">105</a> del archivo <a class="el" href="pid_8h_source.html">pid.h</a>.</p>
+
+</div>
+</div>
+<a id="a9760d4d6ce3a52353ac44cd997f50dc5" name="a9760d4d6ce3a52353ac44cd997f50dc5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9760d4d6ce3a52353ac44cd997f50dc5">&#9670;&#160;</a></span>rawOutput</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PID::rawOutput</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Salida sin limitación de cambio. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="pid_8h_source.html#l00111">111</a> del archivo <a class="el" href="pid_8h_source.html">pid.h</a>.</p>
+
+</div>
+</div>
+<a id="a1a5c8f27b61a74868f874cc6df3a2639" name="a1a5c8f27b61a74868f874cc6df3a2639"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a5c8f27b61a74868f874cc6df3a2639">&#9670;&#160;</a></span>saturated</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool PID::saturated</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indica si el <a class="el" href="class_p_i_d.html" title="Controlador PID con anti-windup, derivative-on-measurement y limitación de cambio de salida (slew-rat...">PID</a> está saturado. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="pid_8h_source.html#l00108">108</a> del archivo <a class="el" href="pid_8h_source.html">pid.h</a>.</p>
+
+</div>
+</div>
+<hr/>La documentación de esta clase está generada de los siguientes archivos:<ul>
+<li><a class="el" href="pid_8h_source.html">pid.h</a></li>
+<li><a class="el" href="pid_8cpp_source.html">pid.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_p_i_d.html">PID</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

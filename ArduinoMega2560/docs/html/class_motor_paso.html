@@ -1,0 +1,1343 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ArduinoMega2560_SPI: Referencia de la clase MotorPaso</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ArduinoMega2560_SPI<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_motor_paso.html','','class_motor_paso-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia de la clase MotorPaso</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Controlador para motores paso a paso 28BYJ-48 con driver ULN2003.  
+ <a href="#details">Más...</a></p>
+
+<p><code>#include &lt;<a class="el" href="motor_step_8h_source.html">motorStep.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Métodos públicos</h2></td></tr>
+<tr class="memitem:aab41ed5022adcbe4f89c5c2fdf73bcad" id="r_aab41ed5022adcbe4f89c5c2fdf73bcad"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aab41ed5022adcbe4f89c5c2fdf73bcad">MotorPaso</a> (uint8_t <a class="el" href="#a9f8eddccee5fd302f15b251328639b5a">pinA</a>, uint8_t <a class="el" href="#a5457b8c20cc470d18d7b67bf53405cda">pinB</a>, uint8_t <a class="el" href="#ae1e9b8723a636ad3349bef9c153b7164">pinC</a>, uint8_t <a class="el" href="#a030805e0b58b52b33950899e90998da3">pinD</a>)</td></tr>
+<tr class="memdesc:aab41ed5022adcbe4f89c5c2fdf73bcad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor del motor paso a paso.  <br /></td></tr>
+<tr class="memitem:ae45688954caa95057df7ac86389a7700" id="r_ae45688954caa95057df7ac86389a7700"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae45688954caa95057df7ac86389a7700">fijarVelocidad</a> (float <a class="el" href="#af8abafcab50187207db982f024d2a981">rpm</a>)</td></tr>
+<tr class="memdesc:ae45688954caa95057df7ac86389a7700"><td class="mdescLeft">&#160;</td><td class="mdescRight">Establece la velocidad del motor en RPM.  <br /></td></tr>
+<tr class="memitem:aeb003102ac4f885226a4a4a1e4121fa5" id="r_aeb003102ac4f885226a4a4a1e4121fa5"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aeb003102ac4f885226a4a4a1e4121fa5">pasoAdelante</a> ()</td></tr>
+<tr class="memdesc:aeb003102ac4f885226a4a4a1e4121fa5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Avanza un paso en la secuencia del motor.  <br /></td></tr>
+<tr class="memitem:a70e7b613b257ac6dab5a0dc38d389f3a" id="r_a70e7b613b257ac6dab5a0dc38d389f3a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a70e7b613b257ac6dab5a0dc38d389f3a">pasoAtras</a> ()</td></tr>
+<tr class="memdesc:a70e7b613b257ac6dab5a0dc38d389f3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrocede un paso en la secuencia del motor.  <br /></td></tr>
+<tr class="memitem:ac610d089d82aca423c7528f918e3e6f1" id="r_ac610d089d82aca423c7528f918e3e6f1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac610d089d82aca423c7528f918e3e6f1">aplicarPaso</a> (int indicePaso)</td></tr>
+<tr class="memdesc:ac610d089d82aca423c7528f918e3e6f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Aplica un paso específico de la secuencia (0–7).  <br /></td></tr>
+<tr class="memitem:a884b1a066e5684a4c1f25431efc6b316" id="r_a884b1a066e5684a4c1f25431efc6b316"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a884b1a066e5684a4c1f25431efc6b316">movimientoContinuo</a> ()</td></tr>
+<tr class="memdesc:a884b1a066e5684a4c1f25431efc6b316"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ejecuta movimiento continuo según la velocidad configurada.  <br /></td></tr>
+<tr class="memitem:a3bf0f1a5f2d26c41e405408be4ec47b4" id="r_a3bf0f1a5f2d26c41e405408be4ec47b4"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3bf0f1a5f2d26c41e405408be4ec47b4">movimientoPosicionRelativo</a> (float grados, bool debugMSG=false)</td></tr>
+<tr class="memdesc:a3bf0f1a5f2d26c41e405408be4ec47b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mueve el motor hacia un ángulo relativo usando el camino más corto.  <br /></td></tr>
+<tr class="memitem:a5e3740ade4968870d145a97dfaa6378b" id="r_a5e3740ade4968870d145a97dfaa6378b"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a5e3740ade4968870d145a97dfaa6378b">diferenciaCircular</a> (float gradosActuales, float <a class="el" href="#aff13a3e505f907b684f6374b51596a05">gradosObjetivo</a>)</td></tr>
+<tr class="memdesc:a5e3740ade4968870d145a97dfaa6378b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcula la diferencia circular entre dos ángulos.  <br /></td></tr>
+<tr class="memitem:afdcaa01d882749cc9a8de8ea6397a12c" id="r_afdcaa01d882749cc9a8de8ea6397a12c"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#afdcaa01d882749cc9a8de8ea6397a12c">normalizarGrados</a> (float grados)</td></tr>
+<tr class="memdesc:afdcaa01d882749cc9a8de8ea6397a12c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normaliza un ángulo al rango 0–360 grados.  <br /></td></tr>
+<tr class="memitem:aa054bdf42608a37c3fbc9e5037c417e9" id="r_aa054bdf42608a37c3fbc9e5037c417e9"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#aa054bdf42608a37c3fbc9e5037c417e9">convertirGradosAPasos</a> (float grados)</td></tr>
+<tr class="memdesc:aa054bdf42608a37c3fbc9e5037c417e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convierte grados a pasos del motor.  <br /></td></tr>
+<tr class="memitem:ac2b6d1c7bc1c04a0fb39839b1658721c" id="r_ac2b6d1c7bc1c04a0fb39839b1658721c"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#ac2b6d1c7bc1c04a0fb39839b1658721c">convertirPasosAGrados</a> (int <a class="el" href="#a45a17ca7197c7968adba7e667f51b492">pasos</a>)</td></tr>
+<tr class="memdesc:ac2b6d1c7bc1c04a0fb39839b1658721c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convierte pasos del motor a grados.  <br /></td></tr>
+<tr class="memitem:aa9331c4fc40047c1b7856cfebc9220bc" id="r_aa9331c4fc40047c1b7856cfebc9220bc"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#aa9331c4fc40047c1b7856cfebc9220bc">movimientoDePosicionGradosCorriendo</a> (int movimientoPasos)</td></tr>
+<tr class="memdesc:aa9331c4fc40047c1b7856cfebc9220bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actualiza y devuelve los grados recorridos durante el movimiento.  <br /></td></tr>
+<tr class="memitem:af1f50306108a5f69c298367da9e96e3c" id="r_af1f50306108a5f69c298367da9e96e3c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af1f50306108a5f69c298367da9e96e3c">debugMovimientoRelativo</a> (int pasoActualDelBucle)</td></tr>
+<tr class="memdesc:af1f50306108a5f69c298367da9e96e3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Imprime información detallada del movimiento relativo.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Atributos privados</h2></td></tr>
+<tr class="memitem:a9f8eddccee5fd302f15b251328639b5a" id="r_a9f8eddccee5fd302f15b251328639b5a"><td class="memItemLeft">uint8_t&#160;</td><td class="memItemRight"><a class="el" href="#a9f8eddccee5fd302f15b251328639b5a">pinA</a></td></tr>
+<tr class="memdesc:a9f8eddccee5fd302f15b251328639b5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bobina A.  <br /></td></tr>
+<tr class="memitem:a5457b8c20cc470d18d7b67bf53405cda" id="r_a5457b8c20cc470d18d7b67bf53405cda"><td class="memItemLeft">uint8_t&#160;</td><td class="memItemRight"><a class="el" href="#a5457b8c20cc470d18d7b67bf53405cda">pinB</a></td></tr>
+<tr class="memdesc:a5457b8c20cc470d18d7b67bf53405cda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bobina B.  <br /></td></tr>
+<tr class="memitem:ae1e9b8723a636ad3349bef9c153b7164" id="r_ae1e9b8723a636ad3349bef9c153b7164"><td class="memItemLeft">uint8_t&#160;</td><td class="memItemRight"><a class="el" href="#ae1e9b8723a636ad3349bef9c153b7164">pinC</a></td></tr>
+<tr class="memdesc:ae1e9b8723a636ad3349bef9c153b7164"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bobina C.  <br /></td></tr>
+<tr class="memitem:a030805e0b58b52b33950899e90998da3" id="r_a030805e0b58b52b33950899e90998da3"><td class="memItemLeft">uint8_t&#160;</td><td class="memItemRight"><a class="el" href="#a030805e0b58b52b33950899e90998da3">pinD</a></td></tr>
+<tr class="memdesc:a030805e0b58b52b33950899e90998da3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bobina D.  <br /></td></tr>
+<tr class="memitem:aa9426503a0b77432173ae0b5d9d16f75" id="r_aa9426503a0b77432173ae0b5d9d16f75"><td class="memItemLeft">unsigned long&#160;</td><td class="memItemRight"><a class="el" href="#aa9426503a0b77432173ae0b5d9d16f75">retardoPaso</a></td></tr>
+<tr class="memdesc:aa9426503a0b77432173ae0b5d9d16f75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Microsegundos entre pasos (determina la velocidad).  <br /></td></tr>
+<tr class="memitem:adf180b58f05bee5cc728b2026aebd30a" id="r_adf180b58f05bee5cc728b2026aebd30a"><td class="memItemLeft">unsigned long&#160;</td><td class="memItemRight"><a class="el" href="#adf180b58f05bee5cc728b2026aebd30a">tiempoUltimoPaso</a></td></tr>
+<tr class="memdesc:adf180b58f05bee5cc728b2026aebd30a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Marca temporal del último paso ejecutado.  <br /></td></tr>
+<tr class="memitem:af8abafcab50187207db982f024d2a981" id="r_af8abafcab50187207db982f024d2a981"><td class="memItemLeft">short&#160;</td><td class="memItemRight"><a class="el" href="#af8abafcab50187207db982f024d2a981">rpm</a></td></tr>
+<tr class="memdesc:af8abafcab50187207db982f024d2a981"><td class="mdescLeft">&#160;</td><td class="mdescRight">Velocidad configurada en RPM.  <br /></td></tr>
+<tr class="memitem:a4dabb0433ba9843a7b0c44fff4ec4dfe" id="r_a4dabb0433ba9843a7b0c44fff4ec4dfe"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a4dabb0433ba9843a7b0c44fff4ec4dfe">pasoActual</a></td></tr>
+<tr class="memdesc:a4dabb0433ba9843a7b0c44fff4ec4dfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Índice de la secuencia (0–7).  <br /></td></tr>
+<tr class="memitem:ad380b0d361ec87653d35b2113d4215da" id="r_ad380b0d361ec87653d35b2113d4215da"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ad380b0d361ec87653d35b2113d4215da">pasosPorVuelta</a> = <a class="el" href="motor_step_8h.html#af31318f5b00506ed7c7de3d525f8d5da">PASOS_POR_VUELTA</a></td></tr>
+<tr class="memdesc:ad380b0d361ec87653d35b2113d4215da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pasos necesarios para 360°  <br /></td></tr>
+<tr class="memitem:a45a17ca7197c7968adba7e667f51b492" id="r_a45a17ca7197c7968adba7e667f51b492"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a45a17ca7197c7968adba7e667f51b492">pasos</a></td></tr>
+<tr class="memdesc:a45a17ca7197c7968adba7e667f51b492"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pasos totales a ejecutar en el movimiento actual.  <br /></td></tr>
+<tr class="memitem:a6c19097335276ef185ddcfdab1cf6144" id="r_a6c19097335276ef185ddcfdab1cf6144"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a6c19097335276ef185ddcfdab1cf6144">gradoActual</a></td></tr>
+<tr class="memdesc:a6c19097335276ef185ddcfdab1cf6144"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ángulo actual del motor (0–360 normalizado).  <br /></td></tr>
+<tr class="memitem:aff13a3e505f907b684f6374b51596a05" id="r_aff13a3e505f907b684f6374b51596a05"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#aff13a3e505f907b684f6374b51596a05">gradosObjetivo</a></td></tr>
+<tr class="memdesc:aff13a3e505f907b684f6374b51596a05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ángulo objetivo solicitado.  <br /></td></tr>
+<tr class="memitem:a064c3f5e2d7c46c29e9b6bfd01aa1904" id="r_a064c3f5e2d7c46c29e9b6bfd01aa1904"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a064c3f5e2d7c46c29e9b6bfd01aa1904">gradosCorriendo</a></td></tr>
+<tr class="memdesc:a064c3f5e2d7c46c29e9b6bfd01aa1904"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ángulo recorrido durante el movimiento (progreso).  <br /></td></tr>
+<tr class="memitem:aef0c5e2a5b02be1ffee595aef622727e" id="r_aef0c5e2a5b02be1ffee595aef622727e"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#aef0c5e2a5b02be1ffee595aef622727e">diferencia</a></td></tr>
+<tr class="memdesc:aef0c5e2a5b02be1ffee595aef622727e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Diferencia circular entre gradoActual y gradosObjetivo (–180 a +180).  <br /></td></tr>
+<tr class="memitem:a74ae1066fd043a6859e95804da2ff170" id="r_a74ae1066fd043a6859e95804da2ff170"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a74ae1066fd043a6859e95804da2ff170">direccionAdelante</a></td></tr>
+<tr class="memdesc:a74ae1066fd043a6859e95804da2ff170"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dirección: true = adelante.  <br /></td></tr>
+<tr class="memitem:acaa45dc69e19963021e7e68fa962460b" id="r_acaa45dc69e19963021e7e68fa962460b"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#acaa45dc69e19963021e7e68fa962460b">direccionAtras</a></td></tr>
+<tr class="memdesc:acaa45dc69e19963021e7e68fa962460b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dirección: true = atrás.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Controlador para motores paso a paso 28BYJ-48 con driver ULN2003. </p>
+<p>Esta clase permite:</p><ul>
+<li>Controlar pasos individuales (adelante/atrás)</li>
+<li>Establecer velocidad en RPM</li>
+<li>Realizar movimientos relativos en grados</li>
+<li>Obtener información del progreso del movimiento</li>
+<li>Depurar el comportamiento mediante mensajes por consola</li>
+</ul>
+<p>La clase está organizada por familias funcionales para facilitar la lectura, mantenimiento y generación de documentación. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="motor_step_8h_source.html#l00022">22</a> del archivo <a class="el" href="motor_step_8h_source.html">motorStep.h</a>.</p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Documentación de constructores y destructores</h2>
+<a id="aab41ed5022adcbe4f89c5c2fdf73bcad" name="aab41ed5022adcbe4f89c5c2fdf73bcad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab41ed5022adcbe4f89c5c2fdf73bcad">&#9670;&#160;</a></span>MotorPaso()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MotorPaso::MotorPaso </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>pinA</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>pinB</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>pinC</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>pinD</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor del motor paso a paso. </p>
+<p>Inicializa el motor paso a paso configurando los pines y el estado inicial.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="#a9f8eddccee5fd302f15b251328639b5a" title="Bobina A.">pinA</a></td><td>Pin conectado a la bobina A. </td></tr>
+    <tr><td class="paramname"><a class="el" href="#a5457b8c20cc470d18d7b67bf53405cda" title="Bobina B.">pinB</a></td><td>Pin conectado a la bobina B. </td></tr>
+    <tr><td class="paramname"><a class="el" href="#ae1e9b8723a636ad3349bef9c153b7164" title="Bobina C.">pinC</a></td><td>Pin conectado a la bobina C. </td></tr>
+    <tr><td class="paramname"><a class="el" href="#a030805e0b58b52b33950899e90998da3" title="Bobina D.">pinD</a></td><td>Pin conectado a la bobina D. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="motor_step_8cpp_source.html#l00012">12</a> del archivo <a class="el" href="motor_step_8cpp_source.html">motorStep.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   13</span>    : <a class="code hl_variable" href="#a9f8eddccee5fd302f15b251328639b5a">pinA</a>(<a class="code hl_variable" href="#a9f8eddccee5fd302f15b251328639b5a">pinA</a>), <a class="code hl_variable" href="#a5457b8c20cc470d18d7b67bf53405cda">pinB</a>(<a class="code hl_variable" href="#a5457b8c20cc470d18d7b67bf53405cda">pinB</a>), <a class="code hl_variable" href="#ae1e9b8723a636ad3349bef9c153b7164">pinC</a>(<a class="code hl_variable" href="#ae1e9b8723a636ad3349bef9c153b7164">pinC</a>), <a class="code hl_variable" href="#a030805e0b58b52b33950899e90998da3">pinD</a>(<a class="code hl_variable" href="#a030805e0b58b52b33950899e90998da3">pinD</a>),</div>
+<div class="line"><span class="lineno">   14</span>      <a class="code hl_variable" href="#aa9426503a0b77432173ae0b5d9d16f75">retardoPaso</a>(2000), <a class="code hl_variable" href="#adf180b58f05bee5cc728b2026aebd30a">tiempoUltimoPaso</a>(0), <a class="code hl_variable" href="#a4dabb0433ba9843a7b0c44fff4ec4dfe">pasoActual</a>(0),</div>
+<div class="line"><span class="lineno">   15</span>      <a class="code hl_variable" href="#a6c19097335276ef185ddcfdab1cf6144">gradoActual</a>(0), <a class="code hl_variable" href="#aff13a3e505f907b684f6374b51596a05">gradosObjetivo</a>(0), <a class="code hl_variable" href="#a064c3f5e2d7c46c29e9b6bfd01aa1904">gradosCorriendo</a>(0),</div>
+<div class="line"><span class="lineno">   16</span>      <a class="code hl_variable" href="#a74ae1066fd043a6859e95804da2ff170">direccionAdelante</a>(<span class="keyword">false</span>), <a class="code hl_variable" href="#acaa45dc69e19963021e7e68fa962460b">direccionAtras</a>(<span class="keyword">false</span>)</div>
+<div class="line"><span class="lineno">   17</span>{</div>
+<div class="line"><span class="lineno">   18</span>    pinMode(<a class="code hl_variable" href="#a9f8eddccee5fd302f15b251328639b5a">pinA</a>, OUTPUT);</div>
+<div class="line"><span class="lineno">   19</span>    pinMode(<a class="code hl_variable" href="#a5457b8c20cc470d18d7b67bf53405cda">pinB</a>, OUTPUT);</div>
+<div class="line"><span class="lineno">   20</span>    pinMode(<a class="code hl_variable" href="#ae1e9b8723a636ad3349bef9c153b7164">pinC</a>, OUTPUT);</div>
+<div class="line"><span class="lineno">   21</span>    pinMode(<a class="code hl_variable" href="#a030805e0b58b52b33950899e90998da3">pinD</a>, OUTPUT);</div>
+<div class="line"><span class="lineno">   22</span>}</div>
+<div class="ttc" id="aclass_motor_paso_html_a030805e0b58b52b33950899e90998da3"><div class="ttname"><a href="#a030805e0b58b52b33950899e90998da3">MotorPaso::pinD</a></div><div class="ttdeci">uint8_t pinD</div><div class="ttdoc">Bobina D.</div><div class="ttdef"><b>Definition</b> <a href="motor_step_8h_source.html#l00151">motorStep.h:151</a></div></div>
+<div class="ttc" id="aclass_motor_paso_html_a064c3f5e2d7c46c29e9b6bfd01aa1904"><div class="ttname"><a href="#a064c3f5e2d7c46c29e9b6bfd01aa1904">MotorPaso::gradosCorriendo</a></div><div class="ttdeci">float gradosCorriendo</div><div class="ttdoc">Ángulo recorrido durante el movimiento (progreso).</div><div class="ttdef"><b>Definition</b> <a href="motor_step_8h_source.html#l00175">motorStep.h:175</a></div></div>
+<div class="ttc" id="aclass_motor_paso_html_a4dabb0433ba9843a7b0c44fff4ec4dfe"><div class="ttname"><a href="#a4dabb0433ba9843a7b0c44fff4ec4dfe">MotorPaso::pasoActual</a></div><div class="ttdeci">int pasoActual</div><div class="ttdoc">Índice de la secuencia (0–7).</div><div class="ttdef"><b>Definition</b> <a href="motor_step_8h_source.html#l00165">motorStep.h:165</a></div></div>
+<div class="ttc" id="aclass_motor_paso_html_a5457b8c20cc470d18d7b67bf53405cda"><div class="ttname"><a href="#a5457b8c20cc470d18d7b67bf53405cda">MotorPaso::pinB</a></div><div class="ttdeci">uint8_t pinB</div><div class="ttdoc">Bobina B.</div><div class="ttdef"><b>Definition</b> <a href="motor_step_8h_source.html#l00149">motorStep.h:149</a></div></div>
+<div class="ttc" id="aclass_motor_paso_html_a6c19097335276ef185ddcfdab1cf6144"><div class="ttname"><a href="#a6c19097335276ef185ddcfdab1cf6144">MotorPaso::gradoActual</a></div><div class="ttdeci">float gradoActual</div><div class="ttdoc">Ángulo actual del motor (0–360 normalizado).</div><div class="ttdef"><b>Definition</b> <a href="motor_step_8h_source.html#l00173">motorStep.h:173</a></div></div>
+<div class="ttc" id="aclass_motor_paso_html_a74ae1066fd043a6859e95804da2ff170"><div class="ttname"><a href="#a74ae1066fd043a6859e95804da2ff170">MotorPaso::direccionAdelante</a></div><div class="ttdeci">bool direccionAdelante</div><div class="ttdoc">Dirección: true = adelante.</div><div class="ttdef"><b>Definition</b> <a href="motor_step_8h_source.html#l00177">motorStep.h:177</a></div></div>
+<div class="ttc" id="aclass_motor_paso_html_a9f8eddccee5fd302f15b251328639b5a"><div class="ttname"><a href="#a9f8eddccee5fd302f15b251328639b5a">MotorPaso::pinA</a></div><div class="ttdeci">uint8_t pinA</div><div class="ttdoc">Bobina A.</div><div class="ttdef"><b>Definition</b> <a href="motor_step_8h_source.html#l00148">motorStep.h:148</a></div></div>
+<div class="ttc" id="aclass_motor_paso_html_aa9426503a0b77432173ae0b5d9d16f75"><div class="ttname"><a href="#aa9426503a0b77432173ae0b5d9d16f75">MotorPaso::retardoPaso</a></div><div class="ttdeci">unsigned long retardoPaso</div><div class="ttdoc">Microsegundos entre pasos (determina la velocidad).</div><div class="ttdef"><b>Definition</b> <a href="motor_step_8h_source.html#l00157">motorStep.h:157</a></div></div>
+<div class="ttc" id="aclass_motor_paso_html_acaa45dc69e19963021e7e68fa962460b"><div class="ttname"><a href="#acaa45dc69e19963021e7e68fa962460b">MotorPaso::direccionAtras</a></div><div class="ttdeci">bool direccionAtras</div><div class="ttdoc">Dirección: true = atrás.</div><div class="ttdef"><b>Definition</b> <a href="motor_step_8h_source.html#l00178">motorStep.h:178</a></div></div>
+<div class="ttc" id="aclass_motor_paso_html_adf180b58f05bee5cc728b2026aebd30a"><div class="ttname"><a href="#adf180b58f05bee5cc728b2026aebd30a">MotorPaso::tiempoUltimoPaso</a></div><div class="ttdeci">unsigned long tiempoUltimoPaso</div><div class="ttdoc">Marca temporal del último paso ejecutado.</div><div class="ttdef"><b>Definition</b> <a href="motor_step_8h_source.html#l00158">motorStep.h:158</a></div></div>
+<div class="ttc" id="aclass_motor_paso_html_ae1e9b8723a636ad3349bef9c153b7164"><div class="ttname"><a href="#ae1e9b8723a636ad3349bef9c153b7164">MotorPaso::pinC</a></div><div class="ttdeci">uint8_t pinC</div><div class="ttdoc">Bobina C.</div><div class="ttdef"><b>Definition</b> <a href="motor_step_8h_source.html#l00150">motorStep.h:150</a></div></div>
+<div class="ttc" id="aclass_motor_paso_html_aff13a3e505f907b684f6374b51596a05"><div class="ttname"><a href="#aff13a3e505f907b684f6374b51596a05">MotorPaso::gradosObjetivo</a></div><div class="ttdeci">float gradosObjetivo</div><div class="ttdoc">Ángulo objetivo solicitado.</div><div class="ttdef"><b>Definition</b> <a href="motor_step_8h_source.html#l00174">motorStep.h:174</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones miembro</h2>
+<a id="ac610d089d82aca423c7528f918e3e6f1" name="ac610d089d82aca423c7528f918e3e6f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac610d089d82aca423c7528f918e3e6f1">&#9670;&#160;</a></span>aplicarPaso()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MotorPaso::aplicarPaso </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>indicePaso</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Aplica un paso específico de la secuencia (0–7). </p>
+<p>Activa las bobinas según el índice de paso (0–7).</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">indicePaso</td><td>Índice de la secuencia. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="motor_step_8cpp_source.html#l00069">69</a> del archivo <a class="el" href="motor_step_8cpp_source.html">motorStep.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   69</span>                                 {</div>
+<div class="line"><span class="lineno">   70</span>    <span class="keywordflow">switch</span> (i) {</div>
+<div class="line"><span class="lineno">   71</span>        <span class="keywordflow">case</span> 0: digitalWrite(<a class="code hl_variable" href="#a9f8eddccee5fd302f15b251328639b5a">pinA</a>, HIGH); digitalWrite(<a class="code hl_variable" href="#a5457b8c20cc470d18d7b67bf53405cda">pinB</a>, LOW);  digitalWrite(<a class="code hl_variable" href="#ae1e9b8723a636ad3349bef9c153b7164">pinC</a>, LOW);  digitalWrite(<a class="code hl_variable" href="#a030805e0b58b52b33950899e90998da3">pinD</a>, LOW);  <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   72</span>        <span class="keywordflow">case</span> 1: digitalWrite(<a class="code hl_variable" href="#a9f8eddccee5fd302f15b251328639b5a">pinA</a>, HIGH); digitalWrite(<a class="code hl_variable" href="#a5457b8c20cc470d18d7b67bf53405cda">pinB</a>, HIGH); digitalWrite(<a class="code hl_variable" href="#ae1e9b8723a636ad3349bef9c153b7164">pinC</a>, LOW);  digitalWrite(<a class="code hl_variable" href="#a030805e0b58b52b33950899e90998da3">pinD</a>, LOW);  <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   73</span>        <span class="keywordflow">case</span> 2: digitalWrite(<a class="code hl_variable" href="#a9f8eddccee5fd302f15b251328639b5a">pinA</a>, LOW);  digitalWrite(<a class="code hl_variable" href="#a5457b8c20cc470d18d7b67bf53405cda">pinB</a>, HIGH); digitalWrite(<a class="code hl_variable" href="#ae1e9b8723a636ad3349bef9c153b7164">pinC</a>, LOW);  digitalWrite(<a class="code hl_variable" href="#a030805e0b58b52b33950899e90998da3">pinD</a>, LOW);  <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   74</span>        <span class="keywordflow">case</span> 3: digitalWrite(<a class="code hl_variable" href="#a9f8eddccee5fd302f15b251328639b5a">pinA</a>, LOW);  digitalWrite(<a class="code hl_variable" href="#a5457b8c20cc470d18d7b67bf53405cda">pinB</a>, HIGH); digitalWrite(<a class="code hl_variable" href="#ae1e9b8723a636ad3349bef9c153b7164">pinC</a>, HIGH); digitalWrite(<a class="code hl_variable" href="#a030805e0b58b52b33950899e90998da3">pinD</a>, LOW);  <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   75</span>        <span class="keywordflow">case</span> 4: digitalWrite(<a class="code hl_variable" href="#a9f8eddccee5fd302f15b251328639b5a">pinA</a>, LOW);  digitalWrite(<a class="code hl_variable" href="#a5457b8c20cc470d18d7b67bf53405cda">pinB</a>, LOW);  digitalWrite(<a class="code hl_variable" href="#ae1e9b8723a636ad3349bef9c153b7164">pinC</a>, HIGH); digitalWrite(<a class="code hl_variable" href="#a030805e0b58b52b33950899e90998da3">pinD</a>, LOW);  <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   76</span>        <span class="keywordflow">case</span> 5: digitalWrite(<a class="code hl_variable" href="#a9f8eddccee5fd302f15b251328639b5a">pinA</a>, LOW);  digitalWrite(<a class="code hl_variable" href="#a5457b8c20cc470d18d7b67bf53405cda">pinB</a>, LOW);  digitalWrite(<a class="code hl_variable" href="#ae1e9b8723a636ad3349bef9c153b7164">pinC</a>, HIGH); digitalWrite(<a class="code hl_variable" href="#a030805e0b58b52b33950899e90998da3">pinD</a>, HIGH); <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   77</span>        <span class="keywordflow">case</span> 6: digitalWrite(<a class="code hl_variable" href="#a9f8eddccee5fd302f15b251328639b5a">pinA</a>, LOW);  digitalWrite(<a class="code hl_variable" href="#a5457b8c20cc470d18d7b67bf53405cda">pinB</a>, LOW);  digitalWrite(<a class="code hl_variable" href="#ae1e9b8723a636ad3349bef9c153b7164">pinC</a>, LOW);  digitalWrite(<a class="code hl_variable" href="#a030805e0b58b52b33950899e90998da3">pinD</a>, HIGH); <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   78</span>        <span class="keywordflow">case</span> 7: digitalWrite(<a class="code hl_variable" href="#a9f8eddccee5fd302f15b251328639b5a">pinA</a>, HIGH); digitalWrite(<a class="code hl_variable" href="#a5457b8c20cc470d18d7b67bf53405cda">pinB</a>, LOW);  digitalWrite(<a class="code hl_variable" href="#ae1e9b8723a636ad3349bef9c153b7164">pinC</a>, LOW);  digitalWrite(<a class="code hl_variable" href="#a030805e0b58b52b33950899e90998da3">pinD</a>, HIGH); <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   79</span>    }</div>
+<div class="line"><span class="lineno">   80</span>}</div>
+</div><!-- fragment --><div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_motor_paso_ac610d089d82aca423c7528f918e3e6f1_icgraph.png" border="0" usemap="#aclass_motor_paso_ac610d089d82aca423c7528f918e3e6f1_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_motor_paso_ac610d089d82aca423c7528f918e3e6f1_icgraph" id="aclass_motor_paso_ac610d089d82aca423c7528f918e3e6f1_icgraph">
+<area shape="rect" title="Aplica un paso específico de la secuencia (0–7)." alt="" coords="577,39,739,64"/>
+<area shape="rect" href="class_motor_paso.html#aeb003102ac4f885226a4a4a1e4121fa5" title="Avanza un paso en la secuencia del motor." alt="" coords="357,13,529,39"/>
+<area shape="poly" title=" " alt="" coords="564,43,529,39,530,34,564,38"/>
+<area shape="rect" href="class_motor_paso.html#a70e7b613b257ac6dab5a0dc38d389f3a" title="Retrocede un paso en la secuencia del motor." alt="" coords="367,63,519,88"/>
+<area shape="poly" title=" " alt="" coords="564,65,520,70,519,64,563,59"/>
+<area shape="rect" href="class_motor_paso.html#a884b1a066e5684a4c1f25431efc6b316" title="Ejecuta movimiento continuo según la velocidad configurada." alt="" coords="100,5,309,31"/>
+<area shape="poly" title=" " alt="" coords="343,25,310,24,310,19,343,20"/>
+<area shape="rect" href="class_motor_paso.html#a3bf0f1a5f2d26c41e405408be4ec47b4" title="Mueve el motor hacia un ángulo relativo usando el camino más corto." alt="" coords="101,55,309,95"/>
+<area shape="poly" title=" " alt="" coords="368,44,302,58,301,53,367,39"/>
+<area shape="rect" href="main_8cpp.html#afe461d27b9c48d5921c00d521181f12f" title="Arduino main loop. Ejecuta continuamente la configuración de pines, lectura analógica,..." alt="" coords="5,63,52,88"/>
+<area shape="poly" title=" " alt="" coords="87,78,52,78,52,73,87,73"/>
+<area shape="poly" title=" " alt="" coords="354,78,309,78,309,73,354,73"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa054bdf42608a37c3fbc9e5037c417e9" name="aa054bdf42608a37c3fbc9e5037c417e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa054bdf42608a37c3fbc9e5037c417e9">&#9670;&#160;</a></span>convertirGradosAPasos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MotorPaso::convertirGradosAPasos </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>grados</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Convierte grados a pasos del motor. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">grados</td><td>Ángulo en grados. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Número de pasos equivalentes. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="motor_step_8cpp_source.html#l00159">159</a> del archivo <a class="el" href="motor_step_8cpp_source.html">motorStep.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  159</span>                                                 {</div>
+<div class="line"><span class="lineno">  160</span>    <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)(abs(grados) * this-&gt;<a class="code hl_variable" href="#ad380b0d361ec87653d35b2113d4215da">pasosPorVuelta</a> / 360.0f);</div>
+<div class="line"><span class="lineno">  161</span>}</div>
+<div class="ttc" id="aclass_motor_paso_html_ad380b0d361ec87653d35b2113d4215da"><div class="ttname"><a href="#ad380b0d361ec87653d35b2113d4215da">MotorPaso::pasosPorVuelta</a></div><div class="ttdeci">int pasosPorVuelta</div><div class="ttdoc">Pasos necesarios para 360°</div><div class="ttdef"><b>Definition</b> <a href="motor_step_8h_source.html#l00166">motorStep.h:166</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_motor_paso_aa054bdf42608a37c3fbc9e5037c417e9_icgraph.png" border="0" usemap="#aclass_motor_paso_aa054bdf42608a37c3fbc9e5037c417e9_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_motor_paso_aa054bdf42608a37c3fbc9e5037c417e9_icgraph" id="aclass_motor_paso_aa054bdf42608a37c3fbc9e5037c417e9_icgraph">
+<area shape="rect" title="Convierte grados a pasos del motor." alt="" coords="356,5,539,45"/>
+<area shape="rect" href="class_motor_paso.html#a3bf0f1a5f2d26c41e405408be4ec47b4" title="Mueve el motor hacia un ángulo relativo usando el camino más corto." alt="" coords="100,5,308,45"/>
+<area shape="poly" title=" " alt="" coords="342,28,308,28,308,23,342,23"/>
+<area shape="rect" href="main_8cpp.html#afe461d27b9c48d5921c00d521181f12f" title="Arduino main loop. Ejecuta continuamente la configuración de pines, lectura analógica,..." alt="" coords="5,13,52,38"/>
+<area shape="poly" title=" " alt="" coords="86,28,52,28,52,23,86,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac2b6d1c7bc1c04a0fb39839b1658721c" name="ac2b6d1c7bc1c04a0fb39839b1658721c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2b6d1c7bc1c04a0fb39839b1658721c">&#9670;&#160;</a></span>convertirPasosAGrados()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float MotorPaso::convertirPasosAGrados </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>pasos</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Convierte pasos del motor a grados. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="#a45a17ca7197c7968adba7e667f51b492" title="Pasos totales a ejecutar en el movimiento actual.">pasos</a></td><td>Número de pasos. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Ángulo equivalente en grados. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="motor_step_8cpp_source.html#l00166">166</a> del archivo <a class="el" href="motor_step_8cpp_source.html">motorStep.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  166</span>                                                {</div>
+<div class="line"><span class="lineno">  167</span>    <span class="keywordflow">return</span> (<span class="keywordtype">float</span>)<a class="code hl_variable" href="#a45a17ca7197c7968adba7e667f51b492">pasos</a> * 360.0f / this-&gt;<a class="code hl_variable" href="#ad380b0d361ec87653d35b2113d4215da">pasosPorVuelta</a>;</div>
+<div class="line"><span class="lineno">  168</span>}</div>
+<div class="ttc" id="aclass_motor_paso_html_a45a17ca7197c7968adba7e667f51b492"><div class="ttname"><a href="#a45a17ca7197c7968adba7e667f51b492">MotorPaso::pasos</a></div><div class="ttdeci">int pasos</div><div class="ttdoc">Pasos totales a ejecutar en el movimiento actual.</div><div class="ttdef"><b>Definition</b> <a href="motor_step_8h_source.html#l00172">motorStep.h:172</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_motor_paso_ac2b6d1c7bc1c04a0fb39839b1658721c_icgraph.png" border="0" usemap="#aclass_motor_paso_ac2b6d1c7bc1c04a0fb39839b1658721c_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_motor_paso_ac2b6d1c7bc1c04a0fb39839b1658721c_icgraph" id="aclass_motor_paso_ac2b6d1c7bc1c04a0fb39839b1658721c_icgraph">
+<area shape="rect" title="Convierte pasos del motor a grados." alt="" coords="628,5,807,45"/>
+<area shape="rect" href="class_motor_paso.html#aa9331c4fc40047c1b7856cfebc9220bc" title="Actualiza y devuelve los grados recorridos durante el movimiento." alt="" coords="356,5,580,45"/>
+<area shape="poly" title=" " alt="" coords="614,28,580,28,580,23,614,23"/>
+<area shape="rect" href="class_motor_paso.html#a3bf0f1a5f2d26c41e405408be4ec47b4" title="Mueve el motor hacia un ángulo relativo usando el camino más corto." alt="" coords="100,5,308,45"/>
+<area shape="poly" title=" " alt="" coords="342,28,308,28,308,23,342,23"/>
+<area shape="rect" href="main_8cpp.html#afe461d27b9c48d5921c00d521181f12f" title="Arduino main loop. Ejecuta continuamente la configuración de pines, lectura analógica,..." alt="" coords="5,13,52,38"/>
+<area shape="poly" title=" " alt="" coords="86,28,52,28,52,23,86,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af1f50306108a5f69c298367da9e96e3c" name="af1f50306108a5f69c298367da9e96e3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1f50306108a5f69c298367da9e96e3c">&#9670;&#160;</a></span>debugMovimientoRelativo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MotorPaso::debugMovimientoRelativo </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>pasoActualDelBucle</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Imprime información detallada del movimiento relativo. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pasoActualDelBucle</td><td>Paso actual dentro del bucle de movimiento. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="motor_step_8cpp_source.html#l00199">199</a> del archivo <a class="el" href="motor_step_8cpp_source.html">motorStep.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  199</span>                                                              {</div>
+<div class="line"><span class="lineno">  200</span> </div>
+<div class="line"><span class="lineno">  201</span>    Serial.println(<span class="stringliteral">&quot;====================================&quot;</span>);</div>
+<div class="line"><span class="lineno">  202</span>    Serial.print(<span class="stringliteral">&quot;Paso actual: &quot;</span>);</div>
+<div class="line"><span class="lineno">  203</span>    Serial.print(pasoActualDelBucle);</div>
+<div class="line"><span class="lineno">  204</span>    Serial.print(<span class="stringliteral">&quot; / &quot;</span>);</div>
+<div class="line"><span class="lineno">  205</span>    Serial.println(this-&gt;<a class="code hl_variable" href="#a45a17ca7197c7968adba7e667f51b492">pasos</a>);</div>
+<div class="line"><span class="lineno">  206</span> </div>
+<div class="line"><span class="lineno">  207</span>    Serial.print(<span class="stringliteral">&quot;Diferencia circular: &quot;</span>);</div>
+<div class="line"><span class="lineno">  208</span>    Serial.print(this-&gt;<a class="code hl_variable" href="#aef0c5e2a5b02be1ffee595aef622727e">diferencia</a>);</div>
+<div class="line"><span class="lineno">  209</span>    Serial.println(<span class="stringliteral">&quot; grados&quot;</span>);</div>
+<div class="line"><span class="lineno">  210</span> </div>
+<div class="line"><span class="lineno">  211</span>    Serial.print(<span class="stringliteral">&quot;Pasos totales calculados: &quot;</span>);</div>
+<div class="line"><span class="lineno">  212</span>    Serial.println(this-&gt;<a class="code hl_variable" href="#a45a17ca7197c7968adba7e667f51b492">pasos</a>);</div>
+<div class="line"><span class="lineno">  213</span> </div>
+<div class="line"><span class="lineno">  214</span>    Serial.print(<span class="stringliteral">&quot;Dirección: &quot;</span>);</div>
+<div class="line"><span class="lineno">  215</span>    <span class="keywordflow">if</span> (this-&gt;<a class="code hl_variable" href="#a74ae1066fd043a6859e95804da2ff170">direccionAdelante</a>) Serial.println(<span class="stringliteral">&quot;Adelante (+)&quot;</span>);</div>
+<div class="line"><span class="lineno">  216</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (this-&gt;<a class="code hl_variable" href="#acaa45dc69e19963021e7e68fa962460b">direccionAtras</a>) Serial.println(<span class="stringliteral">&quot;Atrás (–)&quot;</span>);</div>
+<div class="line"><span class="lineno">  217</span>    <span class="keywordflow">else</span> Serial.println(<span class="stringliteral">&quot;Sin movimiento&quot;</span>);</div>
+<div class="line"><span class="lineno">  218</span> </div>
+<div class="line"><span class="lineno">  219</span>    Serial.print(<span class="stringliteral">&quot;Grados recorridos hasta ahora: &quot;</span>);</div>
+<div class="line"><span class="lineno">  220</span>    Serial.print(this-&gt;<a class="code hl_variable" href="#a064c3f5e2d7c46c29e9b6bfd01aa1904">gradosCorriendo</a>);</div>
+<div class="line"><span class="lineno">  221</span>    Serial.println(<span class="stringliteral">&quot; grados&quot;</span>);</div>
+<div class="line"><span class="lineno">  222</span> </div>
+<div class="line"><span class="lineno">  223</span>    Serial.print(<span class="stringliteral">&quot;Grado actual (antes de normalizar): &quot;</span>);</div>
+<div class="line"><span class="lineno">  224</span>    Serial.println(this-&gt;<a class="code hl_variable" href="#a6c19097335276ef185ddcfdab1cf6144">gradoActual</a>);</div>
+<div class="line"><span class="lineno">  225</span> </div>
+<div class="line"><span class="lineno">  226</span>    Serial.println(<span class="stringliteral">&quot;====================================&quot;</span>);</div>
+<div class="line"><span class="lineno">  227</span>}</div>
+<div class="ttc" id="aclass_motor_paso_html_aef0c5e2a5b02be1ffee595aef622727e"><div class="ttname"><a href="#aef0c5e2a5b02be1ffee595aef622727e">MotorPaso::diferencia</a></div><div class="ttdeci">float diferencia</div><div class="ttdoc">Diferencia circular entre gradoActual y gradosObjetivo (–180 a +180).</div><div class="ttdef"><b>Definition</b> <a href="motor_step_8h_source.html#l00176">motorStep.h:176</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_motor_paso_af1f50306108a5f69c298367da9e96e3c_icgraph.png" border="0" usemap="#aclass_motor_paso_af1f50306108a5f69c298367da9e96e3c_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_motor_paso_af1f50306108a5f69c298367da9e96e3c_icgraph" id="aclass_motor_paso_af1f50306108a5f69c298367da9e96e3c_icgraph">
+<area shape="rect" title="Imprime información detallada del movimiento relativo." alt="" coords="356,5,549,45"/>
+<area shape="rect" href="class_motor_paso.html#a3bf0f1a5f2d26c41e405408be4ec47b4" title="Mueve el motor hacia un ángulo relativo usando el camino más corto." alt="" coords="100,5,308,45"/>
+<area shape="poly" title=" " alt="" coords="343,28,308,28,308,23,343,23"/>
+<area shape="rect" href="main_8cpp.html#afe461d27b9c48d5921c00d521181f12f" title="Arduino main loop. Ejecuta continuamente la configuración de pines, lectura analógica,..." alt="" coords="5,13,52,38"/>
+<area shape="poly" title=" " alt="" coords="86,28,52,28,52,23,86,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5e3740ade4968870d145a97dfaa6378b" name="a5e3740ade4968870d145a97dfaa6378b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e3740ade4968870d145a97dfaa6378b">&#9670;&#160;</a></span>diferenciaCircular()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float MotorPaso::diferenciaCircular </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>gradosActuales</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>gradosObjetivo</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calcula la diferencia circular entre dos ángulos. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gradosActuales</td><td>Ángulo actual. </td></tr>
+    <tr><td class="paramname"><a class="el" href="#aff13a3e505f907b684f6374b51596a05" title="Ángulo objetivo solicitado.">gradosObjetivo</a></td><td>Ángulo objetivo. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Diferencia circular entre -180 y +180 grados. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="motor_step_8cpp_source.html#l00173">173</a> del archivo <a class="el" href="motor_step_8cpp_source.html">motorStep.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  173</span>                                                                {</div>
+<div class="line"><span class="lineno">  174</span>    <span class="keywordtype">float</span> diff = objetivo - actual;</div>
+<div class="line"><span class="lineno">  175</span> </div>
+<div class="line"><span class="lineno">  176</span>    <span class="keywordflow">if</span> (diff &gt; 180.0f)  diff -= 360.0f;</div>
+<div class="line"><span class="lineno">  177</span>    <span class="keywordflow">if</span> (diff &lt; -180.0f) diff += 360.0f;</div>
+<div class="line"><span class="lineno">  178</span> </div>
+<div class="line"><span class="lineno">  179</span>    <span class="keywordflow">return</span> diff;</div>
+<div class="line"><span class="lineno">  180</span>}</div>
+</div><!-- fragment --><div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_motor_paso_a5e3740ade4968870d145a97dfaa6378b_icgraph.png" border="0" usemap="#aclass_motor_paso_a5e3740ade4968870d145a97dfaa6378b_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_motor_paso_a5e3740ade4968870d145a97dfaa6378b_icgraph" id="aclass_motor_paso_a5e3740ade4968870d145a97dfaa6378b_icgraph">
+<area shape="rect" title="Calcula la diferencia circular entre dos ángulos." alt="" coords="356,13,548,38"/>
+<area shape="rect" href="class_motor_paso.html#a3bf0f1a5f2d26c41e405408be4ec47b4" title="Mueve el motor hacia un ángulo relativo usando el camino más corto." alt="" coords="100,5,308,45"/>
+<area shape="poly" title=" " alt="" coords="342,28,308,28,308,23,342,23"/>
+<area shape="rect" href="main_8cpp.html#afe461d27b9c48d5921c00d521181f12f" title="Arduino main loop. Ejecuta continuamente la configuración de pines, lectura analógica,..." alt="" coords="5,13,52,38"/>
+<area shape="poly" title=" " alt="" coords="86,28,52,28,52,23,86,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae45688954caa95057df7ac86389a7700" name="ae45688954caa95057df7ac86389a7700"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae45688954caa95057df7ac86389a7700">&#9670;&#160;</a></span>fijarVelocidad()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MotorPaso::fijarVelocidad </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>rpm</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Establece la velocidad del motor en RPM. </p>
+<p>Establece la velocidad del motor en RPM calculando el retardo entre pasos.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="#af8abafcab50187207db982f024d2a981" title="Velocidad configurada en RPM.">rpm</a></td><td>Revoluciones por minuto. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="motor_step_8cpp_source.html#l00033">33</a> del archivo <a class="el" href="motor_step_8cpp_source.html">motorStep.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   33</span>                                        {</div>
+<div class="line"><span class="lineno">   34</span>    this-&gt;<a class="code hl_variable" href="#aa9426503a0b77432173ae0b5d9d16f75">retardoPaso</a> = (60.0 * 1000000.0) / (<a class="code hl_variable" href="#af8abafcab50187207db982f024d2a981">rpm</a> * this-&gt;<a class="code hl_variable" href="#ad380b0d361ec87653d35b2113d4215da">pasosPorVuelta</a>);</div>
+<div class="line"><span class="lineno">   35</span>    this-&gt;<a class="code hl_variable" href="#af8abafcab50187207db982f024d2a981">rpm</a> = <a class="code hl_variable" href="#af8abafcab50187207db982f024d2a981">rpm</a>;</div>
+<div class="line"><span class="lineno">   36</span>}</div>
+<div class="ttc" id="aclass_motor_paso_html_af8abafcab50187207db982f024d2a981"><div class="ttname"><a href="#af8abafcab50187207db982f024d2a981">MotorPaso::rpm</a></div><div class="ttdeci">short rpm</div><div class="ttdoc">Velocidad configurada en RPM.</div><div class="ttdef"><b>Definition</b> <a href="motor_step_8h_source.html#l00159">motorStep.h:159</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_motor_paso_ae45688954caa95057df7ac86389a7700_icgraph.png" border="0" usemap="#aclass_motor_paso_ae45688954caa95057df7ac86389a7700_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_motor_paso_ae45688954caa95057df7ac86389a7700_icgraph" id="aclass_motor_paso_ae45688954caa95057df7ac86389a7700_icgraph">
+<area shape="rect" title="Establece la velocidad del motor en RPM." alt="" coords="100,5,271,31"/>
+<area shape="rect" href="main_8cpp.html#afe461d27b9c48d5921c00d521181f12f" title="Arduino main loop. Ejecuta continuamente la configuración de pines, lectura analógica,..." alt="" coords="5,5,52,31"/>
+<area shape="poly" title=" " alt="" coords="86,21,52,21,52,15,86,15"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a884b1a066e5684a4c1f25431efc6b316" name="a884b1a066e5684a4c1f25431efc6b316"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a884b1a066e5684a4c1f25431efc6b316">&#9670;&#160;</a></span>movimientoContinuo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MotorPaso::movimientoContinuo </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ejecuta movimiento continuo según la velocidad configurada. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="motor_step_8cpp_source.html#l00091">91</a> del archivo <a class="el" href="motor_step_8cpp_source.html">motorStep.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   91</span>                                   {</div>
+<div class="line"><span class="lineno">   92</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> ahora = micros();</div>
+<div class="line"><span class="lineno">   93</span> </div>
+<div class="line"><span class="lineno">   94</span>    <span class="keywordflow">if</span> (ahora - this-&gt;<a class="code hl_variable" href="#adf180b58f05bee5cc728b2026aebd30a">tiempoUltimoPaso</a> &gt;= this-&gt;<a class="code hl_variable" href="#aa9426503a0b77432173ae0b5d9d16f75">retardoPaso</a>) {</div>
+<div class="line"><span class="lineno">   95</span>        this-&gt;<a class="code hl_variable" href="#adf180b58f05bee5cc728b2026aebd30a">tiempoUltimoPaso</a> = ahora;</div>
+<div class="line"><span class="lineno">   96</span>        this-&gt;<a class="code hl_function" href="#aeb003102ac4f885226a4a4a1e4121fa5">pasoAdelante</a>();</div>
+<div class="line"><span class="lineno">   97</span>    }</div>
+<div class="line"><span class="lineno">   98</span>}</div>
+<div class="ttc" id="aclass_motor_paso_html_aeb003102ac4f885226a4a4a1e4121fa5"><div class="ttname"><a href="#aeb003102ac4f885226a4a4a1e4121fa5">MotorPaso::pasoAdelante</a></div><div class="ttdeci">void pasoAdelante()</div><div class="ttdoc">Avanza un paso en la secuencia del motor.</div><div class="ttdef"><b>Definition</b> <a href="motor_step_8cpp_source.html#l00047">motorStep.cpp:47</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Gráfico de llamadas de esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_motor_paso_a884b1a066e5684a4c1f25431efc6b316_cgraph.png" border="0" usemap="#aclass_motor_paso_a884b1a066e5684a4c1f25431efc6b316_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_motor_paso_a884b1a066e5684a4c1f25431efc6b316_cgraph" id="aclass_motor_paso_a884b1a066e5684a4c1f25431efc6b316_cgraph">
+<area shape="rect" title="Ejecuta movimiento continuo según la velocidad configurada." alt="" coords="5,5,215,31"/>
+<area shape="rect" href="class_motor_paso.html#aeb003102ac4f885226a4a4a1e4121fa5" title="Avanza un paso en la secuencia del motor." alt="" coords="263,5,435,31"/>
+<area shape="poly" title=" " alt="" coords="215,15,249,15,249,21,215,21"/>
+<area shape="rect" href="class_motor_paso.html#ac610d089d82aca423c7528f918e3e6f1" title="Aplica un paso específico de la secuencia (0–7)." alt="" coords="483,5,644,31"/>
+<area shape="poly" title=" " alt="" coords="435,15,469,15,469,21,435,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa9331c4fc40047c1b7856cfebc9220bc" name="aa9331c4fc40047c1b7856cfebc9220bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9331c4fc40047c1b7856cfebc9220bc">&#9670;&#160;</a></span>movimientoDePosicionGradosCorriendo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float MotorPaso::movimientoDePosicionGradosCorriendo </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>movimientoPasos</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Actualiza y devuelve los grados recorridos durante el movimiento. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">movimientoPasos</td><td>Pasos ejecutados hasta el momento. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Grados recorridos. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="motor_step_8cpp_source.html#l00145">145</a> del archivo <a class="el" href="motor_step_8cpp_source.html">motorStep.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  145</span>                                                                        {</div>
+<div class="line"><span class="lineno">  146</span>    this-&gt;<a class="code hl_variable" href="#a064c3f5e2d7c46c29e9b6bfd01aa1904">gradosCorriendo</a> = <a class="code hl_function" href="#ac2b6d1c7bc1c04a0fb39839b1658721c">convertirPasosAGrados</a>(movimientoPasos);</div>
+<div class="line"><span class="lineno">  147</span>    <span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="#a064c3f5e2d7c46c29e9b6bfd01aa1904">gradosCorriendo</a>;</div>
+<div class="line"><span class="lineno">  148</span>}</div>
+<div class="ttc" id="aclass_motor_paso_html_ac2b6d1c7bc1c04a0fb39839b1658721c"><div class="ttname"><a href="#ac2b6d1c7bc1c04a0fb39839b1658721c">MotorPaso::convertirPasosAGrados</a></div><div class="ttdeci">float convertirPasosAGrados(int pasos)</div><div class="ttdoc">Convierte pasos del motor a grados.</div><div class="ttdef"><b>Definition</b> <a href="motor_step_8cpp_source.html#l00166">motorStep.cpp:166</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Gráfico de llamadas de esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_motor_paso_aa9331c4fc40047c1b7856cfebc9220bc_cgraph.png" border="0" usemap="#aclass_motor_paso_aa9331c4fc40047c1b7856cfebc9220bc_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_motor_paso_aa9331c4fc40047c1b7856cfebc9220bc_cgraph" id="aclass_motor_paso_aa9331c4fc40047c1b7856cfebc9220bc_cgraph">
+<area shape="rect" title="Actualiza y devuelve los grados recorridos durante el movimiento." alt="" coords="5,5,229,45"/>
+<area shape="rect" href="class_motor_paso.html#ac2b6d1c7bc1c04a0fb39839b1658721c" title="Convierte pasos del motor a grados." alt="" coords="277,5,456,45"/>
+<area shape="poly" title=" " alt="" coords="229,23,264,23,264,28,229,28"/>
+</map>
+</div>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_motor_paso_aa9331c4fc40047c1b7856cfebc9220bc_icgraph.png" border="0" usemap="#aclass_motor_paso_aa9331c4fc40047c1b7856cfebc9220bc_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_motor_paso_aa9331c4fc40047c1b7856cfebc9220bc_icgraph" id="aclass_motor_paso_aa9331c4fc40047c1b7856cfebc9220bc_icgraph">
+<area shape="rect" title="Actualiza y devuelve los grados recorridos durante el movimiento." alt="" coords="356,5,580,45"/>
+<area shape="rect" href="class_motor_paso.html#a3bf0f1a5f2d26c41e405408be4ec47b4" title="Mueve el motor hacia un ángulo relativo usando el camino más corto." alt="" coords="100,5,308,45"/>
+<area shape="poly" title=" " alt="" coords="342,28,308,28,308,23,342,23"/>
+<area shape="rect" href="main_8cpp.html#afe461d27b9c48d5921c00d521181f12f" title="Arduino main loop. Ejecuta continuamente la configuración de pines, lectura analógica,..." alt="" coords="5,13,52,38"/>
+<area shape="poly" title=" " alt="" coords="86,28,52,28,52,23,86,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3bf0f1a5f2d26c41e405408be4ec47b4" name="a3bf0f1a5f2d26c41e405408be4ec47b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bf0f1a5f2d26c41e405408be4ec47b4">&#9670;&#160;</a></span>movimientoPosicionRelativo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MotorPaso::movimientoPosicionRelativo </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>grados</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>debugMSG</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Mueve el motor hacia un ángulo relativo usando el camino más corto. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">grados</td><td>Ángulo objetivo en grados. </td></tr>
+    <tr><td class="paramname">debugMSG</td><td>Si es true, imprime información detallada del movimiento. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="motor_step_8cpp_source.html#l00109">109</a> del archivo <a class="el" href="motor_step_8cpp_source.html">motorStep.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  109</span>                                                                      {</div>
+<div class="line"><span class="lineno">  110</span> </div>
+<div class="line"><span class="lineno">  111</span>    this-&gt;<a class="code hl_variable" href="#aef0c5e2a5b02be1ffee595aef622727e">diferencia</a> = this-&gt;<a class="code hl_function" href="#a5e3740ade4968870d145a97dfaa6378b">diferenciaCircular</a>(this-&gt;<a class="code hl_variable" href="#a6c19097335276ef185ddcfdab1cf6144">gradoActual</a>, grados);</div>
+<div class="line"><span class="lineno">  112</span>    this-&gt;<a class="code hl_variable" href="#a45a17ca7197c7968adba7e667f51b492">pasos</a> = <a class="code hl_function" href="#aa054bdf42608a37c3fbc9e5037c417e9">convertirGradosAPasos</a>(abs(this-&gt;<a class="code hl_variable" href="#aef0c5e2a5b02be1ffee595aef622727e">diferencia</a>));</div>
+<div class="line"><span class="lineno">  113</span> </div>
+<div class="line"><span class="lineno">  114</span>    this-&gt;<a class="code hl_variable" href="#a74ae1066fd043a6859e95804da2ff170">direccionAdelante</a> = (this-&gt;<a class="code hl_variable" href="#aef0c5e2a5b02be1ffee595aef622727e">diferencia</a> &gt; 0);</div>
+<div class="line"><span class="lineno">  115</span>    this-&gt;<a class="code hl_variable" href="#acaa45dc69e19963021e7e68fa962460b">direccionAtras</a>    = (this-&gt;<a class="code hl_variable" href="#aef0c5e2a5b02be1ffee595aef622727e">diferencia</a> &lt; 0);</div>
+<div class="line"><span class="lineno">  116</span> </div>
+<div class="line"><span class="lineno">  117</span>    <span class="keywordflow">if</span> (this-&gt;<a class="code hl_variable" href="#acaa45dc69e19963021e7e68fa962460b">direccionAtras</a>) {</div>
+<div class="line"><span class="lineno">  118</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; this-&gt;<a class="code hl_variable" href="#a45a17ca7197c7968adba7e667f51b492">pasos</a>; i++) {</div>
+<div class="line"><span class="lineno">  119</span>            this-&gt;<a class="code hl_function" href="#a70e7b613b257ac6dab5a0dc38d389f3a">pasoAtras</a>();</div>
+<div class="line"><span class="lineno">  120</span>            <a class="code hl_function" href="#aa9331c4fc40047c1b7856cfebc9220bc">movimientoDePosicionGradosCorriendo</a>(i);</div>
+<div class="line"><span class="lineno">  121</span>            <span class="keywordflow">if</span> (debugMSG) <a class="code hl_function" href="#af1f50306108a5f69c298367da9e96e3c">debugMovimientoRelativo</a>(i);</div>
+<div class="line"><span class="lineno">  122</span>        }</div>
+<div class="line"><span class="lineno">  123</span>    }</div>
+<div class="line"><span class="lineno">  124</span> </div>
+<div class="line"><span class="lineno">  125</span>    <span class="keywordflow">if</span> (this-&gt;<a class="code hl_variable" href="#a74ae1066fd043a6859e95804da2ff170">direccionAdelante</a>) {</div>
+<div class="line"><span class="lineno">  126</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; this-&gt;<a class="code hl_variable" href="#a45a17ca7197c7968adba7e667f51b492">pasos</a>; i++) {</div>
+<div class="line"><span class="lineno">  127</span>            this-&gt;<a class="code hl_function" href="#aeb003102ac4f885226a4a4a1e4121fa5">pasoAdelante</a>();</div>
+<div class="line"><span class="lineno">  128</span>            <a class="code hl_function" href="#aa9331c4fc40047c1b7856cfebc9220bc">movimientoDePosicionGradosCorriendo</a>(i);</div>
+<div class="line"><span class="lineno">  129</span>            <span class="keywordflow">if</span> (debugMSG) <a class="code hl_function" href="#af1f50306108a5f69c298367da9e96e3c">debugMovimientoRelativo</a>(i);</div>
+<div class="line"><span class="lineno">  130</span>        }</div>
+<div class="line"><span class="lineno">  131</span>    }</div>
+<div class="line"><span class="lineno">  132</span> </div>
+<div class="line"><span class="lineno">  133</span>    this-&gt;<a class="code hl_variable" href="#a6c19097335276ef185ddcfdab1cf6144">gradoActual</a> = <a class="code hl_function" href="#afdcaa01d882749cc9a8de8ea6397a12c">normalizarGrados</a>(grados);</div>
+<div class="line"><span class="lineno">  134</span>}</div>
+<div class="ttc" id="aclass_motor_paso_html_a5e3740ade4968870d145a97dfaa6378b"><div class="ttname"><a href="#a5e3740ade4968870d145a97dfaa6378b">MotorPaso::diferenciaCircular</a></div><div class="ttdeci">float diferenciaCircular(float gradosActuales, float gradosObjetivo)</div><div class="ttdoc">Calcula la diferencia circular entre dos ángulos.</div><div class="ttdef"><b>Definition</b> <a href="motor_step_8cpp_source.html#l00173">motorStep.cpp:173</a></div></div>
+<div class="ttc" id="aclass_motor_paso_html_a70e7b613b257ac6dab5a0dc38d389f3a"><div class="ttname"><a href="#a70e7b613b257ac6dab5a0dc38d389f3a">MotorPaso::pasoAtras</a></div><div class="ttdeci">void pasoAtras()</div><div class="ttdoc">Retrocede un paso en la secuencia del motor.</div><div class="ttdef"><b>Definition</b> <a href="motor_step_8cpp_source.html#l00058">motorStep.cpp:58</a></div></div>
+<div class="ttc" id="aclass_motor_paso_html_aa054bdf42608a37c3fbc9e5037c417e9"><div class="ttname"><a href="#aa054bdf42608a37c3fbc9e5037c417e9">MotorPaso::convertirGradosAPasos</a></div><div class="ttdeci">int convertirGradosAPasos(float grados)</div><div class="ttdoc">Convierte grados a pasos del motor.</div><div class="ttdef"><b>Definition</b> <a href="motor_step_8cpp_source.html#l00159">motorStep.cpp:159</a></div></div>
+<div class="ttc" id="aclass_motor_paso_html_aa9331c4fc40047c1b7856cfebc9220bc"><div class="ttname"><a href="#aa9331c4fc40047c1b7856cfebc9220bc">MotorPaso::movimientoDePosicionGradosCorriendo</a></div><div class="ttdeci">float movimientoDePosicionGradosCorriendo(int movimientoPasos)</div><div class="ttdoc">Actualiza y devuelve los grados recorridos durante el movimiento.</div><div class="ttdef"><b>Definition</b> <a href="motor_step_8cpp_source.html#l00145">motorStep.cpp:145</a></div></div>
+<div class="ttc" id="aclass_motor_paso_html_af1f50306108a5f69c298367da9e96e3c"><div class="ttname"><a href="#af1f50306108a5f69c298367da9e96e3c">MotorPaso::debugMovimientoRelativo</a></div><div class="ttdeci">void debugMovimientoRelativo(int pasoActualDelBucle)</div><div class="ttdoc">Imprime información detallada del movimiento relativo.</div><div class="ttdef"><b>Definition</b> <a href="motor_step_8cpp_source.html#l00199">motorStep.cpp:199</a></div></div>
+<div class="ttc" id="aclass_motor_paso_html_afdcaa01d882749cc9a8de8ea6397a12c"><div class="ttname"><a href="#afdcaa01d882749cc9a8de8ea6397a12c">MotorPaso::normalizarGrados</a></div><div class="ttdeci">float normalizarGrados(float grados)</div><div class="ttdoc">Normaliza un ángulo al rango 0–360 grados.</div><div class="ttdef"><b>Definition</b> <a href="motor_step_8cpp_source.html#l00185">motorStep.cpp:185</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Gráfico de llamadas de esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_motor_paso_a3bf0f1a5f2d26c41e405408be4ec47b4_cgraph.png" border="0" usemap="#aclass_motor_paso_a3bf0f1a5f2d26c41e405408be4ec47b4_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_motor_paso_a3bf0f1a5f2d26c41e405408be4ec47b4_cgraph" id="aclass_motor_paso_a3bf0f1a5f2d26c41e405408be4ec47b4_cgraph">
+<area shape="rect" title="Mueve el motor hacia un ángulo relativo usando el camino más corto." alt="" coords="5,184,213,224"/>
+<area shape="rect" href="class_motor_paso.html#aa054bdf42608a37c3fbc9e5037c417e9" title="Convierte grados a pasos del motor." alt="" coords="282,5,465,45"/>
+<area shape="poly" title=" " alt="" coords="124,182,179,119,218,85,260,55,273,48,275,53,263,60,221,89,183,123,128,186"/>
+<area shape="rect" href="class_motor_paso.html#af1f50306108a5f69c298367da9e96e3c" title="Imprime información detallada del movimiento relativo." alt="" coords="277,69,470,109"/>
+<area shape="poly" title=" " alt="" coords="141,181,196,150,260,119,280,111,282,116,262,124,198,155,144,186"/>
+<area shape="rect" href="class_motor_paso.html#a5e3740ade4968870d145a97dfaa6378b" title="Calcula la diferencia circular entre dos ángulos." alt="" coords="277,134,469,159"/>
+<area shape="poly" title=" " alt="" coords="201,181,300,160,302,165,203,187"/>
+<area shape="rect" href="class_motor_paso.html#aa9331c4fc40047c1b7856cfebc9220bc" title="Actualiza y devuelve los grados recorridos durante el movimiento." alt="" coords="261,184,485,224"/>
+<area shape="poly" title=" " alt="" coords="214,201,248,201,248,207,214,207"/>
+<area shape="rect" href="class_motor_paso.html#afdcaa01d882749cc9a8de8ea6397a12c" title="Normaliza un ángulo al rango 0–360 grados." alt="" coords="276,249,471,274"/>
+<area shape="poly" title=" " alt="" coords="203,221,302,243,300,248,201,227"/>
+<area shape="rect" href="class_motor_paso.html#aeb003102ac4f885226a4a4a1e4121fa5" title="Avanza un paso en la secuencia del motor." alt="" coords="287,298,459,323"/>
+<area shape="poly" title=" " alt="" coords="143,222,198,253,262,283,291,292,289,297,260,288,195,258,140,226"/>
+<area shape="rect" href="class_motor_paso.html#a70e7b613b257ac6dab5a0dc38d389f3a" title="Retrocede un paso en la secuencia del motor." alt="" coords="297,347,449,373"/>
+<area shape="poly" title=" " alt="" coords="129,222,185,278,222,309,263,334,285,343,283,348,260,338,219,313,181,282,126,226"/>
+<area shape="rect" href="class_motor_paso.html#ac2b6d1c7bc1c04a0fb39839b1658721c" title="Convierte pasos del motor a grados." alt="" coords="533,184,712,224"/>
+<area shape="poly" title=" " alt="" coords="485,201,520,201,520,207,485,207"/>
+<area shape="rect" href="class_motor_paso.html#ac610d089d82aca423c7528f918e3e6f1" title="Aplica un paso específico de la secuencia (0–7)." alt="" coords="542,322,703,347"/>
+<area shape="poly" title=" " alt="" coords="460,316,528,323,528,328,459,322"/>
+<area shape="poly" title=" " alt="" coords="449,350,528,342,529,347,450,355"/>
+</map>
+</div>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_motor_paso_a3bf0f1a5f2d26c41e405408be4ec47b4_icgraph.png" border="0" usemap="#aclass_motor_paso_a3bf0f1a5f2d26c41e405408be4ec47b4_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_motor_paso_a3bf0f1a5f2d26c41e405408be4ec47b4_icgraph" id="aclass_motor_paso_a3bf0f1a5f2d26c41e405408be4ec47b4_icgraph">
+<area shape="rect" title="Mueve el motor hacia un ángulo relativo usando el camino más corto." alt="" coords="100,5,308,45"/>
+<area shape="rect" href="main_8cpp.html#afe461d27b9c48d5921c00d521181f12f" title="Arduino main loop. Ejecuta continuamente la configuración de pines, lectura analógica,..." alt="" coords="5,13,52,38"/>
+<area shape="poly" title=" " alt="" coords="86,28,52,28,52,23,86,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="afdcaa01d882749cc9a8de8ea6397a12c" name="afdcaa01d882749cc9a8de8ea6397a12c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdcaa01d882749cc9a8de8ea6397a12c">&#9670;&#160;</a></span>normalizarGrados()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float MotorPaso::normalizarGrados </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>grados</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Normaliza un ángulo al rango 0–360 grados. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">grados</td><td>Ángulo a normalizar. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Ángulo normalizado. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="motor_step_8cpp_source.html#l00185">185</a> del archivo <a class="el" href="motor_step_8cpp_source.html">motorStep.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  185</span>                                              {</div>
+<div class="line"><span class="lineno">  186</span>    <span class="keywordtype">float</span> g = fmod(grados, 360.0f);</div>
+<div class="line"><span class="lineno">  187</span>    <span class="keywordflow">return</span> (g &lt; 0) ? g + 360.0f : g;</div>
+<div class="line"><span class="lineno">  188</span>}</div>
+</div><!-- fragment --><div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_motor_paso_afdcaa01d882749cc9a8de8ea6397a12c_icgraph.png" border="0" usemap="#aclass_motor_paso_afdcaa01d882749cc9a8de8ea6397a12c_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_motor_paso_afdcaa01d882749cc9a8de8ea6397a12c_icgraph" id="aclass_motor_paso_afdcaa01d882749cc9a8de8ea6397a12c_icgraph">
+<area shape="rect" title="Normaliza un ángulo al rango 0–360 grados." alt="" coords="356,13,551,38"/>
+<area shape="rect" href="class_motor_paso.html#a3bf0f1a5f2d26c41e405408be4ec47b4" title="Mueve el motor hacia un ángulo relativo usando el camino más corto." alt="" coords="100,5,308,45"/>
+<area shape="poly" title=" " alt="" coords="343,28,308,28,308,23,343,23"/>
+<area shape="rect" href="main_8cpp.html#afe461d27b9c48d5921c00d521181f12f" title="Arduino main loop. Ejecuta continuamente la configuración de pines, lectura analógica,..." alt="" coords="5,13,52,38"/>
+<area shape="poly" title=" " alt="" coords="86,28,52,28,52,23,86,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aeb003102ac4f885226a4a4a1e4121fa5" name="aeb003102ac4f885226a4a4a1e4121fa5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb003102ac4f885226a4a4a1e4121fa5">&#9670;&#160;</a></span>pasoAdelante()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MotorPaso::pasoAdelante </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Avanza un paso en la secuencia del motor. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="motor_step_8cpp_source.html#l00047">47</a> del archivo <a class="el" href="motor_step_8cpp_source.html">motorStep.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   47</span>                             {</div>
+<div class="line"><span class="lineno">   48</span>    this-&gt;<a class="code hl_variable" href="#a4dabb0433ba9843a7b0c44fff4ec4dfe">pasoActual</a>++;</div>
+<div class="line"><span class="lineno">   49</span>    <span class="keywordflow">if</span> (this-&gt;<a class="code hl_variable" href="#a4dabb0433ba9843a7b0c44fff4ec4dfe">pasoActual</a> &gt; 7) this-&gt;<a class="code hl_variable" href="#a4dabb0433ba9843a7b0c44fff4ec4dfe">pasoActual</a> = 0;</div>
+<div class="line"><span class="lineno">   50</span> </div>
+<div class="line"><span class="lineno">   51</span>    this-&gt;<a class="code hl_function" href="#ac610d089d82aca423c7528f918e3e6f1">aplicarPaso</a>(this-&gt;<a class="code hl_variable" href="#a4dabb0433ba9843a7b0c44fff4ec4dfe">pasoActual</a>);</div>
+<div class="line"><span class="lineno">   52</span>    delayMicroseconds(this-&gt;<a class="code hl_variable" href="#aa9426503a0b77432173ae0b5d9d16f75">retardoPaso</a>);</div>
+<div class="line"><span class="lineno">   53</span>}</div>
+<div class="ttc" id="aclass_motor_paso_html_ac610d089d82aca423c7528f918e3e6f1"><div class="ttname"><a href="#ac610d089d82aca423c7528f918e3e6f1">MotorPaso::aplicarPaso</a></div><div class="ttdeci">void aplicarPaso(int indicePaso)</div><div class="ttdoc">Aplica un paso específico de la secuencia (0–7).</div><div class="ttdef"><b>Definition</b> <a href="motor_step_8cpp_source.html#l00069">motorStep.cpp:69</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Gráfico de llamadas de esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_motor_paso_aeb003102ac4f885226a4a4a1e4121fa5_cgraph.png" border="0" usemap="#aclass_motor_paso_aeb003102ac4f885226a4a4a1e4121fa5_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_motor_paso_aeb003102ac4f885226a4a4a1e4121fa5_cgraph" id="aclass_motor_paso_aeb003102ac4f885226a4a4a1e4121fa5_cgraph">
+<area shape="rect" title="Avanza un paso en la secuencia del motor." alt="" coords="5,5,177,31"/>
+<area shape="rect" href="class_motor_paso.html#ac610d089d82aca423c7528f918e3e6f1" title="Aplica un paso específico de la secuencia (0–7)." alt="" coords="225,5,387,31"/>
+<area shape="poly" title=" " alt="" coords="178,15,212,15,212,21,178,21"/>
+</map>
+</div>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_motor_paso_aeb003102ac4f885226a4a4a1e4121fa5_icgraph.png" border="0" usemap="#aclass_motor_paso_aeb003102ac4f885226a4a4a1e4121fa5_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_motor_paso_aeb003102ac4f885226a4a4a1e4121fa5_icgraph" id="aclass_motor_paso_aeb003102ac4f885226a4a4a1e4121fa5_icgraph">
+<area shape="rect" title="Avanza un paso en la secuencia del motor." alt="" coords="357,35,529,60"/>
+<area shape="rect" href="class_motor_paso.html#a884b1a066e5684a4c1f25431efc6b316" title="Ejecuta movimiento continuo según la velocidad configurada." alt="" coords="100,5,309,31"/>
+<area shape="poly" title=" " alt="" coords="343,38,308,33,308,28,344,32"/>
+<area shape="rect" href="class_motor_paso.html#a3bf0f1a5f2d26c41e405408be4ec47b4" title="Mueve el motor hacia un ángulo relativo usando el camino más corto." alt="" coords="101,55,309,95"/>
+<area shape="poly" title=" " alt="" coords="344,62,309,66,308,60,343,56"/>
+<area shape="rect" href="main_8cpp.html#afe461d27b9c48d5921c00d521181f12f" title="Arduino main loop. Ejecuta continuamente la configuración de pines, lectura analógica,..." alt="" coords="5,63,52,88"/>
+<area shape="poly" title=" " alt="" coords="87,78,52,78,52,73,87,73"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a70e7b613b257ac6dab5a0dc38d389f3a" name="a70e7b613b257ac6dab5a0dc38d389f3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70e7b613b257ac6dab5a0dc38d389f3a">&#9670;&#160;</a></span>pasoAtras()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MotorPaso::pasoAtras </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrocede un paso en la secuencia del motor. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="motor_step_8cpp_source.html#l00058">58</a> del archivo <a class="el" href="motor_step_8cpp_source.html">motorStep.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   58</span>                          {</div>
+<div class="line"><span class="lineno">   59</span>    this-&gt;<a class="code hl_variable" href="#a4dabb0433ba9843a7b0c44fff4ec4dfe">pasoActual</a>--;</div>
+<div class="line"><span class="lineno">   60</span>    <span class="keywordflow">if</span> (this-&gt;<a class="code hl_variable" href="#a4dabb0433ba9843a7b0c44fff4ec4dfe">pasoActual</a> &lt; 0) this-&gt;<a class="code hl_variable" href="#a4dabb0433ba9843a7b0c44fff4ec4dfe">pasoActual</a> = 7;</div>
+<div class="line"><span class="lineno">   61</span> </div>
+<div class="line"><span class="lineno">   62</span>    this-&gt;<a class="code hl_function" href="#ac610d089d82aca423c7528f918e3e6f1">aplicarPaso</a>(this-&gt;<a class="code hl_variable" href="#a4dabb0433ba9843a7b0c44fff4ec4dfe">pasoActual</a>);</div>
+<div class="line"><span class="lineno">   63</span>    delayMicroseconds(this-&gt;<a class="code hl_variable" href="#aa9426503a0b77432173ae0b5d9d16f75">retardoPaso</a>);</div>
+<div class="line"><span class="lineno">   64</span>}</div>
+</div><!-- fragment --><div class="dynheader">
+Gráfico de llamadas de esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_motor_paso_a70e7b613b257ac6dab5a0dc38d389f3a_cgraph.png" border="0" usemap="#aclass_motor_paso_a70e7b613b257ac6dab5a0dc38d389f3a_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_motor_paso_a70e7b613b257ac6dab5a0dc38d389f3a_cgraph" id="aclass_motor_paso_a70e7b613b257ac6dab5a0dc38d389f3a_cgraph">
+<area shape="rect" title="Retrocede un paso en la secuencia del motor." alt="" coords="5,5,157,31"/>
+<area shape="rect" href="class_motor_paso.html#ac610d089d82aca423c7528f918e3e6f1" title="Aplica un paso específico de la secuencia (0–7)." alt="" coords="205,5,367,31"/>
+<area shape="poly" title=" " alt="" coords="158,15,192,15,192,21,158,21"/>
+</map>
+</div>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_motor_paso_a70e7b613b257ac6dab5a0dc38d389f3a_icgraph.png" border="0" usemap="#aclass_motor_paso_a70e7b613b257ac6dab5a0dc38d389f3a_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_motor_paso_a70e7b613b257ac6dab5a0dc38d389f3a_icgraph" id="aclass_motor_paso_a70e7b613b257ac6dab5a0dc38d389f3a_icgraph">
+<area shape="rect" title="Retrocede un paso en la secuencia del motor." alt="" coords="356,13,508,38"/>
+<area shape="rect" href="class_motor_paso.html#a3bf0f1a5f2d26c41e405408be4ec47b4" title="Mueve el motor hacia un ángulo relativo usando el camino más corto." alt="" coords="100,5,308,45"/>
+<area shape="poly" title=" " alt="" coords="342,28,308,28,308,23,342,23"/>
+<area shape="rect" href="main_8cpp.html#afe461d27b9c48d5921c00d521181f12f" title="Arduino main loop. Ejecuta continuamente la configuración de pines, lectura analógica,..." alt="" coords="5,13,52,38"/>
+<area shape="poly" title=" " alt="" coords="86,28,52,28,52,23,86,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Documentación de datos miembro</h2>
+<a id="aef0c5e2a5b02be1ffee595aef622727e" name="aef0c5e2a5b02be1ffee595aef622727e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef0c5e2a5b02be1ffee595aef622727e">&#9670;&#160;</a></span>diferencia</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float MotorPaso::diferencia</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Diferencia circular entre gradoActual y gradosObjetivo (–180 a +180). </p>
+
+<p class="definition">Definición en la línea <a class="el" href="motor_step_8h_source.html#l00176">176</a> del archivo <a class="el" href="motor_step_8h_source.html">motorStep.h</a>.</p>
+
+</div>
+</div>
+<a id="a74ae1066fd043a6859e95804da2ff170" name="a74ae1066fd043a6859e95804da2ff170"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74ae1066fd043a6859e95804da2ff170">&#9670;&#160;</a></span>direccionAdelante</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MotorPaso::direccionAdelante</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Dirección: true = adelante. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="motor_step_8h_source.html#l00177">177</a> del archivo <a class="el" href="motor_step_8h_source.html">motorStep.h</a>.</p>
+
+</div>
+</div>
+<a id="acaa45dc69e19963021e7e68fa962460b" name="acaa45dc69e19963021e7e68fa962460b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acaa45dc69e19963021e7e68fa962460b">&#9670;&#160;</a></span>direccionAtras</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MotorPaso::direccionAtras</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Dirección: true = atrás. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="motor_step_8h_source.html#l00178">178</a> del archivo <a class="el" href="motor_step_8h_source.html">motorStep.h</a>.</p>
+
+</div>
+</div>
+<a id="a6c19097335276ef185ddcfdab1cf6144" name="a6c19097335276ef185ddcfdab1cf6144"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c19097335276ef185ddcfdab1cf6144">&#9670;&#160;</a></span>gradoActual</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float MotorPaso::gradoActual</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Ángulo actual del motor (0–360 normalizado). </p>
+
+<p class="definition">Definición en la línea <a class="el" href="motor_step_8h_source.html#l00173">173</a> del archivo <a class="el" href="motor_step_8h_source.html">motorStep.h</a>.</p>
+
+</div>
+</div>
+<a id="a064c3f5e2d7c46c29e9b6bfd01aa1904" name="a064c3f5e2d7c46c29e9b6bfd01aa1904"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a064c3f5e2d7c46c29e9b6bfd01aa1904">&#9670;&#160;</a></span>gradosCorriendo</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float MotorPaso::gradosCorriendo</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Ángulo recorrido durante el movimiento (progreso). </p>
+
+<p class="definition">Definición en la línea <a class="el" href="motor_step_8h_source.html#l00175">175</a> del archivo <a class="el" href="motor_step_8h_source.html">motorStep.h</a>.</p>
+
+</div>
+</div>
+<a id="aff13a3e505f907b684f6374b51596a05" name="aff13a3e505f907b684f6374b51596a05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff13a3e505f907b684f6374b51596a05">&#9670;&#160;</a></span>gradosObjetivo</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float MotorPaso::gradosObjetivo</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Ángulo objetivo solicitado. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="motor_step_8h_source.html#l00174">174</a> del archivo <a class="el" href="motor_step_8h_source.html">motorStep.h</a>.</p>
+
+</div>
+</div>
+<a id="a4dabb0433ba9843a7b0c44fff4ec4dfe" name="a4dabb0433ba9843a7b0c44fff4ec4dfe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4dabb0433ba9843a7b0c44fff4ec4dfe">&#9670;&#160;</a></span>pasoActual</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MotorPaso::pasoActual</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Índice de la secuencia (0–7). </p>
+
+<p class="definition">Definición en la línea <a class="el" href="motor_step_8h_source.html#l00165">165</a> del archivo <a class="el" href="motor_step_8h_source.html">motorStep.h</a>.</p>
+
+</div>
+</div>
+<a id="a45a17ca7197c7968adba7e667f51b492" name="a45a17ca7197c7968adba7e667f51b492"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45a17ca7197c7968adba7e667f51b492">&#9670;&#160;</a></span>pasos</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MotorPaso::pasos</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pasos totales a ejecutar en el movimiento actual. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="motor_step_8h_source.html#l00172">172</a> del archivo <a class="el" href="motor_step_8h_source.html">motorStep.h</a>.</p>
+
+</div>
+</div>
+<a id="ad380b0d361ec87653d35b2113d4215da" name="ad380b0d361ec87653d35b2113d4215da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad380b0d361ec87653d35b2113d4215da">&#9670;&#160;</a></span>pasosPorVuelta</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MotorPaso::pasosPorVuelta = <a class="el" href="motor_step_8h.html#af31318f5b00506ed7c7de3d525f8d5da">PASOS_POR_VUELTA</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pasos necesarios para 360° </p>
+
+<p class="definition">Definición en la línea <a class="el" href="motor_step_8h_source.html#l00166">166</a> del archivo <a class="el" href="motor_step_8h_source.html">motorStep.h</a>.</p>
+
+</div>
+</div>
+<a id="a9f8eddccee5fd302f15b251328639b5a" name="a9f8eddccee5fd302f15b251328639b5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f8eddccee5fd302f15b251328639b5a">&#9670;&#160;</a></span>pinA</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t MotorPaso::pinA</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Bobina A. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="motor_step_8h_source.html#l00148">148</a> del archivo <a class="el" href="motor_step_8h_source.html">motorStep.h</a>.</p>
+
+</div>
+</div>
+<a id="a5457b8c20cc470d18d7b67bf53405cda" name="a5457b8c20cc470d18d7b67bf53405cda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5457b8c20cc470d18d7b67bf53405cda">&#9670;&#160;</a></span>pinB</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t MotorPaso::pinB</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Bobina B. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="motor_step_8h_source.html#l00149">149</a> del archivo <a class="el" href="motor_step_8h_source.html">motorStep.h</a>.</p>
+
+</div>
+</div>
+<a id="ae1e9b8723a636ad3349bef9c153b7164" name="ae1e9b8723a636ad3349bef9c153b7164"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1e9b8723a636ad3349bef9c153b7164">&#9670;&#160;</a></span>pinC</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t MotorPaso::pinC</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Bobina C. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="motor_step_8h_source.html#l00150">150</a> del archivo <a class="el" href="motor_step_8h_source.html">motorStep.h</a>.</p>
+
+</div>
+</div>
+<a id="a030805e0b58b52b33950899e90998da3" name="a030805e0b58b52b33950899e90998da3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a030805e0b58b52b33950899e90998da3">&#9670;&#160;</a></span>pinD</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t MotorPaso::pinD</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Bobina D. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="motor_step_8h_source.html#l00151">151</a> del archivo <a class="el" href="motor_step_8h_source.html">motorStep.h</a>.</p>
+
+</div>
+</div>
+<a id="aa9426503a0b77432173ae0b5d9d16f75" name="aa9426503a0b77432173ae0b5d9d16f75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9426503a0b77432173ae0b5d9d16f75">&#9670;&#160;</a></span>retardoPaso</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long MotorPaso::retardoPaso</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Microsegundos entre pasos (determina la velocidad). </p>
+
+<p class="definition">Definición en la línea <a class="el" href="motor_step_8h_source.html#l00157">157</a> del archivo <a class="el" href="motor_step_8h_source.html">motorStep.h</a>.</p>
+
+</div>
+</div>
+<a id="af8abafcab50187207db982f024d2a981" name="af8abafcab50187207db982f024d2a981"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8abafcab50187207db982f024d2a981">&#9670;&#160;</a></span>rpm</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short MotorPaso::rpm</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Velocidad configurada en RPM. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="motor_step_8h_source.html#l00159">159</a> del archivo <a class="el" href="motor_step_8h_source.html">motorStep.h</a>.</p>
+
+</div>
+</div>
+<a id="adf180b58f05bee5cc728b2026aebd30a" name="adf180b58f05bee5cc728b2026aebd30a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf180b58f05bee5cc728b2026aebd30a">&#9670;&#160;</a></span>tiempoUltimoPaso</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long MotorPaso::tiempoUltimoPaso</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Marca temporal del último paso ejecutado. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="motor_step_8h_source.html#l00158">158</a> del archivo <a class="el" href="motor_step_8h_source.html">motorStep.h</a>.</p>
+
+</div>
+</div>
+<hr/>La documentación de esta clase está generada de los siguientes archivos:<ul>
+<li><a class="el" href="motor_step_8h_source.html">motorStep.h</a></li>
+<li><a class="el" href="motor_step_8cpp_source.html">motorStep.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_motor_paso.html">MotorPaso</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

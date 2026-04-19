@@ -1,0 +1,7 @@
+<map id="PID::statedt" name="PID::statedt">
+<area shape="rect" id="Node000001" title="Valida y corrige el tiempo de muestreo." alt="" coords="136,31,227,56"/>
+<area shape="rect" id="Node000002" href="$class_p_i_d.html#a4125833122b985f732eef6f3e6d728c3" title="Constructor del controlador PID." alt="" coords="11,5,83,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="122,35,82,27,83,22,123,30"/>
+<area shape="rect" id="Node000003" href="$class_p_i_d.html#ae55a80080d8196166d5a203c6b0131f5" title="Establece un nuevo tiempo de muestreo." alt="" coords="5,55,88,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="123,56,89,63,88,57,122,51"/>
+</map>

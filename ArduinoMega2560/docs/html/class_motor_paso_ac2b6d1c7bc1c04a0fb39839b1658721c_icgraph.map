@@ -1,0 +1,9 @@
+<map id="MotorPaso::convertirPasosAGrados" name="MotorPaso::convertirPasosAGrados">
+<area shape="rect" id="Node000001" title="Convierte pasos del motor a grados." alt="" coords="628,5,807,45"/>
+<area shape="rect" id="Node000002" href="$class_motor_paso.html#aa9331c4fc40047c1b7856cfebc9220bc" title="Actualiza y devuelve los grados recorridos durante el movimiento." alt="" coords="356,5,580,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="614,28,580,28,580,23,614,23"/>
+<area shape="rect" id="Node000003" href="$class_motor_paso.html#a3bf0f1a5f2d26c41e405408be4ec47b4" title="Mueve el motor hacia un ángulo relativo usando el camino más corto." alt="" coords="100,5,308,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="342,28,308,28,308,23,342,23"/>
+<area shape="rect" id="Node000004" href="$main_8cpp.html#afe461d27b9c48d5921c00d521181f12f" title="Arduino main loop. Ejecuta continuamente la configuración de pines, lectura analógica,..." alt="" coords="5,13,52,38"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="86,28,52,28,52,23,86,23"/>
+</map>

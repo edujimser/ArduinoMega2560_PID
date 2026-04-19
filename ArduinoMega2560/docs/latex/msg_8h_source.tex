@@ -1,0 +1,139 @@
+\doxysection{msg.\+h}
+\hypertarget{msg_8h_source}{}\label{msg_8h_source}\index{msg.h@{msg.h}}
+\doxymbox{\hyperlink{msg_8h}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ MESSAGE\_RELEASE\_H}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00002}00002\ \textcolor{preprocessor}{\#define\ MESSAGE\_RELEASE\_H}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <Arduino.h>}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{config_8h}{system/config/config.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00006}00006\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00007}00007\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00008}00008\ \textcolor{comment}{\ *\ @brief\ Prints\ an\ enriched\ log\ message\ to\ the\ serial\ monitor.}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00009}00009\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00010}00010\ \textcolor{comment}{\ *\ This\ function\ should\ be\ defined\ in\ the\ corresponding\ source\ (.cpp)\ file.}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00011}00011\ \textcolor{comment}{\ *\ It\ generates\ a\ structured\ output\ that\ includes:}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00012}00012\ \textcolor{comment}{\ *\ -\/\ Compilation\ date\ and\ time}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00013}00013\ \textcolor{comment}{\ *\ -\/\ Source\ file\ from\ which\ it\ is\ called}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00014}00014\ \textcolor{comment}{\ *\ -\/\ Name\ of\ the\ calling\ function}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00015}00015\ \textcolor{comment}{\ *\ -\/\ Custom\ message}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00016}00016\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00017}00017\ \textcolor{comment}{\ *\ Output\ format:}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00018}00018\ \textcolor{comment}{\ *\ [date\ time]\ file::function\ ➤\ message}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00019}00019\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00020}00020\ \textcolor{comment}{\ *\ Example:}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00021}00021\ \textcolor{comment}{\ *\ [Aug\ 7\ 2025\ 01:23:00]\ main.cpp::setup\ ➤\ System\ initialization...}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00022}00022\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00023}00023\ \textcolor{comment}{\ *\ @param\ message\ \ \ Custom\ text\ to\ be\ printed}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00024}00024\ \textcolor{comment}{\ *\ @param\ file\ \ \ \ \ \ Source\ file\ name\ (\_\_FILE\_\_)}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00025}00025\ \textcolor{comment}{\ *\ @param\ function\ \ Name\ of\ the\ calling\ function\ (\_\_FUNCTION\_\_)}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00026}00026\ \textcolor{comment}{\ *\ @param\ date\ \ \ \ \ \ Compilation\ date\ (\_\_DATE\_\_)}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00027}00027\ \textcolor{comment}{\ *\ @param\ time\ \ \ \ \ \ Compilation\ time\ (\_\_TIME\_\_)}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00028}00028\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00029}00029\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{msg_8h_a6ef1ee9724c4aa2cdcd16023815c107a}{standardMessage}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ message,}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ file,}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ function,}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ date,}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ time);}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00035}00035\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00036}00036\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00037}00037\ \textcolor{comment}{\ *\ Prints\ a\ centered\ header\ with\ decorative\ lines\ above/below.}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00038}00038\ \textcolor{comment}{\ *\ This\ is\ a\ reduced\ version\ without\ metadata,\ ideal\ for\ section\ titles.}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00039}00039\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00040}00040\ \textcolor{comment}{\ *\ @param\ message\ \ \ The\ title\ text\ to\ display\ centered.}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00041}00041\ \textcolor{comment}{\ *\ @param\ width\ \ \ \ \ Total\ width\ of\ the\ decorative\ line\ (default:\ 200).}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00042}00042\ \textcolor{comment}{\ *\ @param\ deco\ \ \ \ \ \ Decorative\ character\ to\ use\ (default:\ '-\/').}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00043}00043\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00044}00044\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{msg_8h_acb66149f12b41706000895b73c79cf52}{standardHeader}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ message,}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint16\_t\ width\ =\ 200,}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ deco\ =\ \textcolor{charliteral}{'-\/'});}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00048}00048\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00049}00049\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00050}00050\ \textcolor{comment}{\ *\ @brief\ Prints\ a\ decorated\ header\ with\ centered\ text\ and\ padding\ on\ both\ sides.}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00051}00051\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00052}00052\ \textcolor{comment}{\ *\ This\ function\ builds\ a\ single\ line\ consisting\ of\ a\ combined\ text}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00053}00053\ \textcolor{comment}{\ *\ that\ includes\ the\ message,\ file,\ function,\ date,\ and\ time,\ surrounded}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00054}00054\ \textcolor{comment}{\ *\ by\ decorative\ characters\ on\ the\ left\ and\ right\ to\ achieve\ a\ total\ line\ width}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00055}00055\ \textcolor{comment}{\ *\ specified\ by\ the\ user.}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00056}00056\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00057}00057\ \textcolor{comment}{\ *\ Output\ format\ example:}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00058}00058\ \textcolor{comment}{\ *\ \ -\/-\/-\/-\/-\/\ Message\ |\ file\ |\ function\ |\ date\ time\ -\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00059}00059\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00060}00060\ \textcolor{comment}{\ *\ @param\ message\ \ \ Main\ text\ or\ description\ to\ display.}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00061}00061\ \textcolor{comment}{\ *\ @param\ file\ \ \ \ \ \ File\ path\ or\ source\ file\ name.}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00062}00062\ \textcolor{comment}{\ *\ @param\ function\ \ Name\ of\ the\ function\ where\ this\ is\ called.}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00063}00063\ \textcolor{comment}{\ *\ @param\ date\ \ \ \ \ \ Compilation\ date\ (recommended:\ \_\_DATE\_\_).}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00064}00064\ \textcolor{comment}{\ *\ @param\ time\ \ \ \ \ \ Compilation\ time\ (recommended:\ \_\_TIME\_\_).}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00065}00065\ \textcolor{comment}{\ *\ @param\ width\ \ \ \ \ Total\ width\ of\ the\ line\ (default:\ 120).}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00066}00066\ \textcolor{comment}{\ *\ @param\ deco\ \ \ \ \ \ Decorative\ character\ (default:\ '-\/').}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00067}00067\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00068}00068\ \textcolor{comment}{\ *\ @note\ The\ number\ of\ decorative\ characters\ is\ automatically\ adjusted}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00069}00069\ \textcolor{comment}{\ *\ \ \ \ \ \ \ to\ keep\ the\ text\ centered\ within\ the\ given\ width.}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00070}00070\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00071}00071\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{msg_8h_ab596236a4ffe692e3e8da3dac004ef9c}{standardHeaderFull}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ message,}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ file,}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ function,}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ date,\ }
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ time,}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint16\_t\ width\ =\ 120,}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ deco\ =\ \textcolor{charliteral}{'-\/'});}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00078}00078\ }
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00079}00079\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00080}00080\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00081}00081\ \textcolor{comment}{\ *\ @brief\ Prints\ an\ enriched\ error\ message\ to\ the\ serial\ monitor,\ including\ contextual\ information.}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00082}00082\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00083}00083\ \textcolor{comment}{\ *\ This\ function\ generates\ a\ structured\ output\ that\ helps\ identify\ the\ origin\ of\ runtime\ errors.}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00084}00084\ \textcolor{comment}{\ *\ The\ output\ includes:}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00085}00085\ \textcolor{comment}{\ *\ -\/\ Compilation\ date\ and\ time}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00086}00086\ \textcolor{comment}{\ *\ -\/\ Source\ file\ name}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00087}00087\ \textcolor{comment}{\ *\ -\/\ Function\ name\ from\ which\ it\ is\ invoked}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00088}00088\ \textcolor{comment}{\ *\ -\/\ Line\ number\ where\ the\ function\ was\ called}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00089}00089\ \textcolor{comment}{\ *\ -\/\ Custom\ error\ message}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00090}00090\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00091}00091\ \textcolor{comment}{\ *\ Output\ format:}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00092}00092\ \textcolor{comment}{\ *\ [date\ time]\ file::function\ (Line\ N)\ ❌\ ERROR\ ➤\ message}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00093}00093\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00094}00094\ \textcolor{comment}{\ *\ Example\ output:}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00095}00095\ \textcolor{comment}{\ *\ [Aug\ 7\ 2025\ 01:23:00]\ sensor.cpp::readSensor\ (Line\ 42)\ ❌\ ERROR\ ➤\ Failed\ to\ initialize\ sensor}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00096}00096\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00097}00097\ \textcolor{comment}{\ *\ @param\ message\ \ \ Description\ of\ the\ specific\ error}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00098}00098\ \textcolor{comment}{\ *\ @param\ file\ \ \ \ \ \ Source\ file\ name\ (\_\_FILE\_\_)}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00099}00099\ \textcolor{comment}{\ *\ @param\ function\ \ Function\ name\ where\ the\ error\ was\ detected\ (\_\_FUNCTION\_\_)}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00100}00100\ \textcolor{comment}{\ *\ @param\ date\ \ \ \ \ \ Compilation\ date\ (\_\_DATE\_\_)}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00101}00101\ \textcolor{comment}{\ *\ @param\ time\ \ \ \ \ \ Compilation\ time\ (\_\_TIME\_\_)}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00102}00102\ \textcolor{comment}{\ *\ @param\ line\ \ \ \ \ \ Line\ number\ in\ the\ file\ where\ the\ function\ is\ invoked\ (\_\_LINE\_\_)}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00103}00103\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00104}00104\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{msg_8h_aaf284eacfd5fa2ce8756262345d925e9}{standardErrorMessage}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ message,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ file,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ function,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ date,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ time,\ \textcolor{keywordtype}{int}\ line);}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00105}00105\ }
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00106}00106\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00107}00107\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00108}00108\ \textcolor{comment}{\ *\ @brief\ Displays\ the\ current\ system\ configuration\ status\ on\ the\ serial\ monitor.}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00109}00109\ \textcolor{comment}{\ *\ }}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00110}00110\ \textcolor{comment}{\ *\ This\ function\ prints\ the\ current\ values\ of\ the\ fields\ defined\ in\ the\ }}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00111}00111\ \textcolor{comment}{\ *\ configuracionMain\ structure,\ such\ as\ debug\ mode\ and\ LED\ project\ status,\ }}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00112}00112\ \textcolor{comment}{\ *\ in\ a\ user-\/friendly\ format\ to\ facilitate\ system\ diagnostics\ or\ verification.}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00113}00113\ \textcolor{comment}{\ *\ }}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00114}00114\ \textcolor{comment}{\ *\ @param\ configuration\ \ Structure\ containing\ the\ main\ system\ configuration.}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00115}00115\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00116}00116\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{msg_8h_aff36c414af17efe4543ba01e5a18ccad}{showConfigurationMessage}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{structconfiguracion_main}{configuracionMain}}\&\ configuration);}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00117}00117\ }
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00118}00118\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00119}00119\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00120}00120\ \textcolor{comment}{\ *\ @brief\ Prints\ firmware\ version\ details\ to\ the\ serial\ monitor.}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00121}00121\ \textcolor{comment}{\ *\ }}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00122}00122\ \textcolor{comment}{\ *\ Displays\ firmware\ and\ application\ information\ (version,\ name,\ date,\ author)\ }}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00123}00123\ \textcolor{comment}{\ *\ defined\ by\ macros\ in\ a\ clear\ format\ for\ easy\ verification.}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00124}00124\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00125}00125\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{msg_8h_acedf89272beec6e618703147664ef34c}{printVersion}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ fwVersion,}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00126}00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ fwName,}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00127}00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ fwDate,}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00128}00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ fwAuthor,}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00129}00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ appVersion,}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00130}00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ appName,}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00131}00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ appDate);}
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00132}00132\ }
+\DoxyCodeLine{\Hypertarget{msg_8h_source_l00133}00133\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ MESSAGE\_RELEASE\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,5 @@
+<map id="diagnoseSerial1" name="diagnoseSerial1">
+<area shape="rect" id="Node000001" title="Performs a diagnostic on Serial1 (UART1)." alt="" coords="5,5,120,31"/>
+<area shape="rect" id="Node000002" href="$diagnostics_u_a_r_t_8cpp.html#a4563ddd7762002687f3b4a852169ef36" title="Realiza un diagnóstico sobre un puerto UART específico." alt="" coords="168,5,319,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="120,15,154,15,154,21,120,21"/>
+</map>

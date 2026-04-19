@@ -1,0 +1,5 @@
+<map id="MotorPaso::movimientoDePosicionGradosCorriendo" name="MotorPaso::movimientoDePosicionGradosCorriendo">
+<area shape="rect" id="Node000001" title="Actualiza y devuelve los grados recorridos durante el movimiento." alt="" coords="5,5,229,45"/>
+<area shape="rect" id="Node000002" href="$class_motor_paso.html#ac2b6d1c7bc1c04a0fb39839b1658721c" title="Convierte pasos del motor a grados." alt="" coords="277,5,456,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="229,23,264,23,264,28,229,28"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="DiagnosticsEEPROM::runTest" name="DiagnosticsEEPROM::runTest">
+<area shape="rect" id="Node000001" title="Runs a diagnostic test on the EEPROM at the specified address. Writes a test value,..." alt="" coords="108,5,263,45"/>
+<area shape="rect" id="Node000002" href="$main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title="Arduino setup function (runs once at startup)." alt="" coords="5,13,60,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="94,28,60,28,60,23,94,23"/>
+</map>

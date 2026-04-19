@@ -1,0 +1,5 @@
+<map id="PID::PID" name="PID::PID">
+<area shape="rect" id="Node000001" title="Constructor del controlador PID." alt="" coords="5,5,77,31"/>
+<area shape="rect" id="Node000002" href="$class_p_i_d.html#a5cdc6d7cb5e1520722dc764b21eb6f09" title="Valida y corrige el tiempo de muestreo." alt="" coords="125,5,216,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="78,15,112,15,112,21,78,21"/>
+</map>
