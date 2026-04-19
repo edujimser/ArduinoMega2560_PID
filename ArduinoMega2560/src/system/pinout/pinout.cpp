@@ -3,14 +3,15 @@
 #include "system/pinout/pinout.h"
 
 
-
 /**
- * @brief Runs a full diagnostic of digital GPIO and PWM pins.
- * 
- * Calls individual diagnostic functions for GPIO and PWM,
- * printing results via Serial. Useful as an initial hardware test.
- * 
- * @note Ideal for checking general pin status at program startup.
+ * @brief Ejecuta un diagnóstico completo de los pines digitales GPIO, PWM y analógicos.
+ *
+ * Esta función:
+ * - Muestra un mensaje de inicio del diagnóstico.
+ * - Llama a diagnoseAnalog(), diagnoseGPIO() y diagnosePWM().
+ * - Muestra un mensaje de finalización.
+ *
+ * Útil como prueba inicial del hardware al arrancar el sistema.
  */
 void fullDiagnosticsPins() {
     standardMessage("Starting PINOUT diagnostic", __FILE__, __FUNCTION__, __DATE__, __TIME__);
@@ -26,20 +27,13 @@ void fullDiagnosticsPins() {
 /**
  * @brief Diagnostica el voltaje presente en los pines analógicos del sistema.
  *
- * Esta función recorre todos los pines definidos como analógicos en la estructura `Pins::ANALOG`,
- * configura cada uno como entrada, permite que la señal se estabilice, y luego realiza una lectura
- * analógica. Convierte el valor leído en un voltaje (asumiendo una referencia de 5V) y lo muestra
- * por el puerto serie junto con el nombre y número del pin.
+ * Recorre todos los pines definidos en `Pins::ANALOG`, los configura como entrada,
+ * estabiliza la señal y realiza una lectura analógica. Convierte el valor leído
+ * a voltaje (asumiendo referencia de 5V) y lo muestra por Serial.
  *
- * @note Utiliza una pequeña demora (5 ms) para permitir la estabilización de la señal antes de la lectura.
- * @warning Asegúrate de que los pines estén correctamente definidos en `Pins::ANALOG` y que el sistema
- *          esté usando una referencia de voltaje de 5V para que la conversión sea precisa.
- *
- * @see Pins::ANALOG
- * @see analogRead()
- * @see pinMode()
+ * @note Incluye pequeñas demoras para estabilizar la señal.
+ * @warning Asegúrate de que el sistema use referencia de 5V para lecturas precisas.
  */
-
 void diagnoseAnalog() {
     standardHeaderFull("⚡ Detecting external voltage on ANALOG pins:", __FILE__, __FUNCTION__, __DATE__, __TIME__);
 
@@ -79,13 +73,14 @@ void diagnoseAnalog() {
     };
 };
 
+
 /**
- * @brief Diagnostic for digital GPIO pins configured as input with pull-up resistor.
- * 
- * Iterates through all defined GPIO pins, configures them as INPUT_PULLUP,
- * and checks if they are connected to ground (LOW reading). Prints results via Serial.-
- * 
- * @note Useful for detecting if a pin is grounded.
+ * @brief Diagnóstico de pines GPIO configurados como entrada.
+ *
+ * Configura cada pin GPIO como INPUT, estabiliza la señal y lee su estado.
+ * Informa si el pin tiene voltaje externo (HIGH) o está en LOW/GND.
+ *
+ * @note Útil para detectar si un pin está conectado a tierra o flotando.
  */
 void diagnoseGPIO(){
     standardHeaderFull("⚡ Detecting external voltage on GPIO pins:", __FILE__, __FUNCTION__, __DATE__, __TIME__);
@@ -120,32 +115,19 @@ void diagnoseGPIO(){
 
 
 /**
- * @brief Detects the presence of external voltage on PWM-capable pins.
+ * @brief Detecta la presencia de voltaje externo en pines PWM.
  *
- * This function loops through all defined PWM pins and configures each one as an input
- * (without enabling the internal pull-up resistor). It then reads the digital state of the pin
- * to determine whether external voltage is present.
+ * Configura cada pin PWM como entrada, estabiliza la señal y lee su estado digital.
+ * Informa si hay voltaje (HIGH) o no (LOW/GND).
  *
- * A brief delay is added after setting the pin mode to allow the signal to stabilize.
- * The result of each pin check is printed to the Serial Monitor, indicating whether
- * voltage was detected (HIGH) or not (LOW or connected to ground).
- *
- * Note: This function does not measure the actual voltage level. It only detects
- * logical HIGH or LOW states. For precise voltage measurement, analog pins and analogRead()
- * should be used instead.
- *
- * Useful for:
- * - Verifying electrical signals on PWM pins
- * - Debugging hardware connections
- * - Checking for floating or grounded pins
+ * @note No mide voltaje real, solo estado lógico.
+ * @note Para medir voltaje real, usar pines analógicos.
  */
 void diagnosePWM() {
-// Display a formatted header with file, function, date, and time
     standardHeaderFull("⚡ Detecting voltage on PWM pins:", __FILE__, __FUNCTION__, __DATE__, __TIME__);
 
-    // Loop through all defined PWM pins
     for (size_t i = 0; i < Pins::NUM_PWM; ++i) {
-        const PinInfo& pin = Pins::PWM[i];  // Access current pin info
+        const PinInfo& pin = Pins::PWM[i];
 
         //Forze the pin to OUTPUT for redux noise and stabily electric system
         pinMode(pin.number, OUTPUT); 
@@ -157,7 +139,6 @@ void diagnosePWM() {
 
         int state = digitalRead(pin.number); // Read the electrical state of the pin
 
-        // Print diagnostic result to Serial Monitor
         Serial.print("• ");
         Serial.print(pin.name);
         Serial.print(" [Pin ");
@@ -173,26 +154,45 @@ void diagnosePWM() {
 };
 
 
-/*
- * Functions to map pin names or numbers to their physical identifiers across multiple interfaces
- * Implemented in pins.cpp
+/**
+ * @brief Devuelve el número físico del pin.
+ *
+ * @param pin Estructura PinInfo.
+ * @return Número del pin.
  */
-
 uint8_t pinNumber(const PinInfo pin) {
     return pin.number;
 }
 
+
+/**
+ * @brief Devuelve el nombre del pin.
+ *
+ * @param pin Estructura PinInfo.
+ * @return Nombre del pin.
+ */
 const char* pinName(const PinInfo pin) {
     return pin.name;
 }
 
+
+/**
+ * @brief Devuelve la familia del pin (GPIO, PWM, ANALOG, etc.).
+ *
+ * @param pin Estructura PinInfo.
+ * @return Familia del pin.
+ */
 const char* pinFamily(const PinInfo pin) {
     return pin.family;
 }
 
-/* 
-* Returns true if the pin is a valid pin 
-*/
+
+/**
+ * @brief Verifica si un pin pertenece a la familia GPIO.
+ *
+ * @param pin Pin a validar.
+ * @return true si es GPIO válido, false si no.
+ */
 bool isValidGPIO(const PinInfo& pin) {
     for (size_t i = 0; i < Pins::NUM_GPIO; ++i) {
         if (Pins::GPIO[i].number == pin.number &&
@@ -205,9 +205,13 @@ bool isValidGPIO(const PinInfo& pin) {
     return false;
 };
 
-/* 
-* Returns true if the pin is a valid pin 
-*/
+
+/**
+ * @brief Verifica si un pin pertenece a la familia PWM.
+ *
+ * @param pin Pin a validar.
+ * @return true si es PWM válido, false si no.
+ */
 bool isValidPWM(const PinInfo& pin) {
     for (size_t i = 0; i < Pins::NUM_PWM; ++i) {
         if (Pins::PWM[i].number == pin.number &&
@@ -220,9 +224,13 @@ bool isValidPWM(const PinInfo& pin) {
     return false;
 };
 
-/* 
-* Returns true if the pin is a valid pin 
-*/
+
+/**
+ * @brief Verifica si un pin pertenece a la familia ANALOG.
+ *
+ * @param pin Pin a validar.
+ * @return true si es ANALOG válido, false si no.
+ */
 bool isValidAnalog(const PinInfo& pin) {
     for (size_t i = 0; i < Pins::NUM_ANALOG; ++i) {
         if (Pins::ANALOG[i].number == pin.number &&

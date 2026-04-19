@@ -1,11 +1,17 @@
 #include "system/diagnostics/diagnosticsEEPROM.h"
 
 /**
- * @brief Runs a diagnostic test on the EEPROM at the specified address.
- *        Writes a test value, reads it back, compares, and reports memory status.
- * 
- * @param address EEPROM address to test (default is 0).
- * @return true if EEPROM responds correctly, false otherwise.
+ * @brief Ejecuta un test de diagnóstico sobre la EEPROM en la dirección indicada.
+ *
+ * El procedimiento realiza:
+ * - Escritura de un valor de prueba en la EEPROM.
+ * - Lectura del valor almacenado.
+ * - Comparación entre valor escrito y leído.
+ * - Informe del estado de memoria libre y usada.
+ * - Limpieza de la dirección probada.
+ *
+ * @param address Dirección de EEPROM a probar (por defecto 0).
+ * @return true si la EEPROM responde correctamente, false en caso contrario.
  */
 bool DiagnosticsEEPROM::runTest(int address) {
     standardMessage("🧪 Starting EEPROM diagnostic", __FILE__, __FUNCTION__, __DATE__, __TIME__);
@@ -47,9 +53,11 @@ bool DiagnosticsEEPROM::runTest(int address) {
 
 
 /**
- * @brief Clears the EEPROM at the specified address by writing 0xFF.
- * 
- * @param address EEPROM address to clear.
+ * @brief Limpia la EEPROM en la dirección indicada escribiendo 0xFF.
+ *
+ * Tras limpiar, lee nuevamente el valor para verificar la operación.
+ *
+ * @param address Dirección de EEPROM a limpiar.
  */
 void DiagnosticsEEPROM::clearEEPROM(int address) {
     EEPROM.write(address, 0xFF);
@@ -64,10 +72,12 @@ void DiagnosticsEEPROM::clearEEPROM(int address) {
 
 
 /**
- * @brief Estimates the amount of free RAM available on the system.
- *        Works on AVR-based boards like Arduino Mega 2560.
- * 
- * @return Number of free bytes in RAM.
+ * @brief Estima la cantidad de memoria RAM libre disponible en el sistema.
+ *
+ * Este método funciona en placas basadas en AVR como Arduino Mega 2560.
+ * Calcula la memoria libre comparando la posición actual de la pila con el heap.
+ *
+ * @return Número de bytes libres en RAM.
  */
 int DiagnosticsEEPROM::getFreeMemory() {
     extern unsigned int __heap_start;
@@ -82,6 +92,3 @@ int DiagnosticsEEPROM::getFreeMemory() {
 
     return freeMemory;
 }
-
-
-

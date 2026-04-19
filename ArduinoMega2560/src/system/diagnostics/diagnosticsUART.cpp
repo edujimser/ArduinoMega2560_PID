@@ -1,8 +1,16 @@
 #include "system/diagnostics/diagnosticsUART.h" // Header for UART diagnostics
 
 /**
- * @brief Runs diagnostics on all available UART ports.
- *        Currently includes Serial1 and Serial2.
+ * @brief Ejecuta diagnósticos en todos los puertos UART disponibles.
+ *
+ * Esta función:
+ * - Muestra un mensaje de inicio del diagnóstico.
+ * - Ejecuta diagnoseSerial1() y diagnoseSerial2().
+ * - Muestra un mensaje de finalización del diagnóstico.
+ *
+ * Actualmente incluye:
+ * - UART1 (Serial1)
+ * - UART2 (Serial2)
  */
 void diagnoseAllUART() {
     standardMessage("Starting UART communication diagnostic", __FILE__, __FUNCTION__, __DATE__, __TIME__);
@@ -14,11 +22,16 @@ void diagnoseAllUART() {
 }
 
 /**
- * @brief Performs a diagnostic on a specific UART stream.
- *        Waits for incoming data for 3 seconds and prints it if available.
- * 
- * @param serialPort Reference to the HardwareSerial object (e.g., Serial1, Serial2).
- * @param portName Name of the UART port for display purposes.
+ * @brief Realiza un diagnóstico sobre un puerto UART específico.
+ *
+ * El procedimiento:
+ * - Inicia el puerto UART a 9600 baudios.
+ * - Espera durante 3 segundos la llegada de datos.
+ * - Si recibe datos, los imprime por consola.
+ * - Si no recibe nada, informa que no hubo actividad.
+ *
+ * @param serialPort Referencia al objeto HardwareSerial (por ejemplo, Serial1 o Serial2).
+ * @param portName Nombre del puerto UART para mostrar en consola.
  */
 void diagnoseUARTStream(HardwareSerial& serialPort, const char* portName) {
     Serial.println("📡 Diagnosing " + String(portName));
@@ -55,7 +68,9 @@ void diagnoseUARTStream(HardwareSerial& serialPort, const char* portName) {
 }
 
 /**
- * @brief Runs diagnostic on Serial1 (UART1), if available.
+ * @brief Ejecuta diagnóstico sobre Serial1 (UART1), si está disponible.
+ *
+ * Esta función solo se compila si HAVE_HWSERIAL1 está definido.
  */
 void diagnoseSerial1() {
 #if defined(HAVE_HWSERIAL1)
@@ -64,7 +79,9 @@ void diagnoseSerial1() {
 }
 
 /**
- * @brief Runs diagnostic on Serial2 (UART2), if available.
+ * @brief Ejecuta diagnóstico sobre Serial2 (UART2), si está disponible.
+ *
+ * Esta función solo se compila si HAVE_HWSERIAL2 está definido.
  */
 void diagnoseSerial2() {
 #if defined(HAVE_HWSERIAL2)

@@ -1,13 +1,34 @@
+/**
+ * @file main.cpp
+ * @brief Firmware principal del sistema. Configura diagnósticos, pines, UART, SPI, I2C,
+ *        interrupciones, entradas analógicas, PWM, GPIO, motor paso a paso y PID.
+ */
+
 #include <Arduino.h>
 #include "main.h"
 
+/**
+ * @brief Arduino setup function (runs once at startup)
+ */
 void setup() {                                                 // Arduino setup function (runs once at startup)
 
                                                                // Otherwise, run in normal execution mode
     Serial.begin(57600);                                       // start serial communication at 57600 baud
     while (!Serial);                                       
 
-    //Config System
+    /**
+     * @brief Config System
+     *
+     * Byte 0 (bits 0–7):
+     * - Bit 0: debugMode
+     * - Bit 1: fullDiagnosticsPins
+     * - Bit 2: diagnoseAnalog
+     * - Bit 3: diagnoseGPIO
+     * - Bit 4: diagnosePWM
+     * - Bit 5: diagnoseUART
+     * - Bit 6: diagnoseEEPROM
+     * - Bit 7: version
+     */
     configuracionMain systemConfiguration = {
                                                                                                              // Byte 0 (bits 0–7)
         .debugMode = false,                                    // Enable debug mode                          | Byte 0, Bit 0 (LSB)
@@ -32,10 +53,17 @@ void setup() {                                                 // Arduino setup 
 
 
 
+/**
+ * @brief Arduino main loop. Ejecuta continuamente la configuración de pines,
+ *        lectura analógica, control PID y movimiento del motor paso a paso.
+ */
 void loop() {
-    // UART: Asynchronous serial communication
-    // Variable                                | Pin array                              | Descripción
-    // ----------------------------------------|----------------------------------------|----------------------------------------
+    /**
+     * @brief UART: Asynchronous serial communication
+     *
+     * Variable                                | Pin array                              | Descripción
+     * ----------------------------------------|----------------------------------------|----------------------------------------
+     */
     [[maybe_unused]] PinInfo uartRx0  =         Pins::UART_RX[0];                        // RX0   → UART0 via USB                
     [[maybe_unused]] PinInfo uartRx1  =         Pins::UART_RX[1];                        // RX1   → UART1 + INT4
     [[maybe_unused]] PinInfo uartRx2  =         Pins::UART_RX[2];                        // RX2   → UART2
@@ -45,21 +73,23 @@ void loop() {
     [[maybe_unused]] PinInfo uartTx2  =         Pins::UART_TX[2];                        // TX2   → UART2
     [[maybe_unused]] PinInfo uartTx3  =         Pins::UART_TX[3];                        // TX3   → UART3
 
-    // SPI: Synchronous master-slave communication
-    // Variable                                | Pin array                              | Descripción
-    // ----------------------------------------|----------------------------------------|----------------------------------------
+    /**
+     * @brief SPI: Synchronous master-slave communication
+     */
     [[maybe_unused]] PinInfo spiMiso  =         Pins::SPI[0];                            // MISO  → pin 50
     [[maybe_unused]] PinInfo spiMosi  =         Pins::SPI[1];                            // MOSI  → pin 51
     [[maybe_unused]] PinInfo spiSck   =         Pins::SPI[2];                            // SCK   → pin 52
     [[maybe_unused]] PinInfo spiSs    =         Pins::SPI[3];                            // SS    → pin 53
 
-    // I2C / TWI: Two-wire communication
+    /**
+     * @brief I2C / TWI: Two-wire communication
+     */
     [[maybe_unused]] PinInfo i2cSda   =         Pins::I2C[0];                            // SDA   → pin 20
     [[maybe_unused]] PinInfo i2cScl   =         Pins::I2C[1];                            // SCL   → pin 21
 
-    // External interrupts
-    // Variable                                | Pin array                              | Descripción
-    // ----------------------------------------|----------------------------------------|----------------------------------------
+    /**
+     * @brief External interrupts
+     */
     [[maybe_unused]] PinInfo int0     =         Pins::INTERRUPTS[0];                     // INT0  → pin 2
     [[maybe_unused]] PinInfo int1     =         Pins::INTERRUPTS[1];                     // INT1  → pin 3
     [[maybe_unused]] PinInfo int2     =         Pins::INTERRUPTS[2];                     // INT2  → pin 21
@@ -67,9 +97,9 @@ void loop() {
     [[maybe_unused]] PinInfo int4     =         Pins::INTERRUPTS[4];                     // INT4  → pin 19
     [[maybe_unused]] PinInfo int5     =         Pins::INTERRUPTS[5];                     // INT5  → pin 18
 
-    // ANALOG: Pins with analog input capability (ADC)
-    // Variable                                | Pin array                              | Descripción             | Set pinMode   
-    // ----------------------------------------|----------------------------------------|----------------------------------------------------------------
+    /**
+     * @brief ANALOG: Pins with analog input capability (ADC)
+     */
     [[maybe_unused]] PinInfo analog0  =         Pins::ANALOG[0];                         /* A0    → pin 54*/        pinMode(analog0.number,  INPUT);
     [[maybe_unused]] PinInfo analog1  =         Pins::ANALOG[1];                         /* A1    → pin 55*/        pinMode(analog1.number,  INPUT);
     [[maybe_unused]] PinInfo analog2  =         Pins::ANALOG[2];                         /* A2    → pin 56*/        pinMode(analog2.number,  INPUT);
@@ -86,9 +116,10 @@ void loop() {
     [[maybe_unused]] PinInfo analog13 =         Pins::ANALOG[13];                        /* A13   → pin 67*/        pinMode(analog13.number, INPUT);
     [[maybe_unused]] PinInfo analog14 =         Pins::ANALOG[14];                        /* A14   → pin 68*/        pinMode(analog14.number, INPUT);
     [[maybe_unused]] PinInfo analog15 =         Pins::ANALOG[15];                        /* A15   → pin 69*/        pinMode(analog15.number, INPUT);
-    // PWM: Pins with pulse-width modulation capability
-    // Variable                                | Pin array                              | Descripción             | Set pinMode   
-    // ----------------------------------------|----------------------------------------|----------------------------------------------------------------
+
+    /**
+     * @brief PWM: Pins with pulse-width modulation capability
+     */
     [[maybe_unused]] PinInfo pwm0     =         Pins::PWM[0];                            /* PWM02 → pin 2*/         pinMode(pwm0.number,  OUTPUT);
     [[maybe_unused]] PinInfo pwm1     =         Pins::PWM[1];                            /* PWM03 → pin 3*/         pinMode(pwm1.number,  OUTPUT);
     [[maybe_unused]] PinInfo pwm2     =         Pins::PWM[2];                            /* PWM04 → pin 4*/         pinMode(pwm2.number,  OUTPUT);
@@ -104,9 +135,9 @@ void loop() {
     [[maybe_unused]] PinInfo pwm12    =         Pins::PWM[12];                           /* PWM45 → pin 45*/        pinMode(pwm12.number, OUTPUT);
     [[maybe_unused]] PinInfo pwm13    =         Pins::PWM[13];                           /* PWM46 → pin 46*/        pinMode(pwm13.number, OUTPUT);
 
-    // GPIO: General-purpose digital pins
-    // Variable                                | Pin array                              | Descripción             | Set pinMode   
-    // ----------------------------------------|----------------------------------------|----------------------------------------------------------------
+    /**
+     * @brief GPIO: General-purpose digital pins
+     */
     [[maybe_unused]] PinInfo gpio0    =         Pins::GPIO[0];                           /* GPIO13 → pin 13 */      pinMode(gpio0.number,  OUTPUT);
     [[maybe_unused]] PinInfo gpio1    =         Pins::GPIO[1];                           /* GPIO22 → pin 22 */      pinMode(gpio1.number,  OUTPUT);
     [[maybe_unused]] PinInfo gpio2    =         Pins::GPIO[2];                           /* GPIO23 → pin 23 */      pinMode(gpio2.number,  OUTPUT);
@@ -141,5 +172,15 @@ void loop() {
     [[maybe_unused]] PinInfo gpio31   =         Pins::GPIO[31];                          /* GPIO52 → pin 52 */      pinMode(gpio31.number, OUTPUT);
     [[maybe_unused]] PinInfo gpio32   =         Pins::GPIO[32];                          /* GPIO53 → pin 53 */      pinMode(gpio32.number, OUTPUT);
 
+   // Motor de pasos: Control de motores paso a paso
+   static MotorPaso motor(gpio10.number, gpio12.number, gpio14.number, gpio16.number);   
+   motor.fijarVelocidad(15.0);  // Establece la velocidad a 20 RPM
 
-} 
+   // Configuración de PID: Control de sistemas con retroalimentación
+   static PID pid(2.0, 0.5, 1.0, 0.0, 360.0, 0.5, 0.5); // Kp=2.0, Ki=0.5, Kd=1.0, output limits [-255, 255], dt=0.1s, slew-rate=50
+   
+   Serial.println(analogRead(analog0.number));
+   motor.movimientoPosicionRelativo(pid.calculoPID(450, analogRead(analog0.number), true), true); 
+
+   delay(1000); // Pequeña pausa para evitar saturar el loop
+};

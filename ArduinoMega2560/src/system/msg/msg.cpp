@@ -1,14 +1,16 @@
 #include "system/msg/msg.h"
 
 /**
- * Prints a standardized, nicely formatted message to the Serial Monitor.
- * The message will be centered between two decorative lines.
+ * @brief Imprime un mensaje estandarizado y formateado en el monitor serie.
  *
- * @param message   The main message to display.
- * @param file      Source file name where the message originated.
- * @param function  Function name from which this is called.
- * @param date      Compilation date or custom date string.
- * @param time      Compilation time or custom time string.
+ * El mensaje aparece centrado entre dos líneas decorativas y acompañado
+ * de información contextual como archivo, función, fecha y hora.
+ *
+ * @param message   Mensaje principal a mostrar.
+ * @param file      Nombre del archivo origen.
+ * @param function  Nombre de la función desde donde se llama.
+ * @param date      Fecha de compilación o personalizada.
+ * @param time      Hora de compilación o personalizada.
  */
 void standardMessage(const char* message, 
                      const char* file, 
@@ -58,11 +60,14 @@ void standardMessage(const char* message,
 
 
 /**
- * Prints a decorative header with the given message centered.
+ * @brief Imprime un encabezado decorativo con el mensaje centrado.
  *
- * @param message The text to be displayed centered.
- * @param width   The total width of the header line.
- * @param deco    The decorative character to use for the top/bottom lines.
+ * Genera una línea con caracteres decorativos a ambos lados del texto,
+ * manteniendo un ancho total definido por el usuario.
+ *
+ * @param message Texto a centrar.
+ * @param width   Ancho total de la línea.
+ * @param deco    Carácter decorativo.
  */
 void standardHeader(const char* message,
                     uint16_t width,
@@ -95,26 +100,23 @@ void standardHeader(const char* message,
 
 
 /**
- * @brief Prints a decorated header with centered text and padding on both sides.
+ * @brief Imprime un encabezado decorado con texto centrado y metadatos.
  *
- * This function builds a single line consisting of a combined text
- * that includes the message, file, function, date, and time, surrounded
- * by decorative characters on the left and right to achieve a total line width
- * specified by the user.
+ * Construye una línea única que incluye:
+ * - mensaje principal
+ * - archivo
+ * - función
+ * - fecha y hora
  *
- * Output format example:
- *  ----- Message | file | function | date time -----
+ * Todo ello centrado y rodeado de caracteres decorativos.
  *
- * @param message   Main text or description to display.
- * @param file      File path or source file name.
- * @param function  Name of the function where this is called.
- * @param date      Compilation date (recommended: __ time      CompilationDATE__).
- * @param time (recommended: __TIME__).
- * @param width     Total width of the line (default: 120).
- * @param deco      Decorative character (default: '-').
- *
- * @note The number of decorative characters is automatically adjusted
- *       to keep the text centered within the given width.
+ * @param message   Mensaje principal.
+ * @param file      Archivo origen.
+ * @param function  Función origen.
+ * @param date      Fecha de compilación.
+ * @param time      Hora de compilación.
+ * @param width     Ancho total de la línea.
+ * @param deco      Carácter decorativo.
  */
 void standardHeaderFull(const char* message,
                         const char* file,
@@ -156,28 +158,21 @@ void standardHeaderFull(const char* message,
 
 
 /**
- * @brief Prints an enriched error message to the serial monitor, including contextual information.
+ * @brief Imprime un mensaje de error enriquecido con información contextual.
  *
- * This function generates a structured output that helps identify the origin of runtime errors.
- * The output includes:
- * - Compilation date and time
- * - Source file name
- * - Function name from which it is invoked
- * - Line number where the function was called
- * - Custom error message
+ * Incluye:
+ * - fecha y hora
+ * - archivo
+ * - función
+ * - número de línea
+ * - mensaje de error
  *
- * Output format:
- * [date time] file::function (Line N) ❌ ERROR ➤ message
- *
- * Example output:
- * [Aug 7 2025 01:23:00] sensor.cpp::readSensor (Line 42) ❌ ERROR ➤ Failed to initialize sensor
- *
- * @param message   Description of the specific error
- * @param file      Source file name (__FILE__)
- * @param function  Function name where the error was detected (__FUNCTION__)
- * @param date      Compilation date (__DATE__)
- * @param time      Compilation time (__TIME__)
- * @param line      Line number in the file where the function is invoked (__LINE__)
+ * @param message   Mensaje de error.
+ * @param file      Archivo origen.
+ * @param function  Función origen.
+ * @param date      Fecha de compilación.
+ * @param time      Hora de compilación.
+ * @param line      Número de línea donde se invoca.
  */
 void standardErrorMessage(const char* message, const char* file, const char* function, const char* date, const char* time, int line) {
   Serial.println();
@@ -198,14 +193,12 @@ void standardErrorMessage(const char* message, const char* file, const char* fun
 
 
 /**
- * @brief Prints the current system configuration status to the serial monitor.
- * 
- * This function displays the values of the fields contained in the 
- * configuracionMain structure, such as debug mode and LED project status,
- * using a clear and friendly visual format for easy reading on the serial monitor.
- * It includes separators and informative emojis to enhance presentation.
- * 
- * @param configuration  Reference to the current system configuration structure.
+ * @brief Muestra la configuración actual del sistema.
+ *
+ * Presenta los valores de la estructura configuracionMain
+ * con un formato visual claro y amigable.
+ *
+ * @param configuration Estructura de configuración del sistema.
  */
 void showConfigurationMessage(const configuracionMain& configuration) {
   standardMessage("Current System Configuration",
@@ -223,24 +216,34 @@ void showConfigurationMessage(const configuracionMain& configuration) {
                      __TIME__,
                      120,
                      '-');
-
-  
 }
 
 
+/**
+ * @brief Imprime una línea compuesta por un carácter repetido.
+ *
+ * @param c       Carácter a imprimir.
+ * @param length  Número de repeticiones.
+ */
 void showMsgPrinLine(char c, int length) {
    for (int i = 0; i < length; i++) {
         Serial.print(c);
     }
     Serial.println();
-  }
+}
 
 
 /**
- * @brief Prints firmware version details to the serial monitor.
- * 
- * Displays firmware and application information (version, name, date, author) 
- * defined by macros in a clear format for easy verification.
+ * @brief Imprime la información de versión del firmware.
+ *
+ * Muestra:
+ * - versión del firmware
+ * - nombre
+ * - fecha
+ * - autor
+ * - versión de la aplicación
+ * - nombre de la aplicación
+ * - fecha de la aplicación
  */
 void printVersion(const char* fwVersion,
                   const char* fwName,
@@ -261,4 +264,4 @@ void printVersion(const char* fwVersion,
     Serial.print("App Version: ");      Serial.println(appVersion);
     Serial.print("App Name: ");         Serial.println(appName);
     Serial.print("App Date: ");         Serial.println(appDate);
-    }
+}
